@@ -58,6 +58,7 @@ const BannerMain = () => {
 
   React.useEffect(() => {
     // componentDidUpdate
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     let timerId: any;
     if (index < 4) {
       timerId = setInterval(() => {
