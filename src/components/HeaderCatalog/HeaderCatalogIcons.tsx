@@ -1,7 +1,7 @@
 import React from "react";
 
 const HeaderCatalogIcons = () => {
-  // const [comparison, setComparison] = React.useState(0);
+// const [comparison, setComparison] = React.useState(0);
   // const [like, setLike] = React.useState(0);
   // const [order, setOrder] = React.useState(0);
   const windowRef = React.useRef(window.innerWidth);
