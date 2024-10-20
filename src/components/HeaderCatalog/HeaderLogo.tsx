@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import logoText from "../../assets/icons/favicon/logo-main-text.svg";
 import logoImg from "../../assets/icons/favicon/logo-main-img.svg";
 
