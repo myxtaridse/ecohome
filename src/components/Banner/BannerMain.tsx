@@ -7,7 +7,7 @@ import banner3 from "../../assets/images-site/banner3.png";
 import banner3Mobile from "../../assets/images-site/ytzttpKsHHY.jpg";
 import banner4 from "../../assets/images-site/banner4.png";
 import banner4Mobile from "../../assets/images-site/b52fdb04f5f8b6de900be5c348b33074.jpg";
-import g81 from "../../assets/images-site/gr1.svg";
+import g81 from "../../assets/images-site/Gr1.svg";
 
 const gallery = [
   {
