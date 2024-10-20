@@ -1,0 +1,214 @@
+.header {
+  width: 100vw;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 150px 0 60px;
+  background-color: #e8eff5;
+}
+.header-contacts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  font-size: 13px;
+}
+.header-phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 600;
+}
+.header-myCity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 9px;
+  cursor: pointer;
+}
+.header-map {
+  width: 17px;
+  margin-top: 2px;
+}
+.header-arrow {
+  margin-left: -2px;
+  margin-top: 5px;
+  width: 20px;
+  color: grey;
+}
+.header-arrow:hover {
+  color: #cf4e32;
+}
+.header-cities-popup-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(128, 128, 128, 0.56);
+}
+.header-cities-popup {
+  background-color: #fff;
+  margin: 10vh auto;
+  width: 50vw;
+  height: 70vh;
+  border: 1px solid #cf4e32;
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+.header-cities-popup-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  width: 100%;
+  input {
+    font-size: 16px;
+    width: 80%;
+    height: 45px;
+    border-radius: 5px 0 0 5px;
+    border: 0.5px solid #cf4f328a;
+    padding-left: 15px;
+  }
+}
+.cities-search {
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  width: 30px;
+  height: 29px;
+  background-color: #cf4e32;
+  padding: 10px;
+}
+.header-cities-popup-list {
+  width: 90%;
+  margin: 40px auto;
+  font-size: 16px;
+  font-weight: 200;
+  height: 70%;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  padding-right: 5px;
+  padding-top: 5px;
+  scrollbar-width: thin;
+  scrollbar-color: #cf4e32 rgb(222, 222, 222); /* плашка скролла и дорожка */
+}
+.header-cities-popup-list::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+}
+.header-cities-popup-list span {
+  cursor: pointer;
+  padding: 5px 3px;
+}
+.header-cities-popup-list span:hover {
+  background-color: rgb(222, 212, 212);
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  font-weight: 500;
+}
+.header-nav a:hover {
+  color: #cf4e32;
+}
+
+.header-phone-popup {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 100px;
+  width: 160px;
+  height: 40px;
+  background-color: #fff;
+
+  font-size: 18px;
+  padding-top: 5px;
+  border: 1px solid #cf4f32a5;
+  text-decoration: underline dotted #cf4e32;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 10;
+}
+.header-phone-popup::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 100%;
+  left: 1.5em;
+  border: 0.5rem solid transparent;
+  border-top: none;
+
+  border-bottom-color: #fff;
+  filter: drop-shadow(0 -0.0625rem 0.0625rem #cf4f328c);
+}
+.header-phone-module {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 60px;
+
+  h1 {
+    text-align: center;
+    font-size: 42px;
+    margin-top: 60px;
+  }
+  input {
+    font-size: 18px;
+    width: 80%;
+    height: 45px;
+    padding-left: 20px;
+  }
+  .header-phone-module-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  .header-phone-module-btns button {
+    width: 250px;
+    height: 50px;
+    border: 1px solid #cf4e32;
+    border-radius: 10px;
+    background-color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .header-phone-module-btns button:first-of-type {
+    background-color: #cf4e32;
+    color: white;
+  }
+}
+
+.header-nav-widget {
+  background-color: #565656;
+  // padding: 10px;
+  width: 20px;
+  height: 20px;
+  color: white;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+@media (max-width: 1000px) {
+  .header {
+    width: 100vw;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: #e8eff5;
+  }
+}
