@@ -49,6 +49,7 @@
   width: 100vw;
   height: 100vh;
   background-color: rgba(128, 128, 128, 0.56);
+  z-index: 100;
 }
 .header-cities-popup {
   background-color: #fff;
@@ -59,35 +60,25 @@
   border-radius: 20px;
   padding: 10px 20px;
 }
-.header-cities-popup-input {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 20px auto;
-  width: 100%;
-  input {
-    font-size: 16px;
-    width: 80%;
-    height: 45px;
-    border-radius: 5px 0 0 5px;
-    border: 0.5px solid #cf4f328a;
-    padding-left: 15px;
-  }
+.header-popup-input {
+  margin: 20px auto 0;
+  width: 94%;
 }
-.cities-search {
+.header-cities-help {
+  text-align: right;
+  color: blue;
+  margin-right: 60px;
+  margin-top: 5px;
+  text-decoration: underline dotted blue;
   cursor: pointer;
-  border-radius: 0 5px 5px 0;
-  width: 30px;
-  height: 29px;
-  background-color: #cf4e32;
-  padding: 10px;
 }
+
 .header-cities-popup-list {
   width: 90%;
-  margin: 40px auto;
+  margin: 10px auto;
   font-size: 16px;
   font-weight: 200;
-  height: 70%;
+  height: 75%;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;

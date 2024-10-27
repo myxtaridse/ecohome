@@ -1,0 +1,28 @@
+.footer {
+  margin-top: 100px;
+  background-color: #cf4e32;
+  width: 100vw;
+  height: max-content;
+  padding-bottom: 15px;
+}
+.footer-yandex {
+  width: 100vw;
+  position: relative;
+}
+.footer-map {
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  margin: 5px 0;
+  height: 350px;
+}
+.footer-review {
+  border: 1px solid #cf4e32;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 256px;
+  right: 155px;
+  width: 150px;
+  height: 96px;
+  box-shadow: 5px 5px 15px #cf4f3240;
+}

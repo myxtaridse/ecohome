@@ -3,6 +3,7 @@ import HeaderLogo from "./HeaderLogo";
 import HeaderCatalogList from "./HeaderCatalogList";
 import HeaderCatalogInput from "./HeaderCatalogInput";
 import HeaderCatalogIcons from "./HeaderCatalogIcons";
+import Catalog from "../Catalog/Catalog";
 
 const HeaderCatalog = () => {
   const windowRef = React.useRef(window.innerWidth);
@@ -12,6 +13,7 @@ const HeaderCatalog = () => {
       <HeaderCatalogList />
       <HeaderCatalogInput />
       {windowRef.current > 1000 && <HeaderCatalogIcons />}
+      {windowRef.current > 1000 && <Catalog />}
     </div>
   );
 };

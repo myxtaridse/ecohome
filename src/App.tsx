@@ -1,17 +1,62 @@
-// import React from "react";
+import React from "react";
 import "./sass/app.scss";
-import Header from "./components/HeaderMain/Header";
-import HeaderCatalog from "./components/HeaderCatalog/HeaderCatalog";
-import BannerMain from "./components/Banner/BannerMain";
+import { Route, Routes } from "react-router-dom";
+import MainPage from "./pages/MainPage";
+import MainLayout from "./layout/MainLayout";
 
 function App() {
+  // const PaymentOrder = React.lazy(
+  //   () =>
+  //     import(/* webpackChunkName: "Cart" */ "./pages/PaymentOrder/PaymentOrder")
+  // );
+
   return (
-    <>
-      <Header />
-      <HeaderCatalog />
-      <BannerMain />
-    </>
+    <Routes>
+      <Route path="/" element={<MainLayout />}>
+        <Route path="/" element={<MainPage />} />
+      </Route>
+    </Routes>
   );
 }
 
 export default App;
+
+// <Routes>
+//   <Route path="/" element={<MainLayout />}>
+//     <Route path="/" element={<Home />} />
+//     <Route path="/about" element={<About />} />
+//     <Route path="/contacts" element={<Contact />} />
+//     <Route
+//       path="cart"
+//       element={
+//         <React.Suspense fallback={<Loading />}>
+//           <Cart />
+//         </React.Suspense>
+//       }
+//     />
+//     <Route
+//       path="payment-order"
+//       element={
+//         <React.Suspense fallback={<Loading />}>
+//           <PaymentOrder />
+//         </React.Suspense>
+//       }
+//     />
+//     <Route
+//       path="*"
+//       element={
+//         <React.Suspense fallback={<Loading />}>
+//           <NotFound />
+//         </React.Suspense>
+//       }
+//     />
+//     <Route
+//       path="product/:id"
+//       element={
+//         <React.Suspense fallback={<Loading />}>
+//           <Product />
+//         </React.Suspense>
+//       }
+//     />
+//   </Route>
+// </Routes>

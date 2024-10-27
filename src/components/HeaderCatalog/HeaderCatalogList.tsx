@@ -1,9 +1,11 @@
-
-// import React from "react";
+import React from "react";
+import { CustomContext } from "../../layout/MainLayout";
 
 const HeaderCatalogList = () => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const { setIsCatalog }: any = React.useContext(CustomContext);
   return (
-    <div className="header-catalog">
+    <div className="header-catalog" onMouseMove={() => setIsCatalog(true)}>
       <div>
         <svg
           xmlns="http://www.w3.org/2000/svg"

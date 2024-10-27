@@ -49,14 +49,14 @@ const Headpopup: React.FC<HeadpopupType> = ({ setIsPopup, setCity }) => {
       }}
     >
       <div className="header-cities-popup">
-        <div className="header-cities-popup-input">
+        <div className="header-catalog-input header-popup-input">
           <input
             placeholder="Найти город"
             type="text"
             value={list}
             onChange={(e) => setList(e.target.value)}
           />
-          <div className="cities-search">
+          <div className="header-catalog-search">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -66,6 +66,7 @@ const Headpopup: React.FC<HeadpopupType> = ({ setIsPopup, setCity }) => {
             </svg>
           </div>
         </div>
+        <div className="header-cities-help">Не нашли свой город?</div>
         <div className="header-cities-popup-list">
           {find !== -1 ? (
             <span>{cities[find]}</span>

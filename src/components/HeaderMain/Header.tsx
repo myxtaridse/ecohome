@@ -10,7 +10,7 @@ const Header = () => {
   const windowRef = React.useRef(window.innerWidth);
   return (
     <div className="header">
-      <HeaderLogo />
+      {windowRef.current < 1000 && <HeaderLogo />}
 
       {windowRef.current > 1000 && (
         <p style={{ fontSize: "12px" }}>
@@ -19,7 +19,7 @@ const Header = () => {
       )}
       {windowRef.current > 1000 && <HeadCityPop />}
 
-      <HeaderCatalogIcons />
+      {windowRef.current < 1000 && <HeaderCatalogIcons />}
       {windowRef.current > 1000 && <Navheader />}
 
       {windowRef.current > 1000 && <HeadContacts />}

@@ -1,0 +1,19 @@
+<svg width="46" height="38" viewBox="0 0 46 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22.9842 8.13477L0.904053 8.13478V24.7917H23.1779L22.9842 8.13477Z" fill="#565656" stroke="white" stroke-width="0.6"/>
+<path d="M23.1777 17.0439H26.083" stroke="white" stroke-width="0.6"/>
+<path d="M39.3058 8.13477L28.0201 8.13478L27.0517 24.7917H44.4834V19.989C44.4834 19.963 44.4783 19.9372 44.4684 19.9131L39.7684 8.44515C39.6915 8.2574 39.5087 8.13477 39.3058 8.13477Z" fill="#565656"/>
+<path d="M26.0833 24.7917H27.0517M27.0517 24.7917H44.4834V19.989C44.4834 19.963 44.4783 19.9372 44.4684 19.9131L39.7684 8.44515C39.6915 8.2574 39.5087 8.13477 39.3058 8.13477L28.0201 8.13478L27.0517 24.7917Z" stroke="white" stroke-width="0.6"/>
+<path d="M32.0988 10.6523H40.4458L43.2824 17.044L32.0819 17.044C31.8605 17.044 31.6812 16.8641 31.6819 16.6427L31.6988 11.0511C31.6995 10.8307 31.8784 10.6523 32.0988 10.6523Z" fill="#565656" stroke="white" stroke-width="0.6"/>
+<path d="M31.7969 20.918H32.9577" stroke="white" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M41.6905 20.3369H44.4832V23.8233C42.6135 23.2 41.7047 21.9501 41.2527 20.9809C41.1085 20.6716 41.3493 20.3369 41.6905 20.3369Z" fill="#565656" stroke="white" stroke-width="0.6"/>
+<path d="M0.904053 27.1963V24.791H44.4833V27.1963C44.4833 27.4724 44.2594 27.6963 43.9833 27.6963H1.40405C1.12791 27.6963 0.904053 27.4724 0.904053 27.1963Z" fill="#565656" stroke="white" stroke-width="0.6"/>
+<path d="M23.1777 24.7529H27.0514" stroke="white" stroke-width="0.52"/>
+<path d="M16.2053 12.5898V18.9815" stroke="white" stroke-width="0.6" stroke-linecap="round"/>
+<path d="M11.9441 12.5898V18.9815" stroke="white" stroke-width="0.6" stroke-linecap="round"/>
+<path d="M7.68311 12.5898V18.9815" stroke="white" stroke-width="0.6" stroke-linecap="round"/>
+<path d="M25.8706 6.97233C25.8706 6.21323 26.4859 5.59785 27.245 5.59785C28.0041 5.59785 28.6195 6.21323 28.6195 6.97233V25.1974H25.8706V6.97233Z" fill="#565656" stroke="white" stroke-width="0.35"/>
+<circle cx="10.6852" cy="27.9881" r="4.25161" fill="#565656" stroke="white" stroke-width="0.6"/>
+<circle cx="34.5084" cy="27.9881" r="4.25161" fill="#565656" stroke="white" stroke-width="0.6"/>
+<circle cx="10.8787" cy="27.7935" r="1.8337" stroke="white" stroke-width="0.4"/>
+<circle cx="34.5085" cy="27.7935" r="1.8337" stroke="white" stroke-width="0.4"/>
+</svg>

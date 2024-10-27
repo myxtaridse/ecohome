@@ -8,6 +8,7 @@ import banner3Mobile from "../../assets/images-site/ytzttpKsHHY.jpg";
 import banner4 from "../../assets/images-site/banner4.png";
 import banner4Mobile from "../../assets/images-site/b52fdb04f5f8b6de900be5c348b33074.jpg";
 import g81 from "../../assets/images-site/Gr1.svg";
+import Loading from "../Loading/Loading";
 
 const gallery = [
   {
@@ -51,32 +52,35 @@ const gallery = [
 
 const BannerMain = () => {
   const windowRef = React.useRef(window.innerWidth);
+  const imageRef = React.useRef<HTMLImageElement>(null);
 
   const [index, setIndex] = React.useState(1);
 
-  console.log(windowRef.current);
+  // React.useEffect(() => {
+  //   // componentDidUpdate
+  //   // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  //   let timerId: any;
+  //   if (index < 4) {
+  //     timerId = setInterval(() => {
+  //       setIndex((prevIndex) => prevIndex + 1);
+  //       // console.log(index);
+  //     }, 7000);
+  //   }
+  //   if (index === 4) {
+  //     setTimeout(() => {
+  //       setIndex(1);
+  //     }, 7000);
+  //   }
 
-  React.useEffect(() => {
-    // componentDidUpdate
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    let timerId: any;
-    if (index < 4) {
-      timerId = setInterval(() => {
-        setIndex((prevIndex) => prevIndex + 1);
-        // console.log(index);
-      }, 7000);
-    }
-    if (index === 4) {
-      setTimeout(() => {
-        setIndex(1);
-      }, 7000);
-    }
+  //   // componentDidUnmount
+  //   return () => {
+  //     clearInterval(timerId);
+  //   };
+  // }, [index]);
 
-    // componentDidUnmount
-    return () => {
-      clearInterval(timerId);
-    };
-  }, [index]);
+  if (!imageRef || imageRef === null) {
+    return <Loading />;
+  }
 
   return (
     <div className="banner">
@@ -124,6 +128,7 @@ const BannerMain = () => {
               </div>
             </div>
             <img
+              ref={imageRef}
               className="banner-image"
               src={windowRef.current > 1000 ? item.url : item.urlMobile}
               alt="banner"
