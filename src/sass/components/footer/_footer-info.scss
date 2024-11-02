@@ -238,9 +238,6 @@
     top: 75%;
     font-size: 10px;
   }
-}
-
-@media (max-width: 370px) {
   .footer-info-dev {
     position: static;
     right: 0;
@@ -252,6 +249,8 @@
     margin-top: 5px;
   }
 }
+
+
 
 @media (max-width: 340px) {
   .footer-info-grid {

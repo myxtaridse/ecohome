@@ -10,9 +10,15 @@
   border-radius: 5px;
   cursor: pointer;
 }
-.header-nav-widget:hover {
-  // background-color: #565656cd;
+.header-nav-widget svg {
+  padding: 2px;
+  background-color: #565656;
+  border-radius: 5px;
+  fill: white;
 }
+// .header-nav-widget:hover .header-nav-widget svg {
+//   background-color: #565656cd;
+// }
 
 .header-nav {
   display: flex;
@@ -117,11 +123,12 @@
   }
 }
 @media (max-width: 350px) {
+  
   .header-nav-widget {
     width: 18px;
     height: 18px;
     padding: 0;
-    
+    margin: 7px 10px;
   }
   .header-nav-widget svg {
     fill: white;
