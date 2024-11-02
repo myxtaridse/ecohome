@@ -1,8 +1,8 @@
 .header-nav-widget {
-  background-color: #565656;
+  // background-color: #565656;
   width: 22px;
   height: 22px;
-  color: white;
+  // color: white;
   padding: 0;
   display: none;
   align-items: center;
@@ -11,7 +11,7 @@
   cursor: pointer;
 }
 .header-nav-widget:hover {
-  background-color: #565656cd;
+  // background-color: #565656cd;
 }
 
 .header-nav {
@@ -47,7 +47,6 @@
   }
   .header-nav {
     transition: 0.7s;
-
     position: absolute;
     transform-origin: 0 0;
     top: 45px;
@@ -82,7 +81,7 @@
 }
 @media (max-width: 500px) {
   .header-nav-widget {
-    display: flex;
+    display: block;
     margin: 0;
   }
   .header-navigation {
