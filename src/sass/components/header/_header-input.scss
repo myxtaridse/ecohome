@@ -1,0 +1,204 @@
+.header-catalog-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background-color: #cf4e32;
+  border-radius: 15px;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.header-catalog-input input {
+  padding-left: 15px;
+  width: 45vw;
+  font-size: 18px;
+  height: 47px;
+  border-radius: 15px;
+  border: 1px solid #cf4f329f;
+}
+
+.header-catalog-search {
+  cursor: pointer;
+  width: 34px;
+  height: 34px;
+  margin: 0 15px 0 5px;
+  border-radius: 0 15px 15px 0;
+}
+.header-catalog-search:hover {
+  background-color: #a63218;
+}
+
+@media (max-width: 1800px) {
+  .header-catalog-input {
+    gap: 5px;
+    border-radius: 15px;
+    font-weight: 550;
+  }
+  .header-catalog-input input {
+    padding-left: 10px;
+    flex: 1;
+    width: 40vw;
+    font-size: 17px;
+    height: 40px;
+    border-radius: 15px;
+    border: 1px solid #cf4f329f;
+  }
+  .header-catalog-search {
+    width: 30px;
+    height: 30px;
+    margin: 0 15px 0 5px;
+    border-radius: 0 15px 15px 0;
+  }
+}
+@media (max-width: 1400px) {
+  .header-catalog-input {
+    gap: 5px;
+    border-radius: 15px;
+    font-weight: 550;
+  }
+  .header-catalog-input input {
+    padding-left: 10px;
+    flex: 1;
+    width: 50vw;
+    font-size: 16px;
+    height: 40px;
+    border-radius: 15px;
+    border: 1px solid #cf4f329f;
+  }
+  .header-catalog-search {
+    width: 28px;
+    height: 28px;
+    margin: 0 15px 0 5px;
+    border-radius: 0 15px 15px 0;
+  }
+}
+@media (max-width: 1300px) {
+  .header-catalog-input {
+    gap: 5px;
+    border-radius: 15px;
+    font-weight: 550;
+  }
+  .header-catalog-input input {
+    padding-left: 10px;
+    flex: 1;
+    width: 40vw;
+    font-size: 16px;
+    height: 40px;
+    border-radius: 15px;
+    border: 1px solid #cf4f329f;
+  }
+  .header-catalog-search {
+    width: 26px;
+    height: 26px;
+    margin: 0 15px 0 5px;
+    border-radius: 0 15px 15px 0;
+  }
+}
+@media (max-width: 1100px) {
+  .header-catalog-input {
+    gap: 5px;
+    border-radius: 15px;
+    font-weight: 550;
+  }
+  .header-catalog-input input {
+    padding-left: 10px;
+    flex: 1;
+    width: 35vw;
+    font-size: 14px;
+    height: 40px;
+    border-radius: 15px;
+    border: 1px solid #cf4f329f;
+  }
+  .header-catalog-search {
+    width: 26px;
+    height: 26px;
+    margin: 0 15px 0 5px;
+    border-radius: 0 15px 15px 0;
+  }
+}
+@media (max-width: 1000px) {
+  .header-catalog-input {
+    font-weight: 550;
+  }
+  .header-catalog-input input {
+    padding-left: 10px;
+    flex: 1;
+    width: 50vw;
+    font-size: 14px;
+    height: 40px;
+    border-radius: 15px;
+    border: 1px solid #cf4f329f;
+  }
+  .header-catalog-search {
+    width: 26px;
+    height: 26px;
+    margin: 0 15px 0 5px;
+    border-radius: 0 15px 15px 0;
+  }
+}
+@media (max-width: 700px) {
+  .header-catalog-input {
+    gap: 0;
+    border-radius: 10px;
+    font-weight: 500;
+  }
+  .header-catalog-input input {
+    padding-left: 10px;
+    flex: 1;
+    width: 40vw;
+    font-size: 14px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #cf4f329f;
+  }
+  .header-catalog-search {
+    width: 22px;
+    height: 22px;
+    margin: 0 10px 0 5px;
+    border-radius: 0 10px 10px 0;
+  }
+}
+@media (max-width: 650px) {
+  .header-catalog-input input {
+    padding-left: 10px;
+    width: 45vw;
+    font-size: 14px;
+    height: 40px;
+  }
+}
+@media (max-width: 600px) {
+  .header-catalog-input input {
+    padding-left: 10px;
+    width: 40vw;
+    font-size: 12px;
+    height: 35px;
+  }
+}
+@media (max-width: 450px) {
+  .header-catalog-input input {
+    padding-left: 10px;
+    width: 47vw;
+    font-size: 12px;
+    height: 32px;
+  }
+}
+@media (max-width: 370px) {
+  .header-catalog-input {
+    border-radius: 5px;
+  }
+  .header-catalog-input input {
+    padding-left: 6px;
+    width: 42vw;
+    font-size: 11px;
+    height: 30px;
+    border-radius: 5px;
+  }
+  .header-catalog-search {
+    width: 16px;
+    height: 16px;
+    margin: 0 5px 9px 5px;
+    border-radius: 0 5px 5px 0;
+  }
+}

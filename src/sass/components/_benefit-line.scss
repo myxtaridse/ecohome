@@ -6,13 +6,20 @@
   // gap: 50px;
   margin: 60px 80px 0 80px;
 }
-.benefitLine-svg {
+.benefitLine-image {
   background-color: #cf4e32;
   width: 80px;
   height: 80px;
-  padding: 15px;
-  border-radius: 50%;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+.benefitLine-image img {
+  width: 55px;
+  height: 55px;
+}
+
 .benefitLine {
   border-left: 1px solid black;
   display: flex;

@@ -1,0 +1,82 @@
+.main-good-status {
+  padding: 2px 5px;
+  background-color: #d9efff;
+  color: #574ccc;
+  border: none;
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  text-align: center;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.main-good-image {
+  justify-content: center;
+  border: 1px solid #cf4e32;
+}
+.main-good-image img {
+  width: 220px;
+  height: 270px;
+  object-fit: contain;
+}
+.good-category {
+  margin: 10px 0 5px;
+
+  justify-content: start;
+  font-size: 12px;
+  gap: 2px;
+}
+.good-category p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 90px;
+  height: 20px;
+  white-space: nowrap;
+  color: rgba(128, 128, 128, 0.8);
+}
+.good-category span {
+  color: rgba(128, 128, 128, 0.8);
+  margin-left: -7px;
+}
+.good-category p:last-of-type {
+  color: rgb(90, 90, 90);
+}
+.good-category div {
+  width: 15px;
+  height: 15px;
+  color: rgba(128, 128, 128, 0.567);
+}
+.good-reviews {
+  justify-content: start;
+  gap: 10px;
+
+  font-weight: 600;
+}
+.good-star {
+  color: #ffce54;
+  padding-top: 5px;
+}
+.good-count {
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.good-count p {
+  font-size: 14px;
+  color: #19a331;
+  position: relative;
+}
+.good-count p::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 9px;
+  width: 5px;
+  height: 5px;
+  background-color: #19a331;
+  border-radius: 50%;
+}
+.flex {
+  display: flex;
+  align-items: center;
+}

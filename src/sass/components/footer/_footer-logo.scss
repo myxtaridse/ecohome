@@ -1,0 +1,26 @@
+.footer-logo {
+  position: absolute;
+  top: -31px;
+  left: 0;
+  width: 45px;
+  height: 25px;
+  animation: carLogo 40s linear infinite;
+}
+.footer-logo img {
+  width: 100%;
+}
+@keyframes carLogo {
+  from {
+    left: 0vw;
+  }
+  to {
+    left: 100vw;
+  }
+}
+@media (max-width: 900px) {
+  .footer-logo {
+    top: -21px;
+    width: 30px;
+    height: 15px;
+  }
+}

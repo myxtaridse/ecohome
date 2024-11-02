@@ -1,8 +1,23 @@
-@use "./header-nav";
-@use "./header-catalog";
+@use "./header/header";
+@use "./header/header-cities";
+@use "./header/header-navigation";
+@use "./header/header-contacts";
+
+@use "./header/header-catalog";
+@use "./header/header-input";
+@use "./header/header-icons";
+
 @use "./banner";
 @use "./benefit-line";
-@use "./footer";
 @use "./loading";
-@use "./footer-info";
 @use "./catalog";
+@use "./partners";
+
+@use "./mainGoods/mainGoods.scss";
+@use "./mainGoods/mainGoodItem.scss";
+
+@use "./footer/footer";
+@use "./footer/footer-grid";
+@use "./footer/footer-info";
+@use "./footer/footer-logo";
+@use "./footer/footer-mailing";

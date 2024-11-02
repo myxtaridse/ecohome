@@ -1,10 +1,7 @@
-import React from "react";
+// import React from "react";
+import HeaderLogIn from "./HeaderLogIn";
 
 const HeaderCatalogIcons = () => {
-// const [comparison, setComparison] = React.useState(0);
-  // const [like, setLike] = React.useState(0);
-  // const [order, setOrder] = React.useState(0);
-  const windowRef = React.useRef(window.innerWidth);
   return (
     <div className="header-catalog-icons">
       <div className="header-catalog-icon-block">
@@ -46,20 +43,10 @@ const HeaderCatalogIcons = () => {
         </div>
         <p>Корзина</p>
       </div>
-      {windowRef.current > 1000 && (
-        <div className="header-catalog-icon-block">
-          <div className="header-catalog-icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="rgba(151,131,121,1)"
-            >
-              <path d="M14 14.252V16.3414C13.3744 16.1203 12.7013 16 12 16C8.68629 16 6 18.6863 6 22H4C4 17.5817 7.58172 14 12 14C12.6906 14 13.3608 14.0875 14 14.252ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13ZM12 11C14.21 11 16 9.21 16 7C16 4.79 14.21 3 12 3C9.79 3 8 4.79 8 7C8 9.21 9.79 11 12 11ZM18.5858 17L16.7574 15.1716L18.1716 13.7574L22.4142 18L18.1716 22.2426L16.7574 20.8284L18.5858 19H15V17H18.5858Z"></path>
-            </svg>
-          </div>
-          <p style={{ color: "#cf4e32" }}>Войти</p>
-        </div>
-      )}
+
+      <div className="header-catalog-login">
+        <HeaderLogIn />
+      </div>
     </div>
   );
 };

@@ -1,0 +1,253 @@
+.footer-info-grid {
+  padding: 10px 80px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+.footer-info-left {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.footer-info-right {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+.footer-info-left p {
+  font-size: 12px;
+}
+.footer-info-left a {
+  color: white;
+  text-decoration: underline dotted rgb(255, 255, 255);
+  font-weight: 600;
+}
+.footer-info-grid p {
+  font-weight: 500;
+}
+.footer-info-right {
+  font-size: 12px;
+  // display: flex;
+  // flex-direction: column;
+  align-items: start;
+}
+.footer-info-right a {
+  color: white;
+  text-decoration: underline dotted rgb(255, 255, 255);
+  font-weight: 600;
+  display: block;
+}
+.footer-info-right a:hover,
+.footer-info-left a:hover {
+  color: rgb(0, 0, 0);
+  text-decoration-color: rgb(0, 0, 0);
+}
+.footer-info-dev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.footer-info-dev:hover {
+  color: black;
+}
+.footer-info-dev div {
+  width: 32px;
+  height: 32px;
+}
+@media (max-width: 1650px) {
+  .footer-info-left h4 {
+    font-size: 14px;
+  }
+  .footer-info-dev {
+    font-size: 14px;
+  }
+  .footer-info-dev div {
+    width: 26px;
+    height: 26px;
+  }
+}
+@media (max-width: 1450px) {
+  .footer-info-grid {
+    padding: 10px 20px;
+    gap: 40px;
+  }
+  .footer-info-left p {
+    font-size: 10px;
+  }
+  .footer-info-left h4 {
+    font-size: 12px;
+  }
+  .footer-info-dev {
+    width: 180px;
+    font-size: 12px;
+    margin-left: auto;
+    margin-right: 20px;
+  }
+  .footer-info-dev div {
+    width: 22px;
+    height: 22px;
+  }
+  .footer-info-right {
+    font-size: 10px;
+  }
+}
+@media (max-width: 1100px) {
+  .footer-info-grid {
+    padding: 10px 20px;
+    gap: 25px;
+  }
+  .footer-info-left {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .footer-info-right {
+    grid-column-start: 3;
+    grid-column-end: 6;
+  }
+  .footer-info-right a {
+    display: inline;
+    margin-right: 20px;
+  }
+  .footer-info-dev {
+    position: absolute;
+    top: 8px;
+    right: -10px;
+    width: 180px;
+    font-size: 12px;
+    margin-left: auto;
+    margin-right: 20px;
+  }
+}
+@media (max-width: 1000px) {
+  .footer-info-grid {
+    padding: 10px 20px 20px;
+  }
+  .footer-info-dev {
+    position: absolute;
+    flex-direction: row-reverse;
+    top: 48px;
+    right: -15px;
+    height: 20px;
+    width: 180px;
+    font-size: 12px;
+    margin-left: auto;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .footer-info-grid {
+    padding: 10px 20px 15px;
+  }
+  .footer-info-left p {
+    font-size: 8px;
+  }
+  .footer-info-left h4 {
+    font-size: 10px;
+  }
+  .footer-info-dev {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 780px) {
+  .footer-info-right a {
+    display: block;
+    margin-right: 20px;
+  }
+  .footer-info-dev {
+    right: -30px;
+    flex-direction: row-reverse;
+    gap: 4px;
+  }
+}
+@media (max-width: 700px) {
+  .footer-info-grid {
+    padding: 10px 20px;
+    position: relative;
+    display: flex;
+    // grid-template-columns: repeat(5, 1fr);
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 10px;
+  }
+  .footer-info-left {
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+  .footer-info-right {
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+  .footer-info-left h4 {
+    font-weight: 700;
+    font-size: 11px;
+  }
+  .footer-info-right p {
+    font-weight: 700;
+    font-size: 11px;
+  }
+  .footer-info-right a {
+    font-size: 8px;
+  }
+  .footer-info-dev {
+    right: -25px;
+    top: 70%;
+  }
+}
+@media (max-width: 550px) {
+  .footer-info-dev {
+    right: -40px;
+    top: 78%;
+    font-size: 10px;
+  }
+  
+  .footer-info-dev div {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-info-grid {
+    padding: 10px 0 10px 10px;
+    gap: 7px;
+  }
+  .footer-info-left h4 {
+    font-size: 9px;
+  }
+  .footer-info-right p {
+    font-size: 9px;
+  }
+  .footer-info-dev {
+    right: -45px;
+    top: 75%;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 370px) {
+  .footer-info-dev {
+    position: static;
+    right: 0;
+    top: 0;
+    font-size: 10px;
+    align-items: start;
+    justify-content: start;
+    margin: 0;
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 340px) {
+  .footer-info-grid {
+    padding: 10px;
+    gap: 7px;
+  }
+}

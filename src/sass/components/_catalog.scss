@@ -3,7 +3,9 @@
   height: 100%;
   overflow-y: scroll;
   scrollbar-width: thin;
-  scrollbar-color: #cf4e32 rgb(255, 255, 255); /* плашка скролла и дорожка */
+  scrollbar-color: #cf4f32bd rgb(231, 231, 231); /* плашка скролла и дорожка */
+  overflow-x: hidden;
+  padding-right: 10px;
 }
 
 .catalog-block::before {
@@ -15,21 +17,21 @@
   left: 2em;
   border: 1rem solid transparent;
   border-top: none;
-
+  z-index: 1001;
   border-bottom-color: #fff;
-  filter: drop-shadow(0 -0.1rem 0.1rem #2e23204e);
 }
 .catalog-block {
   position: absolute;
-  width: 600px;
+  width: 500px;
   height: 700px;
-  top: 125px;
+  top: 145px;
   left: 250px;
   padding: 20px 15px;
   z-index: 1000;
   background-color: #ffffff;
-  border-radius: 20px;
+  border-radius: 20px 0 0 20px;
   box-shadow: 5px 5px 15px #2e232081;
+  overflow-x: hidden;
 }
 .catalog::-webkit-scrollbar-thumb {
   border-radius: 8px;
@@ -37,19 +39,38 @@
 .catalog-bg {
   position: fixed;
   background-color: #85838392;
-  position: absolute;
-  top: 0;
+
+  top: 00px;
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 999;
+  z-index: 98;
 }
 .catalog-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.566);
+  position: relative;
   padding: 5px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.catalog-item:hover {
+  background-color: #c4c3c327;
+}
+.catalog-item:not(.catalog-item:last-of-type)::after {
+  content: " ";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(128, 128, 128, 0.459) 40%,
+    transparent 100%
+  );
 }
 
 .catalog-item:last-of-type {
@@ -61,6 +82,19 @@
 }
 .catalog-arrow {
   width: 30px;
-
   color: grey;
+}
+
+.subCategory {
+  transition: 1s;
+  background-color: #fff;
+  position: fixed;
+  top: 145px;
+  left: 750px;
+  width: 500px;
+  height: 700px;
+  z-index: 1000;
+  padding: 20px;
+  border-radius: 0 20px 20px 0;
+  box-shadow: inset 0px 0px 8px #57575747;
 }

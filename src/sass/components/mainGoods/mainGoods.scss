@@ -1,0 +1,56 @@
+.mainGoods {
+  margin: 100px 180px;
+}
+.mainGoods-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+}
+.mainGoods-title,
+.mainGoods-title-again {
+  position: relative;
+}
+.mainGoods-title {
+  margin-left: 60px;
+  margin-bottom: 40px;
+  gap: 40px;
+  cursor: pointer;
+}
+.mainGoods-title-again div {
+  width: 26px;
+  color: rgba(128, 128, 128, 0.686);
+}
+.mainGoods-title-again p {
+  font-size: 17px;
+}
+.mainGoods-title-again {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 135px;
+  gap: 0;
+  transition: 1s;
+}
+.mainGoods-title:hover .mainGoods-title-again {
+  gap: 10px;
+}
+.main-good {
+  border-radius: 20px;
+  border: 1px solid #cf4e32;
+  padding: 30px 15px 15px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.main-good button {
+  border-radius: 10px;
+  border: none;
+  padding: 10px 15px;
+  background-color: #cf4e32;
+  color: white;
+  font-size: 17px;
+}
+.main-good button:hover {
+  font-size: 18px;
+  background-color: #a63218;
+}

@@ -1,12 +1,12 @@
 import React from "react";
-import banner1 from "../../assets/images-site/banner1.png";
-import banner1Mobile from "../../assets/images-site/i.webp";
-import banner2 from "../../assets/images-site/banner2.png";
-import banner2Mobile from "../../assets/images-site/orig.webp";
-import banner3 from "../../assets/images-site/banner3.png";
-import banner3Mobile from "../../assets/images-site/ytzttpKsHHY.jpg";
-import banner4 from "../../assets/images-site/banner4.png";
-import banner4Mobile from "../../assets/images-site/b52fdb04f5f8b6de900be5c348b33074.jpg";
+import banner1 from "../../assets/images-site/banner1.webp";
+import banner1Mobile from "../../assets/images-site/banner-mobile-1.webp";
+import banner2 from "../../assets/images-site/banner2.webp";
+import banner2Mobile from "../../assets/images-site/banner-mobile-2.webp";
+import banner3 from "../../assets/images-site/banner3.webp";
+import banner3Mobile from "../../assets/images-site/banner-mobile-3.webp";
+import banner4 from "../../assets/images-site/banner4.webp";
+import banner4Mobile from "../../assets/images-site/banner-mobile-4.webp";
 import g81 from "../../assets/images-site/Gr1.svg";
 import Loading from "../Loading/Loading";
 
@@ -56,27 +56,28 @@ const BannerMain = () => {
 
   const [index, setIndex] = React.useState(1);
 
-  // React.useEffect(() => {
-  //   // componentDidUpdate
-  //   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  //   let timerId: any;
-  //   if (index < 4) {
-  //     timerId = setInterval(() => {
-  //       setIndex((prevIndex) => prevIndex + 1);
-  //       // console.log(index);
-  //     }, 7000);
-  //   }
-  //   if (index === 4) {
-  //     setTimeout(() => {
-  //       setIndex(1);
-  //     }, 7000);
-  //   }
+  React.useEffect(() => {
+    // componentDidUpdate
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    let timerId: any;
 
-  //   // componentDidUnmount
-  //   return () => {
-  //     clearInterval(timerId);
-  //   };
-  // }, [index]);
+    if (index < 4) {
+      timerId = setInterval(() => {
+        setIndex((prevIndex) => prevIndex + 1);
+        // console.log(index);
+      }, 7000);
+    }
+    if (index === 4) {
+      setTimeout(() => {
+        setIndex(1);
+      }, 7000);
+    }
+
+    // componentDidUnmount
+    return () => {
+      clearInterval(timerId);
+    };
+  }, [index]);
 
   if (!imageRef || imageRef === null) {
     return <Loading />;

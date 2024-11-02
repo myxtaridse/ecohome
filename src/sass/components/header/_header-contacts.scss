@@ -1,0 +1,213 @@
+.header-contacts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  font-size: 13px;
+}
+.header-phone {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 600;
+}
+.header-phone:last-of-type {
+  cursor: pointer;
+}
+.header-map {
+  width: 17px;
+  margin-top: 2px;
+}
+.header-phone-popup {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: -10px;
+  width: max-content;
+  height: max-content;
+  background-color: #fff;
+  font-size: 17px;
+  font-weight: 650;
+  padding: 5px 10px;
+  border: 1px solid #cf4f32a5;
+  text-decoration: underline dotted #cf4e32;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 10;
+}
+.header-phone-popup::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 100%;
+  top: -5px;
+  left: 1.5em;
+  border: 0.5rem solid transparent;
+  border-top: none;
+  border-bottom-color: #fff;
+  filter: drop-shadow(0 -0.1em 0.01em #cf4f32);
+}
+.header-phone-module {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 60px;
+
+  h1 {
+    text-align: center;
+    font-size: 42px;
+    margin-top: 60px;
+  }
+  input {
+    font-size: 18px;
+    width: 80%;
+    height: 45px;
+    padding-left: 20px;
+  }
+  .header-phone-module-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  .header-phone-module-btns button {
+    width: 250px;
+    height: 50px;
+    border: 1px solid #cf4e32;
+    border-radius: 10px;
+    background-color: #fff;
+    font-size: 20px;
+  }
+  .header-phone-module-btns button:first-of-type {
+    background-color: #cf4e32;
+    color: white;
+  }
+}
+
+@media (max-width: 1300px) {
+  .header-contacts {
+    gap: 20px;
+    font-size: 11px;
+  }
+  .header-map {
+    width: 15px;
+    margin-top: 2px;
+  }
+  .header-phone-popup {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: -10px;
+    width: max-content;
+    height: max-content;
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px 10px;
+    border: 1px solid #cf4f32a5;
+    text-decoration: underline dotted #cf4e32;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .header-phone-popup::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 100%;
+    left: 1.3em;
+    border: 0.4rem solid transparent;
+    border-top: none;
+    border-bottom-color: #fff;
+    // filter: drop-shadow(0 -0.0625rem 0.0625rem #cf4f32ce);
+  }
+}
+@media (max-width: 1100px) {
+  .header-contacts {
+    gap: 30px;
+    font-size: 13px;
+  }
+  .header-map {
+    width: 17px;
+    margin-top: 2px;
+  }
+  .header-phone-popup {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: -10px;
+    width: max-content;
+    height: max-content;
+    background-color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 5px 10px;
+    border: 1px solid #cf4f32a5;
+    text-decoration: underline dotted #cf4e32;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 10;
+  }
+}
+@media (max-width: 900px) {
+  .header-phone {
+    font-size: 10px;
+  }
+  .header-phone .header-map {
+    width: 14px;
+  }
+  .header-phone-popup {
+    top: 22px;
+    right: -10px;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 5px 10px;
+    border: 1px solid #cf4f32a5;
+  }
+}
+
+@media (max-width: 800px) {
+  .header-contacts {
+    gap: 10px;
+  }
+  .header-phone:not(.header-phone:last-of-type) {
+    display: none;
+  }
+  .header-phone {
+    font-size: 10px;
+  }
+  .header-phone .header-map {
+    width: 14px;
+  }
+}
+@media (max-width: 650px) {
+  .header-phone-popup {
+    font-size: 10px;
+  }
+}
+@media (max-width: 500px) {
+  .header-phone .header-map {
+    display: block;
+    svg {
+      fill: rgba(151, 131, 121, 1);
+    }
+  }
+  .header-phone-number {
+    display: none;
+  }
+  .header-phone-popup {
+    right: 0;
+    left: -13px;
+    font-size: 10px;
+    padding: 5px 10px;
+    border: 1px solid #cf4f32a5;
+  }
+}

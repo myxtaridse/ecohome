@@ -1,32 +1,22 @@
 import React from "react";
-import mapLoad from "../../assets/images-site/map-load.png";
+import mapLoad from "../../assets/images-site/map-load.webp";
 
 const FooterMap = () => {
-  // задать ref на карты??, чтобы показывать Loading
   const [isLoading, setLoading] = React.useState(true);
-
-  console.log(isLoading);
-
   return (
-    <div className="footer-yandex">
+    <div className="footer-map">
+      <div className="footer-adress">
+        <h4>г. Киров, ул. Складская д. 33</h4>
+        <h4>Пн-Пт: с 8 до 17</h4>
+      </div>
       {isLoading && <img src={mapLoad} className="footer-map" />}
-
       <iframe
         style={{ display: isLoading ? "none" : "block" }}
         onLoad={() => setLoading(false)}
         className="footer-map"
         title="map"
-        src="https://api-maps.yandex.ru/frame/v1/-/CDd-4Cic?"
+        src="https://api-maps.yandex.ru/frame/v1/-/CDd-4Cic?z=12"
       ></iframe>
-      {/* ) : (
-        <div>Loading</div>
-      )} */}
-
-      <iframe
-        className="footer-review"
-        src="https://yandex.ru/maps-reviews-widget/1408067184?reviews"
-      ></iframe>
-      {/* https://yandex.ru/maps/org/ekokhozbyt/1408067184/ */}
     </div>
   );
 };

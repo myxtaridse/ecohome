@@ -42,6 +42,7 @@ input,
 a,
 button {
   font-family: "Gilroy", sans-serif;
+  cursor: pointer;
 }
 a {
   color: #000;
@@ -66,18 +67,15 @@ a {
   position: relative;
 }
 
-.b {
-  fill: none;
-  stroke: #000000;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+.header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background-color: white;
+  box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.234);
 }
-.cls-1 {
-  fill: #e0e1e2;
-}
-.cls-2 {
-  fill: #1682fc;
-}
-.cls-3 {
-  fill: #2e3a58;
+
+.content {
+  margin-top: 125px;
 }

@@ -1,0 +1,768 @@
+.footer-flex {
+  display: grid;
+  grid-template-columns: repeat(5, calc((100vw - 200px) / 6));
+  align-items: start;
+  justify-content: space-between;
+  gap: 70px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px 100px 0 100px;
+}
+
+.footer-map-block {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.footer-client {
+  grid-column-start: 3;
+  grid-column-end: 3;
+}
+.footer-company {
+  grid-column-start: 4;
+  grid-column-end: 4;
+}
+.footer-contacts {
+  grid-column-start: 5;
+  grid-column-end: 5;
+}
+
+.footer-company,
+.footer-client,
+.footer-contacts {
+  margin-top: 60px;
+}
+.footer-contacts-reviews-block {
+  display: none;
+}
+.footer-webSites {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.footer-title-arrow {
+  display: none;
+}
+.footer-webSites-logo {
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.footer-webSites-logo img {
+  width: 26px;
+  height: 26px;
+}
+.footer-webSites-logo:hover {
+  background-color: #f4a7a7d7;
+}
+
+.footer-company p,
+.footer-client p,
+.footer-contacts p:not(.footer-phone) {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: normal;
+  cursor: pointer;
+}
+.footer-company p:hover,
+.footer-client p:hover,
+.footer-contacts p:hover {
+  color: black;
+  text-decoration-color: black;
+}
+.footer-info-title h2 {
+  font-size: 22px;
+  font-weight: 700;
+}
+.footer-info-title {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+.footer-info-title div {
+  width: 32px;
+}
+.footer-phone {
+  text-decoration: underline dotted rgb(255, 255, 255);
+  margin: 5px 0 15px;
+  font-size: 18px;
+  font-weight: normal;
+}
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 25px;
+}
+.footer-mail {
+  font-size: 22px;
+}
+
+@media (max-width: 1650px) {
+  .footer-flex {
+    gap: 70px;
+  }
+  .footer-contacts {
+    gap: 15px;
+  }
+
+  .footer-info-title h2 {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .footer-info-title {
+    gap: 6px;
+  }
+  .footer-info-title div {
+    width: 20px;
+    padding-top: 5px;
+  }
+  .footer-phone {
+    margin: 5px 0 10px;
+    font-size: 16px;
+  }
+  .footer-company p,
+  .footer-client p,
+  .footer-contacts p:not(.footer-phone) {
+    margin-top: 12px;
+    font-size: 16px;
+  }
+  .footer-mail {
+    font-size: 20px;
+  }
+  .footer-webSites {
+    margin-top: 10px;
+    gap: 15px;
+  }
+
+  .footer-webSites-logo {
+    padding: 7px;
+  }
+  .footer-webSites-logo img {
+    width: 24px;
+    height: 24px;
+  }
+  .footer-map-block {
+    width: 95%;
+  }
+}
+@media (max-width: 1550px) {
+  .footer-flex {
+    gap: 50px;
+    grid-template-columns: repeat(5, calc((100vw - 100px) / 6));
+    padding: 50px 50px 0 50px;
+  }
+}
+@media (max-width: 1220px) {
+  .footer-flex {
+    gap: 15px;
+    grid-template-columns: repeat(5, calc(100vw / 6));
+    padding: 50px 20px 0 20px;
+  }
+  .footer-webSites {
+    gap: 10px;
+  }
+  .footer-webSites-logo {
+    padding: 7px;
+  }
+  .footer-webSites-logo img {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media (max-width: 1100px) {
+  .footer-flex {
+    grid-template-columns: repeat(2, calc(100vw / 2));
+    // justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .footer-map-block {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .footer-client {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin-left: 100px;
+  }
+  .footer-company {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  .footer-contacts {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .footer-map-block {
+    width: 100%;
+    margin: 60px calc(6% * (-1)) 80px calc(6% * (-1));
+  }
+  .footer-company,
+  .footer-client,
+  .footer-contacts {
+    margin-top: 0;
+    padding: 0 20px;
+  }
+  .footer-title-arrow {
+    transform: rotate(0deg);
+    transition: 0.6s;
+    margin-left: auto;
+    display: block;
+  }
+  .footer-title-arrow-down {
+    transform: rotate(-180deg);
+    transition: 0.6s;
+  }
+  .footer-company .footer-info-title,
+  .footer-client .footer-info-title,
+  .footer-contacts .footer-info-title {
+    gap: 15px;
+  }
+  .footer-info-title h2 {
+    font-size: 20px;
+  }
+
+  .footer-company .footer-info-title div,
+  .footer-client .footer-info-title div,
+  .footer-contacts .footer-info-title div {
+    width: 30px;
+  }
+  .footer-client,
+  .footer-company {
+    width: 70%;
+    border-bottom: 1px rgba(255, 255, 255, 0.8) dotted;
+  }
+
+  .footer-list-down-client,
+  .footer-list-down-company {
+    opacity: 0;
+    visibility: hidden;
+    transform-origin: 0 0;
+    transform: scaleY(0);
+    transition: 0.4s;
+    width: 2px;
+    height: 2px;
+    margin: 0;
+    padding-left: 60px;
+    gap: 20px;
+  }
+
+  .showList {
+    opacity: 1;
+    visibility: visible;
+    transform: scaleY(1);
+    width: 100%;
+  }
+  .showListCompany {
+    height: 200px;
+  }
+  .showListClient {
+    height: 260px;
+  }
+
+  .footer-contacts {
+    position: relative;
+    margin: 30px 20px 0;
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(4, calc(100% / 4));
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+    justify-content: space-between;
+
+    .footer-info-title {
+      margin-left: 26px;
+      grid-column-start: 1;
+      grid-column-end: 1;
+
+      h2 {
+        margin-top: 0;
+      }
+    }
+    .footer-contacts-reviews-block {
+      display: inline-block;
+      grid-row-start: 2;
+      grid-column-start: 1;
+      grid-column-end: 1;
+    }
+    .footer-contacts-reviews {
+      border: none;
+      width: 150px;
+      height: 60px;
+    }
+    h1 {
+      margin-top: -15px;
+      grid-row-start: 2;
+      grid-column-start: 4;
+      grid-column-end: 4;
+    }
+    .footer-phone {
+      position: absolute;
+      top: 45px;
+      right: 25px;
+      font-size: 15px;
+    }
+    .footer-mail {
+      margin-top: -15px;
+      font-size: 19px;
+      grid-row-start: 2;
+      grid-column-start: 2;
+      grid-column-end: 2;
+    }
+    .footer-webSites {
+      margin-top: -15px;
+      grid-row-start: 2;
+      grid-column-start: 3;
+      grid-column-end: 3;
+      display: flex;
+      align-items: start;
+      justify-content: start;
+      gap: 20px;
+
+      .footer-webSites-logo {
+        padding: 5px;
+        // background-color: transparent;
+        position: relative;
+      }
+    }
+  }
+}
+@media (max-width: 1000px) {
+  .footer-contacts {
+    margin: 30px 20px 0;
+    width: 95%;
+    grid-template-columns: repeat(4, 200px);
+
+    .footer-info-title {
+      width: 500px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .footer-map-block {
+    width: 90%;
+    margin: 60px auto 80px calc(5% * (-1));
+  }
+
+  .footer-client,
+  .footer-company {
+    width: 80%;
+    margin-left: 0;
+    margin: 0 auto;
+  }
+
+  .footer-info-title h2 {
+    font-size: 17px;
+  }
+  .footer-company .footer-info-title div,
+  .footer-client .footer-info-title div,
+  .footer-contacts .footer-info-title div {
+    width: 24px;
+  }
+  .footer-company .footer-info-title,
+  .footer-client .footer-info-title,
+  .footer-contacts .footer-info-title {
+    gap: 10px;
+  }
+
+  .footer-list-down-client,
+  .footer-list-down-company {
+    padding-left: 20px;
+    gap: 10px;
+  }
+  .showListCompany {
+    height: 180px;
+  }
+  .showListClient {
+    height: 240px;
+  }
+
+  .footer-company p,
+  .footer-client p {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .footer-contacts {
+    margin: 0 30px;
+    .footer-info-title {
+      margin-left: 46px;
+      margin-bottom: 15px;
+      grid-column-start: 1;
+      grid-column-end: 1;
+
+      h2 {
+        margin-top: 0;
+        margin-left: 0;
+      }
+    }
+
+    grid-template-columns: repeat(3, calc(100% / 3));
+    .footer-contacts-reviews-block {
+      display: inline-block;
+      grid-row-start: 2;
+      grid-column-start: 1;
+      grid-column-end: 1;
+      margin-left: 0;
+    }
+    h1 {
+      margin-top: -35px;
+      margin-left: 35px;
+      grid-row-start: 2;
+      grid-column-start: 3;
+      grid-column-end: 3;
+      font-size: 18px;
+    }
+    .footer-phone {
+      position: absolute;
+      top: 32px;
+      right: 61px;
+      font-size: 15px;
+    }
+    .footer-mail {
+      margin-top: -90px;
+      font-size: 15px;
+      margin-left: 50px;
+      grid-row-start: 3;
+      grid-column-start: 3;
+      grid-column-end: 3;
+    }
+
+    .footer-webSites {
+      margin-top: -15px;
+      grid-row-start: 2;
+      grid-column-start: 2;
+      grid-column-end: 2;
+      margin-left: 0;
+
+      .footer-webSites-logo {
+        padding: 7px;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .footer-client,
+  .footer-company {
+    padding: 0;
+  }
+  .footer-company {
+    margin-left: 15px;
+  }
+  .footer-contacts {
+    margin: 0 20px;
+    grid-template-columns: repeat(2, 50%);
+
+    .footer-info-title {
+      margin-left: 7px;
+      margin-bottom: 15px;
+      grid-column-start: 1;
+      grid-column-end: 1;
+
+      h2 {
+        margin-top: 0;
+        margin-left: 0;
+      }
+    }
+
+    .footer-contacts-reviews-block {
+      display: inline-block;
+      grid-row-start: 3;
+      grid-column-start: 2;
+      grid-column-end: 2;
+      margin-left: auto;
+      margin-right: 40px;
+    }
+    h1 {
+      margin-top: 0;
+      margin-left: auto;
+      margin-right: 40px;
+      grid-row-start: 2;
+      grid-column-start: 2;
+      grid-column-end: 2;
+      font-size: 20px;
+    }
+    .footer-phone {
+      position: absolute;
+      top: 32px;
+      right: 40px;
+      font-size: 15px;
+    }
+    .footer-mail {
+      margin-top: -10px;
+      font-size: 20px;
+      margin-left: 10px;
+      grid-row-start: 2;
+      grid-column-start: 1;
+      grid-column-end: 1;
+    }
+    .footer-webSites {
+      width: max-content;
+      margin-top: -20px;
+      grid-row-start: 3;
+      grid-column-start: 1;
+      grid-column-end: 1;
+      margin-left: 0;
+
+      .footer-webSites-logo {
+        padding: 10px;
+      }
+    }
+  }
+}
+@media (max-width: 700px) {
+  .footer-map-block {
+    width: 80%;
+    margin: 40px auto 60px;
+  }
+}
+@media (max-width: 650px) {
+  .footer-flex {
+    padding: 0;
+    margin-left: -10px;
+  }
+  .footer-client,
+  .footer-company {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  .footer-contacts {
+    width: 91%;
+    margin: 0 auto;
+    gap: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+
+    .footer-info-title {
+      margin-left: 0;
+      margin-bottom: 0;
+      grid-column-start: 1;
+      grid-column-end: 1;
+      margin-bottom: 10px;
+    }
+
+    .footer-contacts-reviews-block {
+      display: inline-block;
+      grid-row-start: 3;
+      grid-column-start: 2;
+      grid-column-end: 2;
+      margin: 10px 0 10px 20px;
+      position: absolute;
+      top: 95px;
+      right: 25px;
+    }
+    h1 {
+      margin: 10px 0 0px 0px;
+      grid-row-start: 2;
+      grid-column-start: 2;
+      grid-column-end: 2;
+      font-size: 20px;
+    }
+    .footer-phone {
+      position: absolute;
+      top: 58px;
+      left: 210px;
+      font-size: 11px;
+    }
+    .footer-mail {
+      margin: 21px 0 10px 0px;
+      font-size: 18px;
+      grid-row-start: 2;
+      grid-column-start: 1;
+      grid-column-end: 1;
+    }
+    .footer-webSites {
+      width: max-content;
+      margin-top: -20px;
+      grid-row-start: 3;
+      grid-column-start: 1;
+      grid-column-end: 1;
+      margin-left: 0;
+      gap: 7px;
+      margin: 10px 0 10px 0px;
+
+      .footer-webSites-logo {
+        padding: 7px;
+      }
+    }
+  }
+  
+}
+
+@media (max-width: 550px) {
+  .footer-map-block {
+    width: 97%;
+    margin: 40px auto 60px;
+  }
+  .footer-company p,
+  .footer-client p {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  .footer-list-down-client,
+  .footer-list-down-company {
+    padding-left: 20px;
+    padding-top: 5px;
+    gap: 10px;
+  }
+  .showListCompany {
+    height: 160px;
+  }
+  .showListClient {
+    height: 210px;
+  }
+  .footer-contacts {
+    padding: 0 25px;
+    .footer-info-title {
+      margin-left: -8px;
+      margin-bottom: 10px;
+    }
+    .footer-contacts-reviews-block {
+      margin: 10px 0 10px 20px;
+      top: 80px;
+      right: 30px;
+    }
+    h1 {
+      font-size: 16px;
+    }
+    .footer-mail {
+      margin: 15px 0 10px 0px;
+      font-size: 16px;
+    }
+    .footer-phone {
+      top: 55px;
+      left: 176px;
+      font-size: 10px;
+    }
+    .footer-webSites {
+      width: max-content;
+      margin-top: -25px;
+      gap: 10px;
+      margin: 10px 0 5px 0px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-client,
+  .footer-company {
+    width: 88%;
+  }
+  .footer-map-block {
+    width: 97%;
+    margin: 40px auto 40px;
+  }
+  .footer-contacts {
+    padding: 0 14px;
+
+    .footer-contacts-reviews-block {
+      margin: 10px 0 10px 20px;
+      top: 100px;
+      right: 15px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  
+  .footer-map-block {
+    width: 97%;
+    margin: 15px auto 25px;
+  }
+  .footer-info-title {
+    padding-left: 10px;
+  }
+  .footer-info-title h2 {
+    font-size: 16px;
+  }
+  .footer-client .footer-info-title div,
+  .footer-company .footer-info-title div,
+  .footer-contacts .footer-info-title div {
+    width: 20px;
+  }
+  .footer-company p,
+  .footer-client p {
+    font-size: 13px;
+    margin-top: 5px;
+  }
+  .footer-list-down-client,
+  .footer-list-down-company {
+    padding-left: 40px;
+    padding-top: 5px;
+    gap: 10px;
+  }
+  .showListCompany {
+    height: 140px;
+  }
+  .showListClient {
+    height: 185px;
+  }
+  .footer-contacts {
+    padding: 0 20px;
+
+    .footer-info-title {
+      margin-left: -15px;
+      margin-bottom: 10px;
+    }
+
+    .footer-phone {
+      top: 50px;
+      left: 176px;
+      font-size: 10px;
+    }
+
+    .footer-contacts-reviews-block {
+      position: static;
+      margin: 0;
+      margin-top: 20px;
+      top: 0;
+      right: 0;
+    }
+    .footer-webSites {
+      width: max-content;
+      margin-top: -25px;
+      gap: 10px;
+      margin: 10px 0 5px 0px;
+
+      .footer-webSites-logo {
+        padding: 5px;
+        
+      }
+      .footer-webSites-logo img {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 370px) {
+  .footer-client,
+  .footer-company {
+    width: 91%;
+  }
+  .footer-contacts {
+    padding: 0 14px;
+    
+  }
+}

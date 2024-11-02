@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import "./sass/app.scss";
 import { Route, Routes } from "react-router-dom";
 import MainPage from "./pages/MainPage";
