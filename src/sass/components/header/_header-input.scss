@@ -190,10 +190,11 @@
   }
   .header-catalog-input input {
     padding-left: 6px;
-    width: 36vw;
+    width: max-content;
     font-size: 11px;
     height: 30px;
     border-radius: 5px;
+    flex: 1;
   }
   .header-catalog-search {
     width: 16px;
