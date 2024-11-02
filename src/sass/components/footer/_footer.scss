@@ -4,6 +4,7 @@
   width: 100%;
   margin: 5px 0;
   height: 300px;
+  
 }
 
 .footer-map img {
@@ -180,8 +181,12 @@ hr {
 
 @media (max-width: 350px) {
   .footer-map {
-    width: 100%;
+    width: 99%;
+    
+    margin: 0 auto;
+    padding: 0;
     border-radius: 0;
     height: 240px;
+    float: none;
   }
 }

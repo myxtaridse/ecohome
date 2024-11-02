@@ -59,6 +59,8 @@ const FooterContacts = () => {
       </div>
       <div className="footer-contacts-reviews-block">
         <iframe
+        width="156px"
+        height="65px"
           src="https://yandex.ru/sprav/widget/rating-badge/1408067184?type=rating"
           className="footer-contacts-reviews"
         ></iframe>

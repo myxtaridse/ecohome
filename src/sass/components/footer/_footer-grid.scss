@@ -293,7 +293,9 @@
       }
     }
     .footer-contacts-reviews-block {
-      display: inline-block;
+      width: 150px;
+      height: 60px;
+      display: block;
       grid-row-start: 2;
       grid-column-start: 1;
       grid-column-end: 1;
@@ -347,7 +349,7 @@
     grid-template-columns: repeat(4, 200px);
 
     .footer-info-title {
-      width: 500px;
+      width: max-content;
     }
   }
 }
