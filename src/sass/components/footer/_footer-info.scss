@@ -114,7 +114,7 @@
   .footer-info-dev {
     position: absolute;
     top: 8px;
-    right: -10px;
+    right: 0;
     width: 180px;
     font-size: 12px;
     margin-left: auto;
@@ -129,9 +129,9 @@
     position: absolute;
     flex-direction: row-reverse;
     top: 48px;
-    right: -15px;
+    right: 0;
     height: 20px;
-    width: 180px;
+    width: max-content;
     font-size: 12px;
     margin-left: auto;
     margin-right: 20px;
@@ -197,13 +197,13 @@
     font-size: 8px;
   }
   .footer-info-dev {
-    right: -25px;
+    right: 0;
     top: 70%;
   }
 }
 @media (max-width: 550px) {
   .footer-info-dev {
-    right: -40px;
+    right: 0;
     top: 78%;
     font-size: 10px;
   }
@@ -226,7 +226,7 @@
     font-size: 9px;
   }
   .footer-info-dev {
-    right: -45px;
+    right: 0;
     top: 75%;
     font-size: 10px;
   }
