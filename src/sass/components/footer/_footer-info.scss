@@ -128,7 +128,7 @@
   .footer-info-dev {
     position: absolute;
     flex-direction: row-reverse;
-    top: 48px;
+    top: 70%;
     right: 0;
     height: 20px;
     width: max-content;
@@ -149,6 +149,7 @@
     font-size: 10px;
   }
   .footer-info-dev {
+    top: 65%;
     flex-direction: row;
   }
 }
@@ -159,7 +160,7 @@
     margin-right: 20px;
   }
   .footer-info-dev {
-    right: -30px;
+    right: 0;
     flex-direction: row-reverse;
     gap: 4px;
   }
@@ -199,6 +200,13 @@
   .footer-info-dev {
     right: 0;
     top: 70%;
+  }
+}
+
+@media (max-width: 650px) {
+  .footer-info-dev {
+    right: 0;
+    top: 75%;
   }
 }
 @media (max-width: 550px) {
