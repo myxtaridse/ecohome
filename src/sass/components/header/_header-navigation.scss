@@ -33,7 +33,7 @@
 @media (max-width: 1100px) {
   .header-nav-widget {
     display: flex;
-    margin: 10px 20px 0 0;
+    margin: 0;
   }
 
   .header-navigation {
@@ -83,7 +83,7 @@
 @media (max-width: 500px) {
   .header-nav-widget {
     display: flex;
-    margin: 10px 10px 0 0;
+    margin: 0;
   }
   .header-navigation {
     position: absolute;
@@ -121,7 +121,7 @@
   .header-nav-widget {
     width: 18px;
     height: 18px;
-    padding: 2px;
+    padding: 0;
     
   }
   .header-nav-widget svg {
