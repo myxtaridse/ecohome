@@ -115,6 +115,9 @@
   }
 }
 @media (max-width: 800px) {
+  .header {
+    padding: 0 100px 0 15px;
+  }
   .header-info p {
     left: -15px;
     font-size: 10px;
@@ -129,7 +132,7 @@
 }
 @media (max-width: 650px) {
   .header-info {
-    margin-right: 100px;
+    margin-right: 0px;
   }
   .header-info p {
     top: 26px;
@@ -142,12 +145,11 @@
     text-align: left;
   }
 }
-@media (max-width: 550px) {
-  .header-info {
-    margin-right: 0;
-  }
-}
+
 @media (max-width: 500px) {
+  .header {
+    padding: 0 60px 0 15px;
+  }
   .header-info {
     margin-right: 50px;
   }
@@ -155,9 +157,7 @@
     width: 18px;
     height: 18px;
   }
-  .header-login {
-    display: block;
-  }
+  
   .header-login .header-catalog-icon {
     width: 17px;
     height: 17px;

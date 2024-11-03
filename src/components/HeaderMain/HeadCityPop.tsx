@@ -8,7 +8,7 @@ const HeadCityPop = () => {
   return (
     <div className="header-cities">
       <div className="header-myCity" onClick={() => setIsPopup(!isPopup)}>
-        <div className="header-map">
+        <div className="header-city-svg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"

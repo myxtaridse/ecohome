@@ -143,8 +143,12 @@
     gap: 0;
     border-radius: 10px;
     font-weight: 500;
+    background-color: transparent;
+    margin-left: auto;
+    margin-right: 45px;
   }
   .header-catalog-input input {
+    display: none;
     padding-left: 10px;
     flex: 1;
     width: 40vw;
@@ -153,53 +157,61 @@
     border-radius: 10px;
     border: 1px solid #cf4f329f;
   }
+  
   .header-catalog-search {
-    width: 22px;
-    height: 22px;
-    margin: 0 10px 0 5px;
-    border-radius: 0 10px 10px 0;
+    width: 27px;
+    height: 27px;
+    margin: 0;
+    border-radius: 0;
+    background-color: transparent;
+
+    svg {
+      margin-top: -1px;
+      fill: rgba(151,131,121,1);
+
+    }
+    svg:hover {
+      fill: #a63218;
+    }
+  }
+  .header-catalog-search:hover {
+    background-color: transparent;
   }
 }
-@media (max-width: 650px) {
-  .header-catalog-input input {
-    padding-left: 10px;
-    width: 45vw;
-    font-size: 14px;
-    height: 40px;
-  }
-}
-@media (max-width: 600px) {
-  .header-catalog-input input {
-    padding-left: 10px;
-    width: 40vw;
-    font-size: 12px;
-    height: 35px;
+
+
+
+
+@media (max-width: 500px) {
+  .header-catalog-input {
+    margin-right: 35px;
   }
 }
 @media (max-width: 450px) {
-  .header-catalog-input input {
-    padding-left: 10px;
-    width: 44vw;
-    font-size: 12px;
-    height: 32px;
-  }
-}
-@media (max-width: 370px) {
   .header-catalog-input {
-    border-radius: 5px;
-  }
-  .header-catalog-input input {
-    padding-left: 6px;
-    width: max-content;
-    font-size: 11px;
-    height: 30px;
-    border-radius: 5px;
-    flex: 1;
+    margin-right: 25px;
   }
   .header-catalog-search {
-    width: 16px;
-    height: 16px;
-    margin: 0 5px 9px 5px;
-    border-radius: 0 5px 5px 0;
+    width: 24px;
+    height: 24px;
+
+    svg {
+      margin-top: -1px;
+      fill: rgba(151,131,121,1);
+
+    }
+  }
+}
+@media (max-width: 350px) {
+  .header-catalog-input {
+    margin-right: 20px;
+  }
+  .header-catalog-search {
+    width: 20px;
+    height: 20px;
+    svg {
+      margin-top: -4px;
+    }
+    
   }
 }
