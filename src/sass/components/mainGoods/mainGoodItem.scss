@@ -95,13 +95,15 @@
     left: 25px;
   }
   .main-good-image {
+    margin: 0 auto;
+    width: 90%;
     justify-content: center;
     border: 1px solid #cf4e32;
     border-radius: 5px;
   }
   .main-good-image img {
     width: 100%;
-    max-height: 220px;
+    max-height: 250px;
     height: max-content;
   }
 
