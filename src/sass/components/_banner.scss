@@ -238,10 +238,32 @@
   .banner-arrow-left {
     left: 80%;
   }
+  @keyframes arrow-left {
+    0% {
+      left: 80%;
+    }
+    50% {
+      left: 79%;
+    }
+    100% {
+      left: 80%;
+    }
+  }
 }
 @media (max-width: 400px) {
   .banner-arrow-left {
     left: 78%;
+  }
+  @keyframes arrow-left {
+    0% {
+      left: 78%;
+    }
+    50% {
+      left: 77%;
+    }
+    100% {
+      left: 78%;
+    }
   }
   .banner-text {
     color: white;
@@ -290,6 +312,17 @@
   .banner-arrow-left {
     left: 75%;
   }
+  @keyframes arrow-left {
+    0% {
+      left: 75%;
+    }
+    50% {
+      left: 74%;
+    }
+    100% {
+      left: 75%;
+    }
+  }
 }
 @media (max-width: 340px) {
   .banner-text {
@@ -297,7 +330,7 @@
     padding: 25px 15px 0;
 
     h1 {
-      font-size: 13px;
+      font-size: 14px;
     }
   }
   .banner-subtext {
@@ -324,6 +357,17 @@
 
   .banner-arrow-left {
     left: 80%;
+  }
+  @keyframes arrow-left {
+    0% {
+      left: 80%;
+    }
+    50% {
+      left: 79%;
+    }
+    100% {
+      left: 80%;
+    }
   }
 
   .banner-arrow-right {
