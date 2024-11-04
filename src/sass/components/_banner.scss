@@ -274,17 +274,12 @@
     }
   }
   .banner-button {
-    color: #313131;
-    position: absolute;
-    bottom: 137px;
-    right: 25px;
+    bottom: 140px;
+    right: 10px;
     padding: 0;
-    background-color: #fff;
-    font-weight: 700;
-    border-radius: 10px;
-    width: 130px;
-    height: 35px;
-    font-size: 11px;
+    width: 120px;
+    height: 30px;
+    font-size: 10px;
   }
 
   .banner-button div {
@@ -348,7 +343,14 @@
   }
 }
 @media (max-width: 300px) {
-  
+  .banner-text {
+    color: white;
+    padding: 15px 10px 0;
+
+    h1 {
+      font-size: 14px;
+    }
+  }
   .banner-arrow {
     top: 85%;
     width: 20px;
@@ -374,7 +376,7 @@
     right: 7px;
   }
   .banner-button {
-    bottom: 137px;
+    bottom: 125px;
     right: 15px;
     width: 120px;
     height: 30px;
