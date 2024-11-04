@@ -55,7 +55,7 @@
     width: 0;
     height: 0;
     bottom: 100%;
-    top: -6.5px;
+    top: -8px;
     left: 1.5em;
     border: 0.5rem solid transparent;
     border-top: none;
@@ -171,15 +171,28 @@
     padding: 0 45px 0 5px;
   }
 }
-@media (max-width: 350px) {
+@media (max-width: 450px) {
   .header-info p {
     top: 26px;
     left: -14px;
     width: 90px;
     height: max-content;
-    font-size: 9px;
+    font-size: 7px;
     font-weight: 600;
     padding: 3px 7px;
     text-align: left;
+  }
+  .header-info p::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 100%;
+    top: -4px;
+    left: 2.6em;
+    border: 0.3rem solid transparent;
+    border-top: none;
+    border-bottom-color: #fff;
+    filter: drop-shadow(0 -0.1em 0.01em #cf4f32d7);
   }
 }

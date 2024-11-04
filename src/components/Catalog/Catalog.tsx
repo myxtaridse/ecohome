@@ -690,10 +690,7 @@ const Catalog = () => {
           setIsCatalog(false)
         }
       }}
-      style={{
-        display: isCatalog ? "block" : "none",
-        borderRadius: activeCategory ? "20px 0 0 20px" : "20px",
-      }}
+      
     >
       <div className="catalog">
         {catalog.map((item) => (
@@ -708,7 +705,7 @@ const Catalog = () => {
             <div className="catalog-item-main">
             <img style={{ width: "40px" }} src={item.svg} />
             <p>{item.title}</p>
-            <div className={["catalog-arrow", "catalog-arrow-main", arrowDown && activeCategory === item.id && 'catalog-arrow-down'].join(" ")}>
+            <div className={["catalog-arrow", "catalog-arrow-main", arrowDown && activeCategory === item.id ? 'catalog-arrow-down' : ''].join(" ")}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
