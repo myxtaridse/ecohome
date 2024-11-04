@@ -153,21 +153,18 @@
   .banner-button {
     color: #313131;
     position: absolute;
-    bottom: 140px;
-    right: 30px;
-    padding: 10px 15px;
+    bottom: 135px;
+    right: 25px;
+    padding: 0;
     background-color: #fff;
     font-weight: 700;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border-radius: 10px;
+    width: 180px;
+    height: 40px;
   }
 
   .banner-arrow {
     position: absolute;
-    // bottom: -100px;
     top: 375px;
     width: 30px;
     height: 30px;
