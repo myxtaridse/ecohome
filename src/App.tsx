@@ -1,8 +1,9 @@
 // import React from "react";
 import "./sass/app.scss";
 import { Route, Routes } from "react-router-dom";
-import MainPage from "./pages/MainPage";
+// import MainPage from "./pages/MainPage";
 import MainLayout from "./layout/MainLayout";
+import CatalogPage from "./pages/CatalogPage";
 
 function App() {
   // const PaymentOrder = React.lazy(
@@ -13,7 +14,8 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<MainLayout />}>
-        <Route path="/" element={<MainPage />} />
+        {/* <Route path="/" element={<MainPage />} /> */}
+        <Route path="/catalog" element={<CatalogPage />} />
       </Route>
     </Routes>
   );

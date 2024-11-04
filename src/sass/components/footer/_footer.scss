@@ -150,6 +150,9 @@ hr {
 }
 
 @media (max-width: 500px) {
+  .footerNew {
+    margin-top: 50px;
+  }
   hr {
     margin: 15px 0 4px;
     color: rgba(255, 255, 255, 0.149);

@@ -80,3 +80,9 @@ a {
 .content {
   margin-top: 125px;
 }
+
+@media (max-width: 500px) {
+  .content {
+    margin-top: 75px;
+  }
+}

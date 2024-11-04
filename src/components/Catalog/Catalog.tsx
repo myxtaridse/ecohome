@@ -676,12 +676,20 @@ const Catalog = () => {
   const [activeCategory, setActiveCategory] = React.useState<string | null>(
     null
   );
+  // const [isSubCategory, setIsSubCategory] = React.useState(false);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const { setIsCatalog, isCatalog }: any = React.useContext(CustomContext);
+  const { setIsCatalog, isCatalog, windowRef }: any = React.useContext(CustomContext);
+
+  const [arrowDown, setArrowDown] = React.useState(false);
+  
   return (
     <div
       className="catalog-block"
-      onMouseLeave={() => setIsCatalog(false)}
+      onMouseLeave={() => {
+        if (windowRef.current > 500) {
+          setIsCatalog(false)
+        }
+      }}
       style={{
         display: isCatalog ? "block" : "none",
         borderRadius: activeCategory ? "20px 0 0 20px" : "20px",
@@ -694,11 +702,13 @@ const Catalog = () => {
             className="catalog-item"
             onClick={() => {
               setActiveCategory(item.id);
+              setArrowDown(!arrowDown);
             }}
           >
+            <div className="catalog-item-main">
             <img style={{ width: "40px" }} src={item.svg} />
             <p>{item.title}</p>
-            <div className="catalog-arrow">
+            <div className={["catalog-arrow", "catalog-arrow-main", arrowDown && activeCategory === item.id && 'catalog-arrow-down'].join(" ")}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -707,11 +717,12 @@ const Catalog = () => {
                 <path d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z"></path>
               </svg>
             </div>
+            </div>
 
-            {activeCategory === item.id && (
-              <div className="subCategory">
+            {arrowDown && activeCategory === item.id && (
+              <div className={["subCategory", windowRef.current <= 500 && activeCategory === item.id && "catalog-item-sub-show"].join(" ")}>
                 {item.list.map((li) => (
-                  <div key={li.id} className="catalog-item">
+                  <div key={li.id} className="catalog-item-main">
                     <p>{li.subTitle}</p>
                     <div className="catalog-arrow">
                       <svg

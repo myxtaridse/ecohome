@@ -9,6 +9,7 @@ import banner4 from "../../assets/images-site/banner4.webp";
 import banner4Mobile from "../../assets/images-site/banner-mobile-4.webp";
 import g81 from "../../assets/images-site/Gr1.svg";
 import Loading from "../Loading/Loading";
+import { CustomContext } from "../../layout/MainLayout";
 
 const gallery = [
   {
@@ -51,7 +52,8 @@ const gallery = [
 ];
 
 const BannerMain = () => {
-  const windowRef = React.useRef(window.innerWidth);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const {windowRef}: any = React.useContext(CustomContext)
   const imageRef = React.useRef<HTMLImageElement>(null);
 
   const [index, setIndex] = React.useState(1);

@@ -16,7 +16,10 @@ const HeaderCatalog = () => {
       <HeaderCatalogList />
       <HeaderCatalogInput />
       <HeaderCatalogIcons />
-      {/* {windowRef.current > 1000 && <Catalog />} */}
+      {/* <div className="header-catalog-show">
+      <Catalog />
+      </div> */}
+
     </div>
   );
 };
