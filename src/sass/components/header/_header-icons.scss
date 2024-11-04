@@ -39,6 +39,10 @@
     justify-content: center;
 }
 
+.header-icons-bell p {
+  font-size: 12px;
+}
+
 
 @media (max-width: 1800px) {
   .header-catalog-icons {
@@ -61,6 +65,7 @@
     font-size: 12px;
     padding-top: 0;
   }
+  
 }
 @media (max-width: 1400px) {
   .header-catalog-icons {
@@ -79,8 +84,10 @@
     right: -7px;
     width: 16px;
     height: 16px;
-    font-size: 11px;
     padding-top: 0;
+  }
+  .header-icons-bell p {
+    font-size: 11px;
   }
 }
 @media (max-width: 1100px) {
@@ -104,8 +111,11 @@
     right: -7px;
     width: 16px;
     height: 16px;
-    font-size: 11px;
+    
     padding-top: 0;
+  }
+  .header-icons-bell p {
+    font-size: 11px;
   }
 }
 
@@ -130,8 +140,10 @@
     right: -8px;
     width: 16px;
     height: 16px;
-    font-size: 10px;
     padding-top: 0;
+  }
+  .header-icons-bell p {
+    font-size: 10px;
   }
 }
 @media (max-width: 900px) {
@@ -157,9 +169,12 @@
     right: -8px;
     width: 16px;
     height: 16px;
-    font-size: 10px;
     padding-bottom: 2px;
   }
+  .header-icons-bell p {
+    display: block;
+  }
+  
 }
 @media (max-width: 500px) {
   .header-catalog-icons {
@@ -185,13 +200,12 @@
     right: -4px;
     width: 14px;
     height: 14px;
-    font-size: 9px;
     padding-bottom: 0;
   }
-  .header-icons-bell span {
-    margin-top: 40%;
-    height: max-content;
+  .header-icons-bell p {
+    font-size: 9px;
   }
+  
 }
 
 @media (max-width: 350px) {
@@ -213,12 +227,11 @@
     width: 12px;
     height: 12px;
     padding-top: 0;
-    font-size: 8px;
     padding-bottom: 0px;
   }
-  .header-icons-bell span {
-    margin-top: 20%;
-    height: max-content;
+  .header-icons-bell p {
+    font-size: 8px;
   }
+  
 }
 

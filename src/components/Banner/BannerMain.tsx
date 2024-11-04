@@ -140,7 +140,7 @@ const BannerMain = () => {
               <>
                 <img className="banner-image-svg" src={g81} alt="banner" />
                 <button className="banner-button">
-                  <span>Каталог продукции</span>
+                  <p>Каталог продукции</p>
                   <div>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
