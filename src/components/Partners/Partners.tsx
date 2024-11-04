@@ -24,6 +24,7 @@ import scovo from "../../assets/images-logo-partners/scovo.webp";
 import supra from "../../assets/images-logo-partners/supra.webp";
 import svip from "../../assets/images-logo-partners/svip.webp";
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const partners = [
   {
     id: 1,

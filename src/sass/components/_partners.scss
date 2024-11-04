@@ -39,11 +39,31 @@
 
 .partner-item {
   width: 120px;
-
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .partner-item img {
   width: 100%;
+}
+
+@media (max-width: 500px) {
+  .partners {
+    width: 90%;
+    margin: 70px auto;
+  }
+  .partners h2 {
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .partners-container {
+    margin: 20px auto 0;
+  }
+  .partners-track {
+    padding-right: 15px;
+    gap: 20px;
+  }
+  .partner-item {
+    width: 50px;
+  }
 }
