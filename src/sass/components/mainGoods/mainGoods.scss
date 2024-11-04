@@ -54,3 +54,51 @@
   font-size: 18px;
   background-color: #a63218;
 }
+
+@media (max-width: 500px) {
+  .mainGoods {
+    margin: 20px 10px;
+  }
+  .mainGoods-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+  .mainGoods-title {
+    margin-left: 10px;
+    margin-bottom: 0;
+    gap: 10px;
+
+  }
+  .mainGoods-title h1 {
+    font-size: 18px;
+  }
+  .mainGoods-title-again div {
+    margin-top: -2px;
+    width: 14px;
+  }
+  .mainGoods-title-again p {
+    font-size: 11px;
+  }
+  .mainGoods-title-again {
+    top: 5px;
+    left: 63px;
+    gap: 0;
+    transition: 1s;
+  }
+
+  .main-good {
+    border-radius: 0;
+    border: none;
+    padding: 30px 15px 15px;
+  }
+  .main-good button {
+    border-radius: 5px;
+    border: none;
+    padding: 9px;
+    font-size: 15px;
+  }
+  .main-good button:hover {
+    font-size: 16px;
+  }
+}

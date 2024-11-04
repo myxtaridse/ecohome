@@ -4,9 +4,9 @@ import MainBenefitLine from "../components/MainBenefitLine/MainBenefitLine";
 import { CustomContext } from "../layout/MainLayout";
 import Partners from "../components/Partners/Partners";
 
-// import MainGoods from "../components/MainGoods/MainGoods";
-// import { goodsNew } from "../const/const";
-// import { goodsSale } from "../const/const";
+import MainGoods from "../components/MainGoods/MainGoods";
+import { goodsNew } from "../const/const";
+import { goodsSale } from "../const/const";
 
 const MainPage = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -17,8 +17,8 @@ const MainPage = () => {
       <BannerMain />
       <MainBenefitLine />
 
-      {/* <MainGoods goods={goodsSale} title="Акции" /> */}
-      {/* <MainGoods goods={goodsNew} title="Новинки" /> */}
+      <MainGoods goods={goodsSale} title="Акции" />
+      <MainGoods goods={goodsNew} title="Новинки" />
       <Partners />
     </div>
   );

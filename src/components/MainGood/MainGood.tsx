@@ -51,7 +51,7 @@ const MainGood: React.FC<MainGoodType> = ({
           {Array(5)
             .fill("")
             .map(() => (
-              <div style={{ width: "20px" }}>
+              <div className="good-star-item">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
