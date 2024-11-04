@@ -3,7 +3,6 @@
   grid-template-columns: repeat(5, 1fr);
   align-items: center;
   justify-content: center;
-  // gap: 50px;
   margin: 60px 80px 0 80px;
 }
 .benefitLine-image {
@@ -37,4 +36,35 @@
   font-size: 17px;
   font-weight: 550;
   width: 60%;
+}
+
+@media (max-width: 500px) {
+  .benefitLine-block {
+    display: flex;
+    // grid-template-columns: repeat(3, 33%);
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: center;
+    margin: 0;
+    row-gap: 20px;
+  }
+  .benefitLine-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+  }
+  .benefitLine-image img {
+    width: 24px;
+    height: 24px;
+  }
+  .benefitLine p {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 550;
+    width: 90%;
+  }
+  .benefitLine {
+    width: 33vw;
+    border: none;
+  }
 }

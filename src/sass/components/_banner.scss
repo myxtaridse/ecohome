@@ -76,11 +76,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  //   gap: 5px;
   border-radius: 10px;
 }
+.banner-button:hover {
+  background-color: #a63218;
+  color: white;
+}
 .banner-button div {
-  //   margin-top: 2px;
   width: 20px;
 }
 
@@ -117,6 +119,10 @@
 }
 
 @media (max-width: 1000px) {
+
+  .banner {
+    height: 450px;
+  }
   .banner-item {
     width: 97vw;
     height: 400px;
@@ -147,7 +153,7 @@
   .banner-arrow {
     position: absolute;
     // bottom: -100px;
-    top: 360px;
+    top: 375px;
     width: 30px;
     height: 30px;
   }

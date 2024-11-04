@@ -22,7 +22,7 @@ const MainBenefitLine = () => {
       </div>
       <div className="benefitLine">
         <div className="benefitLine-image">
-          <img style={{ width: "50px", height: "50px" }} src={benefitLine3} />
+          <img src={benefitLine3} />
         </div>
         <p>Отсрочка платежа от 15 календ. дней</p>
       </div>
