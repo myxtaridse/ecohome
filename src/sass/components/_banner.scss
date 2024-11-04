@@ -159,8 +159,14 @@
     background-color: #fff;
     font-weight: 700;
     border-radius: 10px;
-    width: 180px;
-    height: 40px;
+    width: 165px;
+    height: 35px;
+    font-size: 13px;
+  }
+
+  .banner-button div {
+    margin-top: 5px;
+    width: 20px;
   }
 
   .banner-arrow {
@@ -171,7 +177,7 @@
   }
 
   .banner-arrow-left {
-    left: 315px;
+    left: 84%;
   }
 
   .banner-arrow-right {
@@ -187,6 +193,7 @@
     }
   }
   .banner-subtext {
+    width: 80%;
     margin-top: 10px;
     display: flex;
     align-items: center;
@@ -226,3 +233,126 @@
     right: 10px;
   }
 }
+
+@media (max-width: 500px) {
+  .banner-arrow-left {
+    left: 80%;
+  }
+}
+@media (max-width: 400px) {
+  .banner-arrow-left {
+    left: 78%;
+  }
+  .banner-text {
+    color: white;
+    padding: 25px 15px 0;
+
+    h1 {
+      font-size: 15px;
+    }
+  }
+  .banner-button {
+    color: #313131;
+    position: absolute;
+    bottom: 137px;
+    right: 25px;
+    padding: 0;
+    background-color: #fff;
+    font-weight: 700;
+    border-radius: 10px;
+    width: 130px;
+    height: 35px;
+    font-size: 11px;
+  }
+
+  .banner-button div {
+    margin-top: 3px;
+    width: 14px;
+  }
+  .banner-subtext {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+
+    p {
+      font-size: 12px;
+      font-weight: 500;
+    }
+    div {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+@media (max-width: 350px) {
+  .banner-arrow-left {
+    left: 75%;
+  }
+}
+@media (max-width: 340px) {
+  .banner-text {
+    color: white;
+    padding: 25px 15px 0;
+
+    h1 {
+      font-size: 13px;
+    }
+  }
+  .banner-subtext {
+    margin-top: 20px;
+    gap: 5px;
+
+    p {
+      font-size: 10px;
+      font-weight: 500;
+    }
+    div {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+@media (max-width: 300px) {
+  
+  .banner-arrow {
+    top: 85%;
+    width: 20px;
+    height: 20px;
+  }
+
+  .banner-arrow-left {
+    left: 80%;
+  }
+
+  .banner-arrow-right {
+    right: 7px;
+  }
+  .banner-button {
+    bottom: 137px;
+    right: 15px;
+    width: 120px;
+    height: 30px;
+    font-size: 10px;
+  }
+
+  .banner-button div {
+    margin-top: 3px;
+    width: 12px;
+  }
+
+  .banner-subtext {
+    width: 65%;
+  }
+  .banner-item-bg {
+    height: 34%;
+  }
+  .banner-image-svg {
+    width: 70px;
+    bottom: 0.0946em;
+    right: 0;
+  }
+  
+}
+
