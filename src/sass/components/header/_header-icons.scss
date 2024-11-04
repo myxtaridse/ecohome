@@ -24,8 +24,7 @@
 .header-catalog-icon:hover svg {
   fill: #565656;
 }
-.header-catalog-icon span {
-  
+.header-icons-bell {
   position: absolute;
   top: -8px;
   right: -8px;
@@ -40,6 +39,7 @@
     justify-content: center;
 }
 
+
 @media (max-width: 1800px) {
   .header-catalog-icons {
     gap: 30px;
@@ -52,7 +52,8 @@
     width: 28px;
     height: 28px;
   }
-  .header-catalog-icon span {
+
+  .header-icons-bell {
     top: -6px;
     right: -7px;
     width: 17px;
@@ -73,7 +74,7 @@
     width: 26px;
     height: 26px;
   }
-  .header-catalog-icon span {
+  .header-icons-bell {
     top: -6px;
     right: -7px;
     width: 16px;
@@ -98,7 +99,7 @@
     width: 25px;
     height: 25px;
   }
-  .header-catalog-icon span {
+  .header-icons-bell {
     top: -6px;
     right: -7px;
     width: 16px;
@@ -124,7 +125,7 @@
     width: 25px;
     height: 25px;
   }
-  .header-catalog-icon span {
+  .header-icons-bell {
     top: -8px;
     right: -8px;
     width: 16px;
@@ -151,7 +152,7 @@
     width: 26px;
     height: 26px;
   }
-  .header-catalog-icon span {
+  .header-icons-bell {
     top: -8px;
     right: -8px;
     width: 16px;
@@ -178,7 +179,7 @@
     width: 22px;
     height: 22px;
   }
-  .header-catalog-icon span {
+  .header-icons-bell {
     top: -5px;
     right: -4px;
     width: 14px;
@@ -201,7 +202,7 @@
     width: 20px;
     height: 20px;
   }
-  .header-catalog-icon span {
+  .header-icons-bell {
     top: -5px;
     right: -4px;
     width: 12px;
