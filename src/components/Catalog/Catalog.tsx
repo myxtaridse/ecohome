@@ -678,7 +678,7 @@ const Catalog = () => {
   );
   // const [isSubCategory, setIsSubCategory] = React.useState(false);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const { setIsCatalog, isCatalog, windowRef }: any = React.useContext(CustomContext);
+  const { setIsCatalog, windowRef }: any = React.useContext(CustomContext);
 
   const [arrowDown, setArrowDown] = React.useState(false);
   
