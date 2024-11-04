@@ -716,8 +716,8 @@ const Catalog = () => {
             </div>
             </div>
 
-            {arrowDown && activeCategory === item.id && (
-              <div className={["subCategory", windowRef.current <= 500 && activeCategory === item.id && "catalog-item-sub-show"].join(" ")}>
+            {/* {activeCategory === item.id && ( */}
+              <div className={["subCategory", windowRef.current <= 500 && activeCategory === item.id && arrowDown && "catalog-item-sub-show"].join(" ")}>
                 {item.list.map((li) => (
                   <div key={li.id} className="catalog-item-main">
                     <p>{li.subTitle}</p>
@@ -733,7 +733,7 @@ const Catalog = () => {
                   </div>
                 ))}
               </div>
-            )}
+            {/* )} */}
           </div>
         ))}
       </div>
