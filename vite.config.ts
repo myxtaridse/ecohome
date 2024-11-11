@@ -11,5 +11,5 @@ export default defineConfig({
       },
     },
   },
-  // base: "ecohome",
+  base: "ecohome",
 });
