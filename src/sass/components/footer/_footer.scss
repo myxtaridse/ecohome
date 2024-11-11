@@ -26,7 +26,7 @@
   color: white;
 }
 
-hr {
+.footerNew hr {
   width: 100%;
   background-color: #ffffffc6;
   margin: 40px 0 7px;
@@ -65,7 +65,7 @@ hr {
     margin: 5px 0;
     height: 270px;
   }
-  hr {
+  .footerNew hr {
     margin: 50px 0 7px;
   }
 }
@@ -92,7 +92,7 @@ hr {
     margin: 5px auto;
     height: 300px;
   }
-  hr {
+  .footerNew hr {
     margin: 20px 0 7px;
   }
   .footer-review {
@@ -110,7 +110,7 @@ hr {
   }
 }
 @media (max-width: 800px) {
-  hr {
+  .footerNew hr {
     margin: 0px 0 7px;
   }
 }
@@ -125,7 +125,7 @@ hr {
   .footer-adress h4 {
     font-size: 12px;
   }
-  hr {
+  .footerNew hr {
     margin: 20px 0 7px;
   }
 }
@@ -149,7 +149,7 @@ hr {
   .footerNew {
     margin-top: 50px;
   }
-  hr {
+  .footerNew hr {
     margin: 15px 0 4px;
   }
   .footer-adress {
