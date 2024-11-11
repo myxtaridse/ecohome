@@ -20,7 +20,7 @@
   height: 45px;
   border: none;
   padding-left: 10px;
-  border-radius: 10px;
+  border-radius: 5px;
   font-size: 17px;
 }
 .footer-news-input button {
@@ -28,10 +28,8 @@
   position: absolute;
   width: 120px;
   height: 35px;
-  right: calc(120px / 2);
+  right: calc(120px / 1.9);
   top: 6px;
-  border: none;
-  border-radius: 15px;
   background-color: #cf4e32;
   color: white;
 }
@@ -51,7 +49,6 @@
     width: 110px;
     height: 30px;
     top: 5px;
-    border-radius: 10px;
   }
   .footer-news-title {
     font-size: 18px;
@@ -84,7 +81,6 @@
     width: 110px;
     height: 30px;
     top: 5px;
-    border-radius: 10px;
   }
 }
 

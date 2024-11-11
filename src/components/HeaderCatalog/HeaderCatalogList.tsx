@@ -4,14 +4,14 @@ import { useNavigate } from "react-router-dom";
 
 const HeaderCatalogList = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const {windowRef}: any = React.useContext(CustomContext)
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const { setIsCatalog, isCatalog }: any = React.useContext(CustomContext);
   const navigate = useNavigate();
+  console.log(isCatalog, navigate);
+  
   return (
     <div className="header-catalog" onClick={() => {
       setIsCatalog(!isCatalog);
-      if (windowRef.current && windowRef.current <= 500) {
+      // if (windowRef.current && windowRef.current <= 500) {
        if (!isCatalog) {
         navigate('/catalog');
         console.log(isCatalog);
@@ -22,7 +22,7 @@ const HeaderCatalogList = () => {
 
        }
         
-      }
+      // }
     }} >
       <div>
         <svg

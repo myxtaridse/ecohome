@@ -4,11 +4,12 @@ import { Route, Routes } from "react-router-dom";
 import MainPage from "./pages/MainPage";
 import MainLayout from "./layout/MainLayout";
 import CatalogPage from "./pages/CatalogPage";
+import GoodItemPage from "./pages/GoodItemPage"
 
 function App() {
-  // const PaymentOrder = React.lazy(
+  // const GoodItemPage = React.lazy(
   //   () =>
-  //     import(/* webpackChunkName: "Cart" */ "./pages/PaymentOrder/PaymentOrder")
+  //     import(/* webpackChunkName: "GoodItemPage" */ "./pages/GoodItemPage")
   // );
 
   return (
@@ -16,6 +17,7 @@ function App() {
       <Route path="/" element={<MainLayout />}>
         <Route path="/" element={<MainPage />} />
         <Route path="/catalog" element={<CatalogPage />} />
+        <Route path="/goods/article" element={<GoodItemPage />} />
       </Route>
     </Routes>
   );

@@ -1,0 +1,195 @@
+@use './goodItem-main/goodItem-path';
+@use './goodItem-main/goodItem-main';
+@use './goodItem-main/goodItem-parametere';
+@use './goodItem-main/goodItem-add';
+
+@use './goodItem-addition/goodItem-description';
+@use './goodItem-addition/goodItem-reviews/goodItem-reviews';
+@use './goodItem-addition/goodItem-questions';
+
+.goodItem {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 40px;
+    
+}
+.goodItem-flex {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 60px;
+    position: relative;
+}
+
+////// Линия с вкладками описание, отызывы, вопросы
+
+.goodItem-allDescription {
+    margin-top: 50px;
+}
+.goodItem-allDescription-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 80px;
+    position: relative;
+    cursor: pointer;
+    font-size: 14px;
+}
+.goodItem-allDescription-title::after {
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: lightgray;
+}
+.goodItem-allDescription-title h1:nth-of-type(1) {
+    padding: 0 50px;
+    z-index: 10;
+}
+.goodItem-allDescription-title .activeTitle {
+    border-bottom: 2px solid black;
+}
+.goodItem-allDescription-title h1:not(.goodItem-allDescription-title h1:first-of-type) {
+   width: 30%;
+   text-align: center;
+ }
+.goodItem-allDescription-block {
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+    transform: scaleY(0);
+    transform-origin: 0 0;
+    transition: .4s;
+    opacity: 0;
+}
+
+ .activeBlock {
+    margin: 20px 130px;
+    opacity: 1;
+    height: max-content;
+    transform: scaleY(1);
+}
+
+@media (max-width: 1840px) {
+    .goodItem-flex {
+        gap: 20px;
+    }
+    .goodItem-allDescription-title h1:not(.goodItem-allDescription-title h1:first-of-type) {
+        width: 25%;
+      }
+}
+
+@media (max-width: 1650px) {
+    .goodItem {
+        width: 80%;
+        padding-top: 20px;
+    }
+    .goodItem-flex {
+        margin-top: 25px;
+        gap: 60px;
+    }
+    .goodItem-allDescription-title {
+        margin: 0 20px;
+        font-size: 11px;
+    }
+    .activeBlock {
+        margin: 40px 80px;
+    }
+    .goodItem-allDescription-title h1:not(.goodItem-allDescription-title h1:first-of-type) {
+        width: 27%;
+      }
+      .activeBlock {
+        margin: 20px 50px;
+    }
+      
+}
+
+@media (max-width: 1580px) {
+    .goodItem-flex {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 1450px) {
+    .goodItem {
+        width: 85%;
+    }
+    .goodItem-flex {
+        margin-top: 25px;
+    }
+}
+@media (max-width: 1400px) {
+    .goodItem {
+        width: 94%;
+    }
+    .goodItem-flex {
+        gap: 60px;
+    }
+}
+@media (max-width: 1300px) {
+    .goodItem {
+        width: 96%;
+    }
+    .goodItem-flex {
+        gap: 40px;
+    }
+}
+@media (max-width: 1200px) {
+    .goodItem-flex {
+        gap: 30px;
+    }
+}
+@media (max-width: 1100px) {
+    .goodItem {
+        width: 90%;
+    }
+    .goodItem-flex {
+        justify-content: center;
+        gap: 60px;
+    }
+    .goodItem {
+        padding-top: 0px;
+        
+    }
+}
+@media (max-width: 1000px) {
+    .goodItem {
+        width: 93%;
+    }
+    .goodItem-flex {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 800px) {
+    .goodItem-flex {
+        flex-direction: column;
+        align-items: center;
+        
+    }
+   
+}
+
+@media (max-width: 600px) {
+    .goodItem {
+        width: 95%;
+        margin-top: -25px;
+        
+    }
+}
+@media (max-width: 520px) {
+    .goodItem {
+        margin-top: -30px;
+        
+    }
+}
+@media (max-width: 500px) {
+    .goodItem {
+        margin-top: 5px;
+        
+    }
+}

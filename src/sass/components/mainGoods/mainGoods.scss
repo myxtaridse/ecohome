@@ -35,7 +35,7 @@
   gap: 10px;
 }
 .main-good {
-  border-radius: 20px;
+  border-radius: 5px;
   border: 1px solid #cf4e32;
   padding: 30px 15px 15px;
   display: flex;
@@ -43,8 +43,7 @@
   position: relative;
 }
 .main-good button {
-  border-radius: 10px;
-  border: none;
+  border-radius: 5px;
   padding: 10px 15px;
   background-color: #cf4e32;
   color: white;
@@ -83,7 +82,7 @@
   }
   .mainGoods-title-again {
     top: 5px;
-    left: 90px;
+    left: 85px;
     gap: 0;
     transition: 1s;
   }
@@ -95,7 +94,6 @@
   }
   .main-good button {
     border-radius: 5px;
-    border: none;
     padding: 9px;
     font-size: 15px;
   }

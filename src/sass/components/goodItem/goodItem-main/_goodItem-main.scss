@@ -1,0 +1,311 @@
+.goodItem-main {
+    display: flex;
+    margin: 5px 50px;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 30px;
+}
+.goodItem-main-title {
+    width: 150%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.goodItem-add-review {
+    margin-left: 15px;
+    width: 110px;
+    font-size: 13px;
+    background-color: #cf4f32;
+    color: white;
+    border: none;
+    height: 35px;
+}
+
+.goodItem-main-article-reviews {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+.goodItem-main-reviews {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    gap: 20px;
+}
+.goodItem-main-reviews p {
+    text-decoration: underline dotted #565656;
+    margin-top: -2px;
+    font-size: 17px;
+    font-weight: 300;
+}
+.goodItem-main-stars {
+    padding-top: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.goodItem-main-starItem {
+    width: 20px;
+    svg {
+        fill: #ffce54;
+    }
+}
+
+.goodItem-main-image-block {
+    margin-top: -20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.goodItem-main-image {
+    border: 1px solid #cf4f329e;
+    border-radius: 5px;
+    height: 420px;
+}
+
+.goodItem-main-image-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.goodItem-main-image-gallery img {
+    width: 80px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 5px;
+    border: 1px solid #cf4f323d;
+    cursor: pointer;
+    
+}
+.goodItem-main-image-gallery img:hover {
+    border: 1px solid #cf4e32;
+    box-shadow: 2px 2px 15px 2px #cf4f3224;
+    
+}
+.goodItem-main-image-gallery-arrow {
+    width: 40px;
+    transition: .4s;
+    cursor: pointer;
+}
+.goodItem-main-image-gallery-arrow:first-of-type:hover {
+    transform: translateY(-6px);
+}
+.goodItem-main-image-gallery-arrow:last-of-type:hover {
+    transform: translateY(6px);
+}
+
+@media (max-width: 1650px) {
+    .goodItem-main-image-gallery img {
+        width: 60px;
+        height: 80px;
+        
+    }
+    .goodItem-main-image {
+        width: 340px;
+        height: 380px;
+        object-fit: contain;
+    }
+    .goodItem-main-image-block {
+        gap: 20px;
+    }
+    .goodItem-main-reviews p {
+        text-decoration: underline dotted #565656;
+        margin-top: -2px;
+        font-size: 15px;
+    }
+    .goodItem-main-article {
+        font-size: 15px;
+    }
+    .goodItem-main {
+        margin: 0;
+        width: 76%;
+        gap: 20px;
+    }
+    .goodItem-main-reviews {
+        gap: 10px;
+    }
+    .goodItem-main-article-reviews {
+        align-items: start;
+        flex-direction: column;
+        justify-content: start;
+        gap: 5px;
+    }
+    .goodItem-main-reviews-show {
+        display: none;
+    }
+}
+
+@media (max-width: 1580px) {
+    .goodItem-main-image {
+        width: 300px;
+        height: 360px;
+        object-fit: contain;
+    }
+}
+
+@media (max-width: 1400px) {
+    .goodItem-main-image {
+        width: 280px;
+        object-fit: contain;
+    }
+    .goodItem-main {
+        width: 65%;
+        gap: 25px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .goodItem-main-image {
+        width: 240px;
+        height: 320px;
+    }
+    .goodItem-main-reviews p {
+        font-size: 13px;
+    }
+    .goodItem-main-article {
+        font-size: 13px;
+    }
+    .goodItem-main-title {
+        font-size: 16px;
+    }
+    .goodItem-add-review {
+        margin-top: 5px;
+        margin-left: 10px;
+        width: 100px;
+        font-size: 12px;
+        height: 32px;
+    }
+    
+}
+
+@media (max-width: 1100px) {
+    .goodItem-main-article-reviews {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+    }
+    .goodItem-main-image {
+        width: 300px;
+        height: 320px;
+    }
+    .goodItem-main {
+        width: 50%;
+        gap: 20px;
+    }
+    .goodItem-main-image-block {
+        gap: 40px;
+    }
+    .goodItem-main-reviews-show {
+        display: none;
+    }
+}
+
+@media (max-width: 950px) {
+    .goodItem-main-image {
+        width: 280px;
+        height: 340px;
+    }
+    .goodItem-main-image-block {
+        gap: 30px;
+    }
+    .goodItem-main-title {
+        
+        h1 {
+            font-size: 24px;
+        }
+    }
+    
+}
+
+@media (max-width: 800px) {
+    .goodItem-main-image {
+        width: 65vw;
+        height: 360px;
+    }
+    .goodItem-main {
+        margin-right: auto;
+        margin-left: 5vw;
+    }
+    .goodItem-main-image-block {
+        margin-top: -5px;
+    }
+}
+
+@media (max-width: 550px) {
+    .goodItem-main-image-block {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+    .goodItem-main {
+        width: max-content;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .goodItem-main-image-gallery {
+        flex-direction: row;
+        gap: 20px;
+    }
+    
+    .goodItem-main-image-gallery-arrow:first-of-type {
+        transform: rotate(-90deg) translateY(15px);
+
+    }
+    .goodItem-main-image-gallery-arrow:last-of-type {
+        transform: rotate(-90deg) translateY(-15px);
+    }
+    .goodItem-main-image-gallery-arrow:first-of-type:hover {
+        transform: rotate(-90deg) translateY(10px);
+
+    }
+    .goodItem-main-image-gallery-arrow:last-of-type:hover {
+        transform: rotate(-90deg) translateY(-10px);
+    }
+}
+
+@media (max-width: 500px) {
+    .goodItem-main-image {
+        width: 75vw;
+        height: 400px;
+    }
+    .goodItem-main-title {
+        margin: 10px 0;
+    }
+}
+@media (max-width: 400px) {
+    .goodItem-main-title {
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+        gap: 5px;
+    }
+    .goodItem-main-image {
+        width: 100%;
+        height: 400px;
+    }
+    .goodItem-add-review {
+        margin-left: 0;
+        margin-top: 0;
+    }
+    
+}
+
+@media (max-width: 350px) {
+    .goodItem-main-image {
+        height: 400px;
+    }
+    .goodItem-main-image-block {
+        width: 95vw;
+        margin: 0 auto;
+    }
+}

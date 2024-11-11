@@ -38,7 +38,7 @@
   width: 50vw;
   height: 70vh;
   border: 1px solid #cf4e32;
-  border-radius: 20px;
+  border-radius: 5px;
   padding: 10px 20px;
 }
 .header-popup-input {
@@ -69,7 +69,7 @@
   scrollbar-color: #cf4e32 rgb(222, 222, 222); /* плашка скролла и дорожка */
 }
 .header-cities-popup-list::-webkit-scrollbar-thumb {
-  border-radius: 8px;
+  border-radius: 5px;
 }
 .header-cities-popup-list span {
   cursor: pointer;

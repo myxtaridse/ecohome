@@ -1,0 +1,36 @@
+.goodItem-path {
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+    justify-content: start;
+    gap: 5px;
+}
+.goodItem-path p {
+    font-weight: 300;
+}
+.goodItem-path p:last-of-type {
+    font-weight: 600;
+}
+.goodItem-path-arrow {
+    margin-top: 3px;
+    width: 14px;
+
+    svg {
+        fill: rgb(177, 177, 177);
+    }
+}
+
+@media (max-width: 1200px) {
+    .goodItem-path {
+        font-size: 12px;
+    }
+    .goodItem-path p:last-of-type {
+        margin-top: -2px;
+    }
+}
+
+@media (max-width: 600px) {
+    .goodItem-path {
+        flex-wrap: wrap;
+    }
+}

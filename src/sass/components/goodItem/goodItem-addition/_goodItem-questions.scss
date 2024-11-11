@@ -1,0 +1,116 @@
+.goodItem-questions {
+    margin: 20px auto 0;
+    width: 90%;
+
+}
+.goodItem-questions-title {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    h1 {
+        font-size: 34px;
+        font-weight: 600;
+    }
+
+    div {
+        margin-top: 8px;
+        width: 32px;
+    }
+}
+
+.goodItem-questions-subtitle {
+    margin: 40px auto;
+}
+.goodItem-questions form {
+    margin: 20px 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+
+    input, textarea {
+        width: 90%;
+        height: 50px;
+        border: 1px solid #56565671;
+        border-radius: 5px;
+        padding-left: 20px;
+        font-size: 18px;
+    }
+    textarea {
+        height: max-content;
+        min-height: 60px;
+        padding-top: 20px;
+
+
+       
+    }
+    button {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-left: auto;
+        margin-right: 5%;
+        width: 20%;
+        height: 50px;
+        font-size: 18px;
+        color: white;
+        background-color: #CF4E32;
+
+        div {
+            margin-top: 2px;
+            width: 22px;
+            height: 22px;
+        }
+    }
+}
+
+
+
+.goodItem-questions-item h2 {
+    color: #565656;
+    margin: 20px 0 20px 40px;
+}
+
+@media (max-width: 1650px) {
+    .goodItem-questions {
+        margin: 0px auto 0;
+    }
+    .goodItem-questions-title {
+        gap: 10px;
+        h1 {
+            font-size: 26px;
+        }
+    
+        div {
+            margin-top: 5px;
+            width: 26px;
+        }
+    }
+    .goodItem-questions form {
+        margin: 0px 70px;
+        gap: 30px;
+    
+        input, textarea {
+            height: 40px;
+            padding-left: 15px;
+            font-size: 16px;
+        }
+        button {
+            gap: 8px;
+            width: 16%;
+            height: 40px;
+            font-size: 16px;
+    
+            div {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+    .goodItem-questions-subtitle {
+        margin: 25px auto;
+    }
+}

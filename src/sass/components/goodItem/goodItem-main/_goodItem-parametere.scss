@@ -1,0 +1,135 @@
+.goodItem-parameter,
+.goodItem-description {
+    margin-top: 7px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    
+    h2 {
+        text-decoration: underline dotted #000000;
+        font-size: 26px;
+    }
+
+}
+.goodItem-parameter-exchange {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+
+    div {
+        margin-top: -3px;
+        width: 16px;
+        height: 16px;
+
+        svg {
+            fill: #CF4E32;
+        }
+    }
+}
+.goodItem-parameter-block {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.goodItem-parameter-item {
+
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    
+    p {
+        font-size: 14px;
+    }
+
+}
+.goodItem-parameter-item-line {
+   
+        flex: 1;
+        height: 2px;
+        margin: 0 5px 2px 5px;
+        background-color: #fff;
+        border-bottom: 1px dashed rgba(163, 163, 163, 1);
+      
+}
+
+.goodItem-parameter-link {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    div {
+        margin-top: 8px;
+        width: 26px;
+
+        svg {
+            fill: grey;
+        }
+    }
+}
+
+.goodItem-parameter-reviews-show {
+    display: none;
+}
+
+@media (max-width: 1650px) {
+    .goodItem-parameter:nth-of-type(2) {
+        margin-top: -14px;
+    }
+    .goodItem-parameter, .goodItem-description {
+        width: 100%;
+        gap: 30px;
+        
+        h2 {
+            font-size: 22px;
+        }
+    
+    }
+    .goodItem-parameter-reviews-show {
+        display: flex;
+        margin-bottom: 5px;
+    }
+    .goodItem-parameter-item {
+        display: none;
+    }
+    .goodItem-parameter-item:nth-of-type(1),
+        .goodItem-parameter-item:nth-of-type(2),
+        .goodItem-parameter-item:nth-of-type(3),
+        .goodItem-parameter-item:nth-of-type(4) {
+            display: flex;
+        }
+        .goodItem-parameter-exchange {
+            font-size: 15px;
+        }
+}
+
+@media (max-width: 1200px) {
+    .goodItem-parameter:nth-of-type(2) {
+        margin-top: 0px;
+    }
+    .goodItem-parameter,
+    .goodItem-description {
+
+        gap: 20px;
+        width: 95%;
+
+        h2 {
+            font-size: 20px;
+        }
+    
+    }
+    .goodItem-parameter-exchange {
+        font-size: 13px;
+    
+        div {
+            width: 15px;
+            height: 15px;
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .goodItem-parameter:nth-last-of-type(2) {
+        display: none;
+    }
+}

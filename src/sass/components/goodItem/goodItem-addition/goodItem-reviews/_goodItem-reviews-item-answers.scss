@@ -1,0 +1,87 @@
+.goodItem-reviews-item-answer {
+    margin-top: 40px;
+}
+// .goodItem-reviews-item-reviews {
+//     margin: 10px 0;
+// }
+.goodItem-reviews-reviews-list {
+    transform: scaleY(0);
+    transform-origin: 0 0;
+    height: 1px;
+    width: 95%;
+    opacity: 0;
+    transition: all .4s;
+    visibility: hidden;
+}
+.goodItem-reviews-reviews-list-show {
+    transform: scaleY(1);
+    height: max-content;
+    opacity: 1;
+    margin: 20px auto;
+    visibility:visible;
+}
+.goodItem-answers-item-myAnswer {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px;
+
+    textarea {
+        width: 100%;
+        border: 1px solid grey;
+        border-radius: 5px;
+        min-height: 70px;
+        padding-left: 15px;
+        padding-top: 15px;
+    }
+    button {
+        background-color: #CF4E32;
+        width: 120px;
+        height: 40px;
+        color: white;
+    }
+    button:hover {
+        background-color: #a63218;
+    }
+}
+
+.goodItem-reviews-item-answer-actions {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 40px;
+}
+.goodItem-reviews-item-answer-mark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    
+}
+.goodItem-reviews-item-answer-mark-plus,
+.goodItem-reviews-item-answer-mark-minus,
+.goodItem-reviews-item-answer-complain {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        font-size: 16px;
+
+        div {
+            margin-top: 5px;
+            width: 22px;
+
+            svg {
+                fill: #565656c5;
+            }
+        }
+    }
+ 
+
+// @media (max-width: 1650px) {
+//     .goodItem-reviews-reviews-list {
+//         width: 90%;
+//     }
+// }

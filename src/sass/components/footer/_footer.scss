@@ -1,6 +1,6 @@
 .footer-map {
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   width: 100%;
   margin: 5px 0;
   height: 300px;
@@ -18,7 +18,7 @@
 }
 
 .footerNew {
-  margin-top: 500px;
+  margin-top: 100px;
   width: 100vw;
   height: max-content;
   background-color: #cf4e32;
@@ -53,7 +53,6 @@ hr {
   }
   .footer-review {
     margin-top: 17px;
-    border: none;
     width: 160px;
   }
   .footer-adress h4 {
@@ -61,7 +60,6 @@ hr {
     font-weight: 550;
   }
   .footer-map {
-    border-radius: 10px;
     width: 100%;
     margin: 5px 0;
     height: 270px;
@@ -89,8 +87,6 @@ hr {
     gap: 10px;
   }
   .footer-map {
-    border: none;
-    border-radius: 10px;
     width: 94%;
     float: right;
     margin: 5px auto;
@@ -168,7 +164,6 @@ hr {
 @media (max-width: 450px) {
   .footer-map {
     width: 100%;
-    border-radius: 0;
     height: 170px;
   }
   
@@ -188,7 +183,6 @@ hr {
     
     margin: 0 auto;
     padding: 0;
-    border-radius: 0;
     height: 240px;
     float: none;
   }
