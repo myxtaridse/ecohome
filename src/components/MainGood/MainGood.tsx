@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export interface MainGoodType {
   id: string;
@@ -24,6 +25,8 @@ const MainGood: React.FC<MainGoodType> = ({
 }) => {
   if (!isCount) return "";
   return (
+    <>
+    <Link to="/goods/article">
     <div className="main-good">
       <div className="main-good-status">
         {status === "sale" ? "Скидка" : "Новинки"}
@@ -70,6 +73,7 @@ const MainGood: React.FC<MainGoodType> = ({
       </div>
       <button>Добавить в корзину</button>
     </div>
+    </Link></>
   );
 };
 
