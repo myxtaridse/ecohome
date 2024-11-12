@@ -1,0 +1,155 @@
+.header-phone-module {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 60px;
+  
+    h1 {
+      text-align: center;
+      font-size: 42px;
+      margin-top: 60px;
+      font-weight: 650;
+      font-family: 'Gilroy', sans-serif;
+    }
+    input {
+      font-size: 18px;
+      width: 80%;
+      height: 50px;
+      padding-left: 20px;
+      border-radius: 5px;
+      border: 1px solid lightgray;
+    }
+    
+  }
+
+  .header-phone-module-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  .header-phone-module-btns button {
+    width: 250px;
+    height: 50px;
+    border: 1px solid #cf4e32;
+    background-color: #fff;
+    font-size: 20px;
+  }
+  .header-phone-module-btns button:first-of-type {
+    background-color: #cf4e32;
+    color: white;
+  }
+
+  @media (max-width: 1560px) {
+    .header-phone-module {
+        gap: 30px;
+        justify-content: center;
+      
+        h1 {
+          font-size: 36px;
+          margin-top: 0;
+        }
+    }
+  }
+  @media (max-width: 1300px) {
+    .header-cities-popup {
+        width: 60vw;
+        height: 50vh;
+      }
+  }
+
+  @media (max-width: 1000px) {
+    .header-phone-module {
+        h1 {
+          font-size: 32px;
+        }
+        input {
+          font-size: 16px;
+          height: 45px;
+          padding-left: 15px;
+        }
+        
+      }
+      .header-phone-module-btns {
+        gap: 20px;
+        width: 100%;
+      }
+      .header-phone-module-btns button {
+        width: 40%;
+        height: 45px;
+        font-size: 16px;
+      }
+  }
+
+  @media (max-width: 900px) {
+    .header-cities-popup {
+        width: 70vw;
+        height: 45vh;
+      }
+  }
+  @media (max-width: 800px) {
+    .header-cities-popup {
+        width: 80vw;
+        height: 50vh;
+      }
+  }
+  @media (max-width: 700px) {
+    .header-cities-popup {
+        width: 90vw;
+        height: 50vh;
+      }
+  }
+  @media (max-width: 700px) {
+    .header-cities-popup {
+        width: 90vw;
+        height: 50vh;
+      }
+  }
+  @media (max-width: 500px) {
+    .header-cities-popup {
+        width: 90vw;
+        height: 50vh;
+        margin: 5vh auto;
+    }
+    .header-phone-module {
+        h1 {
+          font-size: 28px;
+        }
+        input {
+          width: 97%;
+        }
+        
+      }
+      .header-phone-module-btns {
+        gap: 15px;
+        width: 100%;
+      }
+      .header-phone-module-btns button {
+        width: 50%;
+        height: 45px;
+        font-size: 16px;
+      }
+  }
+@media (max-width: 400px) {
+    .header-cities-popup {
+        width: 90vw;
+        height: 40vh;
+        margin: 5vh auto;
+    }
+    .header-phone-module {
+        
+        input {
+          font-size: 14px;
+          padding-left: 10px;
+        }
+        
+      }
+    .header-phone-module-btns {
+        gap: 10px;
+      }
+      .header-phone-module-btns button {
+        height: 40px;
+        font-size: 14px;
+      }
+}

@@ -58,28 +58,28 @@ const BannerMain = () => {
 
   const [index, setIndex] = React.useState(1);
 
-  React.useEffect(() => {
-    // componentDidUpdate
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    let timerId: any;
+  // React.useEffect(() => {
+  //   // componentDidUpdate
+  //   // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  //   let timerId: any;
 
-    if (index < 4) {
-      timerId = setInterval(() => {
-        setIndex((prevIndex) => prevIndex + 1);
-        // console.log(index);
-      }, 7000);
-    }
-    if (index === 4) {
-      setTimeout(() => {
-        setIndex(1);
-      }, 7000);
-    }
+  //   if (index < 4) {
+  //     timerId = setInterval(() => {
+  //       setIndex((prevIndex) => prevIndex + 1);
+  //       // console.log(index);
+  //     }, 7000);
+  //   }
+  //   if (index === 4) {
+  //     setTimeout(() => {
+  //       setIndex(1);
+  //     }, 7000);
+  //   }
 
-    // componentDidUnmount
-    return () => {
-      clearInterval(timerId);
-    };
-  }, [index]);
+  //   // componentDidUnmount
+  //   return () => {
+  //     clearInterval(timerId);
+  //   };
+  // }, [index]);
 
   if (!imageRef || imageRef === null) {
     return <Loading />;
@@ -133,10 +133,10 @@ const BannerMain = () => {
             <img
               ref={imageRef}
               className="banner-image"
-              src={windowRef.current > 1000 ? item.url : item.urlMobile}
+              src={windowRef.current > 800 ? item.url : item.urlMobile}
               alt="banner"
             />
-            {windowRef.current < 1000 && (
+            {windowRef.current < 800 && (
               <>
                 <img className="banner-image-svg" src={g81} alt="banner" />
                 <button className="banner-button">

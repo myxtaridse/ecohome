@@ -2,7 +2,7 @@ import React from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import Header from "../components/HeaderMain/Header";
 import HeaderCatalog from "../components/HeaderCatalog/HeaderCatalog";
-// import CallPhone from "../components/CallPhone";
+import CallPhone from "../components/CallPhone";
 import Footer from "../components/Footer/Footer";
 
 export interface valueType {
@@ -45,7 +45,7 @@ const MainLayout: React.FC = () => {
         </div>
         <div className="content">
           <Outlet />
-          {/* {isPopup && <CallPhone />} */}
+          {isPopup && <CallPhone />}
         </div>
       {
         location.pathname !== '/catalog'  &&   <Footer />

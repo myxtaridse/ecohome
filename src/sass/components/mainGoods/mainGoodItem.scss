@@ -21,7 +21,6 @@
 }
 .good-category {
   margin: 10px 0 5px;
-
   justify-content: start;
   font-size: 12px;
   gap: 2px;
@@ -83,7 +82,22 @@
   align-items: center;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1600px) {
+  .main-good-status {
+    padding: 2px 5px;
+    width: 80px;
+    font-weight: 600;
+  }
+  .main-good-image img {
+    width: 200px;
+    height: 270px;
+    object-fit: contain;
+  }
+}
+
+
+
+@media (max-width: 600px) {
   .main-good-status {
     padding: 2px 5px;
     width: 60px;
@@ -107,7 +121,7 @@
   }
 
   .good-category {
-    margin: 7px 0 3px;
+    margin: 7px 0 3px 25px;
     font-size: 12px;
     gap: 2px;
   }
@@ -126,6 +140,7 @@
 
 
   .good-reviews {
+    margin-left: 25px;
     justify-content: start;
     gap: 10px;
     font-weight: 600;
@@ -138,13 +153,12 @@
     width: 16px;
   }
   .good-count {
+    margin: 0 25px;
     justify-content: space-between;
     margin-bottom: 15px;
   }
   .good-count p {
     font-size: 12px;
-    color: #19a331;
-    position: relative;
   }
   .good-count h2 {
     font-size: 18px;
@@ -159,5 +173,19 @@
     height: 5px;
     background-color: #19a331;
     border-radius: 50%;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .good-count {
+    margin: 0 10px;
+    margin-bottom: 15px;
+  }
+  .good-reviews {
+    margin-left: 10px;
+  }
+  .good-category {
+    margin: 7px 0 3px 10px;
   }
 }

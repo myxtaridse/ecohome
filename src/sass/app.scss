@@ -94,8 +94,19 @@ a {
   margin-top: 125px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1000px) {
+  .content {
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 600px) {
   .content {
     margin-top: 90px;
+  }
+}
+@media (max-width: 400px) {
+  .content {
+    margin-top: 80px;
   }
 }

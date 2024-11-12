@@ -53,42 +53,7 @@
   border-bottom-color: #fff;
   filter: drop-shadow(0 -0.1em 0.01em #cf4f32);
 }
-.header-phone-module {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
-  gap: 60px;
 
-  h1 {
-    text-align: center;
-    font-size: 42px;
-    margin-top: 60px;
-  }
-  input {
-    font-size: 18px;
-    width: 80%;
-    height: 45px;
-    padding-left: 20px;
-  }
-  .header-phone-module-btns {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-  }
-  .header-phone-module-btns button {
-    width: 250px;
-    height: 50px;
-    border: 1px solid #cf4e32;
-    background-color: #fff;
-    font-size: 20px;
-  }
-  .header-phone-module-btns button:first-of-type {
-    background-color: #cf4e32;
-    color: white;
-  }
-}
 
 @media (max-width: 1300px) {
   .header-contacts {
