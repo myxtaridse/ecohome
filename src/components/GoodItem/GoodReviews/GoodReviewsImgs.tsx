@@ -113,7 +113,7 @@ const GoodReviewsImgs = () => {
                 imagesRef.current.style.translate = `${numberRef - 160}px`; // до -30%
                
                 console.log(imagesRef);
-            } else if (str === 'decr' && numberRef < 0) {
+            } else if (str === 'decr' && numberRef < 70) {
                 // console.log(numberRef);
 
                 imagesRef.current.style.translate = `${numberRef + 160}px`; // до 0%
@@ -130,10 +130,9 @@ const GoodReviewsImgs = () => {
 <div className='goodItem-reviews-imagesBlock-arrow goodItem-reviews-imagesBlock-arrow-left' onClick={() => onClickGallery('decr')}>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11.8284 12.0005L14.6569 14.8289L13.2426 16.2431L9 12.0005L13.2426 7.75781L14.6569 9.17203L11.8284 12.0005Z"></path></svg>
 </div>
-        <div ref={imagesRef} className='goodItem-reviews-imagesBlock-gallery' style={{translate: '0px'}}>
+        <div ref={imagesRef} className='goodItem-reviews-imagesBlock-gallery' style={{translate: '70px'}}>
             {
                 imagesGallery.map((itemImg) => <img src={itemImg.image} key={itemImg.id} />)
-                
             }
         </div>
             <div className='goodItem-reviews-imagesBlock-arrow goodItem-reviews-imagesBlock-arrow-right' onClick={() => onClickGallery('incr')}>

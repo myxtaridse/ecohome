@@ -1,13 +1,18 @@
-// import React from 'react'
+import React from 'react'
+import { CustomContextProductItem } from "../../context/ProductContext";
 
 
 
 const GoodDescription = () => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const valueGood: any = React.useContext(CustomContextProductItem);
   return (
     <div className='goodItem-description'>
       <h2>Описание</h2>
       <div className='goodItem-description-text'>
-      Колосник - это элемент гарнитуры топки, необходимая составляющая любой печи. Решетка для печи выполнена из жаропрочного литейного чугуна и предназначена для поддержания слоя твердого горящего топлива в топке и подвода воздуха в слой топлива через отверстия - прозоры. Колосник также выполняет функцию отвода золы из топочной камеры в зольник. Материал устойчив к повреждениям, деформации, не окисляется при взаимодействии с воздухом.
+       {
+        valueGood[0].description
+       }
       </div>
     </div>
   )

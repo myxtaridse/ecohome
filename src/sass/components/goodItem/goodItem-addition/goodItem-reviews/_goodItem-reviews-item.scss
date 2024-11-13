@@ -1,9 +1,10 @@
 .goodItem-review {
-    margin-top: 20px;
     border: none;
+    margin: 20px auto 0;
     padding: 5px 0;
     border-radius: 5px;
     position: relative;
+    width: 90%;
 }
 
 .goodItem-review::after {
@@ -134,7 +135,7 @@
 
   @media (max-width: 1650px) {
     .goodItem-review {
-        margin-top: 10px;
+        margin: 10px auto 0;
     }
     .goodItem-reviews-item-user-avatar {
         width: 40px;
