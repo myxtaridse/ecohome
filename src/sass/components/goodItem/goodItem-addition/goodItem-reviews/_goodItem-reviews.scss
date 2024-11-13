@@ -133,5 +133,27 @@ transform: translateX(5px);
     .goodItem-reviews-imagesBlock {
         margin-bottom: 20px;
     }
+
     
+    
+}
+
+@media (max-width: 700px) {
+    .goodItem-reviews-imagesBlock {
+        overflow-x: scroll;
+        scrollbar-width: none;
+        -ms-overflow-style: none; 
+    }
+    .goodItem-reviews-imagesBlock::-webkit-scrollbar {
+        display: none; 
+      }
+    .goodItem-reviews-imagesBlock-arrow {
+        display: none;
+    }
+    .goodItem-reviews-imagesBlock::before {
+        display: none;
+    }
+    .goodItem-reviews-imagesBlock::after {
+        display: none;
+    }
 }
