@@ -6,9 +6,7 @@ import GoodParameter from './GoodParameter'
 import GoodDescription from './GoodDescription'
 import GoodQuestions from './GoodQuestions/GoodQuestions'
 import GoodReviews from './GoodReviews/GoodReviews'
-import { CustomContextProductItem } from '../../context/ProductContext'
-
-// import goodItem from '../../../good.json';
+import { CustomContextProductItem } from '../../context/ProductContext';
 
 
 
