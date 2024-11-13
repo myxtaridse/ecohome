@@ -1,11 +1,15 @@
 import React from 'react'
+import db from '../../db.json';
 
 export const CustomContextProductItem = React.createContext(null);
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const ProductContext = ({children}: any) => {
 
-    const [value, setValue] = React.useState(null)
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const valueGood: any = db.goods;
+
+  const [value, setValue] = React.useState(null)
 
 React.useEffect(() => {
     async function reqProduct() {
@@ -14,10 +18,20 @@ React.useEffect(() => {
     }
     reqProduct().then((data) => {
         setValue(data)
-    }).catch((err) => console.log(err)
+    }).catch((err) => 
+    {
+      console.log(err);
+      if (valueGood) {
+        setValue(valueGood)
+      }
+    }
+      
     )
     
-}, []);
+}, [valueGood]);
+
+
+
 
   return (
     <CustomContextProductItem.Provider value={value}>
