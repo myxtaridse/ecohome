@@ -18,43 +18,39 @@
     align-items: start;
     justify-content: space-between;
     gap: 60px;
-    position: relative;
+    // position: relative;
 }
 
 ////// Линия с вкладками описание, отызывы, вопросы
 
 .goodItem-allDescription {
-    margin-top: 50px;
-}
-.goodItem-allDescription-title {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 80px;
+    margin-top: 120px;
     position: relative;
-    cursor: pointer;
-    font-size: 14px;
+    
 }
-.goodItem-allDescription-title::after {
-    content: " ";
+
+.goodItem-allDescription-title {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: lightgray;
+    top: -70px;
+    width: calc(80vw / 3);
+    border-bottom: 1px dotted #565656;
+    text-align: center;
+    font-size: 28px;
 }
-.goodItem-allDescription-title h1:nth-of-type(1) {
-    padding: 0 50px;
-    z-index: 10;
+.goodItem-allDescription-title-description {
+    left: 0%;
+    
+
 }
-.goodItem-allDescription-title .activeTitle {
-    border-bottom: 2px solid black;
+.activeTitle {
+    border-bottom: 1px solid black;
 }
-.goodItem-allDescription-title h1:not(.goodItem-allDescription-title h1:first-of-type) {
-   width: 30%;
-   text-align: center;
- }
+.goodItem-allDescription-title-reviews {
+    left: 33.45%;
+}
+.goodItem-allDescription-title-questions {
+    left: 66.8%;
+}
 .goodItem-allDescription-block {
     height: 0;
     display: flex;
@@ -78,9 +74,7 @@
     .goodItem-flex {
         gap: 20px;
     }
-    .goodItem-allDescription-title h1:not(.goodItem-allDescription-title h1:first-of-type) {
-        width: 25%;
-      }
+    
 }
 
 @media (max-width: 1650px) {
@@ -92,19 +86,7 @@
         margin-top: 25px;
         gap: 60px;
     }
-    .goodItem-allDescription-title {
-        margin: 0 20px;
-        font-size: 11px;
-    }
-    .activeBlock {
-        margin: 40px 80px;
-    }
-    .goodItem-allDescription-title h1:not(.goodItem-allDescription-title h1:first-of-type) {
-        width: 27%;
-      }
-      .activeBlock {
-        margin: 20px 50px;
-    }
+    
       
 }
 
@@ -146,15 +128,13 @@
 @media (max-width: 1100px) {
     .goodItem {
         width: 90%;
+        padding-top: 0px;
     }
     .goodItem-flex {
         justify-content: center;
         gap: 60px;
     }
-    .goodItem {
-        padding-top: 0px;
-        
-    }
+    
 }
 @media (max-width: 1000px) {
     .goodItem {
@@ -171,25 +151,45 @@
         align-items: center;
         
     }
-   
+
+    
+    .goodItem-allDescription {
+        margin-top: 80px;
+        position: static;
+        
+    }
+    .goodItem-allDescription-item {
+        border-bottom:  1px dotted #565656;
+    }
+    .goodItem-allDescription-title {
+        position: static;
+        top: 0;
+        width: 100%;
+        border-bottom: none;
+        text-align: center;
+        font-size: 28px;
+        margin: 20px auto;
+    }
+
+    .activeTitle {
+        border-bottom: none;
+    }
+    
+    .activeBlock {
+        margin: 20px auto;
+    }
 }
 
 @media (max-width: 600px) {
     .goodItem {
         width: 95%;
-        margin-top: -25px;
-        
+        margin-top: -25px; 
     }
+
 }
 @media (max-width: 520px) {
     .goodItem {
         margin-top: -30px;
-        
-    }
-}
-@media (max-width: 500px) {
-    .goodItem {
-        margin-top: 5px;
         
     }
 }

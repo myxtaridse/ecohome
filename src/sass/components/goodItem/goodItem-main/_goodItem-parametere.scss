@@ -89,18 +89,22 @@
         display: flex;
         margin-bottom: 5px;
     }
+    .goodItem-parameter:nth-last-of-type(2) { 
     .goodItem-parameter-item {
         display: none;
-    }
-    .goodItem-parameter-item:nth-of-type(1),
+    }}
+    .goodItem-parameter {
+        .goodItem-parameter-item:nth-of-type(1),
         .goodItem-parameter-item:nth-of-type(2),
         .goodItem-parameter-item:nth-of-type(3),
         .goodItem-parameter-item:nth-of-type(4) {
             display: flex;
         }
-        .goodItem-parameter-exchange {
-            font-size: 15px;
-        }
+    }
+    
+    .goodItem-parameter-exchange {
+        font-size: 15px;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -130,6 +134,20 @@
 
 @media (max-width: 1100px) {
     .goodItem-parameter:nth-last-of-type(2) {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .goodItem-parameter,
+    .goodItem-description {
+        width: 100%;
+    
+    }
+    .goodItem-description {
+        text-align:justify;
+    }
+    .goodItem-parameter-reviews-show {
         display: none;
     }
 }

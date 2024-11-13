@@ -10,7 +10,7 @@ import GoodReviews from './GoodReviews/GoodReviews'
 
 
 const GoodItem = () => {
-    const [isActive, setIsActive] = React.useState(0);
+    const [isActive, setIsActive] = React.useState<number | null>(0);
     console.log(isActive);
     
   return (
@@ -31,22 +31,49 @@ const GoodItem = () => {
       <GoodAdd />
       </div>
       <div className='goodItem-allDescription'>
-        <div className='goodItem-allDescription-title'>
-        <h1 onClick={() => setIsActive(0)} className={[isActive === 0 ? 'activeTitle' : ''].join(" ")}>ОПИСАНИЕ И ХАРАКТЕРИСТИКИ</h1>
-        <h1 onClick={() => setIsActive(1)} className={[isActive === 1 ? 'activeTitle' : ''].join(" ")}>ОТЗЫВЫ</h1>
-        <h1 onClick={() => setIsActive(2)} className={[isActive === 2 ? 'activeTitle' : ''].join(" ")}>ЗАДАТЬ ВОПРОС</h1>
-        </div>
         
-      </div>
-      <div className={['goodItem-allDescription-block scale-1', isActive === 0 ? 'activeBlock' : ''].join(" ")}>
+        
+     <div className='goodItem-allDescription-item'>
+     <h1 onClick={() => {
+      if (isActive !== 0) {
+        setIsActive(0)
+      } else {
+        setIsActive(null)
+      }
+     }} className={["goodItem-allDescription-title goodItem-allDescription-title-description", isActive === 0 ? 'activeTitle' : ''].join(" ")}>ОПИСАНИЕ И ХАРАКТЕРИСТИКИ</h1>
+     <div className={['goodItem-allDescription-block scale-1', isActive === 0 ? 'activeBlock' : ''].join(" ")}>
         <GoodDescription />
         <GoodParameter />
       </div>
-      <div className={['goodItem-allDescription-block scale-2', isActive === 1 ? 'activeBlock' : ''].join(" ")}>
+     </div>
+
+     <div className='goodItem-allDescription-item'>
+     <h1 onClick={() => {
+      if (isActive !== 1) {
+        setIsActive(1)
+      } else {
+        setIsActive(null)
+      }
+     }} className={["goodItem-allDescription-title goodItem-allDescription-title-reviews", isActive === 1 ? 'activeTitle' : ''].join(" ")}>ОТЗЫВЫ</h1>
+     <div className={['goodItem-allDescription-block scale-2', isActive === 1 ? 'activeBlock' : ''].join(" ")}>
         <GoodReviews />
       </div>
+     </div>
+
+      <div className='goodItem-allDescription-item'>
+      <h1 onClick={() =>{
+        if (isActive !== 2) {
+          setIsActive(2)
+        } else {
+          setIsActive(null)
+        }
+      }} className={["goodItem-allDescription-title goodItem-allDescription-title-questions", isActive === 2 ? 'activeTitle' : ''].join(" ")}>ЗАДАТЬ ВОПРОС</h1>
       <div className={['goodItem-allDescription-block scale-3', isActive === 2 ? 'activeBlock' : ''].join(" ")}>
        <GoodQuestions />
+      </div>
+      </div>
+     
+      
       </div>
     </div>
   )

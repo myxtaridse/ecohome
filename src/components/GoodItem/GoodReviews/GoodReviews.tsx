@@ -1,8 +1,6 @@
 // import React from 'react'
 import GoodReviewItem from './GoodReviewItem';
-import image1 from '../../../assets/image.png'
-import image2 from '../../../assets/image-2.png'
-import image3 from '../../../assets/image-3.png'
+import GoodReviewsImgs from './GoodReviewsImgs';
 // import GoodMyReview from './GoodMyReview';
 
 const GoodReviews = () => {
@@ -13,17 +11,7 @@ const GoodReviews = () => {
         <button className='goodItem-reviews-addMy'>Добавить отзыв</button>
         {/* <div><GoodMyReview /></div> */}
         <div className='goodItem-reviews-item'>
-          <div className='goodItem-reviews-imagesBlock'>
-            <img src={image1} />
-            <img src={image2} />
-            <img src={image3} />
-            <img src={image1} />
-            <img src={image2} />
-            <img src={image3} />
-            <img src={image1} />
-            <img src={image2} />
-            <img src={image3} />
-          </div>
+          <GoodReviewsImgs />
           {/* <h2>Какой размер данного изделия?</h2> */}
           <div>
           <GoodReviewItem />
