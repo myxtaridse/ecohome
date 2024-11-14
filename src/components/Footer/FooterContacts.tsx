@@ -3,7 +3,7 @@ import whatsApp from "../../assets/icons/footer-icons/whatsapp.svg";
 import ozon from "../../assets/icons/footer-icons/ozon.svg";
 import wildberries from "../../assets/icons/footer-icons/wildberries.svg";
 import sber from "../../assets/icons/footer-icons/sber.svg";
-import { CustomContext } from "../../layout/MainLayout";
+import { CustomContextMain } from "../../context/MainContext";
 
 const webSites = [
   {
@@ -30,7 +30,7 @@ const webSites = [
 
 const FooterContacts = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const { isPopup, setIsPopup }: any = React.useContext(CustomContext);
+  const { isPopup, setIsPopup }: any = React.useContext(CustomContextMain);
   return (
     <div className="footer-contacts">
       <div className="footer-info-title">

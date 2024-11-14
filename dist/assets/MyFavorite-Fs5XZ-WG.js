@@ -1,0 +1,1 @@
+import{R as e,C as s,j as a}from"./index-k69_DjZI.js";const n=()=>{const{setPathValue:t}=e.useContext(s);e.useEffect(()=>{t(["Главная","Плита печная цельная"])},[t]);const o=+localStorage.getItem("myFavorite");return console.log(o),a.jsx("div",{children:"MyFavorite"})};export{n as default};

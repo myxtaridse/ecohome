@@ -12,6 +12,8 @@
 @use "./loading";
 @use "./catalog";
 @use "./partners";
+@use "./path";
+@use "./error";
 
 @use "./mainGoods/mainGoods.scss";
 @use "./mainGoods/mainGoodItem.scss";

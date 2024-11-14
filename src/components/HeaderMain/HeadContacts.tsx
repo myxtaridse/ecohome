@@ -1,10 +1,10 @@
 import React from "react";
-import { CustomContext, valueType } from "../../layout/MainLayout";
+import { CustomContextMain } from "../../context/MainContext";
 
 const HeadContacts = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const { popupRef, isPopup, setIsPopup }: any = React.useContext<valueType | null>(
-    CustomContext
+  const { popupRef, isPopup, setIsPopup }: any = React.useContext(
+    CustomContextMain
   );
   return (
     <div className="header-contacts">

@@ -1,17 +1,18 @@
-.goodItem-path {
+.path {
+    margin-left: 80px;
     display: flex;
     font-size: 14px;
     align-items: center;
     justify-content: start;
     gap: 5px;
 }
-.goodItem-path p {
+.path p {
     font-weight: 300;
 }
-.goodItem-path p:last-of-type {
+.path p:last-of-type {
     font-weight: 600;
 }
-.goodItem-path-arrow {
+.path-arrow {
     margin-top: 3px;
     width: 14px;
 
@@ -19,18 +20,21 @@
         fill: rgb(177, 177, 177);
     }
 }
+.path-arrow:last-of-type {
+    display: none;
+}
 
 @media (max-width: 1200px) {
-    .goodItem-path {
+    .path {
         font-size: 12px;
     }
-    .goodItem-path p:last-of-type {
+    .path p:last-of-type {
         margin-top: -2px;
     }
 }
 
 @media (max-width: 600px) {
-    .goodItem-path {
+    .path {
         flex-wrap: wrap;
     }
 }

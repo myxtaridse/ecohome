@@ -1,4 +1,4 @@
-@use './goodItem-main/goodItem-path';
+
 @use './goodItem-main/goodItem-main';
 @use './goodItem-main/goodItem-parametere';
 @use './goodItem-main/goodItem-add';
@@ -10,7 +10,7 @@
 .goodItem {
     width: 80%;
     margin: 0 auto;
-    padding-top: 40px;
+    padding-top: 0;
     
 }
 .goodItem-flex {

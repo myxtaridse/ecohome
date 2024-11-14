@@ -32,96 +32,47 @@
 
 @media (max-width: 1800px) {
   .header-catalog-input {
-    gap: 5px;
     font-weight: 550;
   }
   .header-catalog-input input {
     padding-left: 10px;
     flex: 1;
     width: 40vw;
-    font-size: 17px;
+    font-size: 16px;
     height: 40px;
-    border: 1px solid #cf4f329f;
   }
   .header-catalog-search {
     width: 30px;
     height: 30px;
-    margin: 0 15px 0 5px;
   }
 }
 @media (max-width: 1400px) {
-  .header-catalog-input {
-    gap: 5px;
-    font-weight: 550;
-  }
   .header-catalog-input input {
-    padding-left: 10px;
-    flex: 1;
     width: 50vw;
-    font-size: 16px;
-    height: 40px;
-    border: 1px solid #cf4f329f;
   }
   .header-catalog-search {
     width: 28px;
     height: 28px;
-    margin: 0 15px 0 5px;
   }
 }
 @media (max-width: 1300px) {
-  .header-catalog-input {
-    gap: 5px;
-    font-weight: 550;
-  }
   .header-catalog-input input {
-    padding-left: 10px;
-    flex: 1;
     width: 40vw;
-    font-size: 16px;
-    height: 40px;
-    border: 1px solid #cf4f329f;
   }
   .header-catalog-search {
     width: 26px;
     height: 26px;
-    margin: 0 15px 0 5px;
   }
 }
 @media (max-width: 1100px) {
-  .header-catalog-input {
-    gap: 5px;
-    font-weight: 550;
-  }
   .header-catalog-input input {
-    padding-left: 10px;
-    flex: 1;
     width: 35vw;
     font-size: 14px;
-    height: 40px;
-    border: 1px solid #cf4f329f;
-  }
-  .header-catalog-search {
-    width: 26px;
-    height: 26px;
-    margin: 0 15px 0 5px;
   }
 }
 @media (max-width: 1000px) {
-  .header-catalog-input {
-    font-weight: 550;
-  }
   .header-catalog-input input {
-    padding-left: 10px;
-    flex: 1;
     width: 50vw;
-    font-size: 14px;
-    height: 40px;
-    border: 1px solid #cf4f329f;
-  }
-  .header-catalog-search {
-    width: 26px;
-    height: 26px;
-    margin: 0 15px 0 5px;
   }
 }
 @media (max-width: 700px) {
@@ -134,12 +85,6 @@
   }
   .header-catalog-input input {
     display: none;
-    padding-left: 10px;
-    flex: 1;
-    width: 40vw;
-    font-size: 14px;
-    height: 40px;
-    border: 1px solid #cf4f329f;
   }
   
   .header-catalog-search {

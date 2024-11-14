@@ -1,9 +1,9 @@
 import React from "react";
-import { CustomContext } from "../layout/MainLayout";
+import { CustomContextMain } from "../context/MainContext";
 
 const CallPhone = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const { setIsPopup }: any = React.useContext(CustomContext);
+  const { setIsPopup }: any = React.useContext(CustomContextMain);
   let old = 0;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   function inputPhone(e: any) {

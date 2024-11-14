@@ -1,5 +1,4 @@
 import React from 'react'
-import GoodPath from './GoodPath'
 import GoodImg from './GoodImg'
 import GoodAdd from './GoodAdd'
 import GoodParameter from './GoodParameter'
@@ -8,6 +7,7 @@ import GoodQuestions from './GoodQuestions/GoodQuestions'
 import GoodReviews from './GoodReviews/GoodReviews'
 import { CustomContextProductItem } from '../../context/ProductContext';
 import Loading from '../Loading/Loading'
+import { CustomContextMain } from '../../context/MainContext'
 
 
 
@@ -17,13 +17,21 @@ const GoodItem = () => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const valueGood: any = React.useContext(CustomContextProductItem);
     
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const {setPathValue}: any = React.useContext(CustomContextMain);
+
+  React.useEffect(() => {
+      if (valueGood) {
+        setPathValue(['Главная', 'Каталог продукции', valueGood[0].categoryRelative, valueGood[0].categoryChildren])
+      }
+  }, [valueGood, setPathValue])
     
     
  if (valueGood) {
   return (
    
       <div className="goodItem">
-        <GoodPath />
+        
         <div className='goodItem-main-title'>
         
        <h1>{valueGood[0].titleGood}</h1>

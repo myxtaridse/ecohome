@@ -4,15 +4,18 @@ import HeadCityPop from "./HeadCityPop";
 import HeadContacts from "./HeadContacts";
 import HeaderLogo from "../HeaderCatalog/HeaderLogo";
 import HeaderLogIn from "../HeaderCatalog/HeaderLogIn";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   // const windowRef = React.useRef(window.innerWidth);
   const popupRef = React.useRef<HTMLDivElement>(null);
   return (
     <div className="header">
-      <div className="header-logo-block">
-        <HeaderLogo />
-      </div>
+      <Link to='/'>
+        <div className="header-logo-block">
+          <HeaderLogo />
+        </div>
+      </Link>
       <div className="header-info">
         <div
           className="header-info-svg"

@@ -1,4 +1,5 @@
 // import React from "react";
+import { Link } from "react-router-dom";
 import HeaderLogIn from "./HeaderLogIn";
 
 const HeaderCatalogIcons = () => {
@@ -20,7 +21,8 @@ const HeaderCatalogIcons = () => {
         </div>
         <p>Сравнение</p>
       </div>
-      <div className="header-catalog-icon-block">
+      <Link to='/favorite'>
+      <div className="header-catalog-icon-block" >
         <div className="header-catalog-icon">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -36,6 +38,7 @@ const HeaderCatalogIcons = () => {
         </div>
         <p>Избранное</p>
       </div>
+      </Link>
       <div className="header-catalog-icon-block">
         <div className="header-catalog-icon">
           <svg

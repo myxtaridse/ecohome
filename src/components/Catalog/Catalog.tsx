@@ -1,5 +1,4 @@
 import React from "react";
-import { CustomContext } from "../../layout/MainLayout";
 import avto from "../../assets/icons/category/avto.svg";
 import gardenEquipment from "../../assets/icons/category/garden-equipment.svg";
 import decor from "../../assets/icons/category/decor.svg";
@@ -18,6 +17,7 @@ import plate from "../../assets/icons/category/plate.svg";
 import finishingMaterials from "../../assets/icons/category/finishing-materials.svg";
 import bath from "../../assets/icons/category/bath.svg";
 import household from "../../assets/icons/category/household-goods.svg";
+import { CustomContextMain } from "../../context/MainContext";
 
 const catalog = [
   {
@@ -677,7 +677,7 @@ const Catalog = () => {
     null
   );
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const { setIsCatalog, windowRef }: any = React.useContext(CustomContext);
+  const { setIsCatalog, windowRef }: any = React.useContext(CustomContextMain);
 
   const [arrowDown, setArrowDown] = React.useState(false);
   

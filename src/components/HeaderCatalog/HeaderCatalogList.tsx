@@ -1,10 +1,10 @@
 import React from "react";
-import { CustomContext } from "../../layout/MainLayout";
 import { useNavigate } from "react-router-dom";
+import { CustomContextMain } from "../../context/MainContext";
 
 const HeaderCatalogList = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const { setIsCatalog, isCatalog }: any = React.useContext(CustomContext);
+  const { setIsCatalog, isCatalog }: any = React.useContext(CustomContextMain);
   const navigate = useNavigate();
   console.log(isCatalog, navigate);
   

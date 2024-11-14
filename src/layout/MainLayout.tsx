@@ -3,55 +3,38 @@ import { Outlet, useLocation } from "react-router-dom";
 import Header from "../components/HeaderMain/Header";
 import HeaderCatalog from "../components/HeaderCatalog/HeaderCatalog";
 import CallPhone from "../components/CallPhone";
-import Footer from "../components/Footer/Footer";
+// import Footer from "../components/Footer/Footer";
+import Path from "../components/Path";
+import { CustomContextMain } from "../context/MainContext";
 
-export interface valueType {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  windowRef: any;
-  isCatalog: boolean;
-  setIsCatalog: (isCatalog: boolean) => void;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  popupRef: any;
-  isPopup: boolean;
-  setIsPopup: (isPopup: boolean) => void;
-}
-
-export const CustomContext = React.createContext<valueType | null>(null);
 
 const MainLayout: React.FC = () => {
-  const windowRef = React.useRef(window.innerWidth);
-  const [isCatalog, setIsCatalog] = React.useState(false);
-  const [isPopup, setIsPopup] = React.useState(false);
-  const popupRef = React.useRef<HTMLDivElement | null>(null);
   const location = useLocation();
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const {isPopup}: any = React.useContext(CustomContextMain)
 
-  const value: valueType = {
-    windowRef,
-    isCatalog,
-    setIsCatalog,
-    popupRef,
-    isPopup,
-    setIsPopup,
-  };
-
-
+  const showPathInPage = location.pathname !== '/' && location.pathname !== '/catalog';
+  
   
   return (
-    <CustomContext.Provider value={value}>
+    
       <div className="wrapper">
         <div className="header-fixed">
           <Header />
           <HeaderCatalog />
         </div>
         <div className="content">
+          {
+            showPathInPage && <Path />
+          }
           <Outlet />
           {isPopup && <CallPhone />}
         </div>
-      {
+      {/* {
         location.pathname !== '/catalog'  &&   <Footer />
-      }
+      } */}
       </div>
-    </CustomContext.Provider>
+    
   );
 };
 
