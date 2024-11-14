@@ -20,8 +20,7 @@
 }
 
 .loading-logoText {
-  width: 350px;
-  //   margin-bottom: 30px;
+  width: 340px;
 }
 .loading-car {
   position: relative;
@@ -30,15 +29,17 @@
 }
 .loading-car img {
   position: absolute;
-  top: 0;
+  top: 10px;
   left: 0;
-  width: 100px;
-  animation: car 3.2s ease-in-out;
+  width: 85px;
+  animation: car 6s ease-in-out infinite;
+  z-index: 100;
+  
 }
 .loading-line {
   width: 380px;
   background-color: #bdbdbd;
-  height: 30px;
+  height: 25px;
   border-radius: 10px;
   position: relative;
 }
@@ -46,12 +47,13 @@
   content: "";
   width: 20px;
   background-color: #cf4e32;
-  height: 30px;
+  height: 25px;
   border-radius: 10px;
   position: absolute;
   top: 0;
   left: 0;
-  animation: loading-line 3s ease-in-out;
+  animation: loading-line 6s ease-in-out infinite;
+  
 }
 .loading p {
   color: #cf4e32;

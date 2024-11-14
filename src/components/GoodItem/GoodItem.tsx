@@ -7,6 +7,7 @@ import GoodDescription from './GoodDescription'
 import GoodQuestions from './GoodQuestions/GoodQuestions'
 import GoodReviews from './GoodReviews/GoodReviews'
 import { CustomContextProductItem } from '../../context/ProductContext';
+import Loading from '../Loading/Loading'
 
 
 
@@ -84,6 +85,10 @@ const GoodItem = () => {
       </div>
     )
   
+ } else {
+  return (
+    <Loading />
+  )
  }
 }
 

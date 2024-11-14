@@ -1,23 +1,33 @@
-// import React from "react";
+import React from "react";
 import "./sass/app.scss";
 import { Route, Routes } from "react-router-dom";
 import MainPage from "./pages/MainPage";
 import MainLayout from "./layout/MainLayout";
 import CatalogPage from "./pages/CatalogPage";
-import GoodItemPage from "./pages/GoodItemPage"
+import Loading from "./components/Loading/Loading";
+// import GoodItemPage from "./pages/GoodItemPage"
 
 function App() {
-  // const GoodItemPage = React.lazy(
-  //   () =>
-  //     import(/* webpackChunkName: "GoodItemPage" */ "./pages/GoodItemPage")
-  // );
+  const GoodItemPage = React.lazy(
+    () =>
+      import(/* webpackChunkName: "GoodItemPage" */ "./pages/GoodItemPage")
+  );
 
   return (
     <Routes>
       <Route path="/" element={<MainLayout />}>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/catalog" element={<CatalogPage />} />
-        <Route path="/goods/article" element={<GoodItemPage />} />
+        <Route path="/" element={<React.Suspense fallback={<Loading />}>
+          <MainPage />
+        </React.Suspense>} />
+        <Route path="/catalog" element={
+          <React.Suspense fallback={<Loading />}>
+          <CatalogPage />
+        </React.Suspense>} />
+        <Route path="/goods/article" element={
+          <React.Suspense fallback={<Loading />}>
+            <GoodItemPage />
+          </React.Suspense>
+        } />
       </Route>
     </Routes>
   );
