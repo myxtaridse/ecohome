@@ -1,4 +1,4 @@
-// import GoodItem from '../components/GoodItem/GoodItem'
+import GoodItem from '../components/GoodItem/GoodItem'
 import ProductContext from '../context/ProductContext';
 
 const GoodItemPage = () => {
@@ -6,9 +6,9 @@ const GoodItemPage = () => {
   return (
     <>
     
-      <ProductContext>
+    <ProductContext>
       <div>123</div>
-        {/* <GoodItem /> */}
+        <GoodItem />
     </ProductContext>
     </>
   )

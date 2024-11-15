@@ -27,7 +27,7 @@ const GoodItem = () => {
   }, [valueGood, setPathValue])
     
     
- if (valueGood) {
+ if (valueGood.length) {
   return (
    
       <div className="goodItem">
