@@ -23,11 +23,14 @@ const ProductContext = ({children}: any) => {
     reqProduct().then((data) => {
       console.log(data);
       
+    }).catch((error) => {
+      console.log(error);
+      console.log(valueGood, articleLocation);
+      if (valueGood) {
+        setValue(valueGood)
+      }
     })
-    console.log(valueGood, articleLocation);
-    if (valueGood) {
-      setValue(valueGood)
-    }
+   
   }, [valueGood, articleLocation])
 
 // React.useEffect(() => {
