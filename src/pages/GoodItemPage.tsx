@@ -4,9 +4,12 @@ import ProductContext from '../context/ProductContext';
 const GoodItemPage = () => {
   
   return (
-    <ProductContext>
-      <GoodItem />
+    <>
+    <div>123</div>
+      <ProductContext>
+        <GoodItem />
     </ProductContext>
+    </>
   )
 }
 

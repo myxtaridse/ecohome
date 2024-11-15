@@ -1,10 +1,10 @@
 import React from 'react'
 import GoodImg from './GoodImg'
-// import GoodAdd from './GoodAdd'
+import GoodAdd from './GoodAdd'
 import GoodParameter from './GoodParameter'
 import GoodDescription from './GoodDescription'
 import GoodQuestions from './GoodQuestions/GoodQuestions'
-// import GoodReviews from './GoodReviews/GoodReviews'
+import GoodReviews from './GoodReviews/GoodReviews'
 import { CustomContextProductItem } from '../../context/ProductContext';
 import Loading from '../Loading/Loading'
 import { CustomContextMain } from '../../context/MainContext'
@@ -44,7 +44,7 @@ const GoodItem = () => {
        
        <GoodParameter />
        
-        {/* <GoodAdd /> */}
+        <GoodAdd />
         </div>
         <div className='goodItem-allDescription'>
           
@@ -71,7 +71,7 @@ const GoodItem = () => {
         }
        }} className={["goodItem-allDescription-title goodItem-allDescription-title-reviews", isActive === 1 ? 'activeTitle' : ''].join(" ")}>ОТЗЫВЫ</h1>
        <div className={['goodItem-allDescription-block scale-2', isActive === 1 ? 'activeBlock' : ''].join(" ")}>
-          {/* <GoodReviews /> */}
+          <GoodReviews />
         </div>
        </div>
   
