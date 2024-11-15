@@ -23,10 +23,13 @@ React.useEffect(() => {
       
       
         if (articleLocation) {
+        console.log(articleLocation);
         
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const product = data.filter((item: any) => item.article === articleLocation); 
         if (product.length) {
+          console.log(product);
+          
          setValue(product)
         } 
         
