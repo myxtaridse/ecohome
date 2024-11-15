@@ -1,20 +1,73 @@
 import React from 'react'
 import { CustomContextMain } from '../context/MainContext';
+import Loading from '../components/Loading/Loading';
+import { reqProduct } from '../api/fetchProducts';
 
 const MyFavorite = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const { setPathValue }: any = React.useContext(CustomContextMain);
+  const { setPathValue, storage, pathFavorite }: any = React.useContext(CustomContextMain);
 
   React.useEffect(() => {
-    setPathValue(['Главная', 'Плита печная цельная'])
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    reqProduct().then((data: any) => {
+      console.log(pathFavorite, data);
+    })
+    if (pathFavorite === '/') {
+      setPathValue(['Главная', 'Плита печная цельная'])
+    } 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [setPathValue]);
 
-  const storage = +localStorage.getItem('myFavorite')!;
-  console.log(storage);
-  
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const [valueGood, setValueGood] = React.useState<any>(null);
 
+  React.useEffect(() => {
+    if (storage) {
+      const storageValue = JSON.parse(storage)
+      if (storageValue.length) {
+        
+        reqProduct().then((data) => {
+         // eslint-disable-next-line @typescript-eslint/no-explicit-any
+         const isArticle = data.filter((item: any) => {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          const storageArticle = data.filter((itemStorage: any) => itemStorage === item.article);
+          if (storageArticle) {
+            return item
+          }
+        
+          return null
+         })
+         
+         
+         if (isArticle) {
+          setValueGood(isArticle)
+         }
+      }).catch((err) => 
+      {
+        console.log(err);
+        if (valueGood) {
+          setValueGood(null)
+        }
+      }
+        
+      )
+       
+      }
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [storage]);
+  
+  
+if (!valueGood) return <Loading />
   return (
-    <div>MyFavorite</div>
+    <>
+    {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      valueGood.map((itemGood: any) => <div key={itemGood.id}>
+      <h1>{itemGood.titleGood}</h1>
+    </div>)
+    }
+    </>
   )
 }
 

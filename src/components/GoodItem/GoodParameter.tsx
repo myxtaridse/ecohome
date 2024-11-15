@@ -15,7 +15,7 @@ const GoodParameter = () => {
             {Array(5)
               .fill("")
               .map(() => (
-                <div className="goodItem-main-starItem">
+                <div className="goodItem-main-starItem" key={Math.random()}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"

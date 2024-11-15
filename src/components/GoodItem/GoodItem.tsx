@@ -40,7 +40,7 @@ const GoodItem = () => {
        </button>
        </div>
         <div className='goodItem-flex'>
-        <GoodImg />
+        <GoodImg setIsActive={setIsActive} />
        
        <GoodParameter />
        

@@ -23,7 +23,7 @@ const GoodAnswers: React.FC<GoodAnswersType> = ({isreviews}) => {
               <button>Ответить</button>
             </div>
             {
-        Array(5).fill('').map(() => <GoodAnswerItem />)
+        Array(5).fill('').map(() => <GoodAnswerItem key={Math.random()} />)
       }
             </div>
             

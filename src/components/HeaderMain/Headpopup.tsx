@@ -71,9 +71,9 @@ const Headpopup: React.FC<HeadpopupType> = ({ setIsPopup, setCity }) => {
           {find !== -1 ? (
             <span>{cities[find]}</span>
           ) : (
-            cities.map((city) => (
+            cities.map((city, id) => (
               // eslint-disable-next-line @typescript-eslint/no-explicit-any
-              <span onClick={(e: any) => setCity(e?.target?.textContent)}>
+              <span key={id} onClick={(e: any) => setCity(e?.target?.textContent)}>
                 {city}
               </span>
             ))

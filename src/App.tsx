@@ -1,6 +1,6 @@
 import React from "react";
 import "./sass/app.scss";
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import MainPage from "./pages/MainPage";
 import MainLayout from "./layout/MainLayout";
 import CatalogPage from "./pages/CatalogPage";
@@ -9,7 +9,6 @@ import ErrorPage from "./pages/ErrorPage";
 // import GoodItemPage from "./pages/GoodItemPage"
 
 function App() {
-  const location = useLocation();
   const GoodItemPage = React.lazy(
     () =>
       import(/* webpackChunkName: "GoodItemPage" */ "./pages/GoodItemPage")
@@ -18,7 +17,6 @@ function App() {
     () =>
       import(/* webpackChunkName: "GoodItemPage" */ "./pages/MyFavorite")
   );
-  console.log(location);
 
   return (
     <Routes>
@@ -29,7 +27,7 @@ function App() {
           <React.Suspense fallback={<Loading />}>
           <CatalogPage />
         </React.Suspense>} />
-        <Route path="/goods/article" element={
+        <Route path="/goods/:id" element={
           <React.Suspense fallback={<Loading />}>
             <GoodItemPage />
           </React.Suspense>
@@ -51,42 +49,3 @@ function App() {
 
 export default App;
 
-// <Routes>
-//   <Route path="/" element={<MainLayout />}>
-//     <Route path="/" element={<Home />} />
-//     <Route path="/about" element={<About />} />
-//     <Route path="/contacts" element={<Contact />} />
-//     <Route
-//       path="cart"
-//       element={
-//         <React.Suspense fallback={<Loading />}>
-//           <Cart />
-//         </React.Suspense>
-//       }
-//     />
-//     <Route
-//       path="payment-order"
-//       element={
-//         <React.Suspense fallback={<Loading />}>
-//           <PaymentOrder />
-//         </React.Suspense>
-//       }
-//     />
-//     <Route
-//       path="*"
-//       element={
-//         <React.Suspense fallback={<Loading />}>
-//           <NotFound />
-//         </React.Suspense>
-//       }
-//     />
-//     <Route
-//       path="product/:id"
-//       element={
-//         <React.Suspense fallback={<Loading />}>
-//           <Product />
-//         </React.Suspense>
-//       }
-//     />
-//   </Route>
-// </Routes>

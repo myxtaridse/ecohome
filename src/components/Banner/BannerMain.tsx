@@ -107,6 +107,7 @@ const BannerMain = () => {
       <div>
         {gallery.map((item) => (
           <div
+          key={item.id}
             className="banner-item"
             style={{
               transform: `translate(${

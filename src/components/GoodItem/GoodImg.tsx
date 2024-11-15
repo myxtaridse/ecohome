@@ -1,7 +1,11 @@
 import React from 'react'
 import { CustomContextProductItem } from '../../context/ProductContext';
 
-const GoodImg = () => {
+interface GoodImgType {
+  setIsActive: (isActive: number) => void;
+}
+
+const GoodImg: React.FC<GoodImgType> = ({setIsActive}) => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const valueGood: any = React.useContext(CustomContextProductItem);
   if (valueGood) {
@@ -9,12 +13,13 @@ const GoodImg = () => {
       <div className='goodItem-main'>
         <div className='goodItem-main-article-reviews goodItem-main-reviews-show'>
           <p className='goodItem-main-article'>Код товара: {valueGood[0].article}</p>
+          <a href='#reviews' onClick={() => setIsActive(1)}>
           <div className='goodItem-main-reviews'>
             <div className="goodItem-main-stars">
             {Array(5)
               .fill("")
               .map(() => (
-                <div className="goodItem-main-starItem">
+                <div className="goodItem-main-starItem" key={Math.random()}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -27,6 +32,7 @@ const GoodImg = () => {
             </div>
             <p>{valueGood[0].reviews.length} отзывов</p>
           </div>
+          </a>
         </div>
         <div className="goodItem-main-image-block">
           <div className='goodItem-main-image-gallery'>

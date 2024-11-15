@@ -4,9 +4,13 @@ import { CustomContextMain } from '../context/MainContext'
 const Path = () => {
  // eslint-disable-next-line @typescript-eslint/no-explicit-any
  const {pathValue}: any = React.useContext(CustomContextMain);
+ 
     return (
       <div className='path'>
         {
+        
+        
+        
           pathValue.map((item: string) => (
             <>
               <p>{item}</p>

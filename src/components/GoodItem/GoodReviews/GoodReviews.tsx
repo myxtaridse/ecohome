@@ -6,7 +6,7 @@ import GoodReviewsImgs from './GoodReviewsImgs';
 const GoodReviews = () => {
   return (
     
-      <div className='goodItem-reviews-block'>
+      <div className='goodItem-reviews-block' id='reviews'>
         <h1>Отзывы о Плита печная цельная:</h1>
         <button className='goodItem-reviews-addMy'>Добавить отзыв</button>
         {/* <div><GoodMyReview /></div> */}

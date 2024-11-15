@@ -12,7 +12,7 @@ const GoodMyReview = () => {
           {Array(5)
             .fill("")
             .map((_, i) => (
-              <div onMouseMove={() => {
+              <div key={i} onMouseMove={() => {
                 setIndexStar(i + 1);
               }} 
               onMouseLeave={() => {

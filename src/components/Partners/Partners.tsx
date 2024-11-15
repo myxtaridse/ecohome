@@ -155,7 +155,7 @@ const Partners = () => {
       <div className="partners-container">
         <div className="partners-track">
           {partners.map((item) => (
-            <div className="partner-item ">
+            <div className="partner-item " key={item.id}>
               {" "}
               <img src={item.image} alt={item.title} />
             </div>
@@ -163,7 +163,7 @@ const Partners = () => {
         </div>
         <div className="partners-track">
           {partners.map((item) => (
-            <div className="partner-item ">
+            <div className="partner-item " key={item.id}>
               {" "}
               <img src={item.image} alt={item.title} />
             </div>

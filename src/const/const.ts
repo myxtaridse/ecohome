@@ -2,6 +2,7 @@ import image from "../assets/image.png";
 export const goodsSale = [
   {
     id: "1",
+    article: "161616",
     status: "sale",
     category: "Аксессуары для бани",
     categoryMain: "Товары для ванны и бани",
@@ -13,6 +14,7 @@ export const goodsSale = [
   },
   {
     id: "2",
+    article: "161616",
     status: "sale",
     category: "Аксессуары для бани",
     categoryMain: "Товары для ванны и бани",
@@ -24,6 +26,7 @@ export const goodsSale = [
   },
   {
     id: "3",
+    article: "161616",
     status: "sale",
     category: "Аксессуары для бани",
     categoryMain: "Товары для ванны и бани",
@@ -35,6 +38,7 @@ export const goodsSale = [
   },
   {
     id: "4",
+    article: "161616",
     status: "sale",
     category: "Аксессуары для бани",
     categoryMain: "Товары для ванны и бани",
@@ -46,6 +50,7 @@ export const goodsSale = [
   },
   {
     id: "5",
+    article: "161616",
     status: "sale",
     category: "Аксессуары для бани",
     categoryMain: "Товары для ванны и бани",
@@ -59,6 +64,7 @@ export const goodsSale = [
 export const goodsNew = [
   {
     id: "1",
+    article: "161616",
     status: "new",
     category: "Аксессуары для бани",
     categoryMain: "Товары для ванны и бани",
@@ -70,6 +76,7 @@ export const goodsNew = [
   },
   {
     id: "2",
+    article: "161616",
     status: "new",
     category: "Аксессуары для бани",
     categoryMain: "Товары для ванны и бани",
@@ -81,6 +88,7 @@ export const goodsNew = [
   },
   {
     id: "3",
+    article: "161616",
     status: "new",
     category: "Аксессуары для бани",
     categoryMain: "Товары для ванны и бани",
@@ -92,6 +100,7 @@ export const goodsNew = [
   },
   {
     id: "4",
+    article: "161616",
     status: "new",
     category: "Аксессуары для бани",
     categoryMain: "Товары для ванны и бани",
@@ -103,6 +112,7 @@ export const goodsNew = [
   },
   {
     id: "5",
+    article: "161616",
     status: "new",
     category: "Аксессуары для бани",
     categoryMain: "Товары для ванны и бани",

@@ -1,31 +1,29 @@
 import React from 'react'
 import { CustomContextProductItem } from "../../context/ProductContext";
+import { CustomContextMain } from '../../context/MainContext';
 
 const GoodAdd = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const valueGood: any = React.useContext(CustomContextProductItem);
-  const storageFavorite = localStorage.getItem('myFavorite');
-  const statusArticle = JSON.parse(storageFavorite!).includes(valueGood[0].article);
-  const [isLike, setIsLike] = React.useState(statusArticle);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const {storageFavorite, setStorageFavorite}: any = React.useContext(CustomContextMain);
+  const [isLike, setIsLike] = React.useState(storageFavorite.includes(valueGood[0].article));
 
-  console.log(JSON.parse(storageFavorite!).includes(valueGood[0].article));
-
-  React.useEffect(() => {
-    if (valueGood) {
-      if (isLike) {
-        const storage = JSON.parse(storageFavorite!);
-        if (storage.includes(valueGood[0].article)) {
-          localStorage.setItem('myFavorite', JSON.stringify([...storage, valueGood[0].article]))
-        } else {
-          localStorage.setItem('myFavorite', JSON.stringify([]))
-        }
-      } else {
-        localStorage.setItem('myFavorite', JSON.stringify([]))
-      }
-    }
-  }, [isLike, valueGood, storageFavorite]);
-
-  console.log(storageFavorite);
+React.useEffect(() => {
+  const article = valueGood[0].article;
+  if (isLike) {
+    if (!storageFavorite.includes(article)) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      setStorageFavorite((prevStorage: any) => [...prevStorage, article]);
+    } 
+  } else {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const newFavorite = storageFavorite.filter((item: any) => item.article == article);
+    setStorageFavorite(newFavorite)
+  }
+// eslint-disable-next-line react-hooks/exhaustive-deps
+}, [isLike, valueGood, setStorageFavorite])
+ 
   
   
 const addLikeGood = () => {
@@ -42,7 +40,7 @@ const addLikeGood = () => {
             {Array(5)
               .fill("")
               .map(() => (
-                <div className="goodItem-main-starItem">
+                <div className="goodItem-main-starItem" key={Math.random()}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -110,13 +108,13 @@ const addLikeGood = () => {
           </div>
           <div className='goodItem-add-info-item'>
           <div>
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M22 22H2" stroke="#cf4e32" stroke-width="1.5" stroke-linecap="round"></path> <path d="M20 22V11" stroke="#cf4e32" stroke-width="1.5" stroke-linecap="round"></path> <path d="M4 22V11" stroke="#cf4e32" stroke-width="1.5" stroke-linecap="round"></path> <path d="M16.5278 2H7.47214C6.26932 2 5.66791 2 5.18461 2.2987C4.7013 2.5974 4.43234 3.13531 3.89443 4.21114L2.49081 7.75929C2.16652 8.57905 1.88279 9.54525 2.42867 10.2375C2.79489 10.7019 3.36257 11 3.99991 11C5.10448 11 5.99991 10.1046 5.99991 9C5.99991 10.1046 6.89534 11 7.99991 11C9.10448 11 9.99991 10.1046 9.99991 9C9.99991 10.1046 10.8953 11 11.9999 11C13.1045 11 13.9999 10.1046 13.9999 9C13.9999 10.1046 14.8953 11 15.9999 11C17.1045 11 17.9999 10.1046 17.9999 9C17.9999 10.1046 18.8953 11 19.9999 11C20.6373 11 21.205 10.7019 21.5712 10.2375C22.1171 9.54525 21.8334 8.57905 21.5091 7.75929L20.1055 4.21114C19.5676 3.13531 19.2986 2.5974 18.8153 2.2987C18.332 2 17.7306 2 16.5278 2Z" stroke="#cf4e32" stroke-width="1.5" stroke-linejoin="round"></path> <path d="M9.5 21.5V18.5C9.5 17.5654 9.5 17.0981 9.70096 16.75C9.83261 16.522 10.022 16.3326 10.25 16.201C10.5981 16 11.0654 16 12 16C12.9346 16 13.4019 16 13.75 16.201C13.978 16.3326 14.1674 16.522 14.299 16.75C14.5 17.0981 14.5 17.5654 14.5 18.5V21.5" stroke="#cf4e32" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M22 22H2" stroke="#cf4e32" strokeWidth="1.5" strokeLinecap="round"></path> <path d="M20 22V11" stroke="#cf4e32" strokeWidth="1.5" strokeLinecap="round"></path> <path d="M4 22V11" stroke="#cf4e32" strokeWidth="1.5" strokeLinecap="round"></path> <path d="M16.5278 2H7.47214C6.26932 2 5.66791 2 5.18461 2.2987C4.7013 2.5974 4.43234 3.13531 3.89443 4.21114L2.49081 7.75929C2.16652 8.57905 1.88279 9.54525 2.42867 10.2375C2.79489 10.7019 3.36257 11 3.99991 11C5.10448 11 5.99991 10.1046 5.99991 9C5.99991 10.1046 6.89534 11 7.99991 11C9.10448 11 9.99991 10.1046 9.99991 9C9.99991 10.1046 10.8953 11 11.9999 11C13.1045 11 13.9999 10.1046 13.9999 9C13.9999 10.1046 14.8953 11 15.9999 11C17.1045 11 17.9999 10.1046 17.9999 9C17.9999 10.1046 18.8953 11 19.9999 11C20.6373 11 21.205 10.7019 21.5712 10.2375C22.1171 9.54525 21.8334 8.57905 21.5091 7.75929L20.1055 4.21114C19.5676 3.13531 19.2986 2.5974 18.8153 2.2987C18.332 2 17.7306 2 16.5278 2Z" stroke="#cf4e32" strokeWidth="1.5" strokeLinejoin="round"></path> <path d="M9.5 21.5V18.5C9.5 17.5654 9.5 17.0981 9.70096 16.75C9.83261 16.522 10.022 16.3326 10.25 16.201C10.5981 16 11.0654 16 12 16C12.9346 16 13.4019 16 13.75 16.201C13.978 16.3326 14.1674 16.522 14.299 16.75C14.5 17.0981 14.5 17.5654 14.5 18.5V21.5" stroke="#cf4e32" strokeWidth="1.5" strokeLinecap="round"></path> </g></svg>
             </div>
             <p>Самовывоз: сегодня</p>
           </div>
           <div className='goodItem-add-info-item'>
           <div>
-          <svg fill="#cf4e32" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" stroke="#cf4e32"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g data-name="31 delivery box" id="_31_delivery_box"> <path d="M32,3.5A19.7,19.7,0,0,0,12.32,23.18c0,.03.02.06.02.09a1.18,1.18,0,0,0,.04.2,1.336,1.336,0,0,0,.07.18,1.3,1.3,0,0,0,.1.15,1,1,0,0,0,.15.14.234.234,0,0,0,.07.07L28.7,34.63H17.43a2.006,2.006,0,0,0-2,2V58.5a2.006,2.006,0,0,0,2,2H46.57a2.006,2.006,0,0,0,2-2V36.63a2.006,2.006,0,0,0-2-2H35.3L51.23,24.01a.234.234,0,0,0,.07-.07,1,1,0,0,0,.15-.14,1.3,1.3,0,0,0,.1-.15,1.336,1.336,0,0,0,.07-.18,1.18,1.18,0,0,0,.04-.2c0-.03.02-.06.02-.09A19.7,19.7,0,0,0,32,3.5Zm0,2a17.694,17.694,0,0,1,15.68,9.52,10.243,10.243,0,0,0-6.34-2.18A10.347,10.347,0,0,0,32,18.75a10.347,10.347,0,0,0-9.34-5.91,10.243,10.243,0,0,0-6.34,2.18A17.694,17.694,0,0,1,32,5.5ZM14.35,22.66A8.333,8.333,0,0,1,31,23.18V33.76ZM34.11,36.63v8.55l-1.56-1.04a.975.975,0,0,0-1.1,0l-1.56,1.04V36.63Zm1.47,11.3a1,1,0,0,0,.53-.88V36.63H46.57V58.5H17.43V36.63H27.89V47.05a1,1,0,0,0,.53.88,1.009,1.009,0,0,0,1.02-.05L32,46.17l2.56,1.71a1.016,1.016,0,0,0,.55.17A.939.939,0,0,0,35.58,47.93ZM33,33.76V23.18a8.333,8.333,0,0,1,16.65-.52Z"></path> <path d="M43.42,50.2H37.19a1,1,0,0,0-1,1v4.15a1,1,0,0,0,1,1h6.23a1,1,0,0,0,1-1V51.2A1,1,0,0,0,43.42,50.2Zm-1,4.15H38.19V52.2h4.23Z"></path> </g> </g></svg>
+          <svg fill="#cf4e32" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" stroke="#cf4e32"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <g data-name="31 delivery box" id="_31_delivery_box"> <path d="M32,3.5A19.7,19.7,0,0,0,12.32,23.18c0,.03.02.06.02.09a1.18,1.18,0,0,0,.04.2,1.336,1.336,0,0,0,.07.18,1.3,1.3,0,0,0,.1.15,1,1,0,0,0,.15.14.234.234,0,0,0,.07.07L28.7,34.63H17.43a2.006,2.006,0,0,0-2,2V58.5a2.006,2.006,0,0,0,2,2H46.57a2.006,2.006,0,0,0,2-2V36.63a2.006,2.006,0,0,0-2-2H35.3L51.23,24.01a.234.234,0,0,0,.07-.07,1,1,0,0,0,.15-.14,1.3,1.3,0,0,0,.1-.15,1.336,1.336,0,0,0,.07-.18,1.18,1.18,0,0,0,.04-.2c0-.03.02-.06.02-.09A19.7,19.7,0,0,0,32,3.5Zm0,2a17.694,17.694,0,0,1,15.68,9.52,10.243,10.243,0,0,0-6.34-2.18A10.347,10.347,0,0,0,32,18.75a10.347,10.347,0,0,0-9.34-5.91,10.243,10.243,0,0,0-6.34,2.18A17.694,17.694,0,0,1,32,5.5ZM14.35,22.66A8.333,8.333,0,0,1,31,23.18V33.76ZM34.11,36.63v8.55l-1.56-1.04a.975.975,0,0,0-1.1,0l-1.56,1.04V36.63Zm1.47,11.3a1,1,0,0,0,.53-.88V36.63H46.57V58.5H17.43V36.63H27.89V47.05a1,1,0,0,0,.53.88,1.009,1.009,0,0,0,1.02-.05L32,46.17l2.56,1.71a1.016,1.016,0,0,0,.55.17A.939.939,0,0,0,35.58,47.93ZM33,33.76V23.18a8.333,8.333,0,0,1,16.65-.52Z"></path> <path d="M43.42,50.2H37.19a1,1,0,0,0-1,1v4.15a1,1,0,0,0,1,1h6.23a1,1,0,0,0,1-1V51.2A1,1,0,0,0,43.42,50.2Zm-1,4.15H38.19V52.2h4.23Z"></path> </g> </g></svg>
             </div>
            <p> Доставка: от 1 часа</p>
             

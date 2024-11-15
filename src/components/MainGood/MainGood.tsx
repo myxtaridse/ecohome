@@ -1,8 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 export interface MainGoodType {
   id: string;
+  article: string;
   status: string;
   category: string;
   categoryMain: string;
@@ -25,8 +25,8 @@ const MainGood: React.FC<MainGoodType> = ({
 }) => {
   if (!isCount) return "";
   return (
-    <>
-    <Link to="/goods/article">
+   
+   
     <div className="main-good">
       <div className="main-good-status">
         {status === "sale" ? "Скидка" : "Новинки"}
@@ -54,7 +54,7 @@ const MainGood: React.FC<MainGoodType> = ({
           {Array(5)
             .fill("")
             .map(() => (
-              <div className="good-star-item">
+              <div className="good-star-item" key={Math.random()}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -73,7 +73,7 @@ const MainGood: React.FC<MainGoodType> = ({
       </div>
       <button>Добавить в корзину</button>
     </div>
-    </Link></>
+    
   );
 };
 

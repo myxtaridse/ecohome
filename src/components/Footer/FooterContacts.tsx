@@ -51,8 +51,8 @@ const FooterContacts = () => {
       </p>
       <h2 className="footer-mail">example@gmail.com</h2>
       <div className="footer-webSites">
-        {webSites.map((item) => (
-          <div className="footer-webSites-logo">
+        {webSites.map((item, id) => (
+          <div className="footer-webSites-logo" key={id}>
             <img src={item.svg} />
           </div>
         ))}

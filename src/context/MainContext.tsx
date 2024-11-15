@@ -9,7 +9,17 @@ const MainContext = ({children}: any) => {
     const [isCatalog, setIsCatalog] = React.useState(false);
     const [isPopup, setIsPopup] = React.useState(false);
     const [pathValue, setPathValue] = React.useState([]);
+    const [pathFavorite, setPathFavorite] = React.useState('/');
     const popupRef = React.useRef<HTMLDivElement | null>(null);
+    const storage = localStorage.getItem('myFavorite');
+    const [storageFavorite, setStorageFavorite] = React.useState<string | null>(JSON.parse(storage!))
+
+    // React.useRef(() => {
+    //     if (storageFavorite) {
+    //       console.log(storageFavorite);
+          
+    //     }
+    // }, [storageFavorite])
   
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const value: any = {
@@ -21,6 +31,11 @@ const MainContext = ({children}: any) => {
       setIsPopup,
       pathValue,
       setPathValue,
+      storage,
+      setPathFavorite,
+      pathFavorite,
+      storageFavorite,
+      setStorageFavorite
     };
 
   return (
