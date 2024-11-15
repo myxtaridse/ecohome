@@ -2,14 +2,15 @@ import React from 'react'
 import GoodImg from './GoodImg'
 import GoodAdd from './GoodAdd'
 import GoodParameter from './GoodParameter'
-import GoodDescription from './GoodDescription'
-import GoodQuestions from './GoodQuestions/GoodQuestions'
-import GoodReviews from './GoodReviews/GoodReviews'
+// import GoodDescription from './GoodDescription'
+// import GoodQuestions from './GoodQuestions/GoodQuestions'
+// import GoodReviews from './GoodReviews/GoodReviews'
 import { CustomContextProductItem } from '../../context/ProductContext';
 import Loading from '../Loading/Loading'
 import { CustomContextMain } from '../../context/MainContext'
 
 const GoodItem = () => {
+    
     const [isActive, setIsActive] = React.useState<number | null>(0);
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -25,7 +26,7 @@ const GoodItem = () => {
   }, [valueGood, setPathValue]);
 
 
-  console.log(valueGood);
+  console.log(valueGood, isActive);
   
 
   if (!valueGood || valueGood.length === 0) return <Loading />;
@@ -51,7 +52,7 @@ const GoodItem = () => {
            </div>
            <div className='goodItem-allDescription'>
              
-          <div className='goodItem-allDescription-item'>
+          {/* <div className='goodItem-allDescription-item'>
           <h1 onClick={() => {
            if (isActive !== 0) {
              setIsActive(0)
@@ -63,9 +64,9 @@ const GoodItem = () => {
              <GoodDescription />
              <GoodParameter />
            </div>
-          </div>
+          </div> */}
      
-          <div className='goodItem-allDescription-item'>
+          {/* <div className='goodItem-allDescription-item'>
           <h1 onClick={() => {
            if (isActive !== 1) {
              setIsActive(1)
@@ -76,9 +77,9 @@ const GoodItem = () => {
           <div className={['goodItem-allDescription-block scale-2', isActive === 1 ? 'activeBlock' : ''].join(" ")}>
              <GoodReviews />
            </div>
-          </div>
+          </div> */}
      
-           <div className='goodItem-allDescription-item'>
+           {/* <div className='goodItem-allDescription-item'>
            <h1 onClick={() =>{
              if (isActive !== 2) {
                setIsActive(2)
@@ -89,7 +90,7 @@ const GoodItem = () => {
            <div className={['goodItem-allDescription-block scale-3', isActive === 2 ? 'activeBlock' : ''].join(" ")}>
             <GoodQuestions />
            </div>
-           </div>
+           </div> */}
           
            
            </div>
