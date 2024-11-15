@@ -6,7 +6,6 @@ const GoodItemPage = () => {
   return (
     <>
     <ProductContext>
-      <div>123</div>
         <GoodItem />
     </ProductContext>
     </>

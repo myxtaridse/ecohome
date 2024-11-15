@@ -32,7 +32,7 @@ const GoodItem = () => {
 
 
     return (
-      // <div>123</div>
+      
          <div className="goodItem">
            
            <div className='goodItem-main-title'>
