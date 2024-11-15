@@ -5,7 +5,7 @@ import { reqProduct } from '../api/fetchProducts';
 
 const MyFavorite = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const { setPathValue, storage, pathFavorite }: any = React.useContext(CustomContextMain);
+  const { setPathValue, storageFavorite, pathFavorite }: any = React.useContext(CustomContextMain);
 
   React.useEffect(() => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -22,9 +22,9 @@ const MyFavorite = () => {
   const [valueGood, setValueGood] = React.useState<any>(null);
 
   React.useEffect(() => {
-    if (storage) {
-      const storageValue = JSON.parse(storage)
-      if (storageValue.length) {
+    if (storageFavorite) {
+      
+      if (storageFavorite.length) {
         
         reqProduct().then((data) => {
          // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -55,7 +55,7 @@ const MyFavorite = () => {
       }
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [storage]);
+  }, [storageFavorite]);
   
   
 if (!valueGood) return <Loading />

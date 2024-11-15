@@ -28,22 +28,29 @@ React.useEffect(() => {
         if (articleLocation) {
         
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const product = data.filter((item: any) => item.article === articleLocation);
-        
+        const product = data.filter((item: any) => item.article === articleLocation); 
         if (product.length) {
          setValue(product)
-        }
+        } 
+        console.log(data);
         
       }
-       
-     
-      
         
     }).catch((err) => 
     {
       console.log(err);
       if (valueGood) {
-        setValue(valueGood)
+        if (articleLocation) {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          const product = valueGood.filter((item: any) => item.article === articleLocation); 
+
+          if (product) {
+            setValue(product);
+          }
+        }
+        
+        
+        
       }
     }
       
