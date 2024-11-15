@@ -1,14 +1,14 @@
 import React from 'react'
 
 const GoodMyReview = () => {
-  const [indexStar, setIndexStar] = React.useState<number | null>(null);
+  // const [indexStar, setIndexStar] = React.useState<number | null>(null);
   
   return (
     <div className='goodItem-questions'>
         <form action="">
             <h2 className="goodMyReview-title">Плита печная цельная</h2>
             
-            <div className="goodMyReview-stars">
+            {/* <div className="goodMyReview-stars">
           {Array(5)
             .fill("")
             .map((_, i) => (
@@ -28,7 +28,7 @@ const GoodMyReview = () => {
                 </svg>
               </div>
             ))}
-          </div>
+          </div> */}
             
       <input type='text' placeholder='Достоинства*' />
       <input type='text' placeholder='Недостатки*' />
