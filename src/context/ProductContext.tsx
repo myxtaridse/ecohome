@@ -11,7 +11,7 @@ const ProductContext = ({children}: any) => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const valueGood: any = db.goods;
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+
   const [value, setValue] = React.useState(null);
 
   const location = useLocation();
@@ -23,7 +23,7 @@ const ProductContext = ({children}: any) => {
     if (valueGood) {
       setValue(valueGood)
     }
-  }, [])
+  }, [valueGood, articleLocation])
 
 // React.useEffect(() => {
 //     reqProduct().then((data) => {
