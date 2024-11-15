@@ -12,7 +12,15 @@ const MainContext = ({children}: any) => {
     const [pathFavorite, setPathFavorite] = React.useState('/');
     const popupRef = React.useRef<HTMLDivElement | null>(null);
     const storage = localStorage.getItem('myFavorite');
-    const [storageFavorite, setStorageFavorite] = React.useState<string | null>(JSON.parse(storage!))
+    
+    const [storageFavorite, setStorageFavorite] = React.useState<string | null>(null);
+
+    React.useEffect(() => {
+      if (storage) {
+        setStorageFavorite(JSON.parse(storage));
+      }
+      
+    }, [storage])
 
   
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
