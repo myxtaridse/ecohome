@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 
 const GoodMyReview = () => {
   // const [indexStar, setIndexStar] = React.useState<number | null>(null);
