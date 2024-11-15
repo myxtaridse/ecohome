@@ -1,4 +1,4 @@
-import GoodItem from '../components/GoodItem/GoodItem'
+// import GoodItem from '../components/GoodItem/GoodItem'
 import ProductContext from '../context/ProductContext';
 
 const GoodItemPage = () => {
@@ -6,7 +6,7 @@ const GoodItemPage = () => {
   return (
     <>
     <ProductContext>
-        <GoodItem />
+        {/* <GoodItem /> */}
     </ProductContext>
     </>
   )
