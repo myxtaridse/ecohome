@@ -1,6 +1,6 @@
 import React from 'react'
 import { CustomContextMain } from '../context/MainContext';
-import Loading from '../components/Loading/Loading';
+// import Loading from '../components/Loading/Loading';
 import { reqProduct } from '../api/fetchProducts';
 
 const MyFavorite = () => {
@@ -60,7 +60,7 @@ const MyFavorite = () => {
   
   console.log(valueGood);
   
-if (!valueGood) return <Loading />
+// if (!valueGood) return <Loading />
   return (
     <div className='myFavorite'>
       <div className='myFavorite-head'>

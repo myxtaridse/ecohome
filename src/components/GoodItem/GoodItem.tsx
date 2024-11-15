@@ -24,7 +24,6 @@ const GoodItem = () => {
       }
   }, [valueGood, setPathValue]);
 
-console.log(valueGood);
 
   
 
