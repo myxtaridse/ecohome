@@ -18,18 +18,20 @@ const GoodAdd = () => {
   }, [article, storageFavorite])
 
 React.useEffect(() => {
-  if (isLike) {
-    if (!storageFavorite.includes(article)) {
+  if (article) {
+    if (isLike) {
+      if (!storageFavorite.includes(article)) {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        setStorageFavorite((prevStorage: any) => [...prevStorage, article]);
+      } 
+    } else {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      setStorageFavorite((prevStorage: any) => [...prevStorage, article]);
-    } 
-  } else {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const newFavorite = storageFavorite.filter((item: any) => item.article == article);
-    setStorageFavorite(newFavorite)
+      const newFavorite = storageFavorite.filter((item: any) => item.article == article);
+      setStorageFavorite(newFavorite)
+    }
   }
 // eslint-disable-next-line react-hooks/exhaustive-deps
-}, [isLike, setStorageFavorite])
+}, [isLike, setStorageFavorite, article])
  
   
   
