@@ -1,6 +1,6 @@
 import React from 'react'
 import GoodImg from './GoodImg'
-// import GoodAdd from './GoodAdd'
+import GoodAdd from './GoodAdd'
 import GoodParameter from './GoodParameter'
 import GoodDescription from './GoodDescription'
 import GoodQuestions from './GoodQuestions/GoodQuestions'
@@ -47,7 +47,7 @@ const GoodItem = () => {
           
           <GoodParameter />
           
-           {/* <GoodAdd /> */}
+           <GoodAdd />
            </div>
            <div className='goodItem-allDescription'>
              
