@@ -16,9 +16,6 @@ const ProductContext = ({children}: any) => {
   const location = useLocation();
   const articleLocation = location.pathname.split('/goods/').join("");
   
- 
- 
-  
   
 
 React.useEffect(() => {
@@ -44,7 +41,7 @@ React.useEffect(() => {
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
           const product = valueGood.filter((item: any) => item.article === articleLocation); 
 
-          if (product) {
+          if (product.length) {
             setValue(product);
           }
         }

@@ -60,14 +60,20 @@ const MyFavorite = () => {
   
 if (!valueGood) return <Loading />
   return (
-    <>
-    {
+    <div className='myFavorite'>
+      <div className='myFavorite-head'>
+        
+      </div>
+      <div className='myFavorite-filter'></div>
+      <div className='myFavorite-goods'></div>
+
+    {/* {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       valueGood.map((itemGood: any) => <div key={itemGood.id}>
       <h1>{itemGood.titleGood}</h1>
     </div>)
-    }
-    </>
+    } */}
+    </div>
   )
 }
 
