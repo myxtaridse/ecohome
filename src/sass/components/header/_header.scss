@@ -1,3 +1,10 @@
+@use './header-catalog';
+@use './header-cities';
+@use './header-contacts';
+@use './header-icons';
+@use './header-input';
+@use './header-navigation';
+
 .header {
   width: 100vw;
   height: 40px;
@@ -5,7 +12,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 150px 0 60px;
-  background-color: #e8eff5;
+  background-color: #E0EDFA;
   position: relative;
 }
 

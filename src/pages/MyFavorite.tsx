@@ -3,6 +3,8 @@
 // // import Loading from '../components/Loading/Loading';
 // import { reqProduct } from '../api/fetchProducts';
 
+import { useLocation } from "react-router-dom"
+
 const MyFavorite = () => {
   // // eslint-disable-next-line @typescript-eslint/no-explicit-any
   // const { setPathValue, storageFavorite, pathFavorite }: any = React.useContext(CustomContextMain);
@@ -20,6 +22,8 @@ const MyFavorite = () => {
   // // eslint-disable-next-line react-hooks/exhaustive-deps
   // }, [setPathValue]);
 
+  const location = useLocation();
+  console.log(location);
   
 
   // // React.useEffect(() => {
@@ -67,9 +71,9 @@ const MyFavorite = () => {
         <h1>Избранное</h1>
         <div className='myFavorite-head-flex'>
           <p>Найдено <b>2</b> товара</p>
-          <div>
+          <div className="myFavorite-sort">
             <p>Сортировать по:</p>
-            <div>
+            <div className="myFavorite-sort-selector">
               <p>По категории</p>
               <div></div>
             </div>

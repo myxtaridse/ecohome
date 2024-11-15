@@ -1,11 +1,6 @@
 @use "./header/header";
-@use "./header/header-cities";
-@use "./header/header-navigation";
-@use "./header/header-contacts";
 
-@use "./header/header-catalog";
-@use "./header/header-input";
-@use "./header/header-icons";
+@use './userStorage/userStorage';
 
 @use "./banner";
 @use "./benefit-line";
@@ -21,9 +16,5 @@
 @use "./goodItem/goodItem";
 
 @use "./footer/footer";
-@use "./footer/footer-grid";
-@use "./footer/footer-info";
-@use "./footer/footer-logo";
-@use "./footer/footer-mailing";
 
 @use "./popup/popup-phone.scss"
