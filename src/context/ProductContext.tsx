@@ -25,8 +25,12 @@ const ProductContext = ({children}: any) => {
       
     }).catch((error) => {
       console.log(error);
-      console.log(valueGood, articleLocation);
+      
       if (valueGood) {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const product = valueGood.filter((item: any) => item.article === articleLocation);
+        console.log(product);
+        
         setValue(valueGood)
       }
     })
