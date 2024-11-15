@@ -1,6 +1,6 @@
 import React from "react";
 import "./sass/app.scss";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import MainPage from "./pages/MainPage";
 import MainLayout from "./layout/MainLayout";
 import CatalogPage from "./pages/CatalogPage";
@@ -17,6 +17,9 @@ function App() {
     () =>
       import(/* webpackChunkName: "GoodItemPage" */ "./pages/MyFavorite")
   );
+
+  const location = useLocation();
+  console.log(location);
 
   return (
     <Routes>

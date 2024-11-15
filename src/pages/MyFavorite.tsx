@@ -3,7 +3,7 @@
 // // import Loading from '../components/Loading/Loading';
 // import { reqProduct } from '../api/fetchProducts';
 
-import { useLocation } from "react-router-dom"
+
 
 const MyFavorite = () => {
   // // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -22,8 +22,7 @@ const MyFavorite = () => {
   // // eslint-disable-next-line react-hooks/exhaustive-deps
   // }, [setPathValue]);
 
-  const location = useLocation();
-  console.log(location);
+  
   
 
   // // React.useEffect(() => {
