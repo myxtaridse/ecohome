@@ -26,9 +26,7 @@ React.useEffect(() => {
  
   
   
-const addLikeGood = () => {
-  setIsLike(!isLike)
-}
+
 
   if (valueGood) {
     return (
