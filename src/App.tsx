@@ -32,7 +32,7 @@ function App() {
             <GoodItemPage />
           </React.Suspense>
         } />
-        <Route path="/*" element={
+        <Route element={
           <React.Suspense fallback={<Loading />}>
             <ErrorPage />
           </React.Suspense>
