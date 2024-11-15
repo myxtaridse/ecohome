@@ -21,7 +21,11 @@ const ProductContext = ({children}: any) => {
 
   React.useEffect(() => {
     reqProduct().then((data) => {
-      console.log(data);
+      
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const product = data.filter((item: any) => item.article === articleLocation);
+      console.log(product);
+      
       
     }).catch((error) => {
       console.log(error);
@@ -31,7 +35,7 @@ const ProductContext = ({children}: any) => {
         const product = valueGood.filter((item: any) => item.article === articleLocation);
         console.log(product);
         
-        setValue(valueGood)
+        setValue(valueGood);
       }
     })
    
