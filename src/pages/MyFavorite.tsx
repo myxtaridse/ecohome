@@ -62,7 +62,19 @@ if (!valueGood) return <Loading />
   return (
     <div className='myFavorite'>
       <div className='myFavorite-head'>
-        
+        <h1>Избранное</h1>
+        <div className='myFavorite-head-flex'>
+          <p>Найдено <b>2</b> товара</p>
+          <div>
+            <p>Сортировать по:</p>
+            <div>
+              <p>По категории</p>
+              <div></div>
+            </div>
+          </div>
+          <div></div>
+          <div></div>
+        </div>
       </div>
       <div className='myFavorite-filter'></div>
       <div className='myFavorite-goods'></div>
