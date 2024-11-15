@@ -1,17 +1,19 @@
 import React from 'react'
 import { CustomContextProductItem } from "../../context/ProductContext";
-// import { CustomContextMain } from '../../context/MainContext';
+import { CustomContextMain } from '../../context/MainContext';
 
 const GoodAdd = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const valueGood: any = React.useContext(CustomContextProductItem);
-  
-
-  // const {storageFavorite, setStorageFavorite}: any = React.useContext(CustomContextMain);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const {storageFavorite, setStorageFavorite}: any = React.useContext(CustomContextMain);
   const [isLike, setIsLike] = React.useState(false);
-  // const article = valueGood[0].article;
+  const article = valueGood[0].article;
 
-
+  React.useEffect(() => {
+    console.log(article, storageFavorite, setStorageFavorite);
+    
+  }, [article, storageFavorite, setStorageFavorite])
 
 // React.useEffect(() => {
 //   if (article) {
