@@ -2,6 +2,7 @@ import React from 'react'
 import db from '../../db.json';
 // import { reqProduct } from '../api/fetchProducts';
 import { useLocation } from 'react-router-dom';
+import { reqProduct } from '../api/fetchProducts';
 
 export const CustomContextProductItem = React.createContext(null);
 
@@ -19,6 +20,10 @@ const ProductContext = ({children}: any) => {
   
 
   React.useEffect(() => {
+    reqProduct().then((data) => {
+      console.log(data);
+      
+    })
     console.log(valueGood, articleLocation);
     if (valueGood) {
       setValue(valueGood)
