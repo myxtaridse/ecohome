@@ -13,11 +13,8 @@ const GoodAdd = () => {
 
 
   React.useEffect(() => {
-    if (article) {
-      console.log(isLike);
-      
-      setIsLike(storageFavorite.includes(article))
-    }
+    console.log(isLike, setIsLike, storageFavorite, article, '55555');
+    
   }, [article, storageFavorite, isLike])
 
 // React.useEffect(() => {
