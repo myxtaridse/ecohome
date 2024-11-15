@@ -1,14 +1,14 @@
-import GoodItem from '../components/GoodItem/GoodItem'
-import ProductContext from '../context/ProductContext';
+// import GoodItem from '../components/GoodItem/GoodItem'
+// import ProductContext from '../context/ProductContext';
 
 const GoodItemPage = () => {
   
   return (
     <>
     <div>123</div>
-      <ProductContext>
+      {/* <ProductContext>
         <GoodItem />
-    </ProductContext>
+    </ProductContext> */}
     </>
   )
 }
