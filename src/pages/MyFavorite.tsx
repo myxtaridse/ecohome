@@ -1,64 +1,64 @@
-import React from 'react'
-import { CustomContextMain } from '../context/MainContext';
-// import Loading from '../components/Loading/Loading';
-import { reqProduct } from '../api/fetchProducts';
+// import React from 'react'
+// import { CustomContextMain } from '../context/MainContext';
+// // import Loading from '../components/Loading/Loading';
+// import { reqProduct } from '../api/fetchProducts';
 
 const MyFavorite = () => {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const { setPathValue, storageFavorite, pathFavorite }: any = React.useContext(CustomContextMain);
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const [valueGood, setValueGood] = React.useState<any>(null);
+  // // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  // const { setPathValue, storageFavorite, pathFavorite }: any = React.useContext(CustomContextMain);
+  // // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  // const [valueGood, setValueGood] = React.useState<any>(null);
 
-  React.useEffect(() => {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    reqProduct().then((data: any) => {
-      console.log(pathFavorite, data);
-    })
-    if (pathFavorite === '/') {
-      setPathValue(['Главная', 'Плита печная цельная'])
-    } 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [setPathValue]);
+  // React.useEffect(() => {
+  //   // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  //   reqProduct().then((data: any) => {
+  //     console.log(pathFavorite, data);
+  //   })
+  //   if (pathFavorite === '/') {
+  //     setPathValue(['Главная', 'Плита печная цельная'])
+  //   } 
+  // // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, [setPathValue]);
 
   
 
-  React.useEffect(() => {
-    if (storageFavorite) {
+  // // React.useEffect(() => {
+  // //   if (storageFavorite) {
       
-      if (storageFavorite.length) {
+  // //     if (storageFavorite.length) {
         
-        reqProduct().then((data) => {
-         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-         const isArticle = data.filter((item: any) => {
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          const storageArticle = data.filter((itemStorage: any) => itemStorage === item.article);
-          if (storageArticle) {
-            return item
-          }
+  // //       reqProduct().then((data) => {
+  // //        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  // //        const isArticle = data.filter((item: any) => {
+  // //         // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  // //         const storageArticle = data.filter((itemStorage: any) => itemStorage === item.article);
+  // //         if (storageArticle) {
+  // //           return item
+  // //         }
         
-          return null
-         })
+  // //         return null
+  // //        })
          
          
-         if (isArticle) {
-          setValueGood(isArticle)
-         }
-      }).catch((err) => 
-      {
-        console.log(err);
-        if (valueGood) {
-          setValueGood(null)
-        }
-      }
+  // //        if (isArticle) {
+  // //         setValueGood(isArticle)
+  // //        }
+  // //     }).catch((err) => 
+  // //     {
+  // //       console.log(err);
+  // //       if (valueGood) {
+  // //         setValueGood(null)
+  // //       }
+  // //     }
         
-      )
+  // //     )
        
-      }
-    }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [storageFavorite]);
+  // //     }
+  // //   }
+  // // // eslint-disable-next-line react-hooks/exhaustive-deps
+  // // }, [storageFavorite]);
   
-  console.log(valueGood);
+  // console.log(valueGood);
   
 // if (!valueGood) return <Loading />
   return (

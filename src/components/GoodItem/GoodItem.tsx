@@ -25,8 +25,7 @@ const GoodItem = () => {
   }, [valueGood, setPathValue]);
 
 
-  console.log(valueGood);
-  
+ 
 
   if (!valueGood || valueGood.length === 0) return <Loading />;
 

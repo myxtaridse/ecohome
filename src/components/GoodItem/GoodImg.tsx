@@ -9,13 +9,12 @@ interface GoodImgType {
 const GoodImg: React.FC<GoodImgType> = ({setIsActive}) => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const valueGood: any = React.useContext(CustomContextProductItem);
-  console.log(valueGood);
 
   if (!valueGood.length) {
     return <Loading />
   }
   
-  if (valueGood.length) {
+
     return (
       <div className='goodItem-main'>
         <div className='goodItem-main-article-reviews goodItem-main-reviews-show'>
@@ -59,6 +58,6 @@ const GoodImg: React.FC<GoodImgType> = ({setIsActive}) => {
       </div>
     )
   }
-}
+
 
 export default GoodImg

@@ -17,10 +17,25 @@ const MainContext = ({children}: any) => {
 
     React.useEffect(() => {
       if (storage) {
-        setStorageFavorite(JSON.parse(storage));
+        
+        if (!storageFavorite) {
+          setStorageFavorite(JSON.parse(storage));
+        }
+        if (storageFavorite) {
+          localStorage.setItem('myFavorite', JSON.stringify(storageFavorite))
+          
+        }
+        
       }
-      
-    }, [storage])
+     
+    }, [storage, storageFavorite]);
+
+    React.useEffect(() => {
+      if (!storage) {
+        localStorage.setItem('myFavorite', JSON.stringify([]))
+      } 
+     
+    }, [storage]);
 
   
     // eslint-disable-next-line @typescript-eslint/no-explicit-any

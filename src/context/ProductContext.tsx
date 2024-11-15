@@ -39,55 +39,7 @@ const ProductContext = ({children}: any) => {
       }
     })
    
-  }, [valueGood, articleLocation])
-
-// React.useEffect(() => {
-//     reqProduct().then((data) => {
-      
-      
-//         if (articleLocation) {
-//         console.log(articleLocation);
-        
-//         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-//         const product = data.filter((item: any) => item.article === articleLocation); 
-//         if (product.length) {
-//           console.log(product);
-          
-//          setValue(product)
-//         } 
-        
-//       }
-        
-//     }).catch((err) => 
-//     {
-//       console.log(err);
-//       if (valueGood) {
-//         console.log(valueGood);
-        
-//         if (articleLocation) {
-//           console.log(articleLocation);
-
-          
-//           // eslint-disable-next-line @typescript-eslint/no-explicit-any
-//           const product = valueGood.filter((item: any) => item.article === articleLocation); 
-
-//           if (product.length) {
-//             console.log(product);
-            
-//             setValue(product);
-//           }
-//         }
-        
-        
-        
-//       }
-//     }
-      
-//     )
-    
-// }, [valueGood, articleLocation]);
-
-
+  }, [valueGood, articleLocation]);
 
 
   return (
