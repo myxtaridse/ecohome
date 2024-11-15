@@ -42,7 +42,7 @@ const addLikeGood = () => {
   
 }
 
-  if (valueGood) {
+ 
     return (
       <div className='goodItem-add'>
         <div className='goodItem-main-article-reviews goodItem-add-reviews-show'>
@@ -136,6 +136,6 @@ const addLikeGood = () => {
       </div>
     )
   }
-}
+
 
 export default GoodAdd
