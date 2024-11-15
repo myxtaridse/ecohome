@@ -1,5 +1,6 @@
 import React from 'react'
 import { CustomContextProductItem } from '../../context/ProductContext';
+import Loading from '../Loading/Loading';
 
 interface GoodImgType {
   setIsActive: (isActive: number) => void;
@@ -8,7 +9,13 @@ interface GoodImgType {
 const GoodImg: React.FC<GoodImgType> = ({setIsActive}) => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const valueGood: any = React.useContext(CustomContextProductItem);
-  if (valueGood) {
+  console.log(valueGood);
+
+  if (!valueGood.length) {
+    return <Loading />
+  }
+  
+  if (valueGood.length) {
     return (
       <div className='goodItem-main'>
         <div className='goodItem-main-article-reviews goodItem-main-reviews-show'>
