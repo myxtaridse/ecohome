@@ -16,6 +16,7 @@ const ProductContext = ({children}: any) => {
   const location = useLocation();
   const articleLocation = location.pathname.split('/goods/').join("");
   
+
   
 
 React.useEffect(() => {

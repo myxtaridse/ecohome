@@ -9,8 +9,6 @@ import { CustomContextProductItem } from '../../context/ProductContext';
 import Loading from '../Loading/Loading'
 import { CustomContextMain } from '../../context/MainContext'
 
-
-
 const GoodItem = () => {
     const [isActive, setIsActive] = React.useState<number | null>(0);
 
@@ -24,10 +22,14 @@ const GoodItem = () => {
       if (valueGood) {
         setPathValue(['Главная', 'Каталог продукции', valueGood[0].categoryRelative, valueGood[0].categoryChildren])
       }
-  }, [valueGood, setPathValue])
-    
-    
- if (valueGood.length) {
+  }, [valueGood, setPathValue]);
+
+console.log(valueGood);
+
+  
+
+  if (!valueGood) return <Loading /> 
+
   return (
    
       <div className="goodItem">
@@ -93,11 +95,6 @@ const GoodItem = () => {
       </div>
     )
   
- } else {
-  return (
-    <Loading />
-  )
- }
-}
+  }
 
-export default GoodItem
+export default GoodItem;
