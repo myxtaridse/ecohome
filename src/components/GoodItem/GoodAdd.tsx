@@ -5,8 +5,9 @@ import { CustomContextMain } from '../../context/MainContext';
 const GoodAdd = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const valueGood: any = React.useContext(CustomContextProductItem);
+  
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const {storageFavorite, setStorageFavorite}: any = React.useContext(CustomContextMain);
+  const {storageFavorite}: any = React.useContext(CustomContextMain);
   const [isLike, setIsLike] = React.useState(false);
   const article = valueGood[0].article;
 
@@ -17,21 +18,21 @@ const GoodAdd = () => {
     }
   }, [article, storageFavorite])
 
-React.useEffect(() => {
-  if (article) {
-    if (isLike) {
-      if (!storageFavorite.includes(article)) {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        setStorageFavorite((prevStorage: any) => [...prevStorage, article]);
-      } 
-    } else {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const newFavorite = storageFavorite.filter((item: any) => item.article == article);
-      setStorageFavorite(newFavorite)
-    }
-  }
-// eslint-disable-next-line react-hooks/exhaustive-deps
-}, [isLike, setStorageFavorite, article])
+// React.useEffect(() => {
+//   if (article) {
+//     if (isLike) {
+//       if (!storageFavorite.includes(article)) {
+//         // eslint-disable-next-line @typescript-eslint/no-explicit-any
+//         setStorageFavorite((prevStorage: any) => [...prevStorage, article]);
+//       } 
+//     } else {
+//       // eslint-disable-next-line @typescript-eslint/no-explicit-any
+//       const newFavorite = storageFavorite.filter((item: any) => item.article == article);
+//       setStorageFavorite(newFavorite)
+//     }
+//   }
+// // eslint-disable-next-line react-hooks/exhaustive-deps
+// }, [isLike, setStorageFavorite, article])
  
   
   
