@@ -29,7 +29,6 @@ React.useEffect(() => {
         if (product.length) {
          setValue(product)
         } 
-        console.log(data);
         
       }
         
@@ -37,11 +36,18 @@ React.useEffect(() => {
     {
       console.log(err);
       if (valueGood) {
+        console.log(valueGood);
+        
         if (articleLocation) {
+          console.log(articleLocation);
+
+          
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
           const product = valueGood.filter((item: any) => item.article === articleLocation); 
 
           if (product.length) {
+            console.log(product);
+            
             setValue(product);
           }
         }
