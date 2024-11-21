@@ -3,6 +3,7 @@ import { CustomContextMain } from '../context/MainContext';
 import Arrow from '../components/Arrow';
 import { reqProduct } from '../api/fetchProducts';
 import ComparisonGoods from '../components/UserStorage/Comparison/ComparisonGoods';
+import goodsReserv from '../../db.json';
 
 const sortList = [
   {
@@ -69,7 +70,7 @@ const Comparison = () => {
         }
       }).catch((err) => {
         console.log(err)
-        setGoods([])
+        setGoods(goodsReserv.goods)
       })
   }, [])
 
