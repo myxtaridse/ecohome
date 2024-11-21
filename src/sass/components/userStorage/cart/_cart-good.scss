@@ -1,0 +1,125 @@
+.cartGood {
+    padding: 30px 20px;
+    margin: 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    border-bottom: 1px solid lightgray;
+
+    h3 {
+        font-weight: 650;
+        font-size: 18px;
+        margin: -3px 0 -7px 0;
+    }
+
+    h5 {
+        font-weight: 400;
+    }
+
+}
+.cartGood-select {
+    width: 30px;
+    height: 30px;
+}
+.cartGood img {
+    margin-left: 4%;
+    width: 110px;
+    border: 1px solid lightgray;
+    height: 130px;
+    object-fit: contain;
+}
+.cartGood-character {
+    margin-left: 9%;
+    margin-right: auto;
+    transform: translate(-50px);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+}
+
+.cartGood-article,
+.cartGood-reviews,
+.cartGood-category,
+.cartGood-incr-decr,
+.cartGood-action,
+.cartGood-article-reviews {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.cartGood-article-reviews {
+    font-size: 13px;
+    justify-content: start;
+    font-weight: 500;
+    gap: 30px;
+}
+.cartGood-reviews {
+    div {
+        width: 20px;
+        height: 20px;
+    }
+}
+.cartGood-category {
+    div {
+        margin-top: -5px;
+        width: 14px;
+        height: 14px;
+    }
+}
+.cartGood-incr-decr {
+    margin-right: 15%;
+    gap: 20px;
+    padding: 10px 25px;
+    font-size: 25px;
+    font-weight: 600;
+    
+
+        .goodItem-reviews-item-status-arrow {
+            cursor: pointer;
+            width: 28px;
+            height: 28px;
+            background-color: #fff;
+
+            svg {
+                fill: #CF4E32;
+            }
+         }
+         .goodItem-reviews-item-status-arrow:hover {
+            background-color: #F2F5F9;
+         }
+
+         h2 {
+            font-size: 22px;
+            font-weight: 600;
+         }
+}
+.cartGood-price {
+    font-size: 30px;
+    font-weight: 700;
+}
+.cartGood-action {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    gap: 30px;
+}
+.cartGood-action-svg {
+    width: 24px;
+    height: 24px;
+
+    svg {
+        fill: lightgray;
+    }
+}
+.cartGood-exchange {
+    margin: 12px 0;
+    font-weight: 500;
+    flex-direction: row-reverse;
+}
+
+.cartGood:last-of-type {
+    border-bottom: none;
+}

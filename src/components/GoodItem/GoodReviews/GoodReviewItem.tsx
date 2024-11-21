@@ -1,5 +1,6 @@
 import React from 'react'
 import GoodAnswers from './GoodAnswers'
+import Arrow from '../../Arrow';
 
 const GoodReviewItem = () => {
   const [isreviews, setIsreviews] = React.useState(false);
@@ -29,16 +30,19 @@ const GoodReviewItem = () => {
               <div className='goodItem-reviews-item-status-answers'>
               <div className="goodItem-reviews-item-status">
                 <div className='goodItem-reviews-item-status-arrow'>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 11.8284L9.17154 14.6569L7.75732 13.2426L12 9L16.2426 13.2426L14.8284 14.6569L12 11.8284Z"></path></svg>
+                <Arrow />
                 </div>
                 <h2>5</h2>
-                <div className='goodItem-reviews-item-status-arrow'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 15.0006L7.75732 10.758L9.17154 9.34375L12 12.1722L14.8284 9.34375L16.2426 10.758L12 15.0006Z"></path></svg></div>
+                <div className='goodItem-reviews-item-status-arrow'>
+                  <Arrow />
+                  
+                  </div>
               </div>
               <div className='goodItem-reviews-reviews-title'>
             <h3>Ответы 8</h3>
             
             <div onClick={() => setIsreviews(!isreviews)} className={['goodItem-reviews-reviews-title-svg', isreviews ? 'goodItem-reviews-reviews-title-svg-down' : ''].join(" ")}>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"></path></svg>
+             <Arrow />
             </div>
             </div>
               </div>

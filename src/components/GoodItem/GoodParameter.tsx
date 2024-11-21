@@ -1,5 +1,6 @@
 import React from 'react';
 import { CustomContextProductItem } from "../../context/ProductContext";
+import Arrow from '../Arrow';
 
 const GoodParameter = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -53,7 +54,7 @@ const GoodParameter = () => {
           <div className='goodItem-parameter-link'>
             <p>Все характеристики</p>
             <div>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 15.0006L7.75732 10.758L9.17154 9.34375L12 12.1722L14.8284 9.34375L16.2426 10.758L12 15.0006Z"></path></svg>
+              <Arrow />
             </div>
           </div>
         </div>

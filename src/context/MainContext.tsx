@@ -7,13 +7,28 @@ const MainContext = ({children}: any) => {
 
     const windowRef = React.useRef(window.innerWidth);
     const [isCatalog, setIsCatalog] = React.useState(false);
+    const [city, setCity] = React.useState();
     const [isPopup, setIsPopup] = React.useState(false);
+    const [isPopupDelivery, setIsPopupDelivery] = React.useState(false);
     const [pathValue, setPathValue] = React.useState([]);
     const [pathFavorite, setPathFavorite] = React.useState('/');
     const popupRef = React.useRef<HTMLDivElement | null>(null);
     const storage = localStorage.getItem('myFavorite');
-    
     const [storageFavorite, setStorageFavorite] = React.useState<string | null>(null);
+
+    // // delivery-data
+    // const [basket, setBasket] = React.useState([]);
+    // const [isDelivery, setIsDelivery] = React.useState(false);
+    // // form-data
+    // const [nameCompany, setNameCompany] = React.useState('');
+    // const [INN, setINN] = React.useState('');
+    // const [KPP, setKPP] = React.useState('');
+    // const [legalAddress, setLegalAddress] = React.useState('');
+    // const [contactPerson, setContactPerson] = React.useState('');
+    // const [numberPhone, setNumberPhone] = React.useState('');
+    // const [email, setEmail] = React.useState('');
+    // const [address, setAddress] = React.useState('');
+    // const [commentsOrder, setCommentsOrder] = React.useState('')
 
     React.useEffect(() => {
       if (storage) {
@@ -52,7 +67,11 @@ const MainContext = ({children}: any) => {
       setPathFavorite,
       pathFavorite,
       storageFavorite,
-      setStorageFavorite
+      setStorageFavorite,
+      isPopupDelivery,
+      setIsPopupDelivery,
+      city, 
+      setCity
     };
 
   return (

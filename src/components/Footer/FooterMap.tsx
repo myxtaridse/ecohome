@@ -15,7 +15,8 @@ const FooterMap = () => {
         onLoad={() => setLoading(false)}
         className="footer-map"
         title="map"
-        src="https://api-maps.yandex.ru/frame/v1/-/CDd-4Cic?z=12"
+        src="https://api-maps.yandex.ru/frame/v1/-/CDd-4Cic&?z=12"
+        
       ></iframe>
     </div>
   );

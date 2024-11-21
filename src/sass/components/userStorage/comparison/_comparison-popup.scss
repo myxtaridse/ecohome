@@ -1,0 +1,186 @@
+.comparison-sort-selector{
+    background-color: #F2F5F9;
+    width: max-content;
+    padding: 5px 10px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid lightgray;
+
+    div {
+        transform: translateY(4px);
+        transform: rotate(90deg);
+        width: 28px;
+
+        svg {
+            fill: #565656;
+        }
+    }
+}
+
+
+.comparison-sort-selector-popup {
+    border: 1px solid lightgray;
+    width: max-content;
+    position: absolute;
+    top: 38px;
+    right: 0;
+    height: max-content;
+    background-color: #F2F5F9;
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    
+
+    p {
+        height: max-content;
+        flex-wrap: wrap;
+        padding: 10px 20px 10px 8px;
+       display: flex;
+       align-items: center;
+       justify-content: start;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    p:hover {
+        background-color: #dee7ef;
+    }
+}
+
+.comparison-goods-sorted {
+    width: 97%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.comparison-delete-block {
+    margin: 0;
+
+    p {
+        font-size: 18px;
+    }
+    
+}
+.comparison-goods-sorted-block {
+    position: relative;
+}
+.comparison-goods-sorted-block-select {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    p {
+        font-size: 18px;
+    }
+}
+.comparison-goods-sorted-block-select-item {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    gap: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    
+    div {
+        width: 28px;
+        height: 28px;
+
+        svg {
+            fill: black;
+        }
+    }
+
+    p {
+        font-weight: 650;
+        font-size: 19px;
+    }
+}
+.comparison-goods-sorted-block-select-item:hover {
+    background-color: #F2F5F9;
+    
+}
+
+.comparison-goods-sorted-popup {
+    position: absolute;
+    top: 40px;
+    left: 165px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    background-color: #fff;
+    z-index: 10;
+}
+
+
+@media (max-width: 500px) {
+    .comparison-sort-selector{
+        margin-top: 10px;
+        padding: 5px 10px;
+        height: 35px;
+        gap: 0px;
+        font-size: 14px;
+    
+        div {
+            transform: rotate(90deg) translateX(1px);
+            width: 22px;
+    
+            svg {
+                fill: #565656;
+            }
+        }
+    }
+    
+    
+    .comparison-sort-selector-popup {
+        top: 42px;
+        p {
+            height: max-content;
+            padding: 5px 0 5px 9px;
+            font-size: 14px;
+        }
+    }
+
+    .comparison-goods-sorted {
+        position: sticky;
+        top: 0;
+        left: 10px;
+        width: 97%;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .comparison-goods-sorted-block-select {
+        gap: 10px;
+    
+        p {
+            font-size: 14px;
+        }
+    }
+    .comparison-goods-sorted-block-select-item {
+        gap: 7px;
+        padding: 5px 10px;
+        
+        div {
+            width: 24px;
+            height: 24px;
+    
+            svg {
+                fill: black;
+            }
+        }
+    
+        p {
+            margin-top: -3px;
+            font-weight: 650;
+            font-size: 14px;
+        }
+    }
+}

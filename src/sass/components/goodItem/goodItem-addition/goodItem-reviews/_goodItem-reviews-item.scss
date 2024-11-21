@@ -94,12 +94,19 @@
 .goodItem-reviews-item-status-arrow {
     width: 24px;
     height: 24px;
+    padding: 2px;
     background-color: rgb(220, 220, 220);
     border-radius: 50%;
 
     svg {
         fill: #6a6a6a;
     }
+}
+.goodItem-reviews-item-status-arrow:first-of-type {
+    transform: rotate(-90deg);
+}
+.goodItem-reviews-item-status-arrow:last-of-type {
+    transform: rotate(90deg);
 }
 
 
@@ -113,15 +120,15 @@
 }
 
 .goodItem-reviews-reviews-title-svg {
-    margin-top: 3px;
+    margin-top: 0;
     width: 22px;
-    transform: rotate(0deg);
+    transform: rotate(90deg);
     transition: .4s;
     cursor: pointer;
 }
 .goodItem-reviews-reviews-title-svg-down {
-    margin-top: -3px;
-    transform: rotate(-180deg);
+    margin-top: 0;
+    transform: rotate(270deg);
     
   }
 

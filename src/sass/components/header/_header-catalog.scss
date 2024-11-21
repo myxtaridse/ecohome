@@ -225,7 +225,11 @@
 
 @media (max-width: 500px) {
   .header-catalog-block {
+    margin-left: 40px;
     padding: 8px 20px 7px;
+  }
+  .header-catalog span {
+    display: none;
   }
 }
 

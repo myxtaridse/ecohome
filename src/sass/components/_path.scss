@@ -24,6 +24,22 @@
     display: none;
 }
 
+.path-arrow-mobile {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgray;
+
+    svg {
+        width: 22px;
+        height: 22px;
+        fill: #565656;
+    }
+}
+
 @media (max-width: 1200px) {
     .path {
         font-size: 12px;
@@ -36,5 +52,15 @@
 @media (max-width: 600px) {
     .path {
         flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 500px) {
+    .path {
+        position: absolute;
+        top: 46.5px;
+        left: 0;
+        z-index: 1000;
+        margin-left: 10px;
     }
 }

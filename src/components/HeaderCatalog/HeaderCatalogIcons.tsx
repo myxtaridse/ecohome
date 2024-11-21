@@ -11,22 +11,25 @@ const HeaderCatalogIcons = () => {
   
   return (
     <div className="header-catalog-icons">
-      <div className="header-catalog-icon-block">
-        <div className="header-catalog-icon">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="rgba(151,131,121,1)"
-          >
-            <path d="M2 12H4V21H2V12ZM5 14H7V21H5V14ZM16 8H18V21H16V8ZM19 10H21V21H19V10ZM9 2H11V21H9V2ZM12 4H14V21H12V4Z"></path>
-          </svg>
-          <div className="header-icons-bell">
-           <p>0</p> 
+      
+      <Link to='/comparison'>
+        <div className="header-catalog-icon-block">
+          <div className="header-catalog-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="rgba(151,131,121,1)"
+            >
+              <path d="M2 12H4V21H2V12ZM5 14H7V21H5V14ZM16 8H18V21H16V8ZM19 10H21V21H19V10ZM9 2H11V21H9V2ZM12 4H14V21H12V4Z"></path>
+            </svg>
+            <div className="header-icons-bell">
+            <p>0</p> 
+            </div>
+            
           </div>
-          
+          <p>Сравнение</p>
         </div>
-        <p>Сравнение</p>
-      </div>
+      </Link>
       <Link to='/favorite'>
       <div className="header-catalog-icon-block" onClick={() => setPathFavorite(location.pathname)}>
         <div className="header-catalog-icon">
@@ -45,7 +48,8 @@ const HeaderCatalogIcons = () => {
         <p>Избранное</p>
       </div>
       </Link>
-      <div className="header-catalog-icon-block">
+      <Link to='/cart'>
+      <div className="header-catalog-icon-block" onClick={() => setPathFavorite(location.pathname)}>
         <div className="header-catalog-icon">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -60,6 +64,7 @@ const HeaderCatalogIcons = () => {
         </div>
         <p>Корзина</p>
       </div>
+      </Link>
 
       <div className="header-catalog-login">
         <HeaderLogIn />

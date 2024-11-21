@@ -18,6 +18,7 @@ import finishingMaterials from "../../assets/icons/category/finishing-materials.
 import bath from "../../assets/icons/category/bath.svg";
 import household from "../../assets/icons/category/household-goods.svg";
 import { CustomContextMain } from "../../context/MainContext";
+import Arrow from "../Arrow";
 
 const catalog = [
   {
@@ -705,13 +706,7 @@ const Catalog = () => {
             <img style={{ width: "40px" }} src={item.svg} />
             <p>{item.title}</p>
             <div className={["catalog-arrow", "catalog-arrow-main", arrowDown && activeCategory === item.id ? 'catalog-arrow-down' : ''].join(" ")}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z"></path>
-              </svg>
+              <Arrow />
             </div>
             </div>
 
@@ -721,13 +716,7 @@ const Catalog = () => {
                   <div key={li.id} className="catalog-item-main">
                     <p>{li.subTitle}</p>
                     <div className="catalog-arrow">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                      >
-                        <path d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z"></path>
-                      </svg>
+                      <Arrow />
                     </div>
                   </div>
                 ))}

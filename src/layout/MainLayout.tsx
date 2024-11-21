@@ -3,15 +3,16 @@ import { Outlet, useLocation } from "react-router-dom";
 import Header from "../components/HeaderMain/Header";
 import HeaderCatalog from "../components/HeaderCatalog/HeaderCatalog";
 import CallPhone from "../components/CallPhone";
-// import Footer from "../components/Footer/Footer";
+import Footer from "../components/Footer/Footer";
 import Path from "../components/Path";
 import { CustomContextMain } from "../context/MainContext";
+import CartDeliveryDetail from "../components/UserStorage/Cart/CartDeliveryDetail";
 
 
 const MainLayout: React.FC = () => {
   const location = useLocation();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const {isPopup}: any = React.useContext(CustomContextMain)
+  const {isPopup, isPopupDelivery}: any = React.useContext(CustomContextMain)
 
   const showPathInPage = location.pathname !== '/' && location.pathname !== '/catalog';
   
@@ -29,10 +30,11 @@ const MainLayout: React.FC = () => {
           }
           <Outlet />
           {isPopup && <CallPhone />}
+          {isPopupDelivery && <CartDeliveryDetail />}
         </div>
-      {/* {
+      {
         location.pathname !== '/catalog'  &&   <Footer />
-      } */}
+      }
       </div>
     
   );

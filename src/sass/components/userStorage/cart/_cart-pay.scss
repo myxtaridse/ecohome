@@ -1,0 +1,109 @@
+.cartTotal {
+    width: 500px;
+    background-color: #F2F5F9;
+    box-shadow: 2px 2px 7px 3px #0000001c;
+    height: max-content;
+    padding: 20px 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 5px;
+}
+.cartTotal-totalPrice,
+.cartTotal-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cartTotal-item-text {
+    margin-right: auto;
+    margin-left: 10px;
+
+}
+
+.cartTotal-item-svg {
+    width: 20px;
+    height: 20px;
+
+    svg {
+        fill: #565656;
+    }
+}
+.cartTotal-item-line {
+    flex: 1;
+    margin-top: auto;
+    margin-bottom: 1px;
+    background-color: #E6ECF2;
+    height: 1px;
+    border-bottom: 1px dotted #565656;
+}
+
+.cartTotal button {
+        height: 50px;
+        width: 100%;
+        font-size: 18px;
+        color: white;
+        background-color: #CF4E32;
+}
+
+.cartTotal-payBlock-flex {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.cartTotal-payBlock-item {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    height: 53px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 90px;
+}
+.cartTotal-payBlock-item-sber {
+    background: linear-gradient(-120deg, #0FB6FE 0%, #03D31D 50%, #F2EA00 100%);
+
+    div {
+        margin-top: 5px;
+    }
+}
+.cartTotal-payBlock-item-sbp img {
+    width: 90px;
+}
+
+.cartTotal-payBlock-item-money {
+    div {
+        margin-top: 8px;
+    }
+}
+.cartTotal-payBlock-item-addCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+
+    p {
+        width: 90%;
+        text-align: center;
+        font-size: 10px;
+        font-weight: 700;
+        line-height: 1;
+        color: #000;
+    }
+
+    div {
+        margin-bottom: -5px;
+
+        svg {
+            color: black;
+        }
+    }
+}
+
+.cartTotal-payBlock-item-active {
+    box-shadow: 1px 1px 7px 5px #cf4f3232;
+    border: 1px solid #beb3ac;
+}

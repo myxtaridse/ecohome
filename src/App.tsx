@@ -1,6 +1,6 @@
 import React from "react";
 import "./sass/app.scss";
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import MainPage from "./pages/MainPage";
 import MainLayout from "./layout/MainLayout";
 import CatalogPage from "./pages/CatalogPage";
@@ -15,11 +15,16 @@ function App() {
   );
   const MyFavorite = React.lazy(
     () =>
-      import(/* webpackChunkName: "GoodItemPage" */ "./pages/MyFavorite")
+      import(/* webpackChunkName: "MyFavorite" */ "./pages/MyFavorite")
   );
-
-  const location = useLocation();
-  console.log(location);
+  const Cart = React.lazy(
+    () =>
+      import(/* webpackChunkName: "Cart" */ "./pages/Cart")
+  );
+  const Comparison = React.lazy(
+    () =>
+      import(/* webpackChunkName: "Comparison" */ "./pages/Comparison")
+  );
 
   return (
     <Routes>
@@ -43,6 +48,16 @@ function App() {
         <Route path="/favorite" element={
           <React.Suspense fallback={<Loading />}>
             <MyFavorite />
+          </React.Suspense>
+        } />
+        <Route path="/cart" element={
+          <React.Suspense fallback={<Loading />}>
+            <Cart />
+          </React.Suspense>
+        } />
+        <Route path="/comparison" element={
+          <React.Suspense fallback={<Loading />}>
+            <Comparison />
           </React.Suspense>
         } />
       </Route>

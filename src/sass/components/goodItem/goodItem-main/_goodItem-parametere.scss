@@ -59,8 +59,9 @@
     align-items: center;
     justify-content: start;
     div {
-        margin-top: 8px;
-        width: 26px;
+        margin-top: 0;
+        transform: rotate(90deg);
+        width: 24px;
 
         svg {
             fill: grey;

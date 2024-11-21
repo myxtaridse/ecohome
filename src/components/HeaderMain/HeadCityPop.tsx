@@ -1,10 +1,13 @@
 import React from "react";
 import Headpopup from "./Headpopup";
+import Arrow from "../Arrow";
+import { CustomContextMain } from "../../context/MainContext";
 
 const HeadCityPop = () => {
   const [isPopup, setIsPopup] = React.useState(false);
-  const [city, setCity] = React.useState("");
-
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const {city}: any = React.useContext(CustomContextMain);
+  
   return (
     <div className="header-cities">
       <div className="header-myCity" onClick={() => setIsPopup(!isPopup)}>
@@ -18,19 +21,13 @@ const HeadCityPop = () => {
           </svg>
         </div>
 
-        <h2>{city ? city : "Киров"}</h2>
+        <h2>{city ? city.city : "Киров"}</h2>
         <div className="header-arrow">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-          >
-            <path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"></path>
-          </svg>
+        <Arrow />
         </div>
       </div>
       {isPopup === true && (
-        <Headpopup setIsPopup={setIsPopup} setCity={setCity} />
+        <Headpopup setIsPopup={setIsPopup}  />
       )}
     </div>
   );

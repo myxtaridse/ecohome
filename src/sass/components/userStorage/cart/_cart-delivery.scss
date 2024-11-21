@@ -1,0 +1,29 @@
+.cartDelivery-flex {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: 30px auto;
+    border-radius: 5px;
+}
+.cartDelivery-item {
+    cursor: pointer;
+    flex: 1;
+    padding: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    color: #565656;
+}
+.cartDelivery-active {
+    background-color: #F2F5F9;
+    box-shadow: 2px 2px 7px 3px #0000001c;
+    color: black;
+    border-radius: 5px;
+}
+.cartDelivery-item-text {
+    p {
+        border-bottom: 1px dotted #CF4E32;
+        width: max-content;
+    }
+}

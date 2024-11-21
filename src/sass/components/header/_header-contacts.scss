@@ -31,7 +31,7 @@
   height: max-content;
   background-color: #fff;
   font-size: 17px;
-  font-weight: 650;
+  font-weight: 500;
   padding: 5px 10px;
   border: 1px solid #cf4f32a5;
   text-decoration: underline dotted #cf4e32;
@@ -46,12 +46,12 @@
   width: 0;
   height: 0;
   bottom: 100%;
-  top: -6px;
+  top: -7px;
   left: 1.5em;
   border: 0.5rem solid transparent;
   border-top: none;
   border-bottom-color: #fff;
-  filter: drop-shadow(0 -0.1em 0.01em #cf4f32);
+  filter: drop-shadow(0 -0.01em 0.008em #cf4f32);
 }
 
 

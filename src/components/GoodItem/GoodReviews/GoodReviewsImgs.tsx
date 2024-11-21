@@ -2,6 +2,7 @@ import React from 'react'
 import image1 from '../../../assets/image.png'
 import image2 from '../../../assets/image-2.png'
 import image3 from '../../../assets/image-3.png'
+import Arrow from '../../Arrow'
 
 const imagesGallery = [
     {
@@ -128,7 +129,7 @@ const GoodReviewsImgs = () => {
     <div className='goodItem-reviews-imagesBlock'>
         
 <div className='goodItem-reviews-imagesBlock-arrow goodItem-reviews-imagesBlock-arrow-left' onClick={() => onClickGallery('decr')}>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11.8284 12.0005L14.6569 14.8289L13.2426 16.2431L9 12.0005L13.2426 7.75781L14.6569 9.17203L11.8284 12.0005Z"></path></svg>
+    <Arrow />
 </div>
         <div ref={imagesRef} className='goodItem-reviews-imagesBlock-gallery' style={{translate: '70px'}}>
             {
@@ -136,7 +137,7 @@ const GoodReviewsImgs = () => {
             }
         </div>
             <div className='goodItem-reviews-imagesBlock-arrow goodItem-reviews-imagesBlock-arrow-right' onClick={() => onClickGallery('incr')}>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.1717 12.0005L9.34326 9.17203L10.7575 7.75781L15.0001 12.0005L10.7575 16.2431L9.34326 14.8289L12.1717 12.0005Z"></path></svg>
+            <Arrow />
             </div>
     </div>
   )

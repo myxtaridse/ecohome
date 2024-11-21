@@ -82,10 +82,10 @@
     }
 }
 .goodItem-reviews-imagesBlock-arrow-left {
-left: 5px;
+    transform: rotate(180deg);
+    left: 5px;
 }
 .goodItem-reviews-imagesBlock-arrow-left:hover {
-
 transform: translateX(-5px);
 }
 .goodItem-reviews-imagesBlock-arrow-right {

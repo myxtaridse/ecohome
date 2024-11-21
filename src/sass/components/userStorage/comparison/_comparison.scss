@@ -1,0 +1,79 @@
+@use './comparison-good';
+@use './comparison-popup';
+
+.comparison {
+    width: 84vw;
+    margin: 10px auto 250px;
+}
+
+.comparisonGoods {
+    margin-top: 10px;
+    background-color: #F2F5F9;
+    border-radius: 5px;
+    padding: 40px;
+}
+
+
+.comparison-goods {
+    border-top: 1px solid #0000001e;
+    padding-top: 10px;
+    padding-left: 0px;
+    display: block;
+    width: 84vw;
+    border-left: none;
+}
+
+.comparison-goods-notFound {
+    margin: 30px auto;
+}
+
+
+.comparisonGoods-flex {
+    display: flex;
+    width: max-content;
+    gap: 40px;
+
+}
+
+.comparisonGoods-item {
+    width: 300px;
+    height: max-content;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    position: relative;
+}
+
+
+@media (max-width: 500px) {
+    .comparison {
+        width: 95vw;
+        margin: 0px auto 250px;
+    }
+    .comparison-goods {
+        width: 100%;
+        // overflow-x: scroll;
+        scrollbar-width: none;
+        -ms-overflow-style: none; 
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+    }
+    .comparisonGoods {
+        width: max-content;
+        min-width: 100vw;
+        margin-left: -2.5vw;
+        border-radius: 0;
+        padding: 20px;
+        
+        
+    }
+    .comparisonGoods-flex {
+        gap: 20px;
+    
+    }
+    .comparisonGoods-item {
+        width: 150px;
+        padding: 10px;
+    }
+}
+

@@ -10,13 +10,13 @@
 }
 
 .header-city-svg {
-  margin-top: 2px;
   width: 16px;
 }
 
 .header-arrow {
+  transform: rotate(90deg);
   margin-left: -2px;
-  margin-top: 2px;
+  margin-top: 0px;
   width: 20px;
   color:  #565656;
 }
@@ -62,21 +62,24 @@
   height: 75%;
   overflow-y: scroll;
   display: flex;
+  align-items: start;
+  // gap: 12px;
   flex-direction: column;
   padding-right: 5px;
   padding-top: 5px;
   scrollbar-width: thin;
-  scrollbar-color: #cf4e32 rgb(222, 222, 222); /* плашка скролла и дорожка */
+  scrollbar-color: #cf4e32 #F2F5F9; /* плашка скролла и дорожка */
 }
 .header-cities-popup-list::-webkit-scrollbar-thumb {
   border-radius: 5px;
 }
-.header-cities-popup-list span {
+.header-cities-popup-list div {
   cursor: pointer;
-  padding: 5px 3px;
+  width: 90%;
+  padding: 10px 15px;
 }
-.header-cities-popup-list span:hover {
-  background-color: rgb(222, 212, 212);
+.header-cities-popup-list div:hover {
+  background-color: #F2F5F9;
 }
 @media (max-width: 900px) {
   .header-myCity {

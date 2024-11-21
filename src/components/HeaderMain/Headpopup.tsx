@@ -1,42 +1,35 @@
 import React from "react";
 import dataCities from "../../assets/cities/cities.json";
+import { CustomContextMain } from "../../context/MainContext";
 
 interface HeadpopupType {
   setIsPopup: (isPopup: boolean) => void;
-  setCity: (city: string) => void;
 }
 
-const Headpopup: React.FC<HeadpopupType> = ({ setIsPopup, setCity }) => {
+const Headpopup: React.FC<HeadpopupType> = ({ setIsPopup }) => {
   const [list, setList] = React.useState("");
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const {setCity}: any = React.useContext(CustomContextMain)
 
   const cities = dataCities
-    .map((item) => item.cities.map((itemC) => itemC + ", " + item.title))
-    .flat()
-    .sort((a, b) => {
-      if (a.toLocaleLowerCase() < b.toLocaleLowerCase()) {
-        return -1;
+    .map((item) => item.cities.map((itemC) => {
+      return {
+        city: itemC,
+        area: item.title
       }
-      if (a.toLocaleLowerCase() > b.toLocaleLowerCase()) {
-        return 1;
-      }
-      return 0;
-    });
+    })).flat().sort((a, b) => {
+      const cityA = a.city
+      const cityB = b.city
 
-  const citiesNew = dataCities
-    .map((item) => item.cities)
-    .flat()
-    .sort((a, b) => {
-      if (a.toLocaleLowerCase() < b.toLocaleLowerCase()) {
+      if (cityA.toLocaleLowerCase() > cityB.toLocaleLowerCase()) {
+        return 1;
+      } else if (cityA.toLocaleLowerCase() < cityB.toLocaleLowerCase()) {
         return -1;
       }
-      if (a.toLocaleLowerCase() > b.toLocaleLowerCase()) {
-        return 1;
-      }
-      return 0;
-    });
-  const find = citiesNew.findIndex(
-    (city) => city.toLocaleLowerCase() === list.toLocaleLowerCase()
-  );
+
+      return 0
+    }
+    )
 
   return (
     <div
@@ -68,16 +61,18 @@ const Headpopup: React.FC<HeadpopupType> = ({ setIsPopup, setCity }) => {
         </div>
         <div className="header-cities-help">Не нашли свой город?</div>
         <div className="header-cities-popup-list">
-          {find !== -1 ? (
-            <span>{cities[find]}</span>
-          ) : (
-            cities.map((city, id) => (
-              // eslint-disable-next-line @typescript-eslint/no-explicit-any
-              <span key={id} onClick={(e: any) => setCity(e?.target?.textContent)}>
-                {city}
-              </span>
-            ))
-          )}
+
+          {
+            cities && cities.map((itemCities) => <div className="header-cities-popup-item"
+              onClick={() => {
+                setCity(itemCities)
+                setIsPopup(false);
+              }}
+            >
+              {itemCities.city}, {itemCities.area}
+            </div>)
+          }
+
         </div>
       </div>
     </div>
