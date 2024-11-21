@@ -27,6 +27,7 @@ const ComparisonReviews: React.FC<ComparisonReviewsType> = ({goods}) => {
                     <p>{averageRating ? averageRating / item.reviews.length : 5}</p>
                     </div>
                     <p>{item.reviews.length} оценки</p>
+                    <p className='comparisonReviews-popular'>Популярный отзыв</p>
                 </div>
               })
             }

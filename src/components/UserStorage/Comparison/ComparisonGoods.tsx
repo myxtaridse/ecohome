@@ -3,6 +3,8 @@ import ComparisonGoodMain from './ComparisonGoodMain';
 import ComparisonGoodCharacter from './ComparisonGoodCharacter';
 import ComparisonGoodsSize from './ComparisonGoodsSize';
 import ComparisonReviews from './ComparisonReviews';
+import { CustomContextMain } from '../../../context/MainContext';
+import ComparisonGoodPrice from './ComparisonGoodPrice';
 
 interface ComparisonGoodsType {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -14,7 +16,8 @@ interface ComparisonGoodsType {
 const ComparisonGoods: React.FC<ComparisonGoodsType> = ({goods, characterAll}) => {
   const [isSelectAll, setIsSelectAll] = React.useState(false);
   const heightGood = React.useRef<HTMLDivElement>(null);
-  
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const {windowRef}: any = React.useContext(CustomContextMain)
   
   
   return (
@@ -25,11 +28,21 @@ const ComparisonGoods: React.FC<ComparisonGoodsType> = ({goods, characterAll}) =
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             goods.map((itemGood: any) => 
               <div className='comparisonGoods-item'>
-                <ComparisonGoodMain isSelectAll={isSelectAll} itemGood={itemGood} />
+                <ComparisonGoodMain isSelectAll={isSelectAll} itemGood={itemGood} windowRef={windowRef} />
               </div>
             )
           }
         </div>
+        {
+          windowRef.current <= 500 && (
+            <div className='comparisonGoodsSize'>
+              <h2>Цена</h2>
+              {
+                    <ComparisonGoodPrice goods={goods} />
+                }
+            </div>
+          )
+        }
         <div className='comparisonGoodsSize'>
           <h2>Оценки</h2>
           {

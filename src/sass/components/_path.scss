@@ -57,7 +57,7 @@
 
 @media (max-width: 500px) {
     .path {
-        position: absolute;
+        position: fixed;
         top: 46.5px;
         left: 0;
         z-index: 1000;

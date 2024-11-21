@@ -154,35 +154,42 @@
 }
 .comparisonGoodMain-lock-relative {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .comparisonGoodMain-lock {
-    width: 16px;
-    height: 16px;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     svg {
-        width: 12px;
-        height: 12px;
+        width: 24px;
+        height: 24px;
 
         path {
             stroke: #CF4E32;
-            stroke-width: 2.8;
+            stroke-width: 1.5;
         }
     }
 }
 .comparisonGoodMain-lock-close {
     position: absolute;
-    top: -9px;
-    left: 30%;
-    width: 12px;
-    height: 12px;
+    top: -7px;
+    left: 8px;
+    width: 18px;
+    height: 18px;
     transition: all .9s;
     transform: scaleX(1) rotateY(0deg);
 
     svg {
-        width: 6px;
-        height: 6px;
+        width: 10px;
+        height: 10px;
         path {
             stroke: #CF4E32;
+            stroke-width: 1.2;
         }
     }
 }
@@ -210,6 +217,7 @@
         font-size: 13px;
     }
     .comparisonGoodMain-actions-price {
+        background-color: #fff;
         margin-top: 10px;
         justify-content: space-between;
         padding: 5px;
@@ -219,17 +227,19 @@
     }
     
     .comparisonGoodMain-actions {
+        width: 100%;
         display: flex; 
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         gap: 10px;
     
         div {
-            width: 14px;
-            height: 14px;
+            width: 17px;
+            height: 17px;
 
             svg {
-                transform: translateY(-3px);
+
+                transform: translateY(-2px);
             }
         }
 
@@ -262,9 +272,18 @@
             p:not(.comparisonReviews-flex p) {
                 margin-top: 3px;
                 font-size: 10px;
+                margin-right: auto;
+                margin-left: 2px;
             }
+
+            .comparisonReviews-popular {
+                text-decoration: underline dotted #565656;
+            }
+            
         }
     }
+
+
 
     .comparisonReviews-flex {
         padding: 5px 10px;

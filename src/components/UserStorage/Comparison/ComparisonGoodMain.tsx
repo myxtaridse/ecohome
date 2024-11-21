@@ -3,29 +3,34 @@ import React from 'react'
 interface ComparisonGoodMainType {
   isSelectAll: boolean;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  itemGood: any
+  itemGood: any,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  windowRef: any
 }
 
-const ComparisonGoodMain: React.FC<ComparisonGoodMainType> = ({isSelectAll, itemGood}) => {
+const ComparisonGoodMain: React.FC<ComparisonGoodMainType> = ({itemGood, windowRef}) => {
+
+  
 
   const [isClose, setIsClose] = React.useState(false)
   
   return (
     <div className='comparisonGoodsMain'>
           
-            <div className='comparisonGoodMain-check'>
+            {/* <div className='comparisonGoodMain-check'>
                   {
                       isSelectAll ? <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4 3H20C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3ZM11.0026 16L18.0737 8.92893L16.6595 7.51472L11.0026 13.1716L8.17421 10.3431L6.75999 11.7574L11.0026 16Z"></path></svg> : <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4 3H20C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3ZM5 5V19H19V5H5Z"></path></svg>
                   }
-            </div>
+            </div> */}
            <div className='comparisonGoodMain-lock-block' onClick={() => setIsClose(!isClose)}>
                   <div className='comparisonGoodMain-lock-relative'>
                   <div className='comparisonGoodMain-lock'>
                   {
-                       <svg viewBox="-14 -6 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                       <path d="M1 18.1667V3.50029C1 2.48776 1.79569 1.66699 2.77721 1.66699H20.5494C21.5309 1.66699 22.3266 2.48776 22.3266 3.50029V18.1667C22.3266 19.1792 21.5309 20 20.5494 20H2.77721C1.79569 20 1 19.1792 1 18.1667Z"  stroke-linejoin="round"/>
-                       <path d="M11.6619 14.4992C13.6249 14.4992 15.2163 12.8576 15.2163 10.8326C15.2163 8.80761 13.6249 7.16602 11.6619 7.16602C9.69879 7.16602 8.10742 8.80761 8.10742 10.8326C8.10742 12.8576 9.69879 14.4992 11.6619 14.4992Z"  stroke-linejoin="round"/>
+                       <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <path d="M4 12.667V7.33366C4 6.96546 4.29848 6.66699 4.66667 6.66699H11.3333C11.7015 6.66699 12 6.96546 12 7.33366V12.667C12 13.0352 11.7015 13.3337 11.3333 13.3337H4.66667C4.29848 13.3337 4 13.0352 4 12.667Z" stroke-linejoin="round"/>
+                       <path d="M7.99935 11.3337C8.73573 11.3337 9.33268 10.7367 9.33268 10.0003C9.33268 9.26395 8.73573 8.66699 7.99935 8.66699C7.26297 8.66699 6.66602 9.26395 6.66602 10.0003C6.66602 10.7367 7.26297 11.3337 7.99935 11.3337Z" stroke-linejoin="round"/>
                        </svg>
+                       
                        
                        
                        
@@ -69,7 +74,9 @@ const ComparisonGoodMain: React.FC<ComparisonGoodMainType> = ({isSelectAll, item
                     </svg>
                 </div>
               </div>
-              <div className='comparisonGoodMain-price'>{itemGood.price} ₽</div>
+              {
+                windowRef.current > 500 && <div className='comparisonGoodMain-price'>{itemGood.price} ₽</div>
+              }
             </div>
           
     </div>

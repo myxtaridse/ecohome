@@ -110,7 +110,6 @@ const Comparison = () => {
         <h1>Сравнение товаров</h1>
       </div>
         <div className='myFavorite-head-flex'>
-        <h2>Найдено 2 товара</h2>
           
           <div className="myFavorite-sort">
             <p className='myFavorite-sort-title'>Категория:</p>
