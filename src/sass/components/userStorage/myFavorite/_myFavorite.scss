@@ -153,20 +153,22 @@
 
 
 .myFavorite-goods {
+    background-color: #F2F5F9;
     border-top: 1px solid lightgray;
     border-left: 1px solid lightgray;
-    padding-top: 20px;
-    padding-left: 40px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    padding-left: 15px;
     width: 65vw;
     margin-top: 30px;
     margin-right: 5px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 70px;
+    grid-template-columns: repeat(4, max-content);
+    gap: 20px;
     grid-row-start: 2;
     grid-column-start: 2;
     grid-column-end: 3;
-    justify-content: end;
+    // justify-content: end;
 }
 
 .myFavorite-filter-line {
@@ -312,19 +314,48 @@
     .myFavorite-sort-right{
         display: none;
     }
+
+    
+
+    .myFavorite-filter-line {
+        width: 100%;
+        margin: 15px 0;
+    
+        h3 {
+            display: none;
+        }
+        
+    
+        .myFavorite-filter-line-round {
+            width: 17px;
+            height: 17px;
+            top: -7px;
+        }
+        .myFavorite-filter-line-round:last-of-type {
+            left: calc(100% - 17px);
+        }
+        .myFavorite-filter-line-line {
+            width: 90%;
+            height: 4px;
+        }
+    }
+    .myFavorite-filter-line-main {
+        height: 4px;
+    }
+
+
+    ////////////////////////////////////////////////////////////////////////////////
     .myFavorite-goods {
         border: none;
-        padding-top: 20px;
-        padding-left: 40px;
-        width: 65vw;
+        padding-top: 10px;
+        padding-left: 0;
+        padding-right: 0;
+        width: 100vw;
         margin-top: 15px;
-        margin-right: 5px;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        margin-right: 0;
+        margin-left: -2.5vw;
+        display: flex;
+        flex-direction: column;
         gap: 70px;
-        grid-row-start: 2;
-        grid-column-start: 2;
-        grid-column-end: 3;
-        justify-content: end;
     }
 }

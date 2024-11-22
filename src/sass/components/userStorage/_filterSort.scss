@@ -17,9 +17,112 @@
     z-index: 1000;
 }
 .filterSort-block {
+    position: relative;
    margin-left: auto;
     width: 75vw;
     background-color: #fff;
     height: 100vh;
-    padding: 40px 20px ;
+    padding: 30px 20px ;
+
+    h1 {
+        font-size: 20px;
+        font-weight: 720;
+        margin-bottom: 10px;
+    }
+}
+.filterSort-reset {
+    text-decoration: underline dotted #4C6ACC;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #4C6ACC;
+    font-size: 14px;
+}
+.filterSort-block-select {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+
+    .comparison-goods-sorted-block-select-item {
+        
+        width: 100%;
+    }
+}
+
+.filterSort-block-select-item {
+    cursor: pointer;
+    display: flex;
+    
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    div {
+        width: 16px;
+        height: 16px;
+
+        svg {
+            fill: #3b3b3b;
+        }
+    }
+
+    p {
+        font-weight: 450;
+        font-size: 14px;
+    }
+}
+
+.filterSort-block-select-item-active {
+    cursor: auto;
+    border: 1px solid lightgray;
+    border-radius: 5px ;
+
+    div {
+        width: 16px;
+        height: 16px;
+
+        svg {
+            fill: #000;
+        }
+    }
+   
+    p {
+        font-weight: 700;
+        font-size: 15px;
+        // color: #CF4E32;
+    }
+}
+
+.filterSort-block-filter {
+    margin-top: 30px;
+
+    h4 {
+        font-size: 15px;
+        color: #3b3b3b;
+    }
+}
+
+
+.filterSort-filter {
+    // margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+}
+
+.filterSort-filter-input {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    input {
+        border: 1px solid lightgray;
+        border-radius: 5px;
+        width: 30%;
+        height: 35px;
+        padding-left: 10px;
+        font-size: 18px;
+    }
 }

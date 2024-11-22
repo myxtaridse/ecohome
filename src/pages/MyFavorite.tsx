@@ -1,11 +1,13 @@
 import React from 'react';
 import { CustomContextMain } from '../context/MainContext';
 import { reqProduct } from '../api/fetchProducts';
-import UserStorageGood from '../components/UserStorage/UserStorageGood';
 import SliderPrice from '../components/UserStorage/SliderPrice';
 import Sorted from '../components/Sorted';
 import goodsReserv from '../../db.json';
 import FilterSort from '../components/FilterSort';
+// import MyFavoriteGood from '../components/UserStorage/MyFavorite/MyFavoriteGood';
+import GoodSectionLine from '../components/GoodSection/GoodSectionLine';
+import GoodSection from '../components/GoodSection/GoodSection';
 
 const MyFavorite = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -15,6 +17,8 @@ const MyFavorite = () => {
   const [maxPrice, setMaxPrice] = React.useState(0);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [goods, setGoods] = React.useState<any>([]);
+
+  // const [isClose, setIsClose] = React.useState(false)
 
   React.useEffect(() => {
 
@@ -108,11 +112,16 @@ const MyFavorite = () => {
         
       </div>
       }
-      <div className='myFavorite-goods' style={{gridTemplateColumns: isListLine ? "repeat(1, 1fr)" : "repeat(4, 1fr)", 
-        gap: isListLine ? "20px" : "30px", display: goods && goods.length ? 'grid' : 'block'}}>
+
+      {/* стили для запросов */}
+
+      <div className='myFavorite-goods' 
+      style={{gridTemplateColumns: isListLine ? "repeat(1, max-content)" : "repeat(4, max-content)", 
+        gap: isListLine ? "20px" : "30px", 
+        display: goods && goods.length ? windowRef.current > 500 ? 'grid': 'flex' : 'block'}}>
         {
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          goods && goods.length ? goods.map((item: any) => <UserStorageGood key={item.id} item={item} />) : 
+          goods && goods.length ? goods.map((item: any) => windowRef.current > 500 && item ? isListLine ? <GoodSectionLine /> : <GoodSection /> : <GoodSectionLine />) : 
           <div className='myFavorite-goods-notFound'>
             <div className='myFavorite-goods-notFound-flex'>
             <p>Ничего не найдено</p>
