@@ -153,7 +153,7 @@
 
 
 .myFavorite-goods {
-    background-color: #F2F5F9;
+   
     border-top: 1px solid lightgray;
     border-left: 1px solid lightgray;
     padding-top: 15px;
@@ -227,6 +227,21 @@
     border: 1px solid lightgray;
 }
 
+.myFavorite-goods-line {
+    background-color: #F2F5F9;
+    grid-template-columns: repeat(1, max-content);
+    gap: 20px;
+}
+.myFavorite-notFound {
+    background-color: transparent;
+    display: block;
+}
+.myFavorite-goods-block {
+    background-color: #F2F5F9;
+    grid-template-columns: repeat(4, max-content);
+    gap: 30px;
+}
+
 .myFavorite-goods-notFound {
     width: 500px;
     margin: 30px 0 0 18vw;
@@ -277,6 +292,8 @@
         }
     }
 }
+
+
 
 
 

@@ -116,13 +116,11 @@ const MyFavorite = () => {
 
       {/* стили для запросов */}
 
-      <div className={['myFavorite-goods', 'notFound', 'myFavorite-goods-line', 'myFavorite-goods-block'].join(" ")} 
-      style={{gridTemplateColumns: isListLine ? "repeat(1, max-content)" : "repeat(4, max-content)", 
-        gap: isListLine ? "20px" : "30px", 
-        display: goods && goods.length ? windowRef.current > 500 ? 'grid': 'flex' : 'block'}}>
+      <div className={[
+        'myFavorite-goods', goods.length ? (isListLine ? 'myFavorite-goods-line' : 'myFavorite-goods-block') : 'myFavorite-notFound'].join(" ")}>
         {
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          !goods && !goods.length ? goods.map((item: any) => windowRef.current > 500 && item ? isListLine ? <GoodSectionLine /> : <GoodSection /> : <GoodSectionLine />) : 
+          goods && goods.length ? goods.map((item: any) => windowRef.current > 500 && item ? isListLine ? <GoodSectionLine /> : <GoodSection /> : <GoodSectionLine />) : 
           <NotFound />
         }
        
