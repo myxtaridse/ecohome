@@ -1,5 +1,5 @@
 import React from 'react'
-import StarRatings from 'react-star-ratings';
+import StarRatings from 'react-star-ratings'
 
 interface RatingProps {
   rating: number
