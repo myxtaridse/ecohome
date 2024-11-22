@@ -3,7 +3,7 @@
 const GoodSectionGallery = () => {
   return (
     <div className='goodSection-gallery'>
-            <img src="http://localhost:5173/src/assets/image.png" alt="" />
+            <img src="http://localhost:5173/ecohome/src/assets/image.png" alt="" />
         </div>
   )
 }

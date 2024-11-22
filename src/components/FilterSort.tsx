@@ -9,7 +9,7 @@ const FilterSort = () => {
     const [selectItem, setSelectItem] = React.useState(0);
     
 
-    console.log(setMinPrice, setMaxPrice);
+    console.log(setMinPrice, setMaxPrice, 'log');
     
 
   return (
