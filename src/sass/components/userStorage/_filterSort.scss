@@ -1,0 +1,25 @@
+.filterSort {}
+.filterSort-svg {
+    width: 22px;
+    height: 22px;
+
+    svg {
+        fill: #565656;
+    }
+}
+.filterSort-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #0000004d;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+}
+.filterSort-block {
+   margin-left: auto;
+    width: 75vw;
+    background-color: #fff;
+    height: 100vh;
+    padding: 40px 20px ;
+}

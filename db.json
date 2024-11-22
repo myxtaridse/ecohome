@@ -5,7 +5,7 @@
             "idUser": "user1",
             "firstName": "Какой-то",
             "lastName": "Пришелец",
-            "photoUser": "http://localhost:5173/ecohome/src/assets/image-2.png"
+            "photoUser": "http://localhost:5173/src/assets/image-2.png"
         }
     ],
 
@@ -16,9 +16,9 @@
             "url": "http://localhost:5173/ecohome#/goods/article",
             "titleGood": "Плита печная цельная",
             "photoGood": [
-                "http://localhost:5173/ecohome/src/assets/image.png",
-                "http://localhost:5173/ecohome/src/assets/image-2.png",
-                "http://localhost:5173/ecohome/src/assets/image-3.png"
+                "http://localhost:5173/src/assets/image.png",
+                "http://localhost:5173/src/assets/image-2.png",
+                "http://localhost:5173/src/assets/image-3.png"
             ],
             "categoryRelative": "Товары для банни и ванной",
             "categoryChildren": "Аксессуары для бани",
@@ -97,9 +97,9 @@
             "url": "http://localhost:5173/ecohome#/goods/75832797",
             "titleGood": "Дверка прочистная ДПР (150х112)",
             "photoGood": [
-                "http://localhost:5173/ecohome/src/assets/image.png",
-                "http://localhost:5173/ecohome/src/assets/image-2.png",
-                "http://localhost:5173/ecohome/src/assets/image-3.png"
+                "http://localhost:5173/src/assets/image.png",
+                "http://localhost:5173/src/assets/image-2.png",
+                "http://localhost:5173/src/assets/image-3.png"
             ],
             "categoryRelative": "Товары для банни и ванной",
             "categoryChildren": "Аксессуары для бани",
@@ -204,9 +204,9 @@
             "url": "http://localhost:5173/ecohome#/goods/75832797",
             "titleGood": "Дверка прочистная ДПР (150х112)",
             "photoGood": [
-                "http://localhost:5173/ecohome/src/assets/image.png",
-                "http://localhost:5173/ecohome/src/assets/image-2.png",
-                "http://localhost:5173/ecohome/src/assets/image-3.png"
+                "http://localhost:5173/src/assets/image.png",
+                "http://localhost:5173/src/assets/image-2.png",
+                "http://localhost:5173/src/assets/image-3.png"
             ],
             "categoryRelative": "Товары для банни и ванной",
             "categoryChildren": "Аксессуары для бани",

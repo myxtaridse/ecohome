@@ -123,3 +123,29 @@ export const goodsNew = [
     image: image,
   },
 ];
+export const sortList = [
+  {
+    id: '0',
+    title: 'цене',
+  },
+  {
+    id: '1',
+    title: 'цене',
+  },
+  {
+    id: '2',
+    title: 'наименованию',
+  },
+  {
+    id: '3',
+    title: 'наименованию',
+  },
+  {
+    id: '4',
+    title: 'популярности',
+  },
+  {
+    id: '5',
+    title: 'популярности',
+  },
+]

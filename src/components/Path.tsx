@@ -7,7 +7,7 @@ const Path = () => {
  
     return (
       <div className='path'>
-        { windowRef > 500 ?
+        { windowRef.current > 500 ?
           pathValue.map((item: string) => (
             <>
               <p>{item}</p>

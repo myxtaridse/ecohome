@@ -1,23 +1,25 @@
 import React from 'react';
-import Arrow from '../components/Arrow';
-import SliderPrice from '../components/UserStorage/SliderPrice';
 import { CustomContextMain } from '../context/MainContext';
 import { reqProduct } from '../api/fetchProducts';
 import UserStorageGood from '../components/UserStorage/UserStorageGood';
+import SliderPrice from '../components/UserStorage/SliderPrice';
+import Sorted from '../components/Sorted';
+import goodsReserv from '../../db.json';
+import FilterSort from '../components/FilterSort';
 
 const MyFavorite = () => {
-
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const {setPathValue, pathFavorite, storageFavorite}: any = React.useContext(CustomContextMain);
+  const {setPathValue, pathFavorite, storageFavorite, windowRef}: any = React.useContext(CustomContextMain);
   const [isListLine, setIsListLine] = React.useState(false);
-  const [isSelector, setIsSelector] = React.useState(false);
   const [minPrice, setMinPrice] = React.useState(0);
   const [maxPrice, setMaxPrice] = React.useState(0);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [goods, setGoods] = React.useState<any>([]);
 
   React.useEffect(() => {
-    console.log(setMinPrice, setMaxPrice);
+
+    console.log(setMaxPrice, setMinPrice);
+    
     
     if (pathFavorite && pathFavorite.includes('/goods/')) {
       const path = pathFavorite.split('/goods/').join(" ");
@@ -43,17 +45,11 @@ const MyFavorite = () => {
        }
       }).catch((error) => {
         console.log(error);
-        setGoods([])
+        setGoods(goodsReserv.goods)
       })
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [storageFavorite])
- 
-  React.useEffect(() => {
-    if (goods.length) {
-      // max & min Price
-    }
-  }, [goods])
 
 
   return (
@@ -74,53 +70,44 @@ const MyFavorite = () => {
         <div className='myFavorite-head-flex'>
         <h2>Найдено 2 товара</h2>
           
-          <div className="myFavorite-sort myFavorite-sort-left">
-            <p className='myFavorite-sort-title'>Сортировать по:</p>
-            <div className="myFavorite-sort-selector" onClick={() => setIsSelector(!isSelector)}
-              onMouseMove={() => setIsSelector(true)}  
-            >
-              <p>По категории</p>
-              <div>
-                <Arrow />
-              </div>
+          {
+            windowRef.current > 500 ? (
+              <div className="myFavorite-sort myFavorite-sort-left">
+            <Sorted />
+            
+          </div>
+            ) : (
+              <div><FilterSort /></div>
+            )
+          }
+          <div className="myFavorite-sort myFavorite-sort-right">
+            <div onClick={() => setIsListLine(true)} className={['myFavorite-sort-line', isListLine ? 'myFavorite-sort-active' : ''].join(" ")}>
+            <svg viewBox="0 0 80 80" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M36.6667 13.333H70V19.9997H36.6667V13.333ZM36.6667 26.6663H56.6667V33.333H36.6667V26.6663ZM36.6667 46.6663H70V53.333H36.6667V46.6663ZM36.6667 59.9997H56.6667V66.6663H36.6667V59.9997ZM10 13.333H30V33.333H10V13.333ZM16.6667 19.9997V26.6663H23.3333V19.9997H16.6667ZM10 46.6663H30V66.6663H10V46.6663ZM16.6667 53.333V59.9997H23.3333V53.333H16.6667Z"/>
+            </svg>
+
             </div>
-            {
-              isSelector && 
-              <div className='myFavorite-sort-selector-popup' onMouseLeave={() => setIsSelector(false)}  >
-                <p>По поплярности</p>
-                <p>По категории</p>
-                <p>По наименованию</p>
-                <p>По дате</p>
-                <p>По возрастанию цены</p>
-                <p>По уменьшению цены</p>
-              </div>
-            }
-          </div>
-          <div className="myFavorite-sort">
-          <div onClick={() => setIsListLine(true)} className={['myFavorite-sort-line', isListLine ? 'myFavorite-sort-active' : ''].join(" ")}>
-          <svg viewBox="0 0 80 80" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path d="M36.6667 13.333H70V19.9997H36.6667V13.333ZM36.6667 26.6663H56.6667V33.333H36.6667V26.6663ZM36.6667 46.6663H70V53.333H36.6667V46.6663ZM36.6667 59.9997H56.6667V66.6663H36.6667V59.9997ZM10 13.333H30V33.333H10V13.333ZM16.6667 19.9997V26.6663H23.3333V19.9997H16.6667ZM10 46.6663H30V66.6663H10V46.6663ZM16.6667 53.333V59.9997H23.3333V53.333H16.6667Z"/>
-          </svg>
+            <div onClick={() => setIsListLine(false)} className={['myFavorite-sort-block', isListLine ? '' : 'myFavorite-sort-active'].join(" ")}>
+            <svg viewBox="0 0 80 80" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.667 13.333H32.667V33.333H12.667V13.333ZM19.3337 19.9997V26.6663H26.0003V19.9997H19.3337ZM12.667 46.6663H32.667V66.6663H12.667V46.6663ZM19.3337 53.333V59.9997H26.0003V53.333H19.3337Z"/>
+              <path d="M48.0003 13.333H68.0003V33.333H48.0003V13.333ZM54.667 19.9997V26.6663H61.3337V19.9997H54.667ZM48.0003 46.6663H68.0003V66.6663H48.0003V46.6663ZM54.667 53.333V59.9997H61.3337V53.333H54.667Z"/>
+            </svg>
 
-          </div>
-          <div onClick={() => setIsListLine(false)} className={['myFavorite-sort-block', isListLine ? '' : 'myFavorite-sort-active'].join(" ")}>
-          <svg viewBox="0 0 80 80" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12.667 13.333H32.667V33.333H12.667V13.333ZM19.3337 19.9997V26.6663H26.0003V19.9997H19.3337ZM12.667 46.6663H32.667V66.6663H12.667V46.6663ZM19.3337 53.333V59.9997H26.0003V53.333H19.3337Z"/>
-            <path d="M48.0003 13.333H68.0003V33.333H48.0003V13.333ZM54.667 19.9997V26.6663H61.3337V19.9997H54.667ZM48.0003 46.6663H68.0003V66.6663H48.0003V46.6663ZM54.667 53.333V59.9997H61.3337V53.333H54.667Z"/>
-          </svg>
-
-          </div>
+            </div>
           </div>
         </div>
       </div>
-      <div className='myFavorite-filter'>
+      {
+        windowRef > 500 && <div className='myFavorite-filter'>
         <h3>Цена, руб.</h3>
         <div className='myFavorite-filter-input'>
           <input placeholder={`от ${minPrice}`} value={minPrice ? `от ${0}` : ''} />
           <input placeholder={`до ${maxPrice}`} value={maxPrice ? `от ${0}` : ''} />
         </div>
         <SliderPrice />
+        
       </div>
+      }
       <div className='myFavorite-goods' style={{gridTemplateColumns: isListLine ? "repeat(1, 1fr)" : "repeat(4, 1fr)", 
         gap: isListLine ? "20px" : "30px", display: goods && goods.length ? 'grid' : 'block'}}>
         {

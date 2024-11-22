@@ -20,6 +20,8 @@ const ComparisonGoods: React.FC<ComparisonGoodsType> = ({goods, characterAll}) =
   const {windowRef}: any = React.useContext(CustomContextMain)
   
   
+
+
   return (
     <div className='comparisonGoods' onClick={() => setIsSelectAll(!isSelectAll)}>
         
@@ -27,7 +29,7 @@ const ComparisonGoods: React.FC<ComparisonGoodsType> = ({goods, characterAll}) =
           {
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             goods.map((itemGood: any) => 
-              <div className='comparisonGoods-item'>
+              <div className='comparisonGoods-item' style={{height: `${heightGood.current?.offsetHeight}px`}}>
                 <ComparisonGoodMain isSelectAll={isSelectAll} itemGood={itemGood} windowRef={windowRef} />
               </div>
             )

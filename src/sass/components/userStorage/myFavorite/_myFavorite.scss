@@ -279,21 +279,41 @@
 
 
 @media (max-width: 500px) {
-    .myFavorite-head-flex {
+    .myFavorite {
+        display: flex;
         flex-direction: column;
         align-items: start;
-
+        width: 95vw;
+        margin: 20px auto 100px;
+    
+        p {
+            font-size: 14px;
+        }
+    
+        h1 {
+            font-size: 28px;
+        }
         h2 {
-            font-size: 15px;
-            font-weight: 400;
+            font-size: 18px;
+            font-weight: 650;
         }
     }
-    .myFavorite-sort-title {
+    .myFavorite-head-flex {
+        width: 98%;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: space-between;
+
+        h2 {
+            font-size: 13px;
+            font-weight: 600;
+        }
+    }
+    .myFavorite-sort-right{
         display: none;
     }
     .myFavorite-goods {
-        border-top: 1px solid lightgray;
-        border-left: 1px solid lightgray;
+        border: none;
         padding-top: 20px;
         padding-left: 40px;
         width: 65vw;

@@ -53,8 +53,9 @@
 }
 
 .comparison-goods-sorted {
-    width: 97%;
+    width: 100%;
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
@@ -71,52 +72,64 @@
     position: relative;
 }
 .comparison-goods-sorted-block-select {
+    width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 20px;
 
     p {
         font-weight: 400;
         font-size: 18px;
     }
+
+   
 }
 .comparison-goods-sorted-block-select-item {
     display: flex;
     align-items: center;
-    width: max-content;
     gap: 10px;
     padding: 5px 10px;
     cursor: pointer;
-    
     div {
         width: 28px;
         height: 28px;
 
         svg {
-            fill: black;
+            fill: #3b3b3b;
         }
     }
 
     p {
-        font-weight: 650;
+        font-weight: 450;
         font-size: 19px;
     }
 }
+
+
+
 .comparison-goods-sorted-block-select-item:hover {
     background-color: #F2F5F9;
     
 }
 
 .comparison-goods-sorted-popup {
+    border-bottom: 1px solid lightgrey;
+    border-left: 1px solid lightgrey;
+    border-right: 1px solid lightgrey;
     position: absolute;
     top: 40px;
-    left: 165px;
+    left: 163px;
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: start;
     background-color: #fff;
     z-index: 10;
+
+    .comparison-goods-sorted-block-select-item {
+        width: 100%;
+    }
 }
 
 

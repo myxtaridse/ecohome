@@ -1,3 +1,10 @@
+.comparisonGoodsMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
 
 .comparisonGoodMain-check {
     position: absolute;
@@ -25,7 +32,8 @@
 }
 
 .comparisonGoodMain-actions-price {
-    margin-top: 15px;
+
+    // margin-top: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
