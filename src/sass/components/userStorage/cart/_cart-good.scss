@@ -69,33 +69,7 @@
         height: 14px;
     }
 }
-.cartGood-incr-decr {
-    margin-right: 15%;
-    gap: 20px;
-    padding: 10px 25px;
-    font-size: 25px;
-    font-weight: 600;
-    
 
-        .goodItem-reviews-item-status-arrow {
-            cursor: pointer;
-            width: 28px;
-            height: 28px;
-            background-color: #fff;
-
-            svg {
-                fill: #CF4E32;
-            }
-         }
-         .goodItem-reviews-item-status-arrow:hover {
-            background-color: #F2F5F9;
-         }
-
-         h2 {
-            font-size: 22px;
-            font-weight: 600;
-         }
-}
 .cartGood-price {
     font-size: 30px;
     font-weight: 700;

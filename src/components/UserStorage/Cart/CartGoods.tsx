@@ -1,5 +1,5 @@
 import React from 'react'
-import CartGood from "./CartGood"
+import GoodSectionLine from '../../GoodSection/GoodSectionLine';
 
 const goods = [
     {
@@ -100,9 +100,11 @@ const CartGoods = () => {
                 <p>Удалить выбранные</p>
             </div>
         </div>
+        <div className='cart-main-goods-list'>
         {
-            goods.map((item) => <CartGood key={item.id} {...item} />)
+            goods.map((item) => <GoodSectionLine key={item.id} />)
         }
+        </div>
     </div>
   )
 }

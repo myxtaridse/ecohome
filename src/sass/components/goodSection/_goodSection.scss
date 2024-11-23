@@ -11,6 +11,27 @@
         margin-top: 10px;
         font-size: 18px;
     }
+
+    .goodSection-rating {
+    
+        p {
+            margin-top: -2px;
+            font-size: 16px;
+        }
+    
+        .star-ratings {
+            gap: 0;
+        }
+        .star-container {
+            width: 20px !important;
+            height: 20px !important;
+    
+            svg {
+                width: 18px !important;
+                height: 18px !important;
+            }
+          }
+    }
 }
 
 .goodSection-rating {
@@ -19,24 +40,9 @@
     justify-content: start;
     gap: 7px;
 
-    p {
-        margin-top: -2px;
-        font-size: 16px;
-    }
-
-    .star-ratings {
-        gap: 0;
-    }
-    .star-container {
-        width: 20px !important;
-        height: 20px !important;
-
-        svg {
-            width: 18px !important;
-            height: 18px !important;
-        }
-      }
 }
+
+
 
 .goodSection-actions-price {
     display: flex;
@@ -66,5 +72,14 @@
             fill: #000
         }
        }
+    }
+}
+
+.goodSection:hover, 
+.goodSection-line:hover {
+    .goodSection-gallery {
+        img {
+            transform: scale(1.05);
+        }
     }
 }

@@ -1,16 +1,25 @@
 // import React from 'react'
 import GoodSectionGallery from './GoodSectionGallery'
 import Rating from '../Rating'
+import { useLocation } from 'react-router-dom'
 
 const GoodSection = () => {
+    const location = useLocation();
+    
+    
   return (
     <div className='goodSection'>
         <div><GoodSectionGallery /></div>
         <h2>Плита печная цельная</h2>
-        <div className='goodSection-rating'>
-            <Rating rating={5} />
-            <p>4,8</p>
-        </div>
+        {
+            location && location.pathname !== '/comparison' && (
+                <div className='goodSection-rating'>
+                    <Rating rating={5} />
+                    <p>4,8</p>
+                </div>
+            )
+        }
+        
         <div className='goodSection-actions-price'>
             <div className='goodSection-actions'>
                 <div>

@@ -2,11 +2,13 @@ import React from 'react'
 import GoodSectionGallery from './GoodSectionGallery'
 import Rating from '../Rating'
 import { CustomContextMain } from '../../context/MainContext'
+import { useLocation } from 'react-router-dom';
 
 const GoodSectionLine = () => {
     const [isMore, setIsMore] = React.useState(false)
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const {windowRef}: any = React.useContext(CustomContextMain);
+    const location = useLocation()
   return (
     <div className='goodSection-line'>
         <div><GoodSectionGallery /></div>
@@ -17,11 +19,11 @@ const GoodSectionLine = () => {
             <p>4,8</p>
         </div>
         <h1>1413 ₽</h1>
-        <div className='goodSection-character'>
+        <div className='goodSection-character goodSection-article'>
             <p>Артикул:</p>
             <p>80164116</p>
         </div>
-        <div className='goodSection-character'>
+        <div className='goodSection-character goodSection-material'>
             <p>Материал изделия:</p>
             <p>чугун</p>
         </div>
@@ -41,12 +43,36 @@ const GoodSectionLine = () => {
                 </div>
         </div>
     </div>
-        <div className='goodSection-more' onClick={() => setIsMore(!isMore)}>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C10.9 3 10 3.9 10 5C10 6.1 10.9 7 12 7C13.1 7 14 6.1 14 5C14 3.9 13.1 3 12 3ZM12 17C10.9 17 10 17.9 10 19C10 20.1 10.9 21 12 21C13.1 21 14 20.1 14 19C14 17.9 13.1 17 12 17ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10Z"></path></svg>
+
+        
+                <div className="goodItem-reviews-item-status cartGood-incr-decr">
+                    <div className='goodItem-reviews-item-status-arrow'>
+                        -
+                        {/* <Arrow /> */}
+                    </div>
+                    <h2>5</h2>
+                    <div className='goodItem-reviews-item-status-arrow'>
+                        +
+                        {/* <Arrow /> */}
+                    </div>
+              </div>
+            
+
+        <div className='goodSection-more' onClick={() => setIsMore(!isMore)}
+            
+            >
+            <svg viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 8.5C6 9.88071 4.88071 11 3.5 11C2.11929 11 1 9.88071 1 8.5C1 7.11929 2.11929 6 3.5 6C4.88071 6 6 7.11929 6 8.5ZM2.23551 8.5C2.23551 9.19836 2.80164 9.76449 3.5 9.76449C4.19836 9.76449 4.76449 9.19836 4.76449 8.5C4.76449 7.80164 4.19836 7.23551 3.5 7.23551C2.80164 7.23551 2.23551 7.80164 2.23551 8.5Z" fill="#565656"/>
+                <path d="M12 8.5C12 9.88071 10.8807 11 9.5 11C8.11929 11 7 9.88071 7 8.5C7 7.11929 8.11929 6 9.5 6C10.8807 6 12 7.11929 12 8.5ZM8.23551 8.5C8.23551 9.19836 8.80164 9.76449 9.5 9.76449C10.1984 9.76449 10.7645 9.19836 10.7645 8.5C10.7645 7.80164 10.1984 7.23551 9.5 7.23551C8.80164 7.23551 8.23551 7.80164 8.23551 8.5Z" fill="#565656"/>
+                <path d="M18 8.5C18 9.88071 16.8807 11 15.5 11C14.1193 11 13 9.88071 13 8.5C13 7.11929 14.1193 6 15.5 6C16.8807 6 18 7.11929 18 8.5ZM14.2355 8.5C14.2355 9.19836 14.8016 9.76449 15.5 9.76449C16.1984 9.76449 16.7645 9.19836 16.7645 8.5C16.7645 7.80164 16.1984 7.23551 15.5 7.23551C14.8016 7.23551 14.2355 7.80164 14.2355 8.5Z" fill="#565656"/>
+            </svg>
+
+
         </div>
+
     
        <div className='goodSection-line-actions' 
-       style={{transform: windowRef.current <= 500 ? isMore ? 'scale(1)' : 'scale(0)' : 'scale(1)'}}
+       style={{transform: windowRef.current <= 500 || location.pathname === '/cart' ? isMore ? 'scale(1)' : 'scale(0)' : 'scale(1)'}}
        >
             <div>
                 <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -72,3 +98,7 @@ const GoodSectionLine = () => {
 }
 
 export default GoodSectionLine
+
+
+
+

@@ -17,48 +17,10 @@
         fill: #CF4E32;
     }
 }
-.comparisonGoodMain-gallery {
-    width: 100%;
-    margin: 5px auto;
 
-    img {
-        width: 100%;
-        height: 230px;
-        object-fit:contain;
-    }
-}
-.comparisonGoodMain-title {
-    font-size: 19px;
-}
-
-.comparisonGoodMain-actions-price {
-
-    // margin-top: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #F2F5F9;
-    padding: 10px 25px;
-    border-radius: 5px;
-}
 .comparisonGoodMain-price {
     font-size: 22px;
     font-weight: 700;
-}
-
-.comparisonGoodMain-actions {
-    display: flex; 
-    align-items: center;
-    gap: 25px;
-
-    div {
-        width: 24px;
-        height: 24px;
-
-        svg {
-            fill: #565656;
-        }
-    }
 }
 
 .comparisonGoodsCharacter,
@@ -103,7 +65,7 @@
 
     .comparisonGoodsCharacter-item {
         font-size: 18px;
-        width: 300px;
+        width: 280px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -117,7 +79,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    p:not(.comparisonReviews-flex p) {
+        font-size: 14px;
+    }
     
+    .comparisonReviews-popular {
+        text-decoration: underline dotted #565656;
+    }
 }
 
 
@@ -128,14 +97,14 @@
     gap: 5px;
 }
 .star-container {
-    width: 25px !important;
-    height: 25px !important;
+    width: 20px !important;
+    height: 20px !important;
     padding-right: 0px !important;
     padding-left: 0px !important;
 
     svg {
-        width: 25px !important;
-        height: 25px !important;
+        width: 20px !important;
+        height: 20px !important;
     }
 }
 .comparisonReviews-flex {
@@ -148,7 +117,7 @@
     gap: 10px;
 
     p {
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 700;
         color: #333333;
     }
@@ -284,9 +253,7 @@
                 margin-left: 2px;
             }
 
-            .comparisonReviews-popular {
-                text-decoration: underline dotted #565656;
-            }
+            
             
         }
     }

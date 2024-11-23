@@ -1,10 +1,11 @@
 import React from 'react'
-import ComparisonGoodMain from './ComparisonGoodMain';
+// import ComparisonGoodMain from './ComparisonGoodMain';
 import ComparisonGoodCharacter from './ComparisonGoodCharacter';
 import ComparisonGoodsSize from './ComparisonGoodsSize';
 import ComparisonReviews from './ComparisonReviews';
 import { CustomContextMain } from '../../../context/MainContext';
 import ComparisonGoodPrice from './ComparisonGoodPrice';
+import GoodSection from '../../GoodSection/GoodSection';
 
 interface ComparisonGoodsType {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -29,8 +30,8 @@ const ComparisonGoods: React.FC<ComparisonGoodsType> = ({goods, characterAll}) =
           {
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             goods.map((itemGood: any) => 
-              <div className='comparisonGoods-item' style={{height: `${heightGood.current?.offsetHeight}px`}}>
-                <ComparisonGoodMain isSelectAll={isSelectAll} itemGood={itemGood} windowRef={windowRef} />
+              <div className='comparisonGoods-item' key={itemGood.id}>
+                <GoodSection />
               </div>
             )
           }

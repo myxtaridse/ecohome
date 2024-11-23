@@ -115,7 +115,7 @@ fetch(url + query, options)
 
   return (
     <div className='cartForm'>
-        <h2>Укажите данные для получения заказа</h2>
+        <h2 className='cart-title'>Укажите данные для получения заказа</h2>
         <div className='cartForm-select-user'>
             <div className='cartForm-select-user-item' onClick={() => setIsLegalEntity(false)}>
                 
