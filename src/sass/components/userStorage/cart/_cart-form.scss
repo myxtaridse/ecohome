@@ -66,3 +66,28 @@
         min-height: 80px;
     }
 }
+
+
+@media (max-width: 500px) {
+    .cartForm-select-user {
+        margin: 20px 20px;
+        gap: 50px;
+    
+        .cartForm-select-user-item {
+            gap: 7px;
+            font-size: 15px;
+    
+            div {
+                width: 18px;
+                height: 18px;
+                border: 2.5px solid #CF4E32;
+    
+                span {
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+            
+        }
+    }
+}
