@@ -17,19 +17,23 @@ const CartPopup: React.FC<CartPopupType> = ({ setIsMore }) => {
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const downMove = (e: any) => {
-        if (e) {
+        if (e && isTouch) {
             const currentY = e.touches[0].clientY - startTouch;
         // setCurrentTouch(currentY)
             e.target.style.transform = `translateY(${currentY}px)`
         }
     }
 
-    React.useEffect(() => {
-        document.body.classList.add('no-scroll'); // Добавляем класс для блокировки скролла
-        return () => {
-            document.body.classList.remove('no-scroll'); // Убираем класс при размонтировании компонента
-        };
-    }, []);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const downEnd = (e: any) => {
+        if (e && isTouch) {
+            setIsMore(false);
+            setIsTouch(false);
+        }
+    }
+   
+    console.log(isTouch);
+    
     
 
 
@@ -47,6 +51,7 @@ const CartPopup: React.FC<CartPopupType> = ({ setIsMore }) => {
         className="cartPopup"
         onTouchStart={(e) => downStart(e)}
         onTouchMove={(e) => downMove(e)}
+        onTouchEnd={(e) => downEnd(e)}
 
       >
         <div className='cartPopup-item'>
