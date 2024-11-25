@@ -38,3 +38,19 @@
     border-radius: 50px;
   }
   
+  .cartPopup-item {
+    color: #1E1E1E;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 20px;
+
+    div {
+        width: 30px;
+        height: 30px;
+
+        svg {
+            fill: #1E1E1E;
+        }
+    }
+  }

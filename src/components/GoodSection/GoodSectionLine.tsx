@@ -8,7 +8,6 @@ import CartPopup from '../UserStorage/Cart/CartPopup';
 
 const GoodSectionLine: React.FC<GoodSectionType> = ({article, titleGood, categoryChildren, price, description, parameter, reviews}) => {
     const [isMore, setIsMore] = React.useState(false)
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     // const {windowRef}: any = React.useContext(CustomContextMain);
     // const location = useLocation();
     
