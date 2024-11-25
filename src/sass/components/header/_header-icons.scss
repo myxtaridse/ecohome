@@ -33,11 +33,12 @@
   color: white;
   width: 20px;
   height: 20px;
-  font-size: 12px;
   border-radius: 50%;
   display: flex;
-    align-items: center;
-    justify-content: center;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  vertical-align: middle;
 }
 
 .header-icons-bell p {
