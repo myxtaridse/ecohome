@@ -49,9 +49,18 @@ const CartPopup: React.FC<CartPopupType> = ({ setIsMore }) => {
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
       >
-        <p>Добавить в избранное</p>
-        <p>Добавить в сравнение</p>
-        <p>Удалить из корзины</p>
+        <div>
+            <div></div>
+            <p>Добавить в избранное</p>
+        </div>
+        <div>
+            <div></div>
+            <p>Добавить в сравнение</p>
+        </div>
+        <div>
+            <div></div>
+            <p>Удалить из корзины</p>
+        </div>
       </div>
     </div>
   );

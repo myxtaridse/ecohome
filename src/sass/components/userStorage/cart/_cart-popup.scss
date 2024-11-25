@@ -1,13 +1,10 @@
 .cartPopup-bg {
-    direction: ltr;
+    width: 100vw;
     height: 100vh;
-    margin: 0;
-    padding: 0;
     position: fixed;
-    top: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.7);
     z-index: 1000;
     display: flex;
     align-items: flex-end; /* Чтобы блок был снизу */
