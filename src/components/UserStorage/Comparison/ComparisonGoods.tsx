@@ -31,7 +31,7 @@ const ComparisonGoods: React.FC<ComparisonGoodsType> = ({goods, characterAll}) =
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             goods.map((itemGood: any) => 
               <div className='comparisonGoods-item' key={itemGood.id}>
-                <GoodSection />
+                <GoodSection {...itemGood} />
               </div>
             )
           }

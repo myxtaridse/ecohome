@@ -3,20 +3,30 @@ import GoodSectionGallery from './GoodSectionGallery'
 import Rating from '../Rating'
 import { CustomContextMain } from '../../context/MainContext'
 import { useLocation } from 'react-router-dom';
+import { GoodSectionType } from './GoodSection';
 
-const GoodSectionLine = () => {
+const GoodSectionLine: React.FC<GoodSectionType> = ({reviews}) => {
     const [isMore, setIsMore] = React.useState(false)
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const {windowRef}: any = React.useContext(CustomContextMain);
-    const location = useLocation()
+    const location = useLocation();
+
+    console.log(reviews);
+    
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const averageRating = reviews.reduce((sum: number, review: any) => {
+        return sum + parseFloat(review.statusRev)
+    }, 0);
+
   return (
     <div className='goodSection-line'>
         <div><GoodSectionGallery /></div>
     <div className='goodSection-line-info'>
         <h2>Плита печная цельная</h2>
         <div className='goodSection-rating'>
-            <Rating rating={5} />
-            <p>4,8</p>
+            <Rating rating={averageRating ? averageRating / reviews.length : 5} />
+            <p>{averageRating ? averageRating / reviews.length : 5}</p>
         </div>
         <h1>1413 ₽</h1>
         <div className='goodSection-character goodSection-article'>

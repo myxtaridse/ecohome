@@ -63,9 +63,16 @@
     .comparison {
         width: 95vw;
         margin: 0px auto 100px;
+
+        .cart-main-delete {
+            margin-right: 10px;
+            p {
+                display: none
+            }
+        };
     }
     .comparison-goods {
-        width: 100%;
+        width: 100vw;
         // overflow-x: scroll;
         scrollbar-width: none;
         -ms-overflow-style: none; 
@@ -88,6 +95,34 @@
     .comparisonGoods-item {
         width: 150px;
         padding: 10px;
+
+        
+
+        .goodSection {
+            width: 150px;
+            padding: 0;
+    
+            h1 {
+                display: none;
+            }
+            h2 {
+                padding: 0 5px;
+                font-size: 14px;
+                margin: 0;
+            }
+
+            .goodSection-gallery {
+                height: 160px;
+              }
+    
+            
+            .goodSection-actions {
+                width: 100%;
+                background-color: #fff;
+                padding: 5px;
+            }
+    
+        }
     }
 }
 
