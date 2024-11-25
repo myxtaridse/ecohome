@@ -267,6 +267,11 @@
         margin-left: -2.5vw;
 
         .goodSection-line-info {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: start;
             width: 100%;
             margin: 0 10px;
         }
@@ -276,6 +281,7 @@
         }
 
         .goodSection-line {
+            align-items: start;
             .goodSection-more {
                 top: 5%;
                 right: 3%;
