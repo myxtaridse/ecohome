@@ -69,6 +69,11 @@
 
 
 @media (max-width: 500px) {
+
+    .cartForm {
+        margin-top: 90px;
+    }
+    
     .cartForm-select-user {
         margin: 0 auto;
         width: 95%;
@@ -90,6 +95,28 @@
                 }
             }
             
+        }
+    }
+
+    .cartForm-form {
+        padding: 15px 10px;
+        background-color: #F2F5F9;
+        width: 100%;
+        margin: 20px 0 100px;
+        grid-template-columns: repeat(1, 95%);
+        gap: 20px;
+        border-radius: 5px;
+    
+        input,
+        textarea {
+            width: 100%;
+            height: 42px;
+            padding-left: 10px;
+            font-size: 14px;
+        }
+        textarea {
+            padding-top: 10px;
+            min-height: 80px;
         }
     }
 }

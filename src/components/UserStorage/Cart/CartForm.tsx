@@ -62,14 +62,15 @@ const itemForm = [
 
 const CartForm: React.FC<CartFormType> = ({isDelivery}) => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const {setIsPopupDelivery, city}: any = React.useContext(CustomContextMain)
+    const {setIsPopupDelivery, city, windowRef}: any = React.useContext(CustomContextMain)
    const [isLegalEntity, setIsLegalEntity] = React.useState(false);
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const [addressCity, setAddressCity] = React.useState<any>({})
     const [ipAddress, setIPAddress] = React.useState('')
+    
     const url = "http://suggestions.dadata.ru/suggestions/api/4_1/rs/iplocate/address?ip=";
-const token = API_KEY;
-const query = ipAddress;
+    const token = API_KEY;
+    const query = ipAddress;
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const options: any = {
@@ -145,10 +146,10 @@ fetch(url + query, options)
                             titleForm.id === '9' ? <textarea key={titleForm.id} placeholder={titleForm.title} /> :
                             <input key={titleForm.id} placeholder={titleForm.title} type='text'
                                 style={{
-                                    gridColumnStart: titleForm.id === '8' || isDelivery && titleForm.id === '6' ? '1' : 
-                                    +titleForm.id % 2 !== 0 ? '2' : '1',
-                                    gridColumnEnd: titleForm.id === '8' || isDelivery && titleForm.id === '6' ? '3' : 
-                                    +titleForm.id % 2 !== 0 ? '3' : '2',
+                                    gridColumnStart: windowRef.current > 500 ? (titleForm.id === '8' || isDelivery && titleForm.id === '6' ? '1' : 
+                                        +titleForm.id % 2 !== 0 ? '2' : '1') : '1',
+                                    gridColumnEnd: windowRef.current > 500 ? (titleForm.id === '8' || isDelivery && titleForm.id === '6' ? '3' : 
+                                        +titleForm.id % 2 !== 0  ? '3' : '2') : '3',
                                     display: isDelivery && (titleForm.id === '7' || titleForm.id === '8') ? 'none' : 'block',
                                 }}
                                 onClick={() => {
@@ -156,11 +157,6 @@ fetch(url + query, options)
                                         setIsPopupDelivery(true)
                                     }
                                 }}
-                                // onChange={(e) => {
-                                //     if (titleForm.id === '7') {
-                                //         // setCity(e.target.value)
-                                //     }
-                                // }}
                             />
                         )
                     }
@@ -175,10 +171,10 @@ fetch(url + query, options)
 
                                 <input key={titleForm.id} placeholder={titleForm.title} type='text'
                                     style={{
-                                        gridColumnStart: titleForm.id === '8' || isDelivery && titleForm.id === '6' ? '1' : 
-                                            +titleForm.id % 2 !== 0 ? '2' : '1',
-                                            gridColumnEnd: titleForm.id === '8' || isDelivery && titleForm.id === '6' ? '3' : 
-                                            +titleForm.id % 2 !== 0 ? '3' : '2',
+                                        gridColumnStart: windowRef.current > 500 ? (titleForm.id === '8' || isDelivery && titleForm.id === '6' ? '1' : 
+                                            +titleForm.id % 2 !== 0 ? '2' : '1') : '1',
+                                        gridColumnEnd: windowRef.current > 500 ? (titleForm.id === '8' || isDelivery && titleForm.id === '6' ? '3' : 
+                                            +titleForm.id % 2 !== 0 ? '3' : '2') : '3',
                                             display: isDelivery && (titleForm.id === '7' || titleForm.id === '8') ? 'none' : 'block',
                                     }}
                                     onClick={() => {

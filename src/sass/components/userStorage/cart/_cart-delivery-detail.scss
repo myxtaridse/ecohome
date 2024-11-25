@@ -9,6 +9,7 @@
     border: none;
 }
 .cartDelveryDetail {
+   
     position: relative;
     width: 55vw;
     height: 75vh;
@@ -23,6 +24,7 @@
     position: relative;
     margin: 0 auto;
     
+    display: none;
 
     input {
         width: 100%;
@@ -130,4 +132,8 @@
 
 .react-dadata__suggestion--current {
     background-color: #F2F5F9 !important;
+}
+
+@media (max-width: 500px) {
+
 }

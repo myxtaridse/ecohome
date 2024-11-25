@@ -1,14 +1,22 @@
-// import React from 'react'
+import React from 'react'
 import GoodSectionGallery from './GoodSectionGallery'
 import Rating from '../Rating'
 import { useLocation } from 'react-router-dom'
 
 export interface GoodSectionType {
+    article: string,
+    titleGood: string,
+    photoGood: string[],
+    categoryChildren: string,
+    price: number,
+    description: string,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    reviews: any
+    parameter: any[],
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    reviews: any[],
 }
 
-const GoodSection: React.FC<GoodSectionType> = ({reviews}) => {
+const GoodSection: React.FC<GoodSectionType> = ({titleGood, price, reviews}) => {
     const location = useLocation();
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const averageRating = reviews.reduce((sum: number, review: any) => {
@@ -17,7 +25,7 @@ const GoodSection: React.FC<GoodSectionType> = ({reviews}) => {
   return (
     <div className='goodSection'>
         <div><GoodSectionGallery /></div>
-        <h2>Плита печная цельная</h2>
+        <h2>{titleGood}</h2>
         {
             location && location.pathname !== '/comparison' && (
                 <div className='goodSection-rating'>
@@ -45,7 +53,7 @@ const GoodSection: React.FC<GoodSectionType> = ({reviews}) => {
                     </svg>
                 </div>
             </div>
-            <h1>1413 ₽</h1>
+            <h1>{price} ₽</h1>
         </div>
     </div>
   )

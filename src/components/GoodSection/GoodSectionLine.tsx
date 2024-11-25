@@ -5,13 +5,11 @@ import { CustomContextMain } from '../../context/MainContext'
 import { useLocation } from 'react-router-dom';
 import { GoodSectionType } from './GoodSection';
 
-const GoodSectionLine: React.FC<GoodSectionType> = ({reviews}) => {
+const GoodSectionLine: React.FC<GoodSectionType> = ({article, titleGood, categoryChildren, price, description, parameter, reviews}) => {
     const [isMore, setIsMore] = React.useState(false)
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const {windowRef}: any = React.useContext(CustomContextMain);
     const location = useLocation();
-
-    console.log(reviews);
     
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -23,22 +21,22 @@ const GoodSectionLine: React.FC<GoodSectionType> = ({reviews}) => {
     <div className='goodSection-line'>
         <div><GoodSectionGallery /></div>
     <div className='goodSection-line-info'>
-        <h2>Плита печная цельная</h2>
+        <h2>{titleGood}</h2>
         <div className='goodSection-rating'>
             <Rating rating={averageRating ? averageRating / reviews.length : 5} />
             <p>{averageRating ? averageRating / reviews.length : 5}</p>
         </div>
-        <h1>1413 ₽</h1>
+        <h1>{price} ₽</h1>
         <div className='goodSection-character goodSection-article'>
             <p>Артикул:</p>
-            <p>80164116</p>
+            <p>{article}</p>
         </div>
         <div className='goodSection-character goodSection-material'>
             <p>Материал изделия:</p>
-            <p>чугун</p>
+            <p>{parameter[2].valueParameter}</p>
         </div>
         <div className='goodSection-description'>
-            <p><b>Описание:</b> Колосник - это элемент гарнитуры топки, необходимая составляющая любой печи. Решетка для печи выполнена из жаропрочного литейного чугуна и предназначена для поддержания слоя твердого горящего топлива в топке и подвода воздуха в слой топлива через отверстия - прозоры. Колосник также выполняет функцию отвода золы из топочной камеры в зольник. Материал устойчив к повреждениям, деформации, не окисляется при взаимодействии с воздухом.</p>
+            <p><b>Описание:</b> {description}</p>
         </div>
         <div className='goodSection-exchange'>
                 <div>
@@ -47,7 +45,7 @@ const GoodSectionLine: React.FC<GoodSectionType> = ({reviews}) => {
                 <p>Обмен и возврат 10 дней</p>
         </div>
         <div className='cartGood-category'>
-                <p>Аксессуары для бани</p>
+                <p>{categoryChildren}</p>
                 <div >
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path></svg>
                 </div>
