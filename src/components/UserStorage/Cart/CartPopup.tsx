@@ -6,7 +6,6 @@ interface CartPopupType {
 
 const CartPopup: React.FC<CartPopupType> = ({ setIsMore }) => {
   const [isDragging, setIsDragging] = useState(false);
-  const [isLight, setIsLight] = useState(false);
   const [startY, setStartY] = useState(0);
   const [currentY, setCurrentY] = useState(0);
 
@@ -31,16 +30,7 @@ const CartPopup: React.FC<CartPopupType> = ({ setIsMore }) => {
     setIsDragging(false);
   };
 
- 
 
-    React.useEffect(() => {
-        const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        if (isDarkMode) {
-            setIsLight(false)
-        } else {
-            setIsLight(true)
-        }
-    }, [])
 
 
   return (
@@ -51,13 +41,13 @@ const CartPopup: React.FC<CartPopupType> = ({ setIsMore }) => {
           setIsMore(false);
         }
       }}
-      style={{backgroundColor: isLight ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.7)'}}
+      
     >
       <div
         className="cartPopup"
         style={{
           transform: `translateY(${currentY}px)`,
-          transition: isDragging ? 'none' : 'transform 0.3s ease',
+        //   transition: isDragging ? 'none' : 'transform 0.3s ease',
         }}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}

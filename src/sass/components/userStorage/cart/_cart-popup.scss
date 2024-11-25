@@ -20,9 +20,9 @@
     padding: 40px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     justify-content: center;
-    gap: 40px;
+    gap: 25px;
     position: relative;
     transition: transform 0.3s ease, opacity 0.3s ease;
   }
@@ -41,16 +41,20 @@
   .cartPopup-item {
     color: #1E1E1E;
     display: flex;
-    align-items: start;
-    justify-content: center;
+    align-items: center;
+    justify-content: start;
     gap: 20px;
 
     div {
-        width: 30px;
-        height: 30px;
+        width: 26px;
+        height: 26px;
 
         svg {
             fill: #1E1E1E;
         }
+    }
+
+    p {
+        font-size: 20px;
     }
   }
