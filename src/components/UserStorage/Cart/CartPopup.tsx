@@ -1,36 +1,36 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 interface CartPopupType {
   setIsMore: (isMore: boolean) => void;
 }
 
 const CartPopup: React.FC<CartPopupType> = ({ setIsMore }) => {
-  const [isDragging, setIsDragging] = useState(false);
-  const [startY, setStartY] = useState(0);
-  const [currentY, setCurrentY] = useState(0);
+  
+    const [isTouch, setIsTouch] = React.useState(false)
+    const [startTouch, setStartTouch] = React.useState(0)
+    // const [currentTouch, setCurrentTouch] = React.useState(0)
 
-  const handleTouchStart = (e: React.TouchEvent) => {
-    setStartY(e.touches[0].clientY);
-    setIsDragging(true);
-  };
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    if (isDragging) {
-      const diff = e.touches[0].clientY - startY;
-      setCurrentY(diff > 0 ? diff : 0); // Ограничиваем только вниз
+    const downStart = (e: React.TouchEvent) => {
+        setIsTouch(true);
+        setStartTouch(e.touches[0].clientY);
     }
-  };
 
-  const handleTouchEnd = () => {
-    if (currentY > 30) {
-      // Если пользователь потянул вниз достаточно, закрываем блок
-      setIsMore(false);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const downMove = (e: any) => {
+        if (e) {
+            const currentY = e.touches[0].clientY - startTouch;
+        // setCurrentTouch(currentY)
+            e.target.style.transform = `translateY(${currentY}px)`
+        }
     }
-    setCurrentY(0);
-    setIsDragging(false);
-  };
 
-
+    React.useEffect(() => {
+        document.body.classList.add('no-scroll'); // Добавляем класс для блокировки скролла
+        return () => {
+            document.body.classList.remove('no-scroll'); // Убираем класс при размонтировании компонента
+        };
+    }, []);
+    
 
 
   return (
@@ -45,13 +45,9 @@ const CartPopup: React.FC<CartPopupType> = ({ setIsMore }) => {
     >
       <div
         className="cartPopup"
-        style={{
-          transform: `translateY(${currentY}px)`,
-        //   transition: isDragging ? 'none' : 'transform 0.3s ease',
-        }}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
+        onTouchStart={(e) => downStart(e)}
+        onTouchMove={(e) => downMove(e)}
+
       >
         <div className='cartPopup-item'>
             <div>

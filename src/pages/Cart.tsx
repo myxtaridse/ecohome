@@ -62,7 +62,7 @@ const Cart = () => {
 
   return (
     <div className='cart-block' ref={relativeRef}>
-      <div className='cart-title'>
+      <div className='cart-title-main'>
         <div>
         <svg
             xmlns="http://www.w3.org/2000/svg"
