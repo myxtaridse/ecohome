@@ -103,7 +103,7 @@ const CartGoods = () => {
         </div>
         <div className='cart-main-goods-list'>
         {
-            goods.goods.map((item) => <GoodSectionLine key={item.id} {...item} />)
+            goods && goods.goods.map((item) => <GoodSectionLine key={item.id} {...item} />)
         }
         </div>
     </div>

@@ -1,0 +1,40 @@
+.cartPopup-bg {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    align-items: flex-end; /* Чтобы блок был снизу */
+    justify-content: center;
+    transition: opacity 0.3s ease;
+  }
+  
+  .cartPopup {
+    border-radius: 15px 15px 0 0;
+    width: 100vw;
+    height: 30vh;
+    background-color: #fff;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    position: relative;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .cartPopup::before {
+    content: ' ';
+    position: absolute;
+    top: 10px;
+    left: calc((100% - 120px) / 2);
+    background-color: #6c6c6c;
+    width: 120px;
+    height: 5px;
+    border-radius: 50px;
+  }
+  

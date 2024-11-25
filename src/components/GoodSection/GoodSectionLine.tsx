@@ -1,15 +1,16 @@
 import React from 'react'
 import GoodSectionGallery from './GoodSectionGallery'
 import Rating from '../Rating'
-import { CustomContextMain } from '../../context/MainContext'
-import { useLocation } from 'react-router-dom';
+// import { CustomContextMain } from '../../context/MainContext'
+// import { useLocation } from 'react-router-dom';
 import { GoodSectionType } from './GoodSection';
+import CartPopup from '../UserStorage/Cart/CartPopup';
 
 const GoodSectionLine: React.FC<GoodSectionType> = ({article, titleGood, categoryChildren, price, description, parameter, reviews}) => {
     const [isMore, setIsMore] = React.useState(false)
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const {windowRef}: any = React.useContext(CustomContextMain);
-    const location = useLocation();
+    // const {windowRef}: any = React.useContext(CustomContextMain);
+    // const location = useLocation();
     
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -79,7 +80,7 @@ const GoodSectionLine: React.FC<GoodSectionType> = ({article, titleGood, categor
         </div>
 
     
-       <div className='goodSection-line-actions' 
+       {/* <div className='goodSection-line-actions' 
        style={{transform: windowRef.current <= 500 || location.pathname === '/cart' ? isMore ? 'scale(1)' : 'scale(0)' : 'scale(1)'}}
        >
             <div>
@@ -97,9 +98,13 @@ const GoodSectionLine: React.FC<GoodSectionType> = ({article, titleGood, categor
                     <path d="M3.33366 6.66699H16.667V17.5003C16.667 17.9606 16.2939 18.3337 15.8337 18.3337H4.16699C3.70676 18.3337 3.33366 17.9606 3.33366 17.5003V6.66699ZM5.00033 8.33366V16.667H15.0003V8.33366H5.00033ZM7.50033 10.0003H9.16699V15.0003H7.50033V10.0003ZM10.8337 10.0003H12.5003V15.0003H10.8337V10.0003ZM5.83366 4.16699V2.50033C5.83366 2.04009 6.20676 1.66699 6.66699 1.66699H13.3337C13.7939 1.66699 14.167 2.04009 14.167 2.50033V4.16699H18.3337V5.83366H1.66699V4.16699H5.83366ZM7.50033 3.33366V4.16699H12.5003V3.33366H7.50033Z" fill="#565656"/>
                 </svg>
             </div>
-        </div>
+        </div> */}
         
-        
+        {
+            isMore && (
+                <CartPopup setIsMore={setIsMore} />
+            )
+        }
     
 </div>
   )

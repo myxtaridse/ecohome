@@ -96,6 +96,7 @@ const Cart = () => {
         <CartTotal isDelivery={isDelivery} />
       </div>
       </div>
+
     </div>
   )
 }

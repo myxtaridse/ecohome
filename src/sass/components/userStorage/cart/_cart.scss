@@ -3,6 +3,7 @@
 @use './cart-form';
 @use './cart-delivery';
 @use './cart-delivery-detail';
+@use './cart-popup';
 
 .cart-block {
     font-weight: 500;
@@ -339,7 +340,7 @@
         input::placeholder {
             text-overflow: ellipsis;
             overflow: hidden;
-            max-width: 110px;
+            max-width: 80%;
             height: 20px;
             font-size: 12px;
             white-space: nowrap;
