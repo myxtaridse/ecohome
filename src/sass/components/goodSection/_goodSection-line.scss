@@ -172,7 +172,7 @@
 
 @media (max-width: 500px) {
     .goodSection-line {
-        height: 120px;
+        height: 130px;
         margin: 0;
         padding: 8px;
     
@@ -182,7 +182,7 @@
         }
 
         .goodSection-gallery {
-            height: 100px;
+            height: 115px;
             width: 90px;
 
         }
@@ -206,7 +206,7 @@
             box-shadow: inset 1px 1px 5px lightgray;
             transform: translateX(0);
              gap: 20px;
-             padding: 3px 10px;
+             padding: 0px 10px;
              
              
          
@@ -221,16 +221,18 @@
                     
                   }
          }
+
+         .goodSection-more {
+            top: 2%;
+            right: 2%;
+            width: 20px;
+        }
        
     }
-    .goodSection-more {
-        top: 2%;
-        right: 2%;
-        width: 20px;
-    }
+    
 
     .cartGood-category {
-        margin-top: 0;
+        margin-top: 2px;
     
         p {
             font-size: 9px;
