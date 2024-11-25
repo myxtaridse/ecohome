@@ -22,7 +22,7 @@ const CartPopup: React.FC<CartPopupType> = ({ setIsMore }) => {
   };
 
   const handleTouchEnd = () => {
-    if (currentY > 100) {
+    if (currentY > 60) {
       // Если пользователь потянул вниз достаточно, закрываем блок
       setIsMore(false);
     }
