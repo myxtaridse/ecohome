@@ -172,7 +172,8 @@
 
 @media (max-width: 500px) {
     .goodSection-line {
-        height: 130px;
+        min-height: 130px;
+        
         margin: 0;
         padding: 8px;
     

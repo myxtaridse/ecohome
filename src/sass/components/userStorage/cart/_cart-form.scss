@@ -70,10 +70,12 @@
 
 @media (max-width: 500px) {
     .cartForm-select-user {
-        margin: 20px 20px;
-        gap: 40px;
+        margin: 0 auto;
+        width: 95%;
+        gap: 0;
     
         .cartForm-select-user-item {
+            width: 50%;
             gap: 7px;
             font-size: 14px;
     
