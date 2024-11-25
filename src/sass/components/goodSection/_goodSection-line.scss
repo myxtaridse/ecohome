@@ -202,6 +202,7 @@
         
        
         .cartGood-incr-decr {
+            vertical-align: middle;
             box-shadow: inset 1px 1px 5px lightgray;
             transform: translateX(0);
              gap: 20px;
@@ -217,7 +218,7 @@
          
                   h2 {
                      font-size: 18px;
-                     line-height: 18px;
+                    
                   }
          }
        

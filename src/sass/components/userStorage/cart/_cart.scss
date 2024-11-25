@@ -269,6 +269,23 @@
         .goodSection-rating {
            display: none;
         }
+
+        .goodSection-more {
+            top: 4%;
+            right: 4%;
+          }
+
+        .goodSection-line-actions {
+            padding: 7px 5px;
+            top: 24px;
+            right: 3%;
+            gap: 15px;
+
+            div {
+                width: 20px;
+                height: 20px;
+            }
+          }
       }
       
 
