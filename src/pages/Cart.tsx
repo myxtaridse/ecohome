@@ -88,7 +88,7 @@ const Cart = () => {
           <CartForm isDelivery={isDelivery} />
         </div>
       </div>
-      <div className={[isStopPay ? 'cart-right-absolute' : 'cart-right-fixed'].join(" ")} ref={blockRef} 
+      <div className={[isStopPay && window.innerWidth > 500 ? 'cart-right-absolute' : 'cart-right-fixed'].join(" ")} ref={blockRef} 
 
       // style={{top: isStopPay ? (relativeRef.current ? `${relativeRef.current?.clientHeight}` : '') : `${26}%`,
       //  position: isStopPay ? 'absolute' : 'fixed', bottom: isStopPay ? '0px' : 'none'}}

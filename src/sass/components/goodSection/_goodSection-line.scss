@@ -205,9 +205,10 @@
         .cartGood-incr-decr {
             vertical-align: middle;
             box-shadow: inset 1px 1px 5px lightgray;
-            transform: translateX(0);
-             gap: 20px;
-             padding: 0px 10px;
+            transform: translateX(0) translateY(40px);
+            
+            gap: 20px;
+            padding: 0px 10px;
              
              
          
@@ -227,13 +228,15 @@
             top: 2%;
             right: 2%;
             width: 20px;
+            // display: none;
         }
        
     }
     
 
     .cartGood-category {
-        margin-top: 2px;
+        // margin-top: auto;
+        margin-bottom: auto;
     
         p {
             font-size: 9px;
@@ -252,6 +255,9 @@
         p {
             font-size: 10px;
         }
+    }
+    .goodSection-character:nth-of-type(3) {
+        display: none;
     }
 
     .goodSection-line-actions {
