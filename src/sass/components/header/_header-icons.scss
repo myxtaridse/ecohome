@@ -37,12 +37,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  line-height: 1;
   vertical-align: middle;
 }
 
 .header-icons-bell p {
   font-size: 12px;
+  line-height: 20px;
 }
 
 
@@ -66,6 +66,9 @@
     width: 17px;
     height: 17px;
   }
+  .header-icons-bell p {
+    line-height: 17px;
+  }
   
 }
 @media (max-width: 1400px) {
@@ -88,6 +91,7 @@
   }
   .header-icons-bell p {
     font-size: 11px;
+    line-height: 16px;
   }
 }
 @media (max-width: 1100px) {
@@ -105,17 +109,6 @@
   .header-catalog-icon:last-of-type {
     width: 25px;
     height: 25px;
-  }
-  .header-icons-bell {
-    top: -6px;
-    right: -7px;
-    width: 16px;
-    height: 16px;
-    
-    padding-top: 0;
-  }
-  .header-icons-bell p {
-    font-size: 11px;
   }
 }
 
@@ -138,8 +131,6 @@
   .header-icons-bell {
     top: -8px;
     right: -8px;
-    width: 16px;
-    height: 16px;
   }
   .header-icons-bell p {
     font-size: 10px;
@@ -150,7 +141,7 @@
     display: none;
   }
   .header-icons-bell p {
-    display: block;
+    display: inline-block;
   }
 }
 @media (max-width: 700px) {
@@ -166,14 +157,8 @@
     width: 26px;
     height: 26px;
   }
-  .header-icons-bell {
-    top: -8px;
-    right: -8px;
-    width: 16px;
-    height: 16px;
-  }
   .header-icons-bell p {
-    display: block;
+    display: inline-block;
   }
   
 }
@@ -203,7 +188,7 @@
   }
   .header-icons-bell p {
     font-size: 9px;
-
+    line-height: 14px;
   }
   
 }
@@ -222,14 +207,12 @@
     height: 20px;
   }
   .header-icons-bell {
-    top: -5px;
-    right: -4px;
     width: 12px;
     height: 12px;
   }
   .header-icons-bell p {
     font-size: 8px;
-    margin-top: 1px;
+    line-height: 12px;
   }
   
 }
