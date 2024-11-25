@@ -78,7 +78,7 @@ const Cart = () => {
       <div className='cart-main'>
         
         <div className='cart-main-goods'>
-         <h2 className='cart-title'> Проверьте детали заказа</h2>
+         <h2 className='cart-title'> Проверьте товары в заказе</h2>
           <CartGoods />
         </div>
         <div className='cart-main-form'>
