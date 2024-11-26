@@ -21,7 +21,7 @@ const CartPopup: React.FC<CartPopupType> = ({ setIsMore, isMore }) => {
       if (!startTouch) return;
 
       const currentY = e.touches[0].clientY;
-      const deltaY = (currentY - startTouch) * 0.2;
+      const deltaY = (currentY - startTouch) * 0.8;
       if (deltaY > 0) {
         setCurrentTouch(deltaY)
       }
