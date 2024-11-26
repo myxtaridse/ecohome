@@ -6,6 +6,7 @@ import MainLayout from "./layout/MainLayout";
 import CatalogPage from "./pages/CatalogPage";
 import Loading from "./components/Loading/Loading";
 import ErrorPage from "./pages/ErrorPage";
+import CartMobile from "./pages/CartMobile";
 // import GoodItemPage from "./pages/GoodItemPage"
 
 function App() {
@@ -52,7 +53,9 @@ function App() {
         } />
         <Route path="/cart" element={
           <React.Suspense fallback={<Loading />}>
-            <Cart />
+            {
+              window.innerWidth > 500 ? <Cart /> : <CartMobile />
+            }
           </React.Suspense>
         } />
         <Route path="/comparison" element={

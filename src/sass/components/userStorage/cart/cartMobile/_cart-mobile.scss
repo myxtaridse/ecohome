@@ -1,0 +1,104 @@
+@use './cart-popup';
+
+.cartMobile-total-block {
+    margin: 20px auto 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+
+    div {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    button {
+        background-color: #CF4E32;
+        width: 100%;
+        height: 40px;
+        font-size: 15px;
+        color: white;
+        font-weight: 700;
+        margin: 10px auto;
+    }
+}
+
+.cartMobile-recommend {
+    background-color: #F2F5F9;
+    width: 100vw;
+    margin-left: -10px;
+    
+    padding: 20px 10px;
+}
+
+.cartMobile-recommend-goods {
+    display: flex;
+    // align-items: start;
+    align-items:stretch;
+    
+    gap: 12px;
+    margin: 10px 0;
+
+    .goodSection {
+        min-height: 200px;
+        padding: 10px;
+        width: 100%;
+        min-width: 160px;
+        display: flex;
+        flex-direction: column;
+
+
+
+        .goodSection-gallery {
+            width: 100%;      
+            height: 150px;
+          }
+
+          h2 {
+            margin-top: 10px;
+            font-size: 13px;
+          }
+
+          .goodSection-rating {
+
+            .star-container {
+                transform: translateY(-5px);
+                width: 12px !important;
+                height: 12px !important;
+    
+                svg {
+                    width: 11px !important;
+                    height: 11px !important;
+                }
+            }
+
+            p {
+                margin-top: 0;
+                font-size: 12px;
+            }
+          }
+
+          .goodSection-actions-price {
+            margin-top: auto;
+            height: max-content;
+            
+            h1 {
+                font-size: 16px;
+            }
+          }
+
+          .goodSection-actions {
+            transform: translateY(-2px);
+            margin: 0;
+            div {
+                width: 16px;
+                height: 16px;
+              }
+          }
+
+        
+    }
+}

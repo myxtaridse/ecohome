@@ -4,13 +4,12 @@
     position: fixed;
     bottom: 0;
     left: 0;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(176, 176, 176, 0.4);
     z-index: 1000;
     display: flex;
     align-items: flex-end; /* Чтобы блок был снизу */
     justify-content: center;
     transition: opacity 0.3s ease;
-    overflow-y: hidden;
   }
   
   .cartPopup {
@@ -40,6 +39,7 @@
   }
   
   .cartPopup-item {
+    margin: 0 auto;
     color: #1E1E1E;
     display: flex;
     align-items: center;
@@ -47,8 +47,8 @@
     gap: 20px;
 
     div {
-        width: 26px;
-        height: 26px;
+        width: 24px;
+        height: 24px;
 
         svg {
             fill: #1E1E1E;
@@ -56,8 +56,24 @@
     }
 
     p {
-        font-size: 20px;
+        font-size: 18px;
     }
   }
 
+  .cartPopup-close {
+    width: 20px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+    svg {
+        fill: #565656;
+    }
+  }
+
+  .cartPopup-close:hover {
+    svg {
+        fill: #000;
+    }
+  }
   

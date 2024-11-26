@@ -1,9 +1,9 @@
 @use './cart-pay';
-@use './cart-good';
+// @use './cart-good';
 @use './cart-form';
 @use './cart-delivery';
 @use './cart-delivery-detail';
-@use './cart-popup';
+@use './cartMobile/cart-mobile';
 
 .cart-block {
     font-weight: 500;
@@ -238,6 +238,7 @@
 
     .cart-block {
         width: 95vw;
+        margin: auto;
     }
     
     .cart {
