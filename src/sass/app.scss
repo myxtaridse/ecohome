@@ -14,9 +14,8 @@
 html {
   scrollbar-width: thin; /* or auto */
   scrollbar-color: #888 #f0f0f0; /* thumb and track color */
-  // overflow-x: hidden;
-  // scroll-behavior: smooth;
-  overflow: hidden;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 
 }
 

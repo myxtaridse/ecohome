@@ -101,7 +101,7 @@ const GoodSectionLine: React.FC<GoodSectionType> = ({article, titleGood, categor
         
         {
             isMore && (
-                <CartPopup setIsMore={setIsMore} />
+                <CartPopup setIsMore={setIsMore} isMore={isMore} />
             )
         }
     

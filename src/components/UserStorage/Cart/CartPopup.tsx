@@ -2,40 +2,34 @@ import React from 'react';
 
 interface CartPopupType {
   setIsMore: (isMore: boolean) => void;
+  isMore: boolean;
 }
 
-const CartPopup: React.FC<CartPopupType> = ({ setIsMore }) => {
+const CartPopup: React.FC<CartPopupType> = ({ setIsMore, isMore }) => {
   
-    const [isTouch, setIsTouch] = React.useState(false)
-    const [startTouch, setStartTouch] = React.useState(0)
-    const [currentTouch, setCurrentTouch] = React.useState(0)
-
-    const downStart = (e: React.TouchEvent) => {
-        setIsTouch(true);
-        setStartTouch(e.touches[0].clientY);
-    }
+    // const [isTouch, setIsTouch] = React.useState(false)
+    // const [startTouch, setStartTouch] = React.useState(0)
+    // const [currentTouch, setCurrentTouch] = React.useState(0)
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const downMove = (e: any) => {
-        if (e && isTouch) {
-            const currentY = e.touches[0].clientY - startTouch;
-            // document.body.style.overflow = 'hidden'
-            console.log(currentY);
-            
-            if (currentY > 0) {
-              setCurrentTouch(currentY);
-            } 
-            
-            
-        }
+    const touchEventFnc = (e: any) => {
+      setIsMore(true);
+
+      const clientY = e.touches[0].clientY;
+      console.log(clientY, e.target.offsetTop);
+      if (clientY && clientY > 0 && clientY < 800) {
+        e.target.style.transform = `translateY(${clientY}px)`
+      }
+      
     }
 
-    const downEnd = () => {
-        if (currentTouch > 150) {
-            setIsMore(false);
-            setIsTouch(false);
-        }
-    }
+
+
+    React.useEffect(() => {
+      if (isMore) {
+        document.documentElement.style.overflow = 'hidden';
+      }
+    }, [isMore])
 
 
   return (
@@ -50,12 +44,9 @@ const CartPopup: React.FC<CartPopupType> = ({ setIsMore }) => {
     >
       <div
         className="cartPopup"
-        onTouchStart={(e) => downStart(e)}
-        // onTouchMove={(e) => downMove(e)}
-        onTouchMove={(e) => downMove(e)}
-        onTouchEnd={downEnd}
+        onTouchMove={(e) => touchEventFnc(e)}
 
-        style={{transform: `translateY(${currentTouch}px)`}}
+        // style={{transform: `translateY(${currentTouch}px)`}}
       >
         <div className='cartPopup-close' onClick={() => setIsMore(false)}>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"></path></svg>
