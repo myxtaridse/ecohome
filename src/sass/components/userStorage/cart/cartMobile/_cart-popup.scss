@@ -15,7 +15,7 @@
   .cartPopup {
     border-radius: 15px 15px 0 0;
     width: 100vw;
-    height: 30vh;
+    height: 33vh;
     background-color: #fff;
     padding: 40px;
     display: flex;
@@ -24,13 +24,14 @@
     justify-content: center;
     gap: 25px;
     position: relative;
+    transform: translateY(0px);
     transition: transform 0.3s ease, opacity 0.3s ease;
   }
   
   .cartPopup::before {
     content: ' ';
     position: absolute;
-    top: 10px;
+    top: 30px;
     left: calc((100% - 120px) / 2);
     background-color: #6c6c6c;
     width: 120px;
@@ -63,8 +64,8 @@
   .cartPopup-close {
     width: 20px;
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 8px;
+    right: 8px;
 
     svg {
         fill: #565656;
