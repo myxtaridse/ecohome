@@ -16,9 +16,12 @@ const CartPopup: React.FC<CartPopupType> = ({ setIsMore, isMore }) => {
       setIsMore(true);
 
       const clientY = e.touches[0].clientY;
-      console.log(clientY, e.target.offsetTop);
+      const offsetTop = e.target.offsetTop;
+      const middle = clientY - offsetTop;
+      console.log(clientY, offsetTop, middle);
+      
       if (clientY && clientY > 0 && clientY < 800) {
-        e.target.style.transform = `translateY(${clientY -  e.target.offsetTop}px)`
+        e.target.style.transform = `translateY(${(clientY -  e.target.offsetTop) / 0.5}px)`
       }
       
     }
