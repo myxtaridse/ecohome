@@ -79,6 +79,7 @@
     background: linear-gradient(-120deg, #0FB6FE 0%, #03D31D 50%, #F2EA00 100%);
 
     svg {
+        width: 60px;
         margin-top: 5px;
     }
 }
@@ -89,6 +90,11 @@
 .cartTotal-payBlock-item-money {
     div {
         margin-top: 8px;
+
+        svg {
+            width: 80px;
+            height: 23px;
+        }
     }
 }
 .cartTotal-payBlock-item-addCard {
@@ -110,6 +116,8 @@
         margin-bottom: -5px;
 
         svg {
+            width: 20px;
+            height: 20px;
             color: black;
         }
     }
@@ -130,5 +138,38 @@
         padding: 10px 15px;
         gap: 10px;
         border-radius: 0;
+    }
+    .cartTotal-payBlock-item-sbp img {
+        width: 15vw;
+    }
+    .cartTotal-payBlock-item-sber {
+    
+        svg {
+            margin-top: 0;
+            width: 40px;
+        }
+    }
+    .cartTotal-payBlock-item-money {
+            svg {
+                width: 55px;
+                height: max-content;
+            }
+        
+    }
+    .cartTotal-payBlock-item-addCard {
+    
+        p {
+            transform: translateY(-3px);
+            font-size: 7px;
+        }
+    
+        div {
+            margin-bottom: 0;
+    
+            svg {
+                width: 14px;
+                height: 14px;
+            }
+        }
     }
 }

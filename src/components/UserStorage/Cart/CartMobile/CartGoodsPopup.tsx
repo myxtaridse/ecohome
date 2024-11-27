@@ -24,12 +24,24 @@ const CartGoodsPopup = () => {
         isMore && <CartPopup setIsMore={setIsMore}>
             <div className='checkout-person-block'>
                 <div className='cartMobile-map-text'>
-                    <h4>Адрес магазина:</h4>
+                    <h4>Ваш заказ</h4>
                 </div>
-                <div className='checkout-person-form'>
-                    
+                <div className='checkout-popup-goods'>
+                    {
+                        data.goods.map((good) => (
+                            <div className='checkout-popup-good'>
+                                <img src={image} alt="" />
+                                <div className='checkout-popup-good-text'>
+                                    <div>
+                                        <h5>{good.price}</h5>
+                                        <p>1 шт.</p>
+                                    </div>
+                                    <h6>{good.titleGood}, {good.article}, {good.parameter[2].valueParameter}, {good.parameter[4].valueParameter}</h6>    
+                                </div>    
+                            </div>
+                        ))
+                    }
                 </div>
-                <button>Сохранить</button>
             </div>
         </CartPopup>
       }

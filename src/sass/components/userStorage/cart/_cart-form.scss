@@ -76,11 +76,14 @@
     
     .cartForm-select-user {
         margin: 0 auto;
-        width: 95%;
+        width: 90%;
         gap: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     
         .cartForm-select-user-item {
-            width: 50%;
+            width: 100%;
             gap: 7px;
             font-size: 14px;
     

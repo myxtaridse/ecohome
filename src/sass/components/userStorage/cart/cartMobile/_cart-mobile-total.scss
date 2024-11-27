@@ -1,0 +1,41 @@
+.checkout-total {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    button {
+        background-color: #CF4E32;
+        width: 95%;
+        height: 40px;
+        font-size: 15px;
+        color: white;
+        font-weight: 700;
+        margin: 10px auto;
+    }
+}
+.checkout-total-text {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h5 {
+        font-size: 14px;
+    }
+    h6 {
+        font-size: 13px;
+        color: #565656;
+    }
+}
+.checkout-total-input {
+    margin: 10px 0;
+    input {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid grey;
+        padding-left: 7px;
+        padding: 5px 10px;
+        font-size: 15px;
+        border-radius: 0;
+    }
+}
