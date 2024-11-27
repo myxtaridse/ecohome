@@ -1,6 +1,5 @@
 import React from 'react'
 import CartDelivery from '../components/UserStorage/Cart/CartDelivery'
-import Arrow from '../components/Arrow';
 import CartMapPopup from '../components/UserStorage/Cart/CartMobile/CartMapPopup';
 
 const Checkout = () => {
