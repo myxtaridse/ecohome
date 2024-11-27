@@ -4,12 +4,17 @@ import CartPopup from './CartPopup';
 import Arrow from '../../../Arrow';
 
 const CartMapPopup = () => {
-  const [coordinates, setCoordinates] = React.useState<[number, number]>([58.559339, 49.591738]);
-  const [zoom, setZoom] = React.useState(12);
   const [isMore, setIsMore] = React.useState(false)
   const [isGraphic, setIsGraphic] = React.useState(false)
-
-  console.log(setCoordinates, setZoom);
+  
+  React.useEffect(() => {
+    if (isMore) {
+      document.documentElement.style.overflowY = 'hidden';
+    } 
+    if (!isMore) {
+      document.documentElement.style.overflowY = 'scroll';
+    }
+  }, [isMore])
   
   
   return (
@@ -19,7 +24,7 @@ const CartMapPopup = () => {
           <Arrow />
       </div>
       {
-        isMore && <CartPopup setIsMore={setIsMore} isMore={isMore}>
+        isMore && <CartPopup setIsMore={setIsMore}>
         <div className='cartMobile-map-block'>
           <div className='cartMobile-map-text'>
             <h4>Адрес магазина:</h4>
@@ -58,7 +63,7 @@ const CartMapPopup = () => {
               >
                 <Map
                   // className="cartDelveryDetail-map"
-                  state={{ center: coordinates, zoom: zoom }}
+                  state={{ center: [58.559339, 49.591738], zoom: 12 }}
                   width="100vw"
                   height="100%"
                   options={{
@@ -71,7 +76,7 @@ const CartMapPopup = () => {
                         iconImageHref: 'https://cdn-icons-png.flaticon.com/128/16972/16972756.png',
                         iconImageSize: [36, 36]
                         
-                    }} geometry={coordinates} />
+                    }} geometry={[58.559339, 49.591738]} />
     
                 </Map>
               </YMaps>

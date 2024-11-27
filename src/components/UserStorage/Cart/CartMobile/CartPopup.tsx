@@ -2,16 +2,16 @@ import React from 'react';
 
 interface CartPopupType {
   setIsMore: (isMore: boolean) => void;
-  isMore: boolean;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   children: any;
 }
 
-const CartPopup: React.FC<CartPopupType> = ({ setIsMore, isMore, children }) => {
+const CartPopup: React.FC<CartPopupType> = ({ setIsMore, children }) => {
   
     const [isTouch, setIsTouch] = React.useState(false)
     const [startTouch, setStartTouch] = React.useState<number>(0)
     const [currentTouch, setCurrentTouch] = React.useState<number>(0)
+
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const touchStartFn = (e: any) => {
@@ -45,14 +45,7 @@ const CartPopup: React.FC<CartPopupType> = ({ setIsMore, isMore, children }) => 
       setStartTouch(0)
     }
 
-
-    React.useEffect(() => {
-      if (isMore) {
-        document.documentElement.style.overflow = 'hidden';
-      } else {
-        document.documentElement.style.overflow = '';
-      }
-    }, [isMore])
+    
 
 
   return (

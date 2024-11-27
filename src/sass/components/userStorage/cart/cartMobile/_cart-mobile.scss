@@ -1,5 +1,6 @@
 @use './cart-popup';
 @use './cart-mobile-map';
+@use './cart-mobile-person';
 
 .cartMobile-total-block {
     margin: 20px auto 40px;
@@ -37,11 +38,12 @@
 
 .cartMobile-recommend-goods {
     display: flex;
-    // align-items: start;
     align-items:stretch;
-    
     gap: 12px;
     margin: 10px 0;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none; 
 
     .goodSection {
         min-height: 200px;
@@ -119,11 +121,38 @@
 
     h6 {
         font-size: 13px;
+        font-weight: 650;
+        color: #565656;
     }
 
     svg {
         transform: rotate(90deg) translateX(-2px);
         width: 20px;
         height: 20px;
+        fill: #565656;
+    }
+}
+
+.checkout-person-data {
+    margin: 30px 0;
+
+    .cartMobile-pickup-link {
+        margin: 10px 0;
+        display: block;
+
+
+        .cartMobile-pickup-link-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+}
+
+.checkout-person {
+    p {
+        font-size: 12px;
+        color: #565656;
+        text-decoration: underline dotted #565656;
     }
 }

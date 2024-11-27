@@ -8,14 +8,23 @@ import CartPopup from '../UserStorage/Cart/CartMobile/CartPopup';
 
 const GoodSectionLine: React.FC<GoodSectionType> = ({article, titleGood, categoryChildren, price, description, parameter, reviews}) => {
     const [isMore, setIsMore] = React.useState(false)
-    // const {windowRef}: any = React.useContext(CustomContextMain);
-    // const location = useLocation();
     
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const averageRating = reviews.reduce((sum: number, review: any) => {
         return sum + parseFloat(review.statusRev)
     }, 0);
+
+    React.useEffect(() => {
+        if (isMore) {
+          document.documentElement.style.overflowY = 'hidden';
+        } 
+        
+        
+        if (!isMore) {
+          document.documentElement.style.overflowY = 'scroll';
+        }
+      }, [isMore])
 
   return (
     <div className='goodSection-line'>
@@ -102,7 +111,7 @@ const GoodSectionLine: React.FC<GoodSectionType> = ({article, titleGood, categor
         {
             isMore && (
                 
-                <CartPopup setIsMore={setIsMore} isMore={isMore}>
+                <CartPopup setIsMore={setIsMore}>
                     <div className='cartPopup-actions'>
                         <div className='cartPopup-item'>
                             <div>

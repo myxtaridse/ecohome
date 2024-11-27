@@ -1,6 +1,7 @@
 import React from 'react'
 import CartDelivery from '../components/UserStorage/Cart/CartDelivery'
 import CartMapPopup from '../components/UserStorage/Cart/CartMobile/CartMapPopup';
+import CartPersonPopup from '../components/UserStorage/Cart/CartMobile/CartPersonPopup';
 
 const Checkout = () => {
     const [isDelivery, setIsDelivery] = React.useState(false);
@@ -24,6 +25,7 @@ const Checkout = () => {
                 <CartDelivery isDelivery={isDelivery} setIsDelivery={setIsDelivery}  />
             </div>
             <CartMapPopup />
+            <CartPersonPopup />
         </div>
       </div>
 

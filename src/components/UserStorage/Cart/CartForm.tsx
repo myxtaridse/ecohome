@@ -2,12 +2,13 @@ import React from 'react';
 import { CustomContextMain } from '../../../context/MainContext';
 import { AddressSuggestions } from 'react-dadata';
 import { API_KEY } from '../../../config';
+import CartSelectPerson from './CartSelectPerson';
 
 interface CartFormType {
     isDelivery: boolean;
 }
 
-const itemForm = [
+export const itemForm = [
     {
         id: '0',
         title: 'Название компании',
@@ -117,26 +118,7 @@ fetch(url + query, options)
   return (
     <div className='cartForm'>
         <h2 className='cart-title'>Укажите данные для получения заказа</h2>
-        <div className='cartForm-select-user'>
-            <div className='cartForm-select-user-item' onClick={() => setIsLegalEntity(false)}>
-                
-                <div>
-                    {
-                        !isLegalEntity && <span></span>
-                    }
-                </div>
-                <p>Физическое лицо</p>
-            </div>
-            <div className='cartForm-select-user-item' onClick={() => setIsLegalEntity(true)}>
-                
-                <div>
-                    {
-                        isLegalEntity && <span></span>
-                    }
-                </div>
-                <p>Юридическое лицо</p>
-            </div>
-        </div>
+        <CartSelectPerson isLegalEntity={isLegalEntity} setIsLegalEntity={setIsLegalEntity} />
         {
             isLegalEntity ? (
                 <div className='cartForm-form'>
