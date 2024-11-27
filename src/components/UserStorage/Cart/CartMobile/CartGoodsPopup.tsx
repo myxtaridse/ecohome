@@ -1,6 +1,7 @@
 import React from 'react'
 import CartPopup from './CartPopup'
 import data from '../../../../../db.json'
+import image from '../../../../assets/image.png'
 
 const CartGoodsPopup = () => {
     const [isMore, setIsMore] = React.useState(false)
@@ -12,7 +13,7 @@ const CartGoodsPopup = () => {
                 {
                     data.goods.map((good) => (
                         <div>
-                            <img src={good.photoGood[0]} alt="" />
+                            <img src={image} alt="" />
                             <h5>{good.price} ₽</h5>
                         </div>
                     ))
