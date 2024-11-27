@@ -52,8 +52,20 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
-.cartTotal-payBlock-item {
+.cartTotal-payBlock-item-border {
     margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 4px solid #fff;
+    height: max-content;
+    border-radius: 5px;
+    cursor: pointer;
+    width: max-content;
+    padding: 5px;
+}
+.cartTotal-payBlock-item {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,7 +78,7 @@
 .cartTotal-payBlock-item-sber {
     background: linear-gradient(-120deg, #0FB6FE 0%, #03D31D 50%, #F2EA00 100%);
 
-    div {
+    svg {
         margin-top: 5px;
     }
 }
@@ -104,8 +116,8 @@
 }
 
 .cartTotal-payBlock-item-active {
-    box-shadow: 1px 1px 7px 5px #cf4f3232;
-    border: 1px solid #beb3ac;
+    box-shadow: 1px 1px 7px 5px #adadad62;
+    border-color: #adadad;
 }
 
 

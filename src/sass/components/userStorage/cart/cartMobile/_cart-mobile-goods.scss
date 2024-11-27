@@ -1,0 +1,42 @@
+.checkout-goods {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    background-color: #F3F5F9;
+    width: max-content;
+    min-width: 105vw;
+    margin-left: -20px;
+    padding: 10px;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3px;
+        img {
+            width: 60px;
+        }
+    }
+}
+
+.checkout-pay-cards {
+    background-color: #F3F5F9;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 10px;
+    width: 105vw;
+    margin-left: -20px;
+
+    .cartTotal-payBlock-item-border {
+        margin-top: 0px;
+        border: 2px solid #fff;
+        padding: 3px;
+      }
+
+    .cartTotal-payBlock-item {
+        height: calc(53px * .7);
+        width: calc(90px * .7);
+      }
+}

@@ -2,6 +2,8 @@ import React from 'react'
 import CartDelivery from '../components/UserStorage/Cart/CartDelivery'
 import CartMapPopup from '../components/UserStorage/Cart/CartMobile/CartMapPopup';
 import CartPersonPopup from '../components/UserStorage/Cart/CartMobile/CartPersonPopup';
+import CartGoodsPopup from '../components/UserStorage/Cart/CartMobile/CartGoodsPopup';
+import CartPayPopup from '../components/UserStorage/Cart/CartMobile/CartPayPopup';
 
 const Checkout = () => {
     const [isDelivery, setIsDelivery] = React.useState(false);
@@ -26,6 +28,8 @@ const Checkout = () => {
             </div>
             <CartMapPopup />
             <CartPersonPopup />
+            <CartGoodsPopup />
+            <CartPayPopup />
         </div>
       </div>
 
