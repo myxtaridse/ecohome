@@ -5,8 +5,8 @@ import data from '../../../../../db.json'
 const CartGoodsPopup = () => {
     const [isMore, setIsMore] = React.useState(false)
   return (
-    <div className='checkout-person-data'>
-        {/* <h2 className='cart-title'>Укажите данные для получения заказа</h2> */}
+    <div className=''>
+        <h2 className='cart-title checkout-goods-count'>3 шт.</h2>
         
             <div className='checkout-goods' onClick={() => setIsMore(true)}>
                 {

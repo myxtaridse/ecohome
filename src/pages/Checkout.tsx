@@ -23,12 +23,13 @@ const Checkout = () => {
       </div>
       <div className='cart'>
         <div className='cart-main'>
+            <CartGoodsPopup />
+            <CartPersonPopup />
             <div className=''>
                 <CartDelivery isDelivery={isDelivery} setIsDelivery={setIsDelivery}  />
             </div>
             <CartMapPopup />
-            <CartPersonPopup />
-            <CartGoodsPopup />
+            
             <CartPayPopup />
         </div>
       </div>
