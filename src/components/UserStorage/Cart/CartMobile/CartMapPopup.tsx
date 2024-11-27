@@ -4,8 +4,8 @@ import CartPopup from './CartPopup';
 import Arrow from '../../../Arrow';
 
 const CartMapPopup = () => {
-  const [coordinates, setCoordinates] = React.useState<[number, number]>([58.603595, 49.668023]);
-  const [zoom, setZoom] = React.useState(10);
+  const [coordinates, setCoordinates] = React.useState<[number, number]>([58.559339, 49.591738]);
+  const [zoom, setZoom] = React.useState(12);
   const [isMore, setIsMore] = React.useState(false)
   const [isGraphic, setIsGraphic] = React.useState(false)
 
@@ -23,7 +23,7 @@ const CartMapPopup = () => {
         <div className='cartMobile-map-block'>
           <div className='cartMobile-map-text'>
             <h4>Адрес магазина:</h4>
-            <h5>Кировская обл., г. Киров, ул. Складская. д. 33</h5>
+            <h5>Кировская обл., г. Киров, ул. Складская. д. 9</h5>
           </div>
           <div className='cartMobile-map-text'>
             <h4>Номер телефона:</h4>

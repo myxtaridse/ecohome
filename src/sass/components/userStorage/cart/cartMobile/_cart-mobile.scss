@@ -111,10 +111,10 @@
 
 .cartMobile-pickup-link {
     border-bottom: 1px solid lightgrey;
-    padding-bottom: 10px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 0 10px 10px 10px;
     gap: 40px;
 
     h6 {
