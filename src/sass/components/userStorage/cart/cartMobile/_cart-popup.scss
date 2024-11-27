@@ -16,14 +16,8 @@
     
     border-radius: 15px 15px 0 0;
     width: 100vw;
-    height: 33vh;
+    height: max-content;
     background-color: #fff;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    gap: 25px;
     position: relative;
     transform: translateY(0px);
     transition: transform .3s ease;
@@ -41,16 +35,16 @@
   }
   
   .cartPopup-item {
-    margin: 0 auto;
     color: #1E1E1E;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: start;
     gap: 20px;
 
     div {
-        width: 24px;
-        height: 24px;
+      transform: translateY(1px);
+        width: 22px;
+        height: 22px;
 
         svg {
             fill: #1E1E1E;
@@ -58,7 +52,7 @@
     }
 
     p {
-        font-size: 18px;
+        font-size: 17px;
     }
   }
 

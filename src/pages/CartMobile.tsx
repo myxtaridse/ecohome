@@ -2,6 +2,7 @@
 import CartGoods from '../components/UserStorage/Cart/CartGoods'
 import list from '../../db.json'
 import GoodSection from '../components/GoodSection/GoodSection'
+import { Link } from 'react-router-dom'
 
 const CartMobile = () => {
   return (
@@ -35,7 +36,9 @@ const CartMobile = () => {
                 <h5>Общая скидка</h5>
                 <h4>-500 Р</h4>
             </div>
-            <button>Перейти к оформлению</button>
+            <Link to='/checkout'>
+                <button>Перейти к оформлению</button>
+            </Link>
       </div>
 
       <div className='cartMobile-recommend'>

@@ -1,0 +1,49 @@
+.cartMobile-map-block {
+    height: 80vh;
+    padding: 70px 0 30px;
+}
+
+.cartMobile-map-text {
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+    margin-bottom: 10px;
+    h5 {
+        color: #565656;
+    }
+}
+.cartMobile-map-text-flex {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cartMobile-map-text-graphic {
+    display: flex;
+    align-items: center;
+
+    div {
+        transform: translateY(3px);
+        transition: .5s;
+    }
+
+    .cartMobile-map-rotate {
+        transform: rotate(180deg) translateY(5px);
+    }
+}
+.cartMobile-map-graphic {
+    width: 100%;
+    transform: scaleY(0);
+    transform-origin: 0 0;
+    transition: all .2s;
+    height: 0px;
+}
+
+
+.cartMobile-map-graphic-show {
+    transform: scaleY(1);
+    height: max-content;
+}

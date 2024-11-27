@@ -26,6 +26,10 @@ function App() {
     () =>
       import(/* webpackChunkName: "Comparison" */ "./pages/Comparison")
   );
+  const Checkout = React.lazy(
+    () =>
+      import(/* webpackChunkName: "Checkout" */ "./pages/Checkout")
+  );
 
   return (
     <Routes>
@@ -57,6 +61,13 @@ function App() {
               window.innerWidth > 500 ? <Cart /> : <CartMobile />
             }
           </React.Suspense>
+        } />
+        <Route path="/checkout" element={
+          <React.Suspense fallback={<Loading />}>
+          {
+            <Checkout />
+          }
+        </React.Suspense>
         } />
         <Route path="/comparison" element={
           <React.Suspense fallback={<Loading />}>
