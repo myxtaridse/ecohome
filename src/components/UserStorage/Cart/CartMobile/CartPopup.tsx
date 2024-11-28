@@ -22,7 +22,8 @@ const CartPopup: React.FC<CartPopupType> = ({ setIsMore, children }) => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const touchMoveFn = (e: any) => {
       if (!startTouch) return;
-
+      if (e.target?.localName === 'ymaps') return;
+      
       const currentY = e.touches[0].clientY;
       const deltaY = currentY - startTouch;
       if (Math.abs(deltaY) < 5) return;
@@ -32,7 +33,12 @@ const CartPopup: React.FC<CartPopupType> = ({ setIsMore, children }) => {
       }
     }
     
-    const touchEndFn = () => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const touchEndFn = (e: any) => {
+      // if (e.target)
+      console.log(e.target?.localName);
+      
+      
       if (!isTouch) {
         setStartTouch(0);
         return;
@@ -62,7 +68,7 @@ const CartPopup: React.FC<CartPopupType> = ({ setIsMore, children }) => {
         className="cartPopup"
         onTouchStart={(e) => touchStartFn(e)}
         onTouchMove={(e) => touchMoveFn(e)}
-        onTouchEnd={touchEndFn}
+        onTouchEnd={(e) => touchEndFn(e)}
 
         style={{transform: `translateY(${currentTouch}px)`,
         transition: isTouch ? 'none' : 'transform 0.3s ease'
