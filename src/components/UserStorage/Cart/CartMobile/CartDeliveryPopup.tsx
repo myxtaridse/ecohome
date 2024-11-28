@@ -53,7 +53,9 @@ const CartDeliveryPopup = () => {
                     </Map>
                   </YMaps>
               </div>
-              <div className='checkout-delivery-popup'>
+              {
+                isCourier ? (
+                  <div className='checkout-delivery-popup'>
                 <CartPopup setIsMore={setIsMore}>
                     <div className='cartMobile-map-text'>
                       <h4>Адрес доставки:</h4>
@@ -71,6 +73,20 @@ const CartDeliveryPopup = () => {
                     <button>Привезти сюда</button>
                 </CartPopup>
               </div>
+                ) : (
+                  <div className='checkout-delivery-popup-post'>
+                      <CartPopup setIsMore={setIsMore}>
+                          <div className='cartMobile-map-text'>
+                            <h4>Адрес почты:</h4>
+                          </div>
+                          <div className='checkout-delivery-form'>
+                              <input type="text" placeholder='Найти адрес' />
+                          </div>
+                          <button>Заберу отсюда</button>
+                      </CartPopup>
+              </div>
+                )
+              }
           </div>
         )
       }
