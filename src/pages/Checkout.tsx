@@ -5,6 +5,7 @@ import CartPersonPopup from '../components/UserStorage/Cart/CartMobile/CartPerso
 import CartGoodsPopup from '../components/UserStorage/Cart/CartMobile/CartGoodsPopup';
 import CartPayPopup from '../components/UserStorage/Cart/CartMobile/CartPayPopup';
 import CartTotalPopup from '../components/UserStorage/Cart/CartMobile/CartTotalPopup';
+import CartDeliveryPopup from '../components/UserStorage/Cart/CartMobile/CartDeliveryPopup';
 
 const Checkout = () => {
     const [isDelivery, setIsDelivery] = React.useState(false);
@@ -29,7 +30,10 @@ const Checkout = () => {
             <div className=''>
                 <CartDelivery isDelivery={isDelivery} setIsDelivery={setIsDelivery}  />
             </div>
-            <CartMapPopup />
+            {
+              isDelivery ? <CartDeliveryPopup /> :
+              <CartMapPopup />
+            }
             <CartPayPopup />
             <CartTotalPopup />
         </div>

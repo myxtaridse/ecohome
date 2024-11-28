@@ -3,6 +3,7 @@
 @use './cart-mobile-person';
 @use './cart-mobile-goods';
 @use './cart-mobile-total';
+@use './cart-mobile-delivery';
 
 .cartMobile-total-block {
     margin: 20px auto 40px;

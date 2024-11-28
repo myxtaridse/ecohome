@@ -83,9 +83,7 @@
         margin-top: 5px;
     }
 }
-.cartTotal-payBlock-item-sbp img {
-    width: 90px;
-}
+
 
 .cartTotal-payBlock-item-money {
     div {
@@ -139,10 +137,8 @@
         gap: 10px;
         border-radius: 0;
     }
-    .cartTotal-payBlock-item-sbp img {
-        width: 15vw;
-    }
-    .cartTotal-payBlock-item-sber {
+    .cartTotal-payBlock-item-sber,
+    .cartTotal-payBlock-item-sbp {
     
         svg {
             margin-top: 0;
