@@ -1,16 +1,18 @@
 import React from 'react';
 import { CustomContextProductItem } from "../../context/ProductContext";
 import Arrow from '../Arrow';
+import Loading from '../Loading/Loading';
 
 const GoodParameter = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const valueGood: any = React.useContext(CustomContextProductItem);
-  if (valueGood) {
+  const good: any = React.useContext(CustomContextProductItem);
+  if (!good) return <Loading />
+  if (good) {
     return (
       <div className='goodItem-parameter'>
         <div>
         <div className='goodItem-main-article-reviews goodItem-parameter-reviews-show'>
-          <p className='goodItem-main-article'>Код товара: {valueGood[0].article}</p>
+          <p className='goodItem-main-article'>Код товара: {good.article}</p>
           <div className='goodItem-main-reviews'>
             <div className="goodItem-main-stars">
             {Array(5)
@@ -27,7 +29,7 @@ const GoodParameter = () => {
                 </div>
               ))}
             </div>
-            <p>{valueGood[0].reviews.length} отзывов</p>
+            <p>{good.reviews.length} отзывов</p>
           </div>
         </div>
         <div className='goodItem-parameter-exchange'>
@@ -43,7 +45,7 @@ const GoodParameter = () => {
         <div className='goodItem-parameter-block'>
           {
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            valueGood[0].parameter.map((item: any, id: any) => 
+            good.parameter.map((item: any, id: any) => 
             <div key={id} className='goodItem-parameter-item'>
               <p>{item.titleParameter}</p>
               <div className='goodItem-parameter-item-line'></div>

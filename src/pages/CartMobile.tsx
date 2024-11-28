@@ -5,6 +5,7 @@ import GoodSection from '../components/GoodSection/GoodSection'
 import { Link } from 'react-router-dom'
 
 const CartMobile = () => {
+
   return (
     <div className='cart-block'>
       <div className='cart-title-main'>

@@ -1,14 +1,14 @@
 import React from 'react';
 import { CustomContextMain } from '../context/MainContext';
-import { reqProduct } from '../api/fetchProducts';
 import SliderPrice from '../components/UserStorage/SliderPrice';
 import Sorted from '../components/Sorted';
-import goodsReserv from '../../db.json';
 import FilterSort from '../components/FilterSort';
 // import MyFavoriteGood from '../components/UserStorage/MyFavorite/MyFavoriteGood';
 import GoodSectionLine from '../components/GoodSection/GoodSectionLine';
 import GoodSection from '../components/GoodSection/GoodSection';
 import NotFound from '../components/UserStorage/NotFound';
+import { useSelector } from 'react-redux';
+import { selectGoods } from '../redux/goodsSlice/selectorGoods';
 
 const MyFavorite = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -16,15 +16,9 @@ const MyFavorite = () => {
   const [isListLine, setIsListLine] = React.useState(false);
   const [minPrice, setMinPrice] = React.useState(0);
   const [maxPrice, setMaxPrice] = React.useState(0);
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const [goods, setGoods] = React.useState<any>([]);
-
-  // const [isClose, setIsClose] = React.useState(false)
+  const {goods} = useSelector(selectGoods)
 
   React.useEffect(() => {
-
-    console.log(setMaxPrice, setMinPrice);
-    
     
     if (pathFavorite && pathFavorite.includes('/goods/')) {
       const path = pathFavorite.split('/goods/').join(" ");
@@ -35,26 +29,25 @@ const MyFavorite = () => {
     }
   }, [setPathValue, pathFavorite]);
 
-  React.useEffect(() => {
-    if (storageFavorite && storageFavorite.length) {
-      reqProduct().then((data) => {
-       for (let i = 0; i < storageFavorite.length; i++) {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const newData = data.filter((itemData: any) => itemData.article === storageFavorite[i]);
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const isNewData = goods.findIndex((itemGood: any) => itemGood === newData);
-        if (isNewData === -1) {
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          setGoods((prevGoods: any) => [...prevGoods, newData[0]]);
-        }
-       }
-      }).catch((error) => {
-        console.log(error);
-        setGoods(goodsReserv.goods)
-      })
-    }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [storageFavorite])
+  console.log(storageFavorite, setMaxPrice, setMinPrice);
+  
+
+  // React.useEffect(() => {
+    
+      
+  //      for (let i = 0; i < storageFavorite.length; i++) {
+  //       // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  //       const newData = goods.filter((itemData: any) => itemData.article === storageFavorite[i]);
+  //       // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  //       // const isNewData = goods.findIndex((itemGood: any) => itemGood === newData);
+  //       // if (isNewData === -1) {
+  //       //   // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  //       //   setGoods((prevGoods: any) => [...prevGoods, newData[0]]);
+  //       // }
+       
+  //   }
+  // // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, [storageFavorite])
 
 
   return (

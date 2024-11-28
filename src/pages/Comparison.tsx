@@ -1,27 +1,23 @@
 import React from 'react'
 import { CustomContextMain } from '../context/MainContext';
 import Arrow from '../components/Arrow';
-import { reqProduct } from '../api/fetchProducts';
 import ComparisonGoods from '../components/UserStorage/Comparison/ComparisonGoods';
-import goodsReserv from '../../db.json';
 import Sorted from '../components/Sorted';
-
-
+import { useSelector } from 'react-redux';
+import { selectGoods } from '../redux/goodsSlice/selectorGoods';
 
 const Comparison = () => {
   const [isSelector, setIsSelector] = React.useState(false);
-  const [isSelectAll, setIsSelectAll] = React.useState(false);
+  // const [isSelectAll, setIsSelectAll] = React.useState(false);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [characterAll, setCharacterAll] = React.useState<any>(['Артикул']);
   const widthSelector = React.useRef<HTMLDivElement>(null);
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const {setPathValue, pathFavorite}: any = React.useContext(CustomContextMain);
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const [goods, setGoods] = React.useState<any>();
+  const {goods} = useSelector(selectGoods);
   const [categories, setCategories] = React.useState<string[]>()
 
   React.useEffect(() => {
-    console.log(isSelectAll);
     
     if (pathFavorite && pathFavorite.includes('/goods/')) {
       const path = pathFavorite.split('/goods/').join(" ");
@@ -33,24 +29,17 @@ const Comparison = () => {
   }, [setPathValue, pathFavorite]);
 
   React.useEffect(() => {
-    console.log(setIsSelectAll);
-    
-      reqProduct().then((data) => {
-        if (data) {
-            setGoods(data);
+      if (goods) {
 
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            const categoriesAll = data.flatMap((itemData: any) => itemData.categoryChildren);
-            const newCategories: string[] = Array.from(new Set(categoriesAll));
-            if (newCategories) {
-              setCategories(newCategories)
-            }
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const categoriesAll = goods.flatMap((itemData: any) => itemData.categoryChildren);
+        const newCategories: string[] = Array.from(new Set(categoriesAll));
+        if (newCategories) {
+          setCategories(newCategories)
         }
-      }).catch((err) => {
-        console.log(err)
-        setGoods(goodsReserv.goods)
-      })
-  }, [])
+      }
+        
+  }, [goods])
 
   React.useEffect(() => {
     if (goods) {

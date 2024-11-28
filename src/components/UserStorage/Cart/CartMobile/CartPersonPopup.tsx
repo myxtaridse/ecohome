@@ -40,7 +40,7 @@ const CartPersonPopup = () => {
                 <div className='checkout-person-form'>
                     {
                         itemForm.map((item) => (
-                            item.id === '7' || item.id === '8' ? '' : (
+                            item.id === '7' || item.id === '8' || item.id === '9' ? '' : (
                                 !isLegalEntity && item.isPhysicalPerson ? <input type="text" placeholder={item.title} /> : isLegalEntity && <input type="text" placeholder={item.title} />
                             )
                         ))

@@ -10,6 +10,7 @@ import CartMobile from "./pages/CartMobile";
 // import GoodItemPage from "./pages/GoodItemPage"
 
 function App() {
+
   const GoodItemPage = React.lazy(
     () =>
       import(/* webpackChunkName: "GoodItemPage" */ "./pages/GoodItemPage")

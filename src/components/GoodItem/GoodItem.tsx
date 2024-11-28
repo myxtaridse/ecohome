@@ -13,21 +13,21 @@ const GoodItem = () => {
     const [isActive, setIsActive] = React.useState<number | null>(0);
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const valueGood: any = React.useContext(CustomContextProductItem);
+    const good: any = React.useContext(CustomContextProductItem);
     
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const {setPathValue}: any = React.useContext(CustomContextMain);
 
   React.useEffect(() => {
-      if (valueGood) {
-        setPathValue(['Главная', 'Каталог продукции', valueGood[0].categoryRelative, valueGood[0].categoryChildren])
+      if (good) {
+        setPathValue(['Главная', 'Каталог продукции', good.categoryRelative, good.categoryChildren])
       }
-  }, [valueGood, setPathValue]);
+  }, [good, setPathValue]);
 
 
  
 
-  if (!valueGood || valueGood.length === 0) return <Loading />;
+  if (!good || good.length === 0) return <Loading />;
 
 
     return (
@@ -36,7 +36,7 @@ const GoodItem = () => {
            
            <div className='goodItem-main-title'>
            
-          <h1>{valueGood[0].titleGood}</h1>
+          <h1>{good.titleGood}</h1>
           <button className='goodItem-add-review'>
              Добавить отзыв
           </button>

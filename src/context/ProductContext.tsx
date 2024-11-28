@@ -1,49 +1,44 @@
 import React from 'react'
-import db from '../../db.json';
-// import { reqProduct } from '../api/fetchProducts';
 import { useLocation } from 'react-router-dom';
-import { reqProduct } from '../api/fetchProducts';
+import { useSelector } from 'react-redux';
+import { selectGoods } from '../redux/goodsSlice/selectorGoods';
+import { fetchGoods } from '../redux/goodsSlice/asyncActions';
+import { useAppDispatch } from '../redux/store';
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const CustomContextProductItem = React.createContext(null);
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const ProductContext = ({children}: any) => {
-
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const valueGood: any = db.goods;
-
-
-  const [value, setValue] = React.useState(null);
+  const [good, setGood] = React.useState(null);
 
   const location = useLocation();
   const articleLocation = location.pathname.split('/goods/').join("");
+  const {goods} = useSelector(selectGoods);
+  const dispatch = useAppDispatch()
+
+  React.useEffect(() => {
+    if (dispatch) {
+      dispatch(fetchGoods())
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
   
 
   React.useEffect(() => {
-    reqProduct().then((data) => {
-      
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const product = data.filter((item: any) => item.article === articleLocation);
-      setValue(product)
-      
-      
-    }).catch((error) => {
-      console.log(error);
-      
-      if (valueGood) {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const product = valueGood.filter((item: any) => item.article === articleLocation);
-        console.log(product, 'local');
-        
-        setValue(valueGood);
-      }
-    })
+     if (articleLocation && goods) {
+        const find = goods.find((goodItem) => goodItem.article === articleLocation);
+        if (find) {
+          setGood(find)
+        }  
+     }
    
-  }, [valueGood, articleLocation]);
+  }, [articleLocation, goods]);
+  
 
 
   return (
-    <CustomContextProductItem.Provider value={value}>
+    <CustomContextProductItem.Provider value={good}>
        {children}
     </CustomContextProductItem.Provider>
   )

@@ -4,11 +4,11 @@ import { CustomContextMain } from '../../context/MainContext';
 
 const GoodAdd = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const valueGood: any = React.useContext(CustomContextProductItem);
+  const good: any = React.useContext(CustomContextProductItem);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const {storageFavorite, setStorageFavorite}: any = React.useContext(CustomContextMain);
   const [isLike, setIsLike] = React.useState(false);
-  const article = valueGood[0].article;
+  const article = good?.article;
   
   
 const addLikeGood = () => {
@@ -35,7 +35,7 @@ const addLikeGood = () => {
       // <div>123</div>
       <div className='goodItem-add'>
         <div className='goodItem-main-article-reviews goodItem-add-reviews-show'>
-          <p className='goodItem-main-article'>Код товара: {valueGood[0].article}</p>
+          <p className='goodItem-main-article'>Код товара: {good?.article}</p>
           <div className='goodItem-main-reviews'>
             <div className="goodItem-main-stars">
             {Array(5)
@@ -52,7 +52,7 @@ const addLikeGood = () => {
                 </div>
               ))}
             </div>
-            <p>{valueGood[0].reviews.length} отзывов</p>
+            <p>{good?.reviews.length} отзывов</p>
           </div>
         </div>
         <div className='goodItem-add-block'>
@@ -86,7 +86,7 @@ const addLikeGood = () => {
         </div>
        <div className='goodItem-add-price-btns-block'>
        <div className='goodItem-add-price'>
-       <h1>{valueGood[0].price} ₽</h1>
+       <h1>{good?.price} ₽</h1>
        <p>Розничная цена</p>
        </div>
         
@@ -105,7 +105,7 @@ const addLikeGood = () => {
             <div>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="rgba(25,163,49,1)"><path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11.0026 16L6.75999 11.7574L8.17421 10.3431L11.0026 13.1716L16.6595 7.51472L18.0737 8.92893L11.0026 16Z"></path></svg>
             </div>
-            <p>В наличие: {valueGood[0].count} штук</p>
+            <p>В наличие: {good?.count} штук</p>
           </div>
           <div className='goodItem-add-info-item'>
           <div>
