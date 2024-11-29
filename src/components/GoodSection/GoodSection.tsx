@@ -3,20 +3,21 @@ import GoodSectionGallery from './GoodSectionGallery'
 import Rating from '../Rating'
 import { useLocation } from 'react-router-dom'
 
-export interface GoodSectionType {
-    article: string,
-    titleGood: string,
-    photoGood: string[],
-    categoryChildren: string,
-    price: number,
-    description: string,
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    parameter: any[],
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    reviews: any[],
-}
+// export interface GoodSectionType {
+//     article: string,
+//     titleGood: string,
+//     photoGood: string[],
+//     categoryChildren: string,
+//     price: number,
+//     description: string,
+//     // eslint-disable-next-line @typescript-eslint/no-explicit-any
+//     parameter: any[],
+//     // eslint-disable-next-line @typescript-eslint/no-explicit-any
+//     reviews: any[],
+// }
 
-const GoodSection: React.FC<GoodSectionType> = ({titleGood, price, reviews}) => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const GoodSection: React.FC<any> = ({titleGood, price, reviews}) => {
     const location = useLocation();
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const averageRating = reviews.reduce((sum: number, review: any) => {

@@ -1,7 +1,7 @@
 import React from "react";
-import MainGood from "../MainGood/MainGood";
 import { MainGoodType } from "../MainGood/MainGood";
 import { Link } from "react-router-dom";
+import GoodSection from "../GoodSection/GoodSection";
 
 interface MainGoodsType {
   goods: MainGoodType[];
@@ -9,6 +9,8 @@ interface MainGoodsType {
 }
 
 const MainGoods: React.FC<MainGoodsType> = ({ goods, title }) => {
+  console.log(goods);
+  
   return (
     <div className="mainGoods">
       <div className="mainGoods-title">
@@ -29,7 +31,7 @@ const MainGoods: React.FC<MainGoodsType> = ({ goods, title }) => {
       <div className="mainGoods-list">
         {goods.map((item) => (
           <Link key={item.id} to={`/goods/${item.article}`} >
-            <MainGood {...item} />
+            <GoodSection {...item} />
           </Link>
         ))}
       </div>

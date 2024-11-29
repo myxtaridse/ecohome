@@ -70,9 +70,6 @@
     margin-left: 0;
     margin-bottom: 25px;
   }
-  .mainGoods-title h1 {
-    // font-size: 30px;
-  }
   .mainGoods-title-again div {
     width: 18px;
     margin-top: 2px;
@@ -179,7 +176,7 @@
   }
   .mainGoods-list {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
   }
   .mainGoods-title {
@@ -227,6 +224,81 @@
     color: white;
     font-size: 17px;
   }
+}
+@media (max-width: 500px) {
+  .mainGoods {
+    margin: 50px auto 20px auto;
+  }
+  .mainGoods-list {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(2, 45vw);
+    gap: 20px;
+
+    .goodSection {
+      padding: 0px;
+      width: 45vw;
+      position: relative;
+
+      h2 {
+        font-size: 15px;
+      }
+
+      .goodSection-rating {
+        margin-top: 10px;
+        .star-container {
+          line-height: 20px;
+          width: 16px !important;
+          height: 16px !important;
+  
+          svg {
+            width: 15px !important;
+            height: 15px !important;
+          }
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+
+      .goodSection-actions-price {
+        h1 {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        }
+      }
+
+      .goodSection-actions {
+        display: none;
+      }
+    }
+  }
+  .mainGoods-title {
+    margin-left: 10px;
+    margin-bottom: 20px;
+    gap: 10px;
+
+  }
+  .mainGoods-title h1 {
+    font-size: 22px;
+    margin-left: 10px;
+  }
+  .mainGoods-title-again div {
+    margin-top: -2px;
+    width: 14px;
+  }
+  .mainGoods-title-again p {
+    font-size: 11px;
+  }
+  .mainGoods-title-again {
+    top: -2px;
+    left: 85px;
+    gap: 0;
+    transition: 1s;
+  }
+
+  
 }
 
 @media (max-width: 500px) {

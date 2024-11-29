@@ -21,6 +21,20 @@
     position: relative;
     transform: translateY(0px);
     transition: transform .3s ease;
+
+
+  }
+
+  .cartPopup-content {
+    input {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid grey;
+      padding-left: 7px;
+      padding: 5px 10px;
+      font-size: 15px;
+      border-radius: 0;
+  }
   }
   
   .cartPopup::before {

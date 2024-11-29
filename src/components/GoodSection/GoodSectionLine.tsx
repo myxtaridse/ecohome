@@ -3,10 +3,10 @@ import GoodSectionGallery from './GoodSectionGallery'
 import Rating from '../Rating'
 // import { CustomContextMain } from '../../context/MainContext'
 // import { useLocation } from 'react-router-dom';
-import { GoodSectionType } from './GoodSection';
 import CartPopup from '../UserStorage/Cart/CartMobile/CartPopup';
 
-const GoodSectionLine: React.FC<GoodSectionType> = ({article, titleGood, categoryChildren, price, description, parameter, reviews}) => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const GoodSectionLine: React.FC<any> = ({article, titleGood, categoryChildren, price, description, parameter, reviews}) => {
     const [isMore, setIsMore] = React.useState(false)
     
 
