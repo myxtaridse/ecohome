@@ -34,17 +34,23 @@
     }
 
     .goodSection-more {
-        top: 0px;
-        right: 0px;
+        top: 2px;
+        right: 2px;
         rotate: 0;
-        padding: 0px 2px;
-        width: 20px;
-        height: 25px;
         display: flex;
         align-items: center;
         justify-content: center;
         border-radius: 5px;
+        background-color: #fff;
+        width: max-content;
+        height: max-content;
+        box-shadow: 0px 0px 1px 1px lightgray;
         
+        svg {
+            fill: transparent;
+            width: 24px;
+            height: 12px;
+        }
     }
 }
 
@@ -106,15 +112,15 @@
        background-color: #CF4E32;
        box-shadow: 0px 0px 15px 10px rgba(211, 211, 211, 0.319);
        border-radius: 50%;
-       width: 42px;
-       height: 42px;
+       width: 36px;
+       height: 36px;
        display: flex;
        align-items: center;
        justify-content: center;
 
        svg {
-            width: 27px;
-            height: 27px;
+            width: 24px;
+            height: 24px;
             fill: white;
        }
 }
@@ -122,7 +128,7 @@
 .goodSection-category {
     margin-top: 0;
     display: flex;
-    font-size: 12px;
+    font-size: 10px;
     align-items: center;
     justify-content: start;
     gap: 2px;
@@ -131,8 +137,8 @@
         font-weight: 300;
     }
     .goodSection-category-arrow {
-        line-height: 10px;
-        width: 12px;
+        transform: translateY(1px);
+        width: 10px;
     
         svg {
             fill: rgb(177, 177, 177);
