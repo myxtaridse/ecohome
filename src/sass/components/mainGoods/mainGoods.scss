@@ -248,16 +248,16 @@
         margin-top: 10px;
         .star-container {
           line-height: 20px;
-          width: 16px !important;
-          height: 16px !important;
+          width: 15px !important;
+          height: 15px !important;
   
           svg {
-            width: 15px !important;
-            height: 15px !important;
+            width: 14px !important;
+            height: 14px !important;
           }
         }
         p {
-          font-size: 14px;
+          font-size: 13px;
         }
       }
 
@@ -266,6 +266,7 @@
           position: absolute;
           bottom: 0;
           right: 0;
+          font-size: 16px;
         }
       }
 
