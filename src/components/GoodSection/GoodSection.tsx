@@ -25,6 +25,10 @@ const GoodSection: React.FC<any> = ({titleGood, price, reviews, categoryChildren
     const averageRating = reviews.reduce((sum: number, review: any) => {
         return sum + parseFloat(review.statusRev)
     }, 0);
+
+    const [isBasket, setIsBasket] = React.useState(false)
+
+    
   return (
     <div className='goodSection'>
         <div><GoodSectionGallery /></div>
@@ -69,10 +73,27 @@ const GoodSection: React.FC<any> = ({titleGood, price, reviews, categoryChildren
 
         {
             location.pathname === '/' && (
-                <div className='goodSection-actions-flex'>
-                    <div className='goodSection-basket'>
-                        <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M22,8.5H19.535l-3.7-5.555a1,1,0,0,0-1.664,1.11L17.132,8.5H6.868L9.832,4.055a1,1,0,0,0-1.664-1.11L4.465,8.5H2a1,1,0,0,0,0,2H3v8a3,3,0,0,0,3,3H18a3,3,0,0,0,3-3v-8h1a1,1,0,0,0,0-2Zm-3,10a1,1,0,0,1-1,1H6a1,1,0,0,1-1-1v-8H19ZM7,17V13a1,1,0,0,1,2,0v4a1,1,0,0,1-2,0Zm4,0V13a1,1,0,0,1,2,0v4a1,1,0,0,1-2,0Zm4,0V13a1,1,0,0,1,2,0v4a1,1,0,0,1-2,0Z"></path></g></svg>
-                    </div>
+                <>
+                    {
+                        !isBasket && (
+                            <div className='goodSection-basket' onClick={() => setIsBasket(true)}>
+                                <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M22,8.5H19.535l-3.7-5.555a1,1,0,0,0-1.664,1.11L17.132,8.5H6.868L9.832,4.055a1,1,0,0,0-1.664-1.11L4.465,8.5H2a1,1,0,0,0,0,2H3v8a3,3,0,0,0,3,3H18a3,3,0,0,0,3-3v-8h1a1,1,0,0,0,0-2Zm-3,10a1,1,0,0,1-1,1H6a1,1,0,0,1-1-1v-8H19ZM7,17V13a1,1,0,0,1,2,0v4a1,1,0,0,1-2,0Zm4,0V13a1,1,0,0,1,2,0v4a1,1,0,0,1-2,0Zm4,0V13a1,1,0,0,1,2,0v4a1,1,0,0,1-2,0Z"></path></g></svg>
+                            </div>
+                        )
+                    }
+                    {
+                        isBasket && (
+                            <div className="goodSection-incr-decr">
+                                <div className='goodItem-reviews-item-status-arrow'>
+                                    -
+                                </div>
+                                <h2>5</h2>
+                                <div className='goodItem-reviews-item-status-arrow'>
+                                    +
+                                </div>
+                            </div>
+                        )
+                    }
                     <div className='goodSection-more' onClick={() => setIsMore(!isMore)}>
                         <svg width="23" height="12" viewBox="0 0 23 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5.91525 8C6.97302 8 7.83051 7.10457 7.83051 6C7.83051 4.89543 6.97302 4 5.91525 4C4.85749 4 4 4.89543 4 6C4 7.10457 4.85749 8 5.91525 8Z" stroke="black" stroke-linejoin="round"/>
@@ -80,11 +101,12 @@ const GoodSection: React.FC<any> = ({titleGood, price, reviews, categoryChildren
                             <path d="M17.4074 8C18.4652 8 19.3227 7.10457 19.3227 6C19.3227 4.89543 18.4652 4 17.4074 4C16.3497 4 15.4922 4.89543 15.4922 6C15.4922 7.10457 16.3497 8 17.4074 8Z" stroke="black" stroke-linejoin="round"/>
                         </svg>
                     </div>
-                </div>
+                    
+                </>
             )
         }
 
-{ 
+        { 
             isMore && (
                 
                 <CartPopup setIsMore={setIsMore}>
@@ -104,14 +126,6 @@ const GoodSection: React.FC<any> = ({titleGood, price, reviews, categoryChildren
                                 </svg>
                             </div>
                             <p>Добавить в сравнение</p>
-                        </div>
-                        <div className='cartPopup-item'>
-                            <div>
-                                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M6.66732 13.334H33.334V35.0007C33.334 35.9212 32.5878 36.6673 31.6673 36.6673H8.33398C7.41352 36.6673 6.66732 35.9212 6.66732 35.0007V13.334ZM10.0007 16.6673V33.334H30.0007V16.6673H10.0007ZM15.0007 20.0007H18.334V30.0007H15.0007V20.0007ZM21.6673 20.0007H25.0007V30.0007H21.6673V20.0007ZM11.6673 8.33398V5.00065C11.6673 4.08018 12.4135 3.33398 13.334 3.33398H26.6673C27.5878 3.33398 28.334 4.08018 28.334 5.00065V8.33398H36.6673V11.6673H3.33398V8.33398H11.6673ZM15.0007 6.66732V8.33398H25.0007V6.66732H15.0007Z" fill="#1E1E1E"/>
-                                </svg>
-                            </div>
-                            <p>Удалить из корзины</p>
                         </div>
                     </div>
                 </CartPopup>
