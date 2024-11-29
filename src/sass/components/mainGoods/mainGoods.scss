@@ -239,13 +239,16 @@
       padding: 0px;
       width: 45vw;
       position: relative;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
 
       h2 {
         font-size: 15px;
       }
 
       .goodSection-rating {
-        margin-top: 10px;
+        margin-top: auto;
         .star-container {
           line-height: 20px;
           width: 15px !important;
@@ -271,6 +274,7 @@
       }
 
       .goodSection-actions {
+        display: none;
         position: absolute;
         top: 0;
         left: 0;
