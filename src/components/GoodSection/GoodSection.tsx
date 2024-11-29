@@ -84,7 +84,9 @@ const GoodSection: React.FC<any> = ({titleGood, price, reviews, categoryChildren
                     {
                         isBasket && (
                             <div className="goodSection-incr-decr">
-                                <div className='goodItem-reviews-item-status-arrow'>
+                                <div className='goodItem-reviews-item-status-arrow' onClick={() => {
+                                    setIsBasket(false)
+                                }}>
                                     -
                                 </div>
                                 <h2>5</h2>

@@ -231,13 +231,13 @@
     margin: 50px auto 20px;
   }
   .mainGoods-list {
-    width: 93vw;
+    width: max-content;
     margin: 0 auto;
     display: grid;
-    justify-content: space-between;
+    justify-content: center;
 
-    grid-template-columns: repeat(2, 44vw);
-    gap: 20px;
+    grid-template-columns: repeat(2, 47vw);
+    gap: 10px;
 
     .goodSection {
       padding: 0px;
@@ -255,8 +255,8 @@
       }
 
       .goodSection-gallery {
-        height: 200px;
-        width: 44vw;
+        height: 220px;
+        width: 47vw;
         
       }
 
