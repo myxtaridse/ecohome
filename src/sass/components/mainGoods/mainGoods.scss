@@ -309,7 +309,9 @@
     }
   }
   .mainGoods-title {
-    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    margin-left: 0;
     margin-bottom: 20px;
     gap: 10px;
 
@@ -319,17 +321,19 @@
     margin-left: 10px;
   }
   .mainGoods-title-again div {
-    margin-top: -2px;
-    width: 14px;
+    margin-top: 0;
+    transform: translateY(6px);
+    width: 18px;
+
+    svg {
+      fill: #000;
+    }
   }
   .mainGoods-title-again p {
-    font-size: 11px;
+    display: none;
   }
   .mainGoods-title-again {
-    top: -2px;
-    left: 85px;
-    gap: 0;
-    transition: 1s;
+    position: static;
   }
 
   
