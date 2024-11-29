@@ -83,3 +83,23 @@
         }
     }
 }
+
+.goodSection-basket {
+    position: absolute;
+    top: 190px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0px 0px 35px 10px #0000002d;
+
+    svg {
+        width: 24px;
+        height: 24px;
+        fill: #000;
+    }
+}
