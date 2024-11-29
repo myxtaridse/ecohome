@@ -247,6 +247,10 @@
         font-size: 15px;
       }
 
+      .goodSection-gallery {
+        height: 200px;
+      }
+
       .goodSection-rating {
         margin-top: auto;
         .star-container {
@@ -274,7 +278,7 @@
       }
 
       .goodSection-actions {
-        display: none;
+        // display: none;
         position: absolute;
         top: 0;
         left: 0;
