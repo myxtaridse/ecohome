@@ -2,6 +2,7 @@ import React from 'react'
 import GoodSectionGallery from './GoodSectionGallery'
 import Rating from '../Rating'
 import { useLocation } from 'react-router-dom'
+import CartPopup from '../UserStorage/Cart/CartMobile/CartPopup'
 
 // export interface GoodSectionType {
 //     article: string,
@@ -17,7 +18,8 @@ import { useLocation } from 'react-router-dom'
 // }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const GoodSection: React.FC<any> = ({titleGood, price, reviews}) => {
+const GoodSection: React.FC<any> = ({titleGood, price, reviews, categoryChildren}) => {
+    const [isMore, setIsMore] = React.useState(false)
     const location = useLocation();
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const averageRating = reviews.reduce((sum: number, review: any) => {
@@ -26,6 +28,14 @@ const GoodSection: React.FC<any> = ({titleGood, price, reviews}) => {
   return (
     <div className='goodSection'>
         <div><GoodSectionGallery /></div>
+        {
+            location && location.pathname === '/' && (
+                <div className='goodSection-category'>
+                    <p>{categoryChildren}</p>
+                    <div className='goodSection-category-arrow'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path></svg></div>
+                </div>
+            )
+        }
         <h2>{titleGood}</h2>
         {
             location && location.pathname !== '/comparison' && (
@@ -59,11 +69,52 @@ const GoodSection: React.FC<any> = ({titleGood, price, reviews}) => {
 
         {
             location.pathname === '/' && (
-                <div className='goodSection-basket'>
-            <svg viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4.83811 7.48573L0.919922 3.70265L2.62876 2.05273L6.54695 5.83581H24.964C25.6314 5.83581 26.1724 6.35815 26.1724 7.00248C26.1724 7.11602 26.1552 7.22897 26.1215 7.33772L23.2215 16.6711C23.0682 17.1646 22.5976 17.5025 22.064 17.5025H7.25478V19.8359H20.5465V22.1692H6.04645C5.3791 22.1692 4.83811 21.6468 4.83811 21.0025V7.48573ZM7.25478 8.16915V15.1692H21.165L23.34 8.16915H7.25478ZM6.65061 26.8359C5.64959 26.8359 4.83811 26.0523 4.83811 25.0859C4.83811 24.1193 5.64959 23.3359 6.65061 23.3359C7.65163 23.3359 8.46311 24.1193 8.46311 25.0859C8.46311 26.0523 7.65163 26.8359 6.65061 26.8359ZM21.1507 26.8359C20.1496 26.8359 19.3382 26.0523 19.3382 25.0859C19.3382 24.1193 20.1496 23.3359 21.1507 23.3359C22.1516 23.3359 22.9632 24.1193 22.9632 25.0859C22.9632 26.0523 22.1516 26.8359 21.1507 26.8359Z" />
-            </svg>
-        </div>
+                <div className='goodSection-actions-flex'>
+                    <button className='goodSection-basket'>
+                        В корзину
+                    </button>
+                    <div className='goodSection-more' onClick={() => setIsMore(!isMore)}>
+                        <svg viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 8.5C6 9.88071 4.88071 11 3.5 11C2.11929 11 1 9.88071 1 8.5C1 7.11929 2.11929 6 3.5 6C4.88071 6 6 7.11929 6 8.5ZM2.23551 8.5C2.23551 9.19836 2.80164 9.76449 3.5 9.76449C4.19836 9.76449 4.76449 9.19836 4.76449 8.5C4.76449 7.80164 4.19836 7.23551 3.5 7.23551C2.80164 7.23551 2.23551 7.80164 2.23551 8.5Z" fill="#565656"/>
+                            <path d="M12 8.5C12 9.88071 10.8807 11 9.5 11C8.11929 11 7 9.88071 7 8.5C7 7.11929 8.11929 6 9.5 6C10.8807 6 12 7.11929 12 8.5ZM8.23551 8.5C8.23551 9.19836 8.80164 9.76449 9.5 9.76449C10.1984 9.76449 10.7645 9.19836 10.7645 8.5C10.7645 7.80164 10.1984 7.23551 9.5 7.23551C8.80164 7.23551 8.23551 7.80164 8.23551 8.5Z" fill="#565656"/>
+                            <path d="M18 8.5C18 9.88071 16.8807 11 15.5 11C14.1193 11 13 9.88071 13 8.5C13 7.11929 14.1193 6 15.5 6C16.8807 6 18 7.11929 18 8.5ZM14.2355 8.5C14.2355 9.19836 14.8016 9.76449 15.5 9.76449C16.1984 9.76449 16.7645 9.19836 16.7645 8.5C16.7645 7.80164 16.1984 7.23551 15.5 7.23551C14.8016 7.23551 14.2355 7.80164 14.2355 8.5Z" fill="#565656"/>
+                        </svg>
+                    </div>
+                </div>
+            )
+        }
+
+{
+            isMore && (
+                
+                <CartPopup setIsMore={setIsMore}>
+                    <div className='cartPopup-actions'>
+                        <div className='cartPopup-item'>
+                            <div>
+                                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M32.0703 7.92893C34.5077 10.3713 35.4239 13.7501 34.82 16.8947C35.7684 17.162 36.6639 17.667 37.4112 18.4088C39.751 20.7317 39.751 24.4978 37.4112 26.8207L28.3327 35.8333L23.296 30.8333L18.3325 35.8083L4.20165 21.655C0.69443 17.7283 0.825527 11.6984 4.59495 7.92893C8.36863 4.15525 14.408 4.02812 18.3344 7.54755C22.2494 4.03333 28.2993 4.15 32.0703 7.92893ZM21.6027 20.7743C20.576 21.7935 20.576 23.4358 21.6027 24.455L28.3327 31.1363L35.0627 24.455C36.0894 23.4358 36.0894 21.7935 35.0627 20.7743C34.0227 19.7418 32.3264 19.7418 31.2827 20.778L28.3292 23.701L25.9844 21.375L25.379 20.7743C24.339 19.7418 22.6427 19.7418 21.6027 20.7743ZM6.95197 10.286C4.46907 12.7689 4.34442 16.7455 6.63257 19.372L18.3325 31.0905L20.931 28.4867L19.2542 26.8207C16.9144 24.4978 16.9144 20.7317 19.2542 18.4088C21.594 16.086 25.3877 16.086 27.7275 18.4088L28.332 19.0085L28.9379 18.4088C29.6455 17.7063 30.4862 17.2162 31.3793 16.9387C32.072 14.6596 31.509 12.0854 29.711 10.2835C27.2125 7.7799 23.1787 7.67835 20.561 10.0281L18.3359 12.0254L16.1094 10.0297C13.4843 7.67662 9.45778 7.78013 6.95197 10.286Z" fill="#1E1E1E"/>
+                                </svg>
+                            </div>
+                            <p>Добавить в избранное</p>
+                        </div>
+                        <div className='cartPopup-item'>
+                            <div>
+                                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.33398 20.0007H6.66732V35.0007H3.33398V20.0007ZM8.33398 23.334H11.6673V35.0007H8.33398V23.334ZM26.6673 13.334H30.0007V35.0007H26.6673V13.334ZM31.6673 16.6673H35.0007V35.0007H31.6673V16.6673ZM15.0007 3.33398H18.334V35.0007H15.0007V3.33398ZM20.0007 6.66732H23.334V35.0007H20.0007V6.66732Z" fill="#1E1E1E"/>
+                                </svg>
+                            </div>
+                            <p>Добавить в сравнение</p>
+                        </div>
+                        <div className='cartPopup-item'>
+                            <div>
+                                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.66732 13.334H33.334V35.0007C33.334 35.9212 32.5878 36.6673 31.6673 36.6673H8.33398C7.41352 36.6673 6.66732 35.9212 6.66732 35.0007V13.334ZM10.0007 16.6673V33.334H30.0007V16.6673H10.0007ZM15.0007 20.0007H18.334V30.0007H15.0007V20.0007ZM21.6673 20.0007H25.0007V30.0007H21.6673V20.0007ZM11.6673 8.33398V5.00065C11.6673 4.08018 12.4135 3.33398 13.334 3.33398H26.6673C27.5878 3.33398 28.334 4.08018 28.334 5.00065V8.33398H36.6673V11.6673H3.33398V8.33398H11.6673ZM15.0007 6.66732V8.33398H25.0007V6.66732H15.0007Z" fill="#1E1E1E"/>
+                                </svg>
+                            </div>
+                            <p>Удалить из корзины</p>
+                        </div>
+                    </div>
+                </CartPopup>
             )
         }
     </div>

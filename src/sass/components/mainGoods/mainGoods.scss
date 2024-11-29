@@ -227,32 +227,41 @@
 }
 @media (max-width: 500px) {
   .mainGoods {
-    margin: 50px auto 20px auto;
+    
+    margin: 50px auto 20px;
   }
   .mainGoods-list {
+    width: 93vw;
+    margin: 0 auto;
     display: grid;
     justify-content: space-between;
-    grid-template-columns: repeat(2, 45vw);
+
+    grid-template-columns: repeat(2, 44vw);
     gap: 20px;
 
     .goodSection {
       padding: 0px;
-      width: 45vw;
+      width: 100%;
       position: relative;
       display: flex;
       flex-direction: column;
+      // align-items: center;
+      gap: 6px;
       height: 100%;
 
       h2 {
         font-size: 15px;
+        margin-top: 0;
       }
 
       .goodSection-gallery {
         height: 200px;
+        width: 44vw;
       }
 
       .goodSection-rating {
         margin-top: auto;
+        margin-right: auto;
         .star-container {
           line-height: 20px;
           width: 15px !important;
@@ -271,20 +280,20 @@
       .goodSection-actions-price {
         h1 {
           position: absolute;
-          bottom: 0;
+          bottom: 41.5px;
           right: 0;
           font-size: 16px;
         }
       }
 
       .goodSection-actions {
-        // display: none;
+        display: none;
         position: absolute;
         top: 0;
         left: 0;
         background-color: #fff;
         width: max-content;
-        display: flex;
+        // display: flex;
         flex-direction: column;
         align-items: center;
         gap: 5px;

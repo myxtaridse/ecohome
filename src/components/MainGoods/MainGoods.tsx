@@ -1,6 +1,5 @@
 import React from "react";
 import { MainGoodType } from "../MainGood/MainGood";
-import { Link } from "react-router-dom";
 import GoodSection from "../GoodSection/GoodSection";
 
 interface MainGoodsType {
@@ -30,9 +29,9 @@ const MainGoods: React.FC<MainGoodsType> = ({ goods, title }) => {
       </div>
       <div className="mainGoods-list">
         {goods.map((item) => (
-          <Link key={item.id} to={`/goods/${item.article}`} >
+          
             <GoodSection {...item} />
-          </Link>
+          
         ))}
       </div>
     </div>
