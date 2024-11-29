@@ -70,9 +70,9 @@ const GoodSection: React.FC<any> = ({titleGood, price, reviews, categoryChildren
         {
             location.pathname === '/' && (
                 <div className='goodSection-actions-flex'>
-                    <button className='goodSection-basket'>
-                        В корзину
-                    </button>
+                    <div className='goodSection-basket'>
+                        <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M22,8.5H19.535l-3.7-5.555a1,1,0,0,0-1.664,1.11L17.132,8.5H6.868L9.832,4.055a1,1,0,0,0-1.664-1.11L4.465,8.5H2a1,1,0,0,0,0,2H3v8a3,3,0,0,0,3,3H18a3,3,0,0,0,3-3v-8h1a1,1,0,0,0,0-2Zm-3,10a1,1,0,0,1-1,1H6a1,1,0,0,1-1-1v-8H19ZM7,17V13a1,1,0,0,1,2,0v4a1,1,0,0,1-2,0Zm4,0V13a1,1,0,0,1,2,0v4a1,1,0,0,1-2,0Zm4,0V13a1,1,0,0,1,2,0v4a1,1,0,0,1-2,0Z"></path></g></svg>
+                    </div>
                     <div className='goodSection-more' onClick={() => setIsMore(!isMore)}>
                         <svg viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 8.5C6 9.88071 4.88071 11 3.5 11C2.11929 11 1 9.88071 1 8.5C1 7.11929 2.11929 6 3.5 6C4.88071 6 6 7.11929 6 8.5ZM2.23551 8.5C2.23551 9.19836 2.80164 9.76449 3.5 9.76449C4.19836 9.76449 4.76449 9.19836 4.76449 8.5C4.76449 7.80164 4.19836 7.23551 3.5 7.23551C2.80164 7.23551 2.23551 7.80164 2.23551 8.5Z" fill="#565656"/>
