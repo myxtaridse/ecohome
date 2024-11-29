@@ -34,25 +34,16 @@
     }
 
     .goodSection-more {
-        // position: static;
-        top: 3px;
-        right: 2px;
-        rotate: 90deg;
+        top: 0px;
+        right: 0px;
+        rotate: 0;
         padding: 0px 2px;
-        width: max-content;
-        height: max-content;
+        width: 20px;
+        height: 25px;
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: #fff;
-        box-shadow: 0px 0px 15px 10px rgba(211, 211, 211, 0.319);
         border-radius: 5px;
-    
-            svg {
-                fill: #565656;
-                width: 18px;
-                height: 20px;
-            }
         
     }
 }
@@ -115,15 +106,15 @@
        background-color: #CF4E32;
        box-shadow: 0px 0px 15px 10px rgba(211, 211, 211, 0.319);
        border-radius: 50%;
-       width: 40px;
-       height: 40px;
+       width: 42px;
+       height: 42px;
        display: flex;
        align-items: center;
        justify-content: center;
 
        svg {
-            width: 28px;
-            height: 28px;
+            width: 27px;
+            height: 27px;
             fill: white;
        }
 }
