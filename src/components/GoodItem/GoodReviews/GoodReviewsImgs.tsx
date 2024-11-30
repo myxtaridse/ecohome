@@ -131,7 +131,7 @@ const GoodReviewsImgs = () => {
 <div className='goodItem-reviews-imagesBlock-arrow goodItem-reviews-imagesBlock-arrow-left' onClick={() => onClickGallery('decr')}>
     <Arrow />
 </div>
-        <div ref={imagesRef} className='goodItem-reviews-imagesBlock-gallery' style={{translate: '70px'}}>
+        <div ref={imagesRef} className='goodItem-reviews-imagesBlock-gallery' style={{translate: '10px'}}>
             {
                 imagesGallery.map((itemImg) => <img src={itemImg.image} key={itemImg.id} />)
             }

@@ -2,10 +2,10 @@
     width: 100vw;
     height: 100vh;
     position: fixed;
-    bottom: 0;
+    top: 0;
     left: 0;
     background-color: rgba(176, 176, 176, 0.4);
-    z-index: 1000;
+    z-index: 9999;
     display: flex;
     align-items: flex-end; /* Чтобы блок был снизу */
     justify-content: center;

@@ -1,9 +1,10 @@
 import React from "react";
-import { MainGoodType } from "../MainGood/MainGood";
 import GoodSection from "../GoodSection/GoodSection";
+import { Link } from "react-router-dom";
 
 interface MainGoodsType {
-  goods: MainGoodType[];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  goods: any[];
   title: string;
 }
 
@@ -30,7 +31,9 @@ const MainGoods: React.FC<MainGoodsType> = ({ goods, title }) => {
       <div className="mainGoods-list">
         {goods.map((item) => (
           
-            <GoodSection {...item} />
+           <Link to={`/item/${item.article}`}>
+               <GoodSection {...item} />
+           </Link>
           
         ))}
       </div>

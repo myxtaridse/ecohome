@@ -367,7 +367,23 @@
         font-size: 14px;
     }
     .goodItem-main-reviews {
+        width: 100vw;
+        margin-left: -10px;
+        justify-content: space-between;
         gap: 15px;
+    }
+    .goodItem-main-reviews-left {
+        display: flex;
+        align-items: start;
+        flex-direction: row-reverse;
+        gap: 7px;
+
+        p {
+            transform: translateY(4px);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 26px;
+        }
     }
     .goodItem-main-reviews p {
         font-size: 15px;
@@ -387,6 +403,7 @@
         
     }
     .goodItem-add-info-item {
+        gap: 12px;
 
         p {
             font-size: 14px;
@@ -397,13 +414,14 @@
         }
      
      }
+     .goodItem-add-info-item:last-of-type {
+        p {
+            transform: translateY(-2px);
+        }
+     }
 }
 
 @media (max-width: 400px) {
-    .goodItem-main-reviews {
-        justify-content: space-between;
-        margin-left: auto;
-    }
     .goodItem-add-price {
         flex-direction: column-reverse;
         align-items: end;

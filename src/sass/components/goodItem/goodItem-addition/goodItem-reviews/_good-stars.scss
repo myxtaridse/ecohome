@@ -1,0 +1,25 @@
+.goodStars {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background-color: #F3F5F9;
+    border-radius: 5px;
+}
+.goodStars-flex {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+
+    div {
+        transform: translateY(3px);
+        width: 30px;
+    }
+}
+
+.goodStars-info-svg {
+    width: 40px;
+    height: 40px;
+}

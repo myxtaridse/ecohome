@@ -259,7 +259,7 @@
     }
     
     .activeBlock {
-        margin: 20px auto;
+        margin: 20px auto 40px;
     }
 }
 
@@ -278,12 +278,41 @@
 }
 @media (max-width: 500px) {
     .goodItem {
-        margin-top: -10px; 
+        margin-top: 10px; 
     }
     .goodItem-allDescription {
         margin-top: 30px;
         margin-bottom: 70px;
-        
+    }
+    .goodItem-flex {
+        gap: 20px;
+    }
+    .goodItem-gallery {
+        .goodSection-gallery {
+            width: 95vw;
+            height: 300px;
+          }
+    }
+    .goodItem-category {
+        margin-top: -15px;
+        margin-bottom: 10px;
+        width: 100%;
+        display: flex;
+        align-items: start;
+        gap: 5px;
+
+        p {
+            font-size: 14px;
+        }
+
+        div {
+            width: 14px;
+            height: 14px;
+
+            svg {
+                fill: #565656;
+            }
+        }
     }
 }
 @media (max-width: 450px) {

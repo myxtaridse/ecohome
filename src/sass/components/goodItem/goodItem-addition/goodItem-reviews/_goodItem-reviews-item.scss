@@ -4,7 +4,7 @@
     padding: 5px 0;
     border-radius: 5px;
     position: relative;
-    width: 90%;
+    width: 100%;
 }
 
 .goodItem-review::after {
@@ -58,8 +58,12 @@
 .goodItem-reviews-item-user-avatar {
     width: 45px;
     height: 45px;
-    background-color: lightgray;
     border-radius: 50%;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
 }
 .goodItem-reviews-item-text {
     margin: 15px 0;
@@ -164,7 +168,19 @@
         // margin-right: 80px;
     }
     .goodItem-reviews-item-text {
-        font-size: 18px;
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        div {
+            h4 {
+                font-size: 16px;
+            }
+            p {
+                font-size: 15px;
+            }
+        }
     }
     .goodItem-reviews-item-status {
         gap: 30px;

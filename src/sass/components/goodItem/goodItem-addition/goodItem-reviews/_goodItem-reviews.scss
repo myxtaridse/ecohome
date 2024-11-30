@@ -2,6 +2,7 @@
 @use './goodItem-reviews-item-answers';
 @use './goodItem-reviews-my-item';
 @use './goodItem-reviews-modal';
+@use './good-stars';
 
 
 .goodItem-reviews-block {
@@ -97,7 +98,19 @@ transform: translateX(5px);
 
 .goodItem-reviews-item {
     padding: 0 30px;
-    margin: 50px auto;
+    margin: 30px auto;
+}
+
+.goodItem-reviews-item-sorted {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 7px;
+
+    div {
+        line-height: 10px;
+        transform: translateY(2px);
+    }
 }
 
 @media (max-width: 1650px) {

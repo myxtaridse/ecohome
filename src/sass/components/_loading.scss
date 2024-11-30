@@ -5,7 +5,7 @@
   background-color: #fff;
   width: 100vw;
   height: 100vh;
-  z-index: 110;
+  z-index: 1100;
 }
 .loading-module {
   background-color: #E8EFF5;
@@ -74,5 +74,61 @@
   }
   100% {
     width: 380px;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .loading-module {
+    background-color: #fff;
+    width: 80vw;
+    height: 400px;
+    margin: calc((100vh - 400px) / 2) auto;
+  }
+  
+  .loading-logoText {
+    width: 75vw;
+  }
+  .loading-car {
+    position: relative;
+    width: 75vw;
+    height: 70px;
+  }
+  .loading-car img {
+    width: 65px;
+    
+  }
+  .loading-line {
+    height: 20px;
+    width: 75vw;
+  }
+  .loading-line::after {
+    content: "";
+    width: 20px;
+    background-color: #cf4e32;
+    height: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loading-line 6s ease-in-out infinite;
+    
+  }
+  
+  @keyframes car {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: 60vw;
+    }
+  }
+  @keyframes loading-line {
+    0% {
+      width: 20px;
+    }
+    100% {
+      width: 75vw;
+    }
   }
 }

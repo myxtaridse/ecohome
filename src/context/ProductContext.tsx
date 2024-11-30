@@ -13,7 +13,7 @@ const ProductContext = ({children}: any) => {
   const [good, setGood] = React.useState(null);
 
   const location = useLocation();
-  const articleLocation = location.pathname.split('/goods/').join("");
+  const articleLocation = location.pathname.split('/item/').join("");
   const {goods} = useSelector(selectGoods);
   const dispatch = useAppDispatch()
 
@@ -23,11 +23,18 @@ const ProductContext = ({children}: any) => {
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
+  
+  
   
 
   React.useEffect(() => {
      if (articleLocation && goods) {
-        const find = goods.find((goodItem) => goodItem.article === articleLocation);
+        const find = goods.find((goodItem) => {
+          console.log(goodItem, articleLocation);
+          
+          return goodItem.article === articleLocation
+        });
         if (find) {
           setGood(find)
         }  

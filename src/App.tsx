@@ -41,7 +41,7 @@ function App() {
           <React.Suspense fallback={<Loading />}>
           <CatalogPage />
         </React.Suspense>} />
-        <Route path="/goods/:id" element={
+        <Route path="/item/:id" element={
           <React.Suspense fallback={<Loading />}>
             <GoodItemPage />
           </React.Suspense>

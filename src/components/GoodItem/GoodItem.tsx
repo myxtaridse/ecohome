@@ -1,5 +1,4 @@
 import React from 'react'
-import GoodImg from './GoodImg'
 import GoodAdd from './GoodAdd'
 import GoodParameter from './GoodParameter'
 import GoodDescription from './GoodDescription'
@@ -8,6 +7,7 @@ import GoodReviews from './GoodReviews/GoodReviews'
 import { CustomContextProductItem } from '../../context/ProductContext';
 import Loading from '../Loading/Loading'
 import { CustomContextMain } from '../../context/MainContext'
+import GoodSectionGallery from '../GoodSection/GoodSectionGallery'
 
 const GoodItem = () => {
     const [isActive, setIsActive] = React.useState<number | null>(0);
@@ -24,7 +24,7 @@ const GoodItem = () => {
       }
   }, [good, setPathValue]);
 
-
+  
  
 
   if (!good || good.length === 0) return <Loading />;
@@ -33,21 +33,24 @@ const GoodItem = () => {
     return (
       
          <div className="goodItem">
-           
-           <div className='goodItem-main-title'>
-           
-          <h1>{good.titleGood}</h1>
-          <button className='goodItem-add-review'>
-             Добавить отзыв
-          </button>
-          </div>
            <div className='goodItem-flex'>
-           <GoodImg setIsActive={setIsActive} />
-          
-          <GoodParameter />
-          
-           <GoodAdd />
+              <div className='goodItem-gallery'>
+                  <GoodSectionGallery />
+              </div>
+              <div className='goodItem-main-title'>
+                  <h1>{good.titleGood}</h1>
+              </div>
+              <div className='goodItem-category'>
+                    <p>{good.categoryChildren}</p>
+                    <div className=''>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path></svg>
+                    </div>
+              </div>
+              <GoodParameter />
+              <GoodAdd />
            </div>
+
+
            <div className='goodItem-allDescription'>
              
           <div className='goodItem-allDescription-item'>

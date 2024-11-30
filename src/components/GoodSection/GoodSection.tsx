@@ -73,7 +73,7 @@ const GoodSection: React.FC<any> = ({titleGood, price, reviews, categoryChildren
 
         {
             location.pathname === '/' && (
-                <>
+                <div onClick={(e) => e.preventDefault()}>
                     {
                         !isBasket && (
                             <div className='goodSection-basket' onClick={() => setIsBasket(true)}>
@@ -104,7 +104,7 @@ const GoodSection: React.FC<any> = ({titleGood, price, reviews, categoryChildren
                         </svg>
                     </div>
                     
-                </>
+                </div>
             )
         }
 
