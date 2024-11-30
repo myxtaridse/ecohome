@@ -7,15 +7,6 @@
     width: 100%;
 }
 
-.goodItem-review::after {
-    content: " ";
-    width: 98%;
-    height: 1px;
-    position: absolute;
-    bottom: 0;
-    left: 1%;
-    background-color: rgba(211, 211, 211, 0.522);
-}
 
 .goodItem-review:not(.goodItem-review:nth-of-type(1)) .goodItem-most-popular-review-title {
     display: none;
@@ -43,6 +34,7 @@
 
 .goodItem-reviews-item-user {
     display: flex;
+    align-items: center;
 }
 .goodItem-reviews-item-user-name {
     margin-left: 20px;
@@ -156,22 +148,27 @@
         margin-left: 10px;
 
         h3{
-            font-size: 15px;
-            font-weight: 600;
+            font-size: 14px;
+            font-weight: 700;
         }
         p{
-            font-size: 13px;
+            font-size: 8px;
         }
+    }
+    .goodItem-reviews-item-stars {
+        margin-top: 5px;
+       font-size: 8px;
     }
     .goodItem-reviews-item-link {
         width: 24px;
         // margin-right: 80px;
     }
     .goodItem-reviews-item-text {
-        width: 95%;
+        width: 97%;
+        margin: 20px auto 0;
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: 18px;
 
         div {
             h4 {

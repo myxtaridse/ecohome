@@ -6,6 +6,10 @@
     padding: 10px 15px;
     background-color: #F3F5F9;
     border-radius: 5px;
+
+    p {
+        font-size: 15px;
+    }
 }
 .goodStars-flex {
     display: flex;
@@ -15,7 +19,11 @@
 
     div {
         transform: translateY(3px);
-        width: 30px;
+        width: 28px;
+    }
+
+    h2 {
+        font-size: 22px;
     }
 }
 

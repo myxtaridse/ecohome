@@ -216,9 +216,10 @@
     .goodItem-add-block-item {
         gap: 5px;
         div {
-            width: 20px;
+            width: 22px;
         }
         p {
+            transform: translateY(-2px);
             font-size: 14px;
         }
     }
@@ -351,6 +352,7 @@
         grid-column-end: 3;
         grid-row-start: 1;
         justify-content: end;
+        gap: 40px;
     }
     .goodItem-add-reviews-show {
         grid-column-start: 1;
@@ -386,6 +388,7 @@
         }
     }
     .goodItem-main-reviews p {
+        transform: translateY(-1px);
         font-size: 15px;
     }
     .goodItem-add-price-btns-block {

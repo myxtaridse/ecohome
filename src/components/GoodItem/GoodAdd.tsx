@@ -38,7 +38,7 @@ const addLikeGood = () => {
           <p className='goodItem-main-article'>Код товара: {good?.article}</p>
           <div className='goodItem-main-reviews'>
             <div className='goodItem-main-reviews-left'>
-                <p>4,8</p>
+                <h4>4,8</h4>
                 <div className="goodItem-main-stars">
                 {Array(5)
                   .fill("")
