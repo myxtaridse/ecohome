@@ -1,8 +1,8 @@
 <svg width="983" height="847" viewBox="0 0 983 847" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="685" cy="549" r="295.5" stroke="#C7CDD1" stroke-width="5" stroke-dasharray="60 60"/>
-<circle cx="175" cy="193" r="172.5" stroke="#C7CDD1" stroke-width="5" stroke-dasharray="60 60"/>
+<circle cx="685" cy="549" r="295.5" stroke="#C7CDD1" strokeWidth="5" stroke-dasharray="60 60"/>
+<circle cx="175" cy="193" r="172.5" stroke="#C7CDD1" strokeWidth="5" stroke-dasharray="60 60"/>
 <rect x="467" y="402" width="36" height="340" fill="#CF4E32"/>
-<rect x="469.5" y="404.5" width="31" height="335" stroke="#552014" stroke-opacity="0.5" stroke-width="5"/>
+<rect x="469.5" y="404.5" width="31" height="335" stroke="#552014" stroke-opacity="0.5" strokeWidth="5"/>
 <path d="M400.136 0H569.864L689 119.136V288.864L569.864 408H400.136L281 288.864V119.136L400.136 0Z" fill="#CF4E32"/>
 <path d="M400.136 0H569.864L689 119.136V288.864L569.864 408H400.136L281 288.864V119.136L400.136 0Z" fill="#CF4E32"/>
 <path d="M401.924 5H567.076L683 120.924V286.076L567.076 402H401.924L286 286.076V120.924L401.924 5Z" fill="#CF4E32"/>
@@ -18,9 +18,9 @@
 <path d="M274.672 598L385.57 598L387 604L273.1 603.699L274.672 598Z" fill="white" fill-opacity="0.71"/>
 <path d="M279.422 581H380.109L384.881 598H274.699L279.422 581Z" fill="white"/>
 <rect x="206" y="713" width="247" height="25" fill="#CF4E32"/>
-<circle cx="866" cy="667" r="11" stroke="#C7CDD1" stroke-width="2"/>
-<line x1="153" y1="739" x2="747" y2="739" stroke="#9794B3" stroke-width="6"/>
-<line x1="29" y1="739" x2="129" y2="739" stroke="#9794B3" stroke-width="6"/>
-<line x1="777" y1="739" x2="856" y2="739" stroke="#9794B3" stroke-width="6"/>
-<line x1="884" y1="739" x2="946" y2="739" stroke="#9794B3" stroke-width="6"/>
+<circle cx="866" cy="667" r="11" stroke="#C7CDD1" strokeWidth="2"/>
+<line x1="153" y1="739" x2="747" y2="739" stroke="#9794B3" strokeWidth="6"/>
+<line x1="29" y1="739" x2="129" y2="739" stroke="#9794B3" strokeWidth="6"/>
+<line x1="777" y1="739" x2="856" y2="739" stroke="#9794B3" strokeWidth="6"/>
+<line x1="884" y1="739" x2="946" y2="739" stroke="#9794B3" strokeWidth="6"/>
 </svg>

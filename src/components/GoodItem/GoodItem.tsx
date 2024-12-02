@@ -88,7 +88,7 @@ const GoodItem = () => {
                 </div>
               </div>
               <div className='goodItem-gallery'>
-                  <GoodSectionGallery />
+                  <GoodSectionGallery gallery={good.photoGood} />
               </div>
               <div className='goodItem-main-title'>
                   <h1>{good.titleGood}</h1>

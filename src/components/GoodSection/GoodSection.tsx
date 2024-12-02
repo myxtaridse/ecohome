@@ -77,7 +77,7 @@ const GoodSection: React.FC<any> = ({titleGood, price, reviews, categoryChildren
                     {
                         !isBasket && (
                             <div className='goodSection-basket' onClick={() => setIsBasket(true)}>
-                                <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M22,8.5H19.535l-3.7-5.555a1,1,0,0,0-1.664,1.11L17.132,8.5H6.868L9.832,4.055a1,1,0,0,0-1.664-1.11L4.465,8.5H2a1,1,0,0,0,0,2H3v8a3,3,0,0,0,3,3H18a3,3,0,0,0,3-3v-8h1a1,1,0,0,0,0-2Zm-3,10a1,1,0,0,1-1,1H6a1,1,0,0,1-1-1v-8H19ZM7,17V13a1,1,0,0,1,2,0v4a1,1,0,0,1-2,0Zm4,0V13a1,1,0,0,1,2,0v4a1,1,0,0,1-2,0Zm4,0V13a1,1,0,0,1,2,0v4a1,1,0,0,1-2,0Z"></path></g></svg>
+                                <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M22,8.5H19.535l-3.7-5.555a1,1,0,0,0-1.664,1.11L17.132,8.5H6.868L9.832,4.055a1,1,0,0,0-1.664-1.11L4.465,8.5H2a1,1,0,0,0,0,2H3v8a3,3,0,0,0,3,3H18a3,3,0,0,0,3-3v-8h1a1,1,0,0,0,0-2Zm-3,10a1,1,0,0,1-1,1H6a1,1,0,0,1-1-1v-8H19ZM7,17V13a1,1,0,0,1,2,0v4a1,1,0,0,1-2,0Zm4,0V13a1,1,0,0,1,2,0v4a1,1,0,0,1-2,0Zm4,0V13a1,1,0,0,1,2,0v4a1,1,0,0,1-2,0Z"></path></g></svg>
                             </div>
                         )
                     }
@@ -98,9 +98,9 @@ const GoodSection: React.FC<any> = ({titleGood, price, reviews, categoryChildren
                     }
                     <div className='goodSection-more' onClick={() => setIsMore(!isMore)}>
                         <svg width="23" height="12" viewBox="0 0 23 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5.91525 8C6.97302 8 7.83051 7.10457 7.83051 6C7.83051 4.89543 6.97302 4 5.91525 4C4.85749 4 4 4.89543 4 6C4 7.10457 4.85749 8 5.91525 8Z" stroke="black" stroke-linejoin="round"/>
-                            <path d="M11.6613 8C12.7191 8 13.5766 7.10457 13.5766 6C13.5766 4.89543 12.7191 4 11.6613 4C10.6036 4 9.74609 4.89543 9.74609 6C9.74609 7.10457 10.6036 8 11.6613 8Z" stroke="black" stroke-linejoin="round"/>
-                            <path d="M17.4074 8C18.4652 8 19.3227 7.10457 19.3227 6C19.3227 4.89543 18.4652 4 17.4074 4C16.3497 4 15.4922 4.89543 15.4922 6C15.4922 7.10457 16.3497 8 17.4074 8Z" stroke="black" stroke-linejoin="round"/>
+                            <path d="M5.91525 8C6.97302 8 7.83051 7.10457 7.83051 6C7.83051 4.89543 6.97302 4 5.91525 4C4.85749 4 4 4.89543 4 6C4 7.10457 4.85749 8 5.91525 8Z" stroke="black" strokeLinejoin="round"/>
+                            <path d="M11.6613 8C12.7191 8 13.5766 7.10457 13.5766 6C13.5766 4.89543 12.7191 4 11.6613 4C10.6036 4 9.74609 4.89543 9.74609 6C9.74609 7.10457 10.6036 8 11.6613 8Z" stroke="black" strokeLinejoin="round"/>
+                            <path d="M17.4074 8C18.4652 8 19.3227 7.10457 19.3227 6C19.3227 4.89543 18.4652 4 17.4074 4C16.3497 4 15.4922 4.89543 15.4922 6C15.4922 7.10457 16.3497 8 17.4074 8Z" stroke="black" strokeLinejoin="round"/>
                         </svg>
                     </div>
                     

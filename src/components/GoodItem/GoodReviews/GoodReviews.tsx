@@ -22,7 +22,7 @@ const GoodReviews = () => {
                   <h4>Полезное</h4>
                   <div>
                       <svg width="14" height="20" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_1610_2690)">
+                        <g clipPath="url(#clip0_1610_2690)">
                         <path d="M7 2.66602L10.5 7.99935H3.5L7 2.66602Z" fill="#CF4E32"/>
                         </g>
                         <path d="M7 16L3.5 10.4615H10.5L7 16Z" fill="#CF4E32"/>
