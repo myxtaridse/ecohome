@@ -31,6 +31,9 @@ const GoodSectionGallery: React.FC<GoodSectionGalleryType> = ({gallery}) => {
     }
   }
   
+  console.log(gallery);
+  
+  
 
   return (
     <div className='goodSection-gallery-block'
