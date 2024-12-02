@@ -15,6 +15,10 @@ const MainContext = ({children}: any) => {
     const popupRef = React.useRef<HTMLDivElement | null>(null);
     const storage = localStorage.getItem('myFavorite');
     const [storageFavorite, setStorageFavorite] = React.useState<string | null>(null);
+    const [sort, setSort] = React.useState(0);
+
+    const [childrenPopup, setChildrenPopup] = React.useState(null);
+    const [isMore, setIsMore] = React.useState(false);
 
     // // delivery-data
     // const [basket, setBasket] = React.useState([]);
@@ -71,7 +75,13 @@ const MainContext = ({children}: any) => {
       isPopupDelivery,
       setIsPopupDelivery,
       city, 
-      setCity
+      setCity,
+      childrenPopup, 
+      setChildrenPopup,
+      isMore, 
+      setIsMore,
+      sort, 
+      setSort
     };
 
   return (

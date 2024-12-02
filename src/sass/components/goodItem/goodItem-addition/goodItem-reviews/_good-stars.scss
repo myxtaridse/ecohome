@@ -31,3 +31,39 @@
     width: 32px;
     height: 32px;
 }
+
+
+.goodStars-popup-block {
+    height: max-content;
+    padding: 70px 0 30px;
+    .goodStars {
+        flex-direction: column;
+        align-items: start;
+        background-color: #fff;
+    }
+}
+
+.goodStars-popup-marks {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+    margin: 20px;
+}
+.goodStars-popup-mark {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+
+        .star-container {
+            font-size: 17px;
+          width: 18px !important;
+          height: 18px !important;
+
+          svg {
+            width: 18px !important;
+            height: 18px !important;
+          }
+        }
+}

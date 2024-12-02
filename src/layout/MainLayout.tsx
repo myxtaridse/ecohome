@@ -7,12 +7,14 @@ import CallPhone from "../components/CallPhone";
 import Path from "../components/Path";
 import { CustomContextMain } from "../context/MainContext";
 import CartDeliveryDetail from "../components/UserStorage/Cart/CartDeliveryDetail";
+import CartPopup from "../components/UserStorage/Cart/CartMobile/CartPopup";
 
 
 const MainLayout: React.FC = () => {
   const location = useLocation();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const {isPopup, isPopupDelivery}: any = React.useContext(CustomContextMain)
+  const {isPopup, isPopupDelivery, setIsMore, childrenPopup, isMore}: any = React.useContext(CustomContextMain);
+  
 
   const showPathInPage = location.pathname !== '/' && location.pathname !== '/catalog';
   
@@ -35,6 +37,9 @@ const MainLayout: React.FC = () => {
       {/* {
         location.pathname !== '/catalog'  &&   <Footer />
       } */}
+      { isMore &&
+        <CartPopup setIsMore={setIsMore}>{childrenPopup}</CartPopup>
+      }
       </div>
     
   );

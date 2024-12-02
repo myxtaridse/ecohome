@@ -2,6 +2,7 @@ import React from 'react'
 
 const GoodQuestions = () => {
   const [itsMe, setItsMe] = React.useState(false)
+  
   return (
     <div className='goodItem-questions'>
           <h6>Вопрос по данному товару пока нет</h6>

@@ -344,12 +344,13 @@
         position: static;
     }
     .goodItem-add-block {
+        margin-top: 5px;
         width: max-content;
         margin-left: auto;
         justify-content: end;
         gap: 40px;
         margin-right: 3px;
-        margin-bottom: -10px;
+        margin-bottom: -15px;
     }
     .goodItem-add-reviews-show {
         grid-column-start: 1;
