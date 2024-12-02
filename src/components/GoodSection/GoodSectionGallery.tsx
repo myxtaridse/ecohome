@@ -31,13 +31,10 @@ const GoodSectionGallery: React.FC<GoodSectionGalleryType> = ({gallery}) => {
     }
   }
   
-  console.log(gallery);
-  
   
 
   return (
     <div className='goodSection-gallery-block'
-    style={{ transform: `translateX(${237.5 - 95 * nowImage}vw)`}}
 
     onTouchStart={(e) => startTouchFn(e)}
     onTouchEnd={(e) => endTouchFn(e)}
@@ -45,7 +42,9 @@ const GoodSectionGallery: React.FC<GoodSectionGalleryType> = ({gallery}) => {
       {
         gallery.map((image, id) => (
           <div key={id} className='goodSection-gallery' style={{
-            backgroundImage: `url(${image ? image : image404})`
+            backgroundImage: `url(${image ? image : image404})`,
+            transform: nowImage === id ? 'scaleX(1)' : 'scaleX(0)',
+            transition: '.3s'
           }}
           >
               <img src={image ? image : image404} alt="" />
