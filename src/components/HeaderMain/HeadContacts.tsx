@@ -1,11 +1,23 @@
 import React from "react";
 import { CustomContextMain } from "../../context/MainContext";
+import CallPhone from "../CallPhone";
 
 const HeadContacts = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const { popupRef, isPopup, setIsPopup }: any = React.useContext(
     CustomContextMain
   );
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const {setIsMore, setChildrenPopup}: any = React.useContext(CustomContextMain);
+
+  const morePopupFn = () => {
+      setIsMore(true)
+      setChildrenPopup(
+          <div className='goodStars-popup-block'>
+              <CallPhone />
+           </div>
+      )
+  }
   return (
     <div className="header-contacts">
       <div className="header-phone">
@@ -34,12 +46,13 @@ const HeadContacts = () => {
       </div>
       <div
         className="header-phone hover"
-        onMouseMove={() => {
-          if (popupRef.current) popupRef.current.style.display = "block";
-          setTimeout(() => {
-            if (popupRef.current) popupRef.current.style.display = "none";
-          }, 5000);
-        }}
+        // onMouseMove={() => {
+        //   if (popupRef.current) popupRef.current.style.display = "block";
+        //   setTimeout(() => {
+        //     if (popupRef.current) popupRef.current.style.display = "none";
+        //   }, 5000);
+        // }}
+        onClick={morePopupFn}
       >
         <div className="header-map">
           <svg

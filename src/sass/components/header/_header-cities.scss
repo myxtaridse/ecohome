@@ -98,6 +98,21 @@
   }
 }
 @media (max-width: 500px) {
+  .header-cities-popup-bg {
+    position: static;
+    width: 100vw;
+    height: max-content;
+    background-color: transparent;
+  }
+  .header-cities-popup {
+    background-color: #fff;
+    margin: 0 auto;
+    width: 50vw;
+    height: max-content;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+  }
   .header-myCity {
     gap: 5px;
     font-size: 7px;
@@ -114,20 +129,3 @@
   }
 }
 
-@media (max-width: 350px) {
-  .header-arrow {
-    display: none;
-  }
-  .header-myCity h2 {
-    display: none;
-  }
-  .header-city-svg {
-    margin-top: 2px;
-    width: 18px;
-    
-    svg {
-      fill: #565656;
-    }
-  }
-  
-}

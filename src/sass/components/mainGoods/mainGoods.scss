@@ -281,10 +281,14 @@
       .goodSection-actions-price {
         h1 {
           position: absolute;
-          bottom: 6px;
+          bottom: 11px;
           right: 0;
           font-size: 16px;
         }
+      }
+
+      .goodSection-category {
+        margin-right: auto;
       }
 
       .goodSection-actions {
