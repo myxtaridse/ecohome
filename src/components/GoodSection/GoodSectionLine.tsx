@@ -6,7 +6,7 @@ import Rating from '../Rating'
 import CartPopup from '../UserStorage/Cart/CartMobile/CartPopup';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const GoodSectionLine: React.FC<any> = ({article, titleGood, categoryChildren, price, description, parameter, reviews}) => {
+const GoodSectionLine: React.FC<any> = ({article, titleGood, categoryChildren, price, description, parameter, reviews, photoGood }) => {
     const [isMore, setIsMore] = React.useState(false)
     
 
@@ -28,7 +28,7 @@ const GoodSectionLine: React.FC<any> = ({article, titleGood, categoryChildren, p
 
   return (
     <div className='goodSection-line'>
-        <div><GoodSectionGallery /></div>
+        <div><GoodSectionGallery gallery={photoGood} /></div>
     <div className='goodSection-line-info'>
         <h2>{titleGood}</h2>
         <div className='goodSection-rating'>

@@ -18,7 +18,7 @@ import CartPopup from '../UserStorage/Cart/CartMobile/CartPopup'
 // }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const GoodSection: React.FC<any> = ({titleGood, price, reviews, categoryChildren}) => {
+const GoodSection: React.FC<any> = ({titleGood, price, reviews, categoryChildren, photoGood}) => {
     const [isMore, setIsMore] = React.useState(false)
     const location = useLocation();
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -31,7 +31,7 @@ const GoodSection: React.FC<any> = ({titleGood, price, reviews, categoryChildren
     
   return (
     <div className='goodSection'>
-        <div><GoodSectionGallery /></div>
+        <div><GoodSectionGallery gallery={photoGood} /></div>
         {
             location && location.pathname === '/' && (
                 <div className='goodSection-category'>
