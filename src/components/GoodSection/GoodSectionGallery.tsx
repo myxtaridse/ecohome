@@ -25,7 +25,7 @@ const GoodSectionGallery: React.FC<GoodSectionGalleryType> = ({gallery}) => {
       if (swipeDistance > 50) {
         setNowImage((prev) => Math.max(0, prev - 1))
       } else if (swipeDistance < -50) {
-        setNowImage((prev) => Math.max(0, prev + 1))
+        setNowImage((prev) => Math.min(gallery.length - 1, prev + 1))
       }
       setStartTouch(0)
     }
@@ -41,11 +41,9 @@ const GoodSectionGallery: React.FC<GoodSectionGalleryType> = ({gallery}) => {
     >
       {
         gallery.map((image, id) => (
-          <div key={Math.random()} className='goodSection-gallery' style={{
+          <div key={id} className='goodSection-gallery' style={{
             backgroundImage: `url(${image})`
           }}
-            onClick={() => console.log(id)
-            }
           >
               <img src={image} alt="" />
           </div>
