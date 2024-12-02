@@ -31,7 +31,7 @@ const GoodSection: React.FC<any> = ({titleGood, price, reviews, categoryChildren
     
   return (
     <div className='goodSection'>
-        <div><GoodSectionGallery gallery={photoGood} /></div>
+        <div><GoodSectionGallery gallery={photoGood} width={51} /></div>
         {
             location && location.pathname === '/' && (
                 <div className='goodSection-category'>

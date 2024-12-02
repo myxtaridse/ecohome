@@ -3,7 +3,10 @@
     align-items: center;
     justify-content: start;
     gap: 5vw;
-    height: 230px;
+    // transform: translateX(95vw);
+    // transform: translateX(237.5vw);
+    transition: .4s;
+    width: max-content;
 }
 
 .goodSection-gallery {
@@ -14,11 +17,6 @@
     overflow: hidden;
     border-radius: 5px;
     border: 1px solid lightgray;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    transform-origin: 0 0;
     
     
 

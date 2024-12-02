@@ -28,7 +28,7 @@ const GoodSectionLine: React.FC<any> = ({article, titleGood, categoryChildren, p
 
   return (
     <div className='goodSection-line'>
-        <div><GoodSectionGallery gallery={photoGood} /></div>
+        <div><GoodSectionGallery gallery={photoGood} width={48} /></div>
     <div className='goodSection-line-info'>
         <h2>{titleGood}</h2>
         <div className='goodSection-rating'>

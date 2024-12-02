@@ -88,7 +88,7 @@ const GoodItem = () => {
                 </div>
               </div>
               <div className='goodItem-gallery'>
-                  <GoodSectionGallery gallery={good.photoGood} />
+                  <GoodSectionGallery gallery={good.photoGood} width={95} />
               </div>
               <div className='goodItem-main-title'>
                   <h1>{good.titleGood}</h1>

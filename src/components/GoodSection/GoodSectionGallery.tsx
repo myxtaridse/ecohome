@@ -2,10 +2,11 @@ import React from 'react';
 import image404 from '../../assets/images-site/404.png';
 
 interface GoodSectionGalleryType {
-  gallery: string[]
+  gallery: string[],
+  width: number
 }
 
-const GoodSectionGallery: React.FC<GoodSectionGalleryType> = ({gallery}) => {
+const GoodSectionGallery: React.FC<GoodSectionGalleryType> = ({gallery, width}) => {
   const [nowImage, setNowImage] = React.useState(0);
   const [startTouch, setStartTouch] = React.useState<number>(0);
 
@@ -35,6 +36,7 @@ const GoodSectionGallery: React.FC<GoodSectionGalleryType> = ({gallery}) => {
 
   return (
     <div className='goodSection-gallery-block'
+    style={{ transform: `translateX(${((width * (gallery.length - 1)) / 2) - width * nowImage}vw)`}}
 
     onTouchStart={(e) => startTouchFn(e)}
     onTouchEnd={(e) => endTouchFn(e)}
@@ -42,9 +44,7 @@ const GoodSectionGallery: React.FC<GoodSectionGalleryType> = ({gallery}) => {
       {
         gallery.map((image, id) => (
           <div key={id} className='goodSection-gallery' style={{
-            backgroundImage: `url(${image ? image : image404})`,
-            transform: nowImage === id ? 'scaleX(1)' : 'scaleX(0)',
-            transition: '.3s'
+            backgroundImage: `url(${image ? image : image404})`
           }}
           >
               <img src={image ? image : image404} alt="" />
