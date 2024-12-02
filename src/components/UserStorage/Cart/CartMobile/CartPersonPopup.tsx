@@ -1,27 +1,19 @@
 import React from 'react'
 import Arrow from '../../../Arrow'
-import CartPopup from './CartPopup'
 import { itemForm } from '../CartForm'
 import CartSelectPerson from '../CartSelectPerson'
+import { CustomContextMain } from '../../../../context/MainContext'
 
 const CartPersonPopup = () => {
-    const [isMore, setIsMore] = React.useState(false)
     const [itsMe, setItsMe] = React.useState(false)
     const [isLegalEntity, setIsLegalEntity] = React.useState(false);
-  return (
-    <div className='checkout-person-data'>
-        <h2 className='cart-title'>Укажите данные для получения заказа</h2>
-        <div className='cartMobile-pickup-link' onClick={() => setIsMore(true)}>
-            <div className='cartMobile-pickup-link-flex'>
-                <h6>Получатель</h6>
-                <Arrow />
-            </div>
-            <div className='checkout-person'>
-                <p>ООО “Компания” (Фамилия Имя Отчетсво)</p>
-            </div>
-        </div>
-        {
-        isMore && <CartPopup setIsMore={setIsMore}>
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const {setIsMore, setChildrenPopup}: any = React.useContext(CustomContextMain);
+
+    const morePopupFn = () => {
+        setIsMore(true)
+        setChildrenPopup(
             <div className='checkout-person-block'>
                 <div className='cartMobile-map-text'>
                     <h4>Адрес магазина:</h4>
@@ -48,8 +40,21 @@ const CartPersonPopup = () => {
                 </div>
                 <button>Сохранить</button>
             </div>
-        </CartPopup>
-      }
+        )
+    }
+
+  return (
+    <div className='checkout-person-data'>
+        <h2 className='cart-title'>Укажите данные для получения заказа</h2>
+        <div className='cartMobile-pickup-link' onClick={morePopupFn}>
+            <div className='cartMobile-pickup-link-flex'>
+                <h6>Получатель</h6>
+                <Arrow />
+            </div>
+            <div className='checkout-person'>
+                <p>ООО “Компания” (Фамилия Имя Отчетсво)</p>
+            </div>
+        </div>
     </div>
   )
 }

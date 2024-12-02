@@ -1,27 +1,15 @@
 import React from 'react'
-import CartPopup from './CartPopup'
 import data from '../../../../../db.json'
 import image from '../../../../assets/image.png'
+import { CustomContextMain } from '../../../../context/MainContext'
 
 const CartGoodsPopup = () => {
-    const [isMore, setIsMore] = React.useState(false)
-  return (
-    <div className=''>
-        <h2 className='cart-title checkout-goods-count'>3 шт.</h2>
-        
-            <div className='checkout-goods' onClick={() => setIsMore(true)}>
-                {
-                    data.goods.map((good) => (
-                        <div>
-                            <img src={image} alt="" />
-                            <h5>{good.price} ₽</h5>
-                        </div>
-                    ))
-                }
-            </div>
-        
-        {
-        isMore && <CartPopup setIsMore={setIsMore}>
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const {setIsMore, setChildrenPopup}: any = React.useContext(CustomContextMain);
+
+    const morePopupFn = () => {
+        setIsMore(true)
+        setChildrenPopup(
             <div className='checkout-person-block'>
                 <div className='cartMobile-map-text'>
                     <h4>Ваш заказ</h4>
@@ -43,8 +31,22 @@ const CartGoodsPopup = () => {
                     }
                 </div>
             </div>
-        </CartPopup>
-      }
+        )
+    }
+  return (
+    <div className=''>
+        <h2 className='cart-title checkout-goods-count'>3 шт.</h2>
+        
+            <div className='checkout-goods' onClick={morePopupFn}>
+                {
+                    data.goods.map((good) => (
+                        <div>
+                            <img src={image} alt="" />
+                            <h5>{good.price} ₽</h5>
+                        </div>
+                    ))
+                }
+            </div>
     </div>
   )
 }

@@ -5,6 +5,8 @@ import ComparisonGoods from '../components/UserStorage/Comparison/ComparisonGood
 import Sorted from '../components/Sorted';
 import { useSelector } from 'react-redux';
 import { selectGoods } from '../redux/goodsSlice/selectorGoods';
+import { useAppDispatch } from '../redux/store';
+import { fetchGoods } from '../redux/goodsSlice/asyncActions';
 
 const Comparison = () => {
   const [isSelector, setIsSelector] = React.useState(false);
@@ -16,6 +18,14 @@ const Comparison = () => {
   const {setPathValue, pathFavorite}: any = React.useContext(CustomContextMain);
   const {goods} = useSelector(selectGoods);
   const [categories, setCategories] = React.useState<string[]>()
+  const dispatch = useAppDispatch();
+
+  React.useEffect(() => {
+    if (dispatch) {
+      dispatch(fetchGoods())
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   React.useEffect(() => {
     

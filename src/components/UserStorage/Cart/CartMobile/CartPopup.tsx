@@ -1,4 +1,5 @@
 import React from 'react';
+import { CustomContextMain } from '../../../../context/MainContext';
 
 interface CartPopupType {
   setIsMore: (isMore: boolean) => void;
@@ -11,6 +12,9 @@ const CartPopup: React.FC<CartPopupType> = ({ setIsMore, children }) => {
     const [isTouch, setIsTouch] = React.useState(false)
     const [startTouch, setStartTouch] = React.useState<number>(0)
     const [currentTouch, setCurrentTouch] = React.useState<number>(0)
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const {setChildrenPopup}: any = React.useContext(CustomContextMain);
 
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -60,6 +64,7 @@ const CartPopup: React.FC<CartPopupType> = ({ setIsMore, children }) => {
       onClick={(e: React.MouseEvent<HTMLDivElement>) => {
         if ((e.target as HTMLElement).className === 'cartPopup-bg') {
           setIsMore(false);
+          setChildrenPopup(null)
         }
       }}
       
@@ -74,7 +79,10 @@ const CartPopup: React.FC<CartPopupType> = ({ setIsMore, children }) => {
         transition: isTouch ? 'none' : 'transform 0.3s ease'
       }}
       >
-        <div className='cartPopup-close' onClick={() => setIsMore(false)}>
+        <div className='cartPopup-close' onClick={() => {
+          setIsMore(false)
+          setChildrenPopup(null)
+        }}>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"></path></svg>
         </div>
 

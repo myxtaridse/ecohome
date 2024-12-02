@@ -1,5 +1,4 @@
 import React from 'react'
-// import CartPopup from './CartPopup'
 import CartCardPay from '../CartCardPay'
 
 const CartPayPopup = () => {
@@ -14,20 +13,6 @@ const CartPayPopup = () => {
             <div className='checkout-pay-cards' onClick={() => setIsMore(true)}>
                 <CartCardPay activePay={activePay} setActivePay={setActivePay} />
             </div>
-        
-        {/* {
-        isMore && <CartPopup setIsMore={setIsMore}>
-            <div className='checkout-person-block'>
-                <div className='cartMobile-map-text'>
-                    <h4>Адрес магазина:</h4>
-                </div>
-                <div className='checkout-person-form'>
-                    
-                </div>
-                <button>Сохранить</button>
-            </div>
-        </CartPopup>
-      } */}
     </div>
   )
 }

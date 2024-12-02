@@ -9,6 +9,8 @@ import GoodSection from '../components/GoodSection/GoodSection';
 import NotFound from '../components/UserStorage/NotFound';
 import { useSelector } from 'react-redux';
 import { selectGoods } from '../redux/goodsSlice/selectorGoods';
+import { useAppDispatch } from '../redux/store';
+import { fetchGoods } from '../redux/goodsSlice/asyncActions';
 
 const MyFavorite = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -17,6 +19,14 @@ const MyFavorite = () => {
   const [minPrice, setMinPrice] = React.useState(0);
   const [maxPrice, setMaxPrice] = React.useState(0);
   const {goods} = useSelector(selectGoods)
+  const dispatch = useAppDispatch();
+
+  React.useEffect(() => {
+    if (dispatch) {
+      dispatch(fetchGoods())
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   React.useEffect(() => {
     
@@ -28,8 +38,6 @@ const MyFavorite = () => {
       setPathValue(['Главная', 'Избранное'])
     }
   }, [setPathValue, pathFavorite]);
-
-  console.log(storageFavorite, setMaxPrice, setMinPrice);
   
 
   // React.useEffect(() => {
@@ -49,6 +57,8 @@ const MyFavorite = () => {
   // // eslint-disable-next-line react-hooks/exhaustive-deps
   // }, [storageFavorite])
 
+  console.log(storageFavorite, setMaxPrice, setMinPrice);
+  
 
   return (
     <div className='myFavorite'>

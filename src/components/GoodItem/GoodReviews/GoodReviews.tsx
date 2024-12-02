@@ -8,14 +8,16 @@ const sortedList = ['Полезное', 'Новые', 'Старые', 'С выс
 
 const GoodReviews = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const {setIsMore, setChildrenPopup, sort, setSort, isMore}: any = React.useContext(CustomContextMain)
+  const {setIsMore, setChildrenPopup, sort, setSort}: any = React.useContext(CustomContextMain)
+  const [isSortedMore, setIsSortedMore] = React.useState(false)
 
 const morePopupFn = () => {
     setIsMore(true)
+    setIsSortedMore(true)
 }
 
 React.useEffect(() => {
-    if (isMore) {
+    if (isSortedMore) {
         setChildrenPopup(
             <div className='goodStars-popup-sorted'>
                 {
@@ -47,7 +49,8 @@ React.useEffect(() => {
              </div>
         )
     }
-}, [isMore, sort, sortedList])
+}, [isSortedMore, sort, sortedList])
+
   
   return (
     

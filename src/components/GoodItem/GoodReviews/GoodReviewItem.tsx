@@ -1,11 +1,53 @@
-// import React from 'react'
-// import GoodAnswers from './GoodAnswers'
-// import Arrow from '../../Arrow';
+import React from 'react'
 import Rating from '../../Rating';
 import anon from '../../../assets/icons-user/anon.svg'
+import { CustomContextMain } from '../../../context/MainContext';
 
 const GoodReviewItem = () => {
-  // const [isreviews, setIsreviews] = React.useState(false);
+  
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const {setIsMore, setChildrenPopup}: any = React.useContext(CustomContextMain);
+    const [itemComplaint, setItemComplaint] = React.useState<number | null>(null)
+    const [isComplaint, setIsComplaint] = React.useState(false)
+
+    const morePopupFn = () => {
+        setIsMore(true)
+        setIsComplaint(true)
+    }
+
+    React.useEffect(() => {
+        if (isComplaint) {
+            setChildrenPopup(
+                <div className='goodStars-popup-block good-complaint'>
+                    <h4>Пожаловаться</h4>
+                    <h6>Укажите, что не так:</h6>
+                    <div className='good-complaint-list'>
+                        {
+                            [
+                                'Спам или реклама', 
+                                'Неприемлимое содержание', 
+                                'Оскорбительное высказывание', 
+                                'Другое'
+                            ].map((item, id) => (
+                                <div className='good-complaint-item' onClick={() => setItemComplaint(id)}
+                                    
+                                >
+                                    <p>{item}</p>
+                                    <div className='good-complaint-select'
+                                        style={{border: itemComplaint === id ? 'none' : '2px solid #D9D9D9'}}
+                                    >
+                                        <div style={{ display: itemComplaint === id ? 'block' : 'none' }}></div>
+                                    </div>
+                                </div>
+                            ))
+                        }
+                    </div>
+                    <button>Отправить</button>
+                 </div>
+            )
+        }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [isComplaint, itemComplaint])
   
   return (
     
@@ -66,7 +108,9 @@ const GoodReviewItem = () => {
                     </div>
                     <p>0</p>
                 </div>
-                <div className='goodItem-review-complaint'>
+                <div className='goodItem-review-complaint'
+                    onClick={morePopupFn}
+                >
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 7V13" stroke="#565656" strokeWidth="1.5" strokeLinecap="round"/>
                             <path d="M12 17C12.5523 17 13 16.5523 13 16C13 15.4477 12.5523 15 12 15C11.4477 15 11 15.4477 11 16C11 16.5523 11.4477 17 12 17Z" fill="#565656"/>
