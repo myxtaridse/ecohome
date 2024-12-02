@@ -60,4 +60,3 @@ export default GoodSectionGallery
 
 
 
-// https://s402vla.storage.yandex.net/rdisk/d68e24b995d463470b410c9cef6a9c1eb6e7db2f23edf1508b53ee07076c5233/674dc5d7/FY5Rs_A0VxypX9DJXYpf4AHj3nBrYWEAYwdFF9822Ay9t-WoMarMYSVduRzMRJYCFR_GlyvuCVyn0qXlOLKdKQ==?uid=1602084553&filename=image.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=1602084553&fsize=112040&hid=a231f803501887ccfdd0a8e4ebe0be9b&media_type=image&tknv=v2&etag=053d45ba94e51df2ef8897e033126343&ts=6284a780be3c0&s=1bb76311878c14afe872a425766b97a30f3812e6ea5eef52b7189c684dd871a9&pb=U2FsdGVkX1_xQpvzxikMF3EQrStzjjielomBc70jGp5FgG4pdUUSQGs1v7aXocjonPmWEH3UkQ0p9fv91cw-mcHCddjiuilKBQzH9acuqLA
