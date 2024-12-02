@@ -7,32 +7,37 @@ interface GoodSectionGalleryType {
 
 const GoodSectionGallery: React.FC<GoodSectionGalleryType> = ({gallery}) => {
   const [nowImage, setNowImage] = React.useState(0);
-  const [startTouch, setStartTouch] = React.useState(0)
-  // const [currentTouch, setCurrentTouch] = React.useState(0)
+  const [startTouch, setStartTouch] = React.useState<number>(0);
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const startTouchFn = (e: any) => {
+    if (e) {
+      setStartTouch(e.touches[0].clientX)
+    }
+  }
   
-  console.log(nowImage);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const endTouchFn = (e: any) => {
+    if (startTouch) {
+      const endTouch = e.changedTouches[0].clientX;
+      const swipeDistance = endTouch - startTouch
+
+      if (swipeDistance > 50) {
+        setNowImage((prev) => Math.max(0, prev - 1))
+      } else if (swipeDistance < -50) {
+        setNowImage((prev) => Math.max(0, prev + 1))
+      }
+      setStartTouch(0)
+    }
+  }
   
 
   return (
     <div className='goodSection-gallery-block'
     style={{ transform: `translateX(${237.5 - 95 * nowImage}vw)`}}
 
-    onTouchStart={(e) => setStartTouch(e.touches[0].clientX)
-    }
-    onTouchMove={(e) => {
-      console.log(startTouch);
-      
-      if (e.touches[0].clientX > startTouch && nowImage !== gallery.length - 1) {
-        setNowImage(prevIndex => prevIndex + 1)
-      } else if (e.touches[0].clientX < startTouch && nowImage > 0) {
-        setNowImage(prevIndex => prevIndex - 1)
-      }
-    }
-    }
-    onTouchEnd={() => {
-      setStartTouch(0)
-    }}
+    onTouchStart={(e) => startTouchFn(e)}
+    onTouchEnd={(e) => endTouchFn(e)}
     >
       {
         gallery.map((image, id) => (
