@@ -3,12 +3,12 @@
 .goodSection-gallery {
     height: 230px;
     margin: 0 auto;
-    background-image: url(http://localhost:5173/ecohome/src/assets/image.png);
+    background-image: url(https://myxtaridse.github.io/ecohome/assets/image-BlcObsXO.png);
     background-size: cover;
     overflow: hidden;
     border-radius: 5px;
     border: 1px solid lightgray;
-
+    
     
 
     img {
@@ -17,8 +17,7 @@
         object-fit: contain;
         backdrop-filter: blur(2px);
         -webkit-backdrop-filter: blur(2px);
-        
-        // background-color: rgba(171, 171, 171, 0.251);
+        background-color: rgba(171, 171, 171, 0.251);
         transition: all .4s;
         transform: scale(1.05);
     }
