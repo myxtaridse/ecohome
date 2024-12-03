@@ -51,6 +51,7 @@
 }
 
 .goodSection-character {
+    margin-right: auto;
     display: flex;
     align-items: center;
     justify-content: start;
@@ -250,6 +251,7 @@
     .cartGood-category {
         // margin-top: auto;
         margin-bottom: auto;
+        margin-right: auto;
     
         p {
             font-size: 9px;

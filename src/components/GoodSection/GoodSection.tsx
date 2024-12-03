@@ -18,7 +18,7 @@ import { CustomContextMain } from '../../context/MainContext'
 // }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const GoodSection: React.FC<any> = ({titleGood, price, reviews, categoryChildren, photoGood}) => {
+const GoodSection: React.FC<any> = ({article, titleGood, price, reviews, categoryChildren, photoGood, parameter}) => {
     // const [isMore, setIsMore] = React.useState(false)
     const location = useLocation();
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -67,6 +67,14 @@ const GoodSection: React.FC<any> = ({titleGood, price, reviews, categoryChildren
                 </div>
             )
         }
+        {
+            location && location.pathname === '/favorite' && (
+                <div className='goodSection-character goodSection-article'>
+                    <p>Артикул:</p>
+                    <p>{article}</p>
+                </div>
+            )
+        }
         <h2>{titleGood}</h2>
         {
             location && location.pathname !== '/comparison' && (
@@ -99,6 +107,36 @@ const GoodSection: React.FC<any> = ({titleGood, price, reviews, categoryChildren
         </div>
 
         {
+            location && location.pathname === '/favorite' && (
+                <>
+                    <div className='goodSection-character goodSection-material'>
+                        <p>Материал изделия:</p>
+                        <p>{parameter[2].valueParameter}</p>
+                    </div>
+                    <div className='goodSection-character goodSection-material'>
+                        <p>Цвет изделия:</p>
+                        <p>серый</p>
+                    </div>
+                    <div className='goodSection-character goodSection-material'>
+                        <p>Размер изделия:</p>
+                        <p>{parameter[parameter.length - 4].valueParameter} x {parameter[parameter.length - 3].valueParameter} x {parameter[parameter.length - 2].valueParameter}</p>
+                    </div>
+                    <div className='goodSection-character goodSection-material'>
+                        <p>Производитель:</p>
+                        <p>Печи России</p>
+                    </div>
+
+                    <div className='cartGood-category'>
+                            <p>{categoryChildren}</p>
+                            <div >
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path></svg>
+                            </div>
+                    </div>
+                </>
+            )
+        }
+
+        {
             location.pathname === '/' && (
                 <div onClick={(e) => e.preventDefault()}>
                     {
@@ -123,17 +161,20 @@ const GoodSection: React.FC<any> = ({titleGood, price, reviews, categoryChildren
                             </div>
                         )
                     }
-                    <div className='goodSection-more' onClick={morePopupFn}>
-                        <svg width="23" height="12" viewBox="0 0 23 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5.91525 8C6.97302 8 7.83051 7.10457 7.83051 6C7.83051 4.89543 6.97302 4 5.91525 4C4.85749 4 4 4.89543 4 6C4 7.10457 4.85749 8 5.91525 8Z" stroke="black" strokeLinejoin="round"/>
-                            <path d="M11.6613 8C12.7191 8 13.5766 7.10457 13.5766 6C13.5766 4.89543 12.7191 4 11.6613 4C10.6036 4 9.74609 4.89543 9.74609 6C9.74609 7.10457 10.6036 8 11.6613 8Z" stroke="black" strokeLinejoin="round"/>
-                            <path d="M17.4074 8C18.4652 8 19.3227 7.10457 19.3227 6C19.3227 4.89543 18.4652 4 17.4074 4C16.3497 4 15.4922 4.89543 15.4922 6C15.4922 7.10457 16.3497 8 17.4074 8Z" stroke="black" strokeLinejoin="round"/>
-                        </svg>
-                    </div>
+                   
                     
                 </div>
             )
         }
+
+        <div className='goodSection-more' onClick={morePopupFn}>
+            <svg width="23" height="12" viewBox="0 0 23 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.91525 8C6.97302 8 7.83051 7.10457 7.83051 6C7.83051 4.89543 6.97302 4 5.91525 4C4.85749 4 4 4.89543 4 6C4 7.10457 4.85749 8 5.91525 8Z" stroke="black" strokeLinejoin="round"/>
+                <path d="M11.6613 8C12.7191 8 13.5766 7.10457 13.5766 6C13.5766 4.89543 12.7191 4 11.6613 4C10.6036 4 9.74609 4.89543 9.74609 6C9.74609 7.10457 10.6036 8 11.6613 8Z" stroke="black" strokeLinejoin="round"/>
+                <path d="M17.4074 8C18.4652 8 19.3227 7.10457 19.3227 6C19.3227 4.89543 18.4652 4 17.4074 4C16.3497 4 15.4922 4.89543 15.4922 6C15.4922 7.10457 16.3497 8 17.4074 8Z" stroke="black" strokeLinejoin="round"/>
+            </svg>
+        </div>
+
     </div>
   )
   

@@ -385,7 +385,7 @@
         gap: 30px 15px;
 
         .goodSection {
-            padding: 0px;
+            padding: 10px;
             width: 100%;
             position: relative;
             display: flex;
@@ -398,6 +398,7 @@
             h2 {
               font-size: 14px;
               margin-top: 0;
+              margin-right: auto;
             }
             .goodSection-gallery {
               height: 220px;
