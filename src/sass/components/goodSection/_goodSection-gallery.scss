@@ -8,7 +8,7 @@
 }
 
 .goodSection-gallery {
-    height: max-content;
+    height: 230px;
     margin: 0 auto;
     background-image: url(https://myxtaridse.github.io/ecohome/assets/image-BlcObsXO.png);
     background-size: cover;
@@ -16,7 +16,7 @@
     border: 1px solid lightgray;
     padding: 0;
     width: 100%;
-    overflow-x: hidden;
+    
     
     
 
@@ -28,7 +28,7 @@
         -webkit-backdrop-filter: blur(2px);
         background-color: rgba(171, 171, 171, 0.251);
         transition: all .4s;
-        transform: scale(1.05);
+        // transform: scale(1.05);
     }
 }
 
