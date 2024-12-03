@@ -381,7 +381,8 @@
         padding-left: 0;
         padding-right: 0;
 
-        width: 100vw;
+        width: max-content;
+        min-width: 100vw;
         margin: 20px auto 0 -2.5vw;
         display: grid;
         justify-content: center;
@@ -397,6 +398,7 @@
             align-items: center;
             gap: 6px;
             height: 100%;
+            overflow-x: hidden;
       
             h2 {
               font-size: 14px;
