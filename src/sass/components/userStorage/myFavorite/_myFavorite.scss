@@ -397,7 +397,7 @@
             align-items: center;
             gap: 6px;
             height: 100%;
-            // overflow-x: hidden;
+            overflow-x: hidden;
       
             h2 {
               font-size: 14px;
@@ -405,10 +405,16 @@
               margin-right: auto;
               margin-bottom: auto;
             }
+
+            .goodSection-gallery-block {
+                height: 220px;
+            }
+
             .goodSection-gallery {
+                overflow-y: hidden;
                 transform: scale(0.92);
-              height: 220px;
-              width: 46vw;
+                height: 220px;
+                width: 46vw;
             }
       
             .goodSection-rating {
