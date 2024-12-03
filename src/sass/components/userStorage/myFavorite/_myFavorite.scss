@@ -396,8 +396,8 @@
             flex-direction: column;
             align-items: center;
             gap: 6px;
-            height: 100%;
-            overflow-x: hidden;
+            height: max-content;
+            // overflow-x: hidden;
       
             h2 {
               font-size: 14px;
