@@ -397,7 +397,7 @@
             align-items: center;
             gap: 6px;
             height: 100%;
-            overflow-x: hidden;
+            overflow: hidden;
       
             h2 {
               font-size: 14px;
@@ -406,7 +406,9 @@
               margin-bottom: auto;
             }
 
+
             .goodSection-gallery-block {
+                
                 height: 220px;
             }
 
