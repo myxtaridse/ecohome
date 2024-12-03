@@ -27,7 +27,7 @@
 }
 .good-category p {
   text-overflow: ellipsis;
-  overflow: hidden;
+  overflow-x: hidden;
   max-width: 110px;
   height: 20px;
   font-size: 12px;
