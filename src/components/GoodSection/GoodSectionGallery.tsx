@@ -12,6 +12,8 @@ const GoodSectionGallery: React.FC<GoodSectionGalleryType> = ({gallery, width}) 
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const startTouchFn = (e: any) => {
+    console.log(startTouch);
+    
     if (e) {
       setStartTouch(e.touches[0].clientX)
     }

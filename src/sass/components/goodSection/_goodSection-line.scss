@@ -182,32 +182,29 @@
 
 @media (max-width: 500px) {
 
-    .goodSection-line-gallery-block {
-        height: 115px;
-        margin: 0 auto;
-        background-image: url(https://myxtaridse.github.io/ecohome/assets/image-BlcObsXO.png);
-        background-size: cover;
-        overflow: hidden;
-        border-radius: 5px;
-        border: 1px solid lightgray;
-        width: max-content;
-        width: 25vw;
-    }
-
     .goodSection-line {
         min-height: 130px;
         width: 100%;
         margin: 0;
-        padding: 8px;
+        padding: 0;
     
         h2 {
             margin-top: 10px;
             font-size: 12px;
         }
 
+        .goodSection-line-block-images {
+            width: 25vw;
+            height: 100%;
+            overflow-x: hidden;
+            
+
+        }
+
+
         .goodSection-gallery {
-            height: 115px;
-            // width: 25vw;
+            height: 100px;
+            width: 20vw;
 
         }
         .goodSection-exchange {

@@ -385,15 +385,21 @@
         gap: 15px;
 
         .goodSection-line {
-            width: 100vw;
+            width: 100%;
             align-items: start;
-            justify-content: start;
+            justify-content: center;
             padding: 10px 5px 5px 10px;
-            height: max-content;
+            height: 100%;
+            position: relative;
+            gap: 0;
+
+            
     
             .goodSection-gallery {
+                flex-shrink: 0;
                 height: 100px;
-            }
+                // width: 25vw;
+              }
             .star-container {
                 transform: translateY(1px);
                 width: 13px !important;
@@ -411,7 +417,7 @@
             margin: 5px;
             display: grid;
             width: 90vw;
-            margin-left: -95px;
+            transform: translateX(-95px);
             grid-template-columns: 100px;
             
     

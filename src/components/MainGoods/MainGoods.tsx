@@ -9,7 +9,6 @@ interface MainGoodsType {
 }
 
 const MainGoods: React.FC<MainGoodsType> = ({ goods, title }) => {
-  console.log(goods);
   
   return (
     <div className="mainGoods">
