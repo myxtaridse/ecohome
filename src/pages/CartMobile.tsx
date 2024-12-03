@@ -1,10 +1,26 @@
-// import React from 'react'
+import React from 'react'
 import CartGoods from '../components/UserStorage/Cart/CartGoods'
-import list from '../../db.json'
 import GoodSection from '../components/GoodSection/GoodSection'
 import { Link } from 'react-router-dom'
+import { selectGoods } from '../redux/goodsSlice/selectorGoods'
+import { useSelector } from 'react-redux'
+import { useAppDispatch } from '../redux/store'
+import { fetchGoods } from '../redux/goodsSlice/asyncActions'
 
 const CartMobile = () => {
+
+  const {goods} = useSelector(selectGoods);
+  const dispatch = useAppDispatch()
+
+  console.log(goods);
+  
+
+  React.useEffect(() => {
+    if (dispatch) {
+      dispatch(fetchGoods())
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <div className='cart-block'>
@@ -46,7 +62,7 @@ const CartMobile = () => {
         <h2 className='cart-title'>Рекомендуем вам</h2>
         <div className='cartMobile-recommend-goods'>
             {
-                list && list.goods.map((good) => <GoodSection {...good} />)
+                goods.length && goods.map((good) => <GoodSection key={good.id} {...good} />)
             }
         </div>
       </div>

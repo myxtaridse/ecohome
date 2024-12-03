@@ -193,30 +193,12 @@
             font-size: 12px;
         }
 
-        .goodSection-line-block-images {
-            width: 35vw;
-            overflow: hidden;
-        }
-
-        .goodSection-gallery-block {
-            margin-left: -30vw;
-            display: flex;
-            align-items: center;
-            justify-content: start;
-            gap: 5vw;
-            transition: .4s;
-            width: 100%;
-        }
         
         .goodSection-gallery {
-            height: 130px;
-            margin: 0 auto;
-            background-image: url(https://myxtaridse.github.io/ecohome/assets/image-BlcObsXO.png);
-            background-size: cover;
-            border-radius: 5px;
-            border: 1px solid lightgray;
-            width: 25vw;
+            height: 150px;
+            width: 150px;
         }
+
         .goodSection-exchange {
             margin-top: 0;
             p {

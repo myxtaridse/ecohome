@@ -23,13 +23,18 @@ const GoodSectionGallery: React.FC<GoodSectionGalleryType> = ({gallery, width}) 
 
     if (startTouch) {
       const endTouch = e.changedTouches[0].clientX;
-      const swipeDistance = endTouch - startTouch;
+      const swipeDistance = endTouch - startTouch
+      console.log(swipeDistance);
       
       if (swipeDistance) {
-        setNowImage((prev) =>
-          swipeDistance > 0 ? Math.max(0, prev - 1) : Math.min(gallery.length, prev + 1)
-        );
-        // setStartTouch(0)
+        if (swipeDistance > 50) {
+          setNowImage((prev) =>
+            swipeDistance > 0 ? Math.max(0, prev - 1) : Math.min(gallery.length - 1, prev + 1)
+          );
+        } else if (swipeDistance < -50) {
+          setNowImage((prev) => Math.min(gallery.length - 1, prev + 1))
+        }
+        setStartTouch(0)
       }
       
     }
@@ -39,9 +44,9 @@ const GoodSectionGallery: React.FC<GoodSectionGalleryType> = ({gallery, width}) 
 
   return (
     <div className='goodSection-gallery-block'
-    // style={{ transform: `translateX(${((width * (gallery.length - 1)) / 2) - width * nowImage}vw)`}}
-    style={{ transform: `translateX(${width - width * nowImage}vw)`}}
-
+    style={{ transform: `translateX(${((width * (gallery.length - 1)) / 2) - width * nowImage}vw)`}}
+    onClick={(e) => console.log(e)
+    }
     onTouchStart={(e) => startTouchFn(e)}
     onTouchEnd={(e) => endTouchFn(e)}
     >

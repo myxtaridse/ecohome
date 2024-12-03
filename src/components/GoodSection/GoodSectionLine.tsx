@@ -1,7 +1,7 @@
 import React from 'react'
-import GoodSectionGallery from './GoodSectionGallery'
 import Rating from '../Rating'
 import { CustomContextMain } from '../../context/MainContext';
+import image404 from '../../assets/images-site/404.png';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const GoodSectionLine: React.FC<any> = ({article, titleGood, categoryChildren, price, description, parameter, reviews, photoGood }) => {
@@ -61,9 +61,12 @@ const GoodSectionLine: React.FC<any> = ({article, titleGood, categoryChildren, p
 
   return (
     <div className='goodSection-line'>
-        <div className='goodSection-line-block-images'>
-            <GoodSectionGallery gallery={photoGood} width={30} />
-        </div>
+        <div className='goodSection-gallery' style={{
+            backgroundImage: `url(${photoGood.length ? photoGood[0] : image404})`
+          }}
+          >
+              <img src={photoGood.length ? photoGood[0] : image404} alt="" />
+          </div>
     <div className='goodSection-line-info'>
         <h2>{titleGood}</h2>
         <div className='goodSection-rating'>

@@ -123,7 +123,7 @@ const MyFavorite = () => {
         'myFavorite-goods', goods.length ? (isListLine ? 'myFavorite-goods-line' : 'myFavorite-goods-block') : 'myFavorite-notFound'].join(" ")}>
         {
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          goods && goods.length ? goods.map((item: any) => windowRef.current > 500 && item ? isListLine ? <GoodSectionLine {...item} key={item.id} /> : <GoodSection {...item} key={item.id} /> : <GoodSectionLine {...item} key={item.id} />) : 
+          goods && goods.length ? goods.map((item: any) => windowRef.current > 500 && item ? isListLine ? <GoodSectionLine {...item} key={item.id} /> : <GoodSection {...item} key={item.id} /> : <GoodSection {...item} key={item.id} />) : 
           <NotFound />
         }
        
