@@ -21,6 +21,10 @@
     grid-row-start: 1;
     grid-column-start: 1;
     grid-column-end: 3;
+
+    .cart-main-delete-block {
+        margin: 10px 3px 0;
+    }
 }
 .myFavorite-head-flex {
     margin-top: 0px;
@@ -399,6 +403,7 @@
               font-size: 14px;
               margin-top: 0;
               margin-right: auto;
+              margin-bottom: auto;
             }
             .goodSection-gallery {
               height: 220px;
@@ -408,8 +413,8 @@
             }
       
             .goodSection-rating {
-              margin-top: auto;
-              margin-right: auto;
+                margin-top: auto;
+                width: 100%;
               .star-container {
                 line-height: 20px;
                 width: 15px !important;
@@ -423,13 +428,19 @@
               p {
                 font-size: 13px;
               }
+
+              h1 {
+                font-size: 20px;
+                transform: translateY(-4px);
+                margin-left: auto;
+              }
             }
       
             .goodSection-actions-price {
               h1 {
                 position: absolute;
-                bottom: 11px;
-                right: 0;
+                bottom: 123px;
+                right: 10px;
                 font-size: 16px;
               }
             }

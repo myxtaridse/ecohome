@@ -81,6 +81,7 @@ const GoodSection: React.FC<any> = ({article, titleGood, price, reviews, categor
                 <div className='goodSection-rating'>
                     <Rating rating={averageRating ? averageRating / reviews.length : 5} />
                     <p>{averageRating ? averageRating / reviews.length : 5}</p>
+                    <h1>{price} ₽</h1>
                 </div>
             )
         }
@@ -103,7 +104,7 @@ const GoodSection: React.FC<any> = ({article, titleGood, price, reviews, categor
                     </svg>
                 </div>
             </div>
-            <h1>{price} ₽</h1>
+            {/* <h1>{price} ₽</h1> */}
         </div>
 
         {
