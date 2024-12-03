@@ -14,10 +14,10 @@ import { fetchGoods } from '../redux/goodsSlice/asyncActions';
 
 const MyFavorite = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const {setPathValue, pathFavorite, storageFavorite, windowRef}: any = React.useContext(CustomContextMain);
+  const {setPathValue, pathFavorite, windowRef}: any = React.useContext(CustomContextMain);
   const [isListLine, setIsListLine] = React.useState(false);
-  const [minPrice, setMinPrice] = React.useState(0);
-  const [maxPrice, setMaxPrice] = React.useState(0);
+  // const [minPrice, setMinPrice] = React.useState(0);
+  // const [maxPrice, setMaxPrice] = React.useState(0);
   const {goods} = useSelector(selectGoods)
   const dispatch = useAppDispatch();
 
@@ -57,7 +57,7 @@ const MyFavorite = () => {
   // // eslint-disable-next-line react-hooks/exhaustive-deps
   // }, [storageFavorite])
 
-  console.log(storageFavorite, setMaxPrice, setMinPrice);
+  // console.log(storageFavorite, setMaxPrice, setMinPrice);
   
 
   return (
@@ -108,10 +108,10 @@ const MyFavorite = () => {
       {
         windowRef > 500 && <div className='myFavorite-filter'>
         <h3>Цена, руб.</h3>
-        <div className='myFavorite-filter-input'>
+        {/* <div className='myFavorite-filter-input'>
           <input placeholder={`от ${minPrice}`} value={minPrice ? `от ${0}` : ''} />
           <input placeholder={`до ${maxPrice}`} value={maxPrice ? `от ${0}` : ''} />
-        </div>
+        </div> */}
         <SliderPrice />
         
       </div>

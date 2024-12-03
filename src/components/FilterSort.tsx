@@ -4,12 +4,12 @@ import { sortList } from '../const/const';
 
 const FilterSort = () => {
     const [isPopup, setIsPopup] = React.useState(false);
-    const [minPrice, setMinPrice] = React.useState(0)
-    const [maxPrice, setMaxPrice] = React.useState(0)
+    // const [minPrice, setMinPrice] = React.useState(0)
+    // const [maxPrice, setMaxPrice] = React.useState(0)
     const [selectItem, setSelectItem] = React.useState(0);
     
 
-    console.log(setMinPrice, setMaxPrice, 'log');
+    // console.log(setMinPrice, setMaxPrice, 'log');
     
 
   return (
@@ -82,10 +82,10 @@ const FilterSort = () => {
                         <div className='filterSort-filter'>
                             
                             <h4>Цена, руб.</h4>
-                            <div className='filterSort-filter-input'>
+                            {/* <div className='filterSort-filter-input'>
                             <input placeholder={`от ${minPrice}`} value={minPrice ? `от ${0}` : ''} />
                             <input placeholder={`до ${maxPrice}`} value={maxPrice ? `от ${0}` : ''} />
-                            </div>
+                            </div> */}
                             <SliderPrice />
                         </div>
                     </div>

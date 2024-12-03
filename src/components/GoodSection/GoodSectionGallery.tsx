@@ -12,7 +12,6 @@ const GoodSectionGallery: React.FC<GoodSectionGalleryType> = ({gallery, width}) 
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const startTouchFn = (e: any) => {
-    console.log(startTouch);
     
     if (e) {
       setStartTouch(e.touches[0].clientX)
@@ -21,16 +20,18 @@ const GoodSectionGallery: React.FC<GoodSectionGalleryType> = ({gallery, width}) 
   
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const endTouchFn = (e: any) => {
+
     if (startTouch) {
       const endTouch = e.changedTouches[0].clientX;
-      const swipeDistance = endTouch - startTouch
-
-      if (swipeDistance > 50) {
-        setNowImage((prev) => Math.max(0, prev - 1))
-      } else if (swipeDistance < -50) {
-        setNowImage((prev) => Math.min(gallery.length - 1, prev + 1))
+      const swipeDistance = endTouch - startTouch;
+      
+      if (swipeDistance) {
+        setNowImage((prev) =>
+          swipeDistance > 0 ? Math.max(0, prev - 1) : Math.min(gallery.length, prev + 1)
+        );
+        // setStartTouch(0)
       }
-      setStartTouch(0)
+      
     }
   }
   
@@ -38,7 +39,8 @@ const GoodSectionGallery: React.FC<GoodSectionGalleryType> = ({gallery, width}) 
 
   return (
     <div className='goodSection-gallery-block'
-    style={{ transform: `translateX(${((width * (gallery.length - 1)) / 2) - width * nowImage}vw)`}}
+    // style={{ transform: `translateX(${((width * (gallery.length - 1)) / 2) - width * nowImage}vw)`}}
+    style={{ transform: `translateX(${width - width * nowImage}vw)`}}
 
     onTouchStart={(e) => startTouchFn(e)}
     onTouchEnd={(e) => endTouchFn(e)}

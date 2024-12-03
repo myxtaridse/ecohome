@@ -390,16 +390,15 @@
             justify-content: center;
             padding: 10px 5px 5px 10px;
             height: 100%;
-            position: relative;
             gap: 0;
 
             
     
             .goodSection-gallery {
                 flex-shrink: 0;
-                height: 100px;
-                // width: 25vw;
+                height: 130px;
               }
+
             .star-container {
                 transform: translateY(1px);
                 width: 13px !important;
