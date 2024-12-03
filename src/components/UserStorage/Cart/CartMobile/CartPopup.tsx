@@ -38,9 +38,7 @@ const CartPopup: React.FC<CartPopupType> = ({ setIsMore, children }) => {
     }
     
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const touchEndFn = (e: any) => {
-      // if (e.target)
-      console.log(e.target?.localName);
+    const touchEndFn = () => {
       
       
       if (!isTouch) {
@@ -73,7 +71,7 @@ const CartPopup: React.FC<CartPopupType> = ({ setIsMore, children }) => {
         className="cartPopup"
         onTouchStart={(e) => touchStartFn(e)}
         onTouchMove={(e) => touchMoveFn(e)}
-        onTouchEnd={(e) => touchEndFn(e)}
+        onTouchEnd={() => touchEndFn()}
 
         style={{transform: `translateY(${currentTouch}px)`,
         transition: isTouch ? 'none' : 'transform 0.3s ease'

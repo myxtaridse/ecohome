@@ -12,9 +12,6 @@ const CartMobile = () => {
   const {goods} = useSelector(selectGoods);
   const dispatch = useAppDispatch()
 
-  console.log(goods);
-  
-
   React.useEffect(() => {
     if (dispatch) {
       dispatch(fetchGoods())

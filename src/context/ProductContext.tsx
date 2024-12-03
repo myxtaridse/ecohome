@@ -30,11 +30,7 @@ const ProductContext = ({children}: any) => {
 
   React.useEffect(() => {
      if (articleLocation && goods) {
-        const find = goods.find((goodItem) => {
-          console.log(goodItem, articleLocation);
-          
-          return goodItem.article === articleLocation
-        });
+        const find = goods.find((goodItem) => goodItem.article === articleLocation);
         if (find) {
           setGood(find)
         }  

@@ -14,9 +14,9 @@
     background-size: cover;
     border-radius: 5px;
     border: 1px solid lightgray;
+    padding: 0;
     width: 100%;
-    pointer-events: auto;
-    
+    overflow: hidden;
     
     
 
@@ -29,7 +29,6 @@
         background-color: rgba(171, 171, 171, 0.251);
         transition: all .4s;
         transform: scale(1.05);
-        pointer-events: auto;
     }
 }
 

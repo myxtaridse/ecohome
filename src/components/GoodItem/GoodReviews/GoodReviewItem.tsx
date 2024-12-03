@@ -6,7 +6,7 @@ import { CustomContextMain } from '../../../context/MainContext';
 const GoodReviewItem = () => {
   
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const {setIsMore, setChildrenPopup}: any = React.useContext(CustomContextMain);
+    const {setIsMore, setChildrenPopup, isMore}: any = React.useContext(CustomContextMain);
     const [itemComplaint, setItemComplaint] = React.useState<number | null>(null)
     const [isComplaint, setIsComplaint] = React.useState(false)
 
@@ -14,6 +14,12 @@ const GoodReviewItem = () => {
         setIsMore(true)
         setIsComplaint(true)
     }
+
+    React.useEffect(() => {
+        if (!isMore) {
+            setIsComplaint(false)
+        }
+    }, [isMore])
 
     React.useEffect(() => {
         if (isComplaint) {
