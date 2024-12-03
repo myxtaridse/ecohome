@@ -8,7 +8,7 @@
 }
 
 .goodSection-gallery {
-    height: 230px;
+    height: max-content;
     margin: 0 auto;
     background-image: url(https://myxtaridse.github.io/ecohome/assets/image-BlcObsXO.png);
     background-size: cover;
@@ -16,7 +16,7 @@
     border: 1px solid lightgray;
     padding: 0;
     width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
     
     
 
