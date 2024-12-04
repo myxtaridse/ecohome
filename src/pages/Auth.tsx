@@ -2,9 +2,14 @@
 
 const Auth = () => {
   return (
-    <div>
-        
-    </div>
+    <>
+        <div>
+            <input type="text" placeholder="Фамилия Имя Отчество" />
+        </div>
+        <div>
+            <input type="text" placeholder="Номер телефона" />
+        </div>
+    </>
   )
 }
 

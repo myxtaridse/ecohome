@@ -35,6 +35,10 @@ function App() {
     () =>
       import(/* webpackChunkName: "LogIn" */ "./pages/LogIn")
   );
+  const Auth = React.lazy(
+    () =>
+      import(/* webpackChunkName: "LogIn" */ "./pages/Auth")
+  );
 
   return (
     <Routes>
@@ -88,7 +92,7 @@ function App() {
             } />
           <Route path="/auth" element={
               <React.Suspense fallback={<Loading />}>
-                <LogIn />
+                <Auth />
               </React.Suspense>
             } />
       </Route>

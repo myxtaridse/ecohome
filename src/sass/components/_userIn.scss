@@ -29,7 +29,8 @@
         border: none;
         border-radius: 0;
         border-bottom: 1px solid lightgray;
-        padding: 10px 15px 10px 5px;
+        padding: 10px 15px 10px 8px;
+        font-size: 17px;
     }
 
     p {
@@ -85,6 +86,10 @@
         div {
             width: 18px;
             height: 18px;
+
+            svg {
+                fill: #565656;
+            }
         }
     }
 }
