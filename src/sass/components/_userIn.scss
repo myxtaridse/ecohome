@@ -30,7 +30,7 @@
         border-radius: 0;
         border-bottom: 1px solid lightgray;
         padding: 10px 15px 10px 8px;
-        font-size: 17px;
+        font-size: 16px;
     }
 
     p {
@@ -67,8 +67,8 @@
 
     div {
         position: absolute;
-        top: 20%;
-        right: 5%;
+        top: 27%;
+        right: 3%;
     }
 }
 
@@ -92,4 +92,8 @@
             }
         }
     }
+}
+
+.userIn-auth {
+    margin: 10px 0 0;
 }

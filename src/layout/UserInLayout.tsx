@@ -8,7 +8,7 @@ const UserIn = () => {
   const navigate = useNavigate()
   const [isShowPassword, setIsShowPassword] = React.useState(false)
   return (
-    <div className='userIn'>
+    <div className={['userIn', location && location.pathname === '/auth' ? 'userIn-auth' : ''].join(" ")}>
         <div className='userIn-logo'>
             <img src={logo} alt='logo' />
         </div>
