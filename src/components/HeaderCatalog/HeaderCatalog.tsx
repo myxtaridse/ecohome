@@ -17,7 +17,9 @@ const HeaderCatalog = () => {
       </Link>
 
       <HeaderCatalogList />
-      <HeaderCatalogInput />
+      <Link to='/user'>
+        <HeaderCatalogInput />
+      </Link>
       <HeaderCatalogIcons />
       {/* <div className="header-catalog-show">
       <Catalog />

@@ -39,6 +39,10 @@ function App() {
     () =>
       import(/* webpackChunkName: "LogIn" */ "./pages/Auth")
   );
+  const User = React.lazy(
+    () =>
+      import(/* webpackChunkName: "LogIn" */ "./pages/User")
+  );
 
   return (
     <Routes>
@@ -81,6 +85,11 @@ function App() {
         <Route path="/comparison" element={
           <React.Suspense fallback={<Loading />}>
             <Comparison />
+          </React.Suspense>
+        } />
+        <Route path="/user" element={
+          <React.Suspense fallback={<Loading />}>
+            <User />
           </React.Suspense>
         } />
         </Route>
