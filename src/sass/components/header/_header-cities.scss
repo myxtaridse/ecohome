@@ -114,8 +114,8 @@
     padding: 10px 20px;
 
     .header-popup-input {
-      margin: 0 auto;
-      // width: 94%;
+      margin: 0 0 0 -1vw;
+      width: 92vw;
       border-bottom: 1px solid #565656;
       border-radius: 0;
       
@@ -147,7 +147,9 @@
     margin: 10px auto;
     font-size: 14px;
     font-weight: 300;
-    height: 100%;
+    height: 80%;
+    scrollbar-width: thin;
+    scrollbar-color: #cf4e32 #F2F5F9; /* плашка скролла и дорожка */
   }
   
   .header-myCity {

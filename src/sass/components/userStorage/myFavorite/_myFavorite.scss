@@ -394,7 +394,7 @@
             display: flex;
             align-items: center;
             gap: 6px;
-            height: 100%;
+            height: max-content;
       
             h2 {
               font-size: 14px;
