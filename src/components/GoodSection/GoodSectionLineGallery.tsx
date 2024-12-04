@@ -6,11 +6,12 @@ interface GoodSectionGalleryType {
   width: number        // ширина галереи (в процентах)
 }
 
-const GoodSectionGallery: React.FC<GoodSectionGalleryType> = ({gallery, width}) => {
+const GoodSectionLineGallery: React.FC<GoodSectionGalleryType> = ({gallery, width}) => {
   const [nowImage, setNowImage] = React.useState(0);  // Индекс текущей картинки
   const [startTouch, setStartTouch] = React.useState<number>(0);  // Стартовое положение для жестов
 
   // Обработка начала жеста (касание)
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const startTouchFn = (e: any) => {
     if (e) {
       setStartTouch(e.touches[0].clientX);  // Сохраняем стартовую позицию касания
@@ -18,6 +19,7 @@ const GoodSectionGallery: React.FC<GoodSectionGalleryType> = ({gallery, width}) 
   }
 
   // Обработка окончания жеста (касание)
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const endTouchFn = (e: any) => {
     if (startTouch) {
       const endTouch = e.changedTouches[0].clientX;  // Позиция окончания жеста
@@ -63,4 +65,4 @@ const GoodSectionGallery: React.FC<GoodSectionGalleryType> = ({gallery, width}) 
   );
 }
 
-export default GoodSectionGallery;
+export default GoodSectionLineGallery;

@@ -2,11 +2,12 @@ import React from 'react'
 import Rating from '../Rating'
 import { CustomContextMain } from '../../context/MainContext';
 import image404 from '../../assets/images-site/404.png';
+import { useLocation } from 'react-router-dom';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const GoodSectionLine: React.FC<any> = ({article, titleGood, categoryChildren, price, description, parameter, reviews, photoGood }) => {
+const GoodSectionLine: React.FC<any> = ({article, titleGood, categoryChildren, price, parameter, reviews, photoGood }) => {
     
-    
+    const location = useLocation()
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const averageRating = reviews.reduce((sum: number, review: any) => {
@@ -73,18 +74,36 @@ const GoodSectionLine: React.FC<any> = ({article, titleGood, categoryChildren, p
             <Rating rating={averageRating ? averageRating / reviews.length : 5} />
             <p>{averageRating ? averageRating / reviews.length : 5}</p>
         </div>
-        <h1>{price} ₽</h1>
+       <div className='goodSection-actions-price'>
+            <h1>{price} ₽</h1>
+       </div>
         <div className='goodSection-character goodSection-article'>
             <p>Артикул:</p>
             <p>{article}</p>
         </div>
-        <div className='goodSection-character goodSection-material'>
-            <p>Материал изделия:</p>
-            <p>{parameter[2].valueParameter}</p>
-        </div>
-        <div className='goodSection-description'>
-            <p><b>Описание:</b> {description}</p>
-        </div>
+        
+        {
+            location && location.pathname === '/favorite' && (
+                <>
+                    <div className='goodSection-character goodSection-material'>
+                        <p>Материал изделия:</p>
+                        <p>{parameter[2].valueParameter}</p>
+                    </div>
+                    <div className='goodSection-character goodSection-color'>
+                        <p>Цвет изделия:</p>
+                        <p>серый</p>
+                    </div>
+                    <div className='goodSection-character goodSection-size'>
+                        <p>Размер изделия:</p>
+                        <p>{parameter[parameter.length - 4].valueParameter} x {parameter[parameter.length - 3].valueParameter} x {parameter[parameter.length - 2].valueParameter}</p>
+                    </div>
+                    <div className='goodSection-character goodSection-manufacturer'>
+                        <p>Производитель:</p>
+                        <p>Печи России</p>
+                    </div>
+                </>
+            )
+        }
         <div className='goodSection-exchange'>
                 <div>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4.00488 5.00275V19.0027H20.0049V5.00275H4.00488ZM3.00488 3.00275H21.0049C21.5572 3.00275 22.0049 3.45046 22.0049 4.00275V20.0027C22.0049 20.555 21.5572 21.0027 21.0049 21.0027H3.00488C2.4526 21.0027 2.00488 20.555 2.00488 20.0027V4.00275C2.00488 3.45046 2.4526 3.00275 3.00488 3.00275ZM15.0049 7.00275L18.5049 10.0027L15.0049 13.0027V11.0027H11.0049V9.00275H15.0049V7.00275ZM9.00488 17.0027L5.50488 14.0027L9.00488 11.0027V13.0027H13.0049V15.0027H9.00488V17.0027Z"></path></svg>
