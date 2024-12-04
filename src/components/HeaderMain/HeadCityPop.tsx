@@ -4,13 +4,25 @@ import Arrow from "../Arrow";
 import { CustomContextMain } from "../../context/MainContext";
 
 const HeadCityPop = () => {
-  const [isPopup, setIsPopup] = React.useState(false);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const {city}: any = React.useContext(CustomContextMain);
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const {setIsMore, setChildrenPopup}: any = React.useContext(CustomContextMain);
+
+  const morePopupFn = () => {
+      setIsMore(true)
+      setChildrenPopup(
+          <div className='goodStars-popup-block'>
+               <Headpopup />
+           </div>
+      )
+  }
+
   
   return (
     <div className="header-cities">
-      <div className="header-myCity" onClick={() => setIsPopup(!isPopup)}>
+      <div className="header-myCity" onClick={morePopupFn}>
         <div className="header-city-svg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -26,9 +38,7 @@ const HeadCityPop = () => {
         <Arrow />
         </div>
       </div>
-      {isPopup === true && (
-        <Headpopup setIsPopup={setIsPopup}  />
-      )}
+      
     </div>
   );
 };

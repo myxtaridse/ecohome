@@ -2,11 +2,7 @@ import React from "react";
 import dataCities from "../../assets/cities/cities.json";
 import { CustomContextMain } from "../../context/MainContext";
 
-interface HeadpopupType {
-  setIsPopup: (isPopup: boolean) => void;
-}
-
-const Headpopup: React.FC<HeadpopupType> = ({ setIsPopup }) => {
+const Headpopup = () => {
   const [list, setList] = React.useState("");
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const {setCity}: any = React.useContext(CustomContextMain)
@@ -34,12 +30,6 @@ const Headpopup: React.FC<HeadpopupType> = ({ setIsPopup }) => {
   return (
     <div
       className="header-cities-popup-bg"
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      onClick={(e: any) => {
-        if (e.target.className === "header-cities-popup-bg") {
-          setIsPopup(false);
-        }
-      }}
     >
       <div className="header-cities-popup">
         <div className="header-catalog-input header-popup-input">
@@ -66,7 +56,6 @@ const Headpopup: React.FC<HeadpopupType> = ({ setIsPopup }) => {
             cities && cities.map((itemCities) => <div className="header-cities-popup-item"
               onClick={() => {
                 setCity(itemCities)
-                setIsPopup(false);
               }}
             >
               {itemCities.city}, {itemCities.area}
