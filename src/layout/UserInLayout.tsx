@@ -28,6 +28,7 @@ const UserIn = () => {
             }
         </h1>
         <div className='userIn-form'>
+          <Outlet />
             <div>
                 <input type="text" placeholder='E-mail / Телефон' />
             </div>
@@ -49,9 +50,10 @@ const UserIn = () => {
                     } 
                 </div>
             </div>
+            
             {
               location && location.pathname === '/auth' && (
-                <div>
+                <div className='userIn-sale'>
                     <Select />
                     <p>Получать <span>предложения о скидках и акциях</span></p>
                 </div>
@@ -77,7 +79,7 @@ const UserIn = () => {
               }
             </h4>
         </div>
-        <Outlet />
+        
     </div>
   )
 }

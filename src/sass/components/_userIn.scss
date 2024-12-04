@@ -24,8 +24,8 @@
     gap: 20px;
     width: 90%;
     input {
-        margin: 10px;
-        width: 94%;
+        margin: 10px 0;
+        width: 100%;
         border: none;
         border-radius: 0;
         border-bottom: 1px solid lightgray;
@@ -71,3 +71,20 @@
     }
 }
 
+.userIn-sale {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 15px;
+
+    .cart-main-select-all {
+        p {
+            display: none;
+        }
+
+        div {
+            width: 18px;
+            height: 18px;
+        }
+    }
+}
