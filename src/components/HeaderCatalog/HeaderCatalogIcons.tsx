@@ -66,9 +66,11 @@ const HeaderCatalogIcons = () => {
       </div>
       </Link>
 
-      <div className="header-catalog-login">
-        <HeaderLogIn />
-      </div>
+      <Link to='/login'>
+          <div className="header-catalog-login">
+            <HeaderLogIn />
+          </div>
+      </Link>
     </div>
   );
 };

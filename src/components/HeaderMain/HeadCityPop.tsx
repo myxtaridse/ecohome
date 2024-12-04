@@ -1,6 +1,6 @@
 import React from "react";
 import Headpopup from "./Headpopup";
-import Arrow from "../Arrow";
+// import Arrow from "../Arrow";
 import { CustomContextMain } from "../../context/MainContext";
 
 const HeadCityPop = () => {
@@ -45,9 +45,9 @@ const HeadCityPop = () => {
         </div>
 
         <h2>{city ? city.city : "Киров"}</h2>
-        <div className="header-arrow">
+        {/* <div className="header-arrow">
         <Arrow />
-        </div>
+        </div> */}
       </div>
       
     </div>

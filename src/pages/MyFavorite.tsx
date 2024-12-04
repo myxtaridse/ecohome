@@ -11,6 +11,7 @@ import { useSelector } from 'react-redux';
 import { selectGoods } from '../redux/goodsSlice/selectorGoods';
 import { useAppDispatch } from '../redux/store';
 import { fetchGoods } from '../redux/goodsSlice/asyncActions';
+import Select from '../components/Select';
 
 const MyFavorite = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -18,7 +19,6 @@ const MyFavorite = () => {
   const [isListLine, setIsListLine] = React.useState(false);
   // const [minPrice, setMinPrice] = React.useState(0);
   // const [maxPrice, setMaxPrice] = React.useState(0);
-  const [isSelectAll, setIsSelectAll] = React.useState(false);
   const {goods} = useSelector(selectGoods)
   const dispatch = useAppDispatch();
 
@@ -106,14 +106,7 @@ const MyFavorite = () => {
           </div>
         </div>
         <div className="cart-main-delete-block">
-            <div className="cart-main-select-all" onClick={() => setIsSelectAll(!isSelectAll)}>
-                <div>
-                {
-                    isSelectAll ? <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="rgb(207, 78, 50)"><path d="M4 3H20C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3ZM11.0026 16L18.0737 8.92893L16.6595 7.51472L11.0026 13.1716L8.17421 10.3431L6.75999 11.7574L11.0026 16Z"></path></svg> : <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4 3H20C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3ZM5 5V19H19V5H5Z"></path></svg>
-                }
-                </div>
-                <p>Выделить все</p>
-            </div>
+            <Select />
             <div className="cart-main-delete">
                 <div>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4 8H20V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V8ZM6 10V20H18V10H6ZM9 12H11V18H9V12ZM13 12H15V18H13V12ZM7 5V3C7 2.44772 7.44772 2 8 2H16C16.5523 2 17 2.44772 17 3V5H22V7H2V5H7ZM9 4V5H15V4H9Z"></path></svg>

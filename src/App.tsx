@@ -7,7 +7,7 @@ import CatalogPage from "./pages/CatalogPage";
 import Loading from "./components/Loading/Loading";
 import ErrorPage from "./pages/ErrorPage";
 import CartMobile from "./pages/CartMobile";
-// import GoodItemPage from "./pages/GoodItemPage"
+import UserIn from "./layout/UserInLayout";
 
 function App() {
 
@@ -30,6 +30,10 @@ function App() {
   const Checkout = React.lazy(
     () =>
       import(/* webpackChunkName: "Checkout" */ "./pages/Checkout")
+  );
+  const LogIn = React.lazy(
+    () =>
+      import(/* webpackChunkName: "LogIn" */ "./pages/LogIn")
   );
 
   return (
@@ -75,6 +79,18 @@ function App() {
             <Comparison />
           </React.Suspense>
         } />
+        </Route>
+      <Route element={<UserIn />}>
+          <Route path="/login" element={
+              <React.Suspense fallback={<Loading />}>
+                <LogIn />
+              </React.Suspense>
+            } />
+          <Route path="/auth" element={
+              <React.Suspense fallback={<Loading />}>
+                <LogIn />
+              </React.Suspense>
+            } />
       </Route>
     </Routes>
   );
