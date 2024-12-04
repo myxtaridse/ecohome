@@ -148,7 +148,10 @@
     font-size: 14px;
     font-weight: 300;
     height: 80%;
-    scrollbar-width: thin;
+    overflow-y: scroll;
+    padding-right: 5px;
+    padding-top: 5px;
+    scrollbar-width: auto;
     scrollbar-color: #cf4e32 #F2F5F9; /* плашка скролла и дорожка */
   }
   
