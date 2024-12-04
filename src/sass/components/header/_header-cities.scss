@@ -107,12 +107,58 @@
   .header-cities-popup {
     background-color: #fff;
     margin: 0 auto;
-    width: 50vw;
+    width: 100%;
     height: max-content;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
+
+    .header-popup-input {
+      margin: 0 auto;
+      // width: 94%;
+      border-bottom: 1px solid #565656;
+      border-radius: 0;
+      
+
+      input {
+        display: flex;
+        border: none;
+        border-radius: 0;
+      }
+    }
+
+      .header-catalog-search {
+        margin-left: auto;
+        width: 27px;
+        height: 27px;
+        border-radius: 0;
+        background-color: transparent;
+      }
   }
+
+  .header-cities-help {
+    margin-right: 0px;
+    margin-top: 15px;
+    font-size: 14px;
+  }
+
+  .header-cities-popup-list {
+    width: 100%;
+    margin: 10px auto;
+    font-size: 16px;
+    font-weight: 200;
+    height: 55vh;
+    overflow-y: scroll;
+    display: flex;
+    align-items: start;
+    // gap: 12px;
+    flex-direction: column;
+    padding-right: 5px;
+    padding-top: 5px;
+    scrollbar-width:auto;
+    scrollbar-color: #cf4e32 #F2F5F9; /* плашка скролла и дорожка */
+  }
+  
   .header-myCity {
     gap: 5px;
     font-size: 7px;
