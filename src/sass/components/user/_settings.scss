@@ -31,7 +31,7 @@
         height: 90px;
 
         img {
-            filter: brightness(70%) blur(1px);
+            filter: brightness(75%) blur(.8px);
         }
     }
 }
@@ -49,8 +49,8 @@
     border-radius: 50px;
 
     svg {
-        width: 30px;
-        height: 30px;
+        width: 24px;
+        height: 24px;
     }
 }
 
@@ -60,7 +60,7 @@
     align-items: start;
 
     button {
-        padding: 15px 7px;
+        padding: 20px 7px;
         border: none;
         border-bottom: 1px solid lightgray;
         background-color: #fff;
@@ -71,6 +71,7 @@
         width: 95%;
         margin: 0 auto;
         color: rgb(123, 123, 123);
+        font-size: 16px;
 
         div {
             margin-right: 10px;
@@ -89,7 +90,13 @@
     input {
         border: none;
         border-bottom: 1px solid lightgray;
+        color: rgb(123, 123, 123);
         width: 100%;
-        padding: 15px 7px;
+        padding: 20px 7px;
+        border-radius: 0;
+        font-size: 16px;
+    }
+    input::placeholder {
+        color: rgb(123, 123, 123);
     }
 }
