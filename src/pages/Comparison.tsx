@@ -1,19 +1,14 @@
 import React from 'react'
 import { CustomContextMain } from '../context/MainContext';
-import Arrow from '../components/Arrow';
 import ComparisonGoods from '../components/UserStorage/Comparison/ComparisonGoods';
-import Sorted from '../components/Sorted';
 import { useSelector } from 'react-redux';
 import { selectGoods } from '../redux/goodsSlice/selectorGoods';
 import { useAppDispatch } from '../redux/store';
 import { fetchGoods } from '../redux/goodsSlice/asyncActions';
 
 const Comparison = () => {
-  const [isSelector, setIsSelector] = React.useState(false);
-  // const [isSelectAll, setIsSelectAll] = React.useState(false);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [characterAll, setCharacterAll] = React.useState<any>(['Артикул']);
-  const widthSelector = React.useRef<HTMLDivElement>(null);
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const {setPathValue, pathFavorite}: any = React.useContext(CustomContextMain);
   const {goods} = useSelector(selectGoods);
@@ -73,7 +68,7 @@ const Comparison = () => {
   return (
     <div>
       <div className='comparison'>
-      <div className='myFavorite-head'>
+      {/* <div className='myFavorite-head'>
       <div className='cart-title-main'>
         <div>
         <svg
@@ -113,12 +108,12 @@ const Comparison = () => {
           </div>
           
         </div>
-      </div>
+      </div> */}
 
       
 
       <div className='myFavorite-goods comparison-goods'>
-        <div className='comparison-goods-sorted'>
+        {/* <div className='comparison-goods-sorted'>
           <div className="cart-main-delete-block comparison-delete-block">
               
               <div className="cart-main-delete">
@@ -129,7 +124,7 @@ const Comparison = () => {
               </div>
           </div>
           <Sorted />
-        </div>
+        </div> */}
         {
           
           goods && goods.length ? <ComparisonGoods goods={goods} characterAll={characterAll}  /> : 

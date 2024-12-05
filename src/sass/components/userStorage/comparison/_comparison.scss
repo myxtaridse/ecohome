@@ -70,6 +70,7 @@
                 display: none
             }
         };
+
     }
     .comparison-goods {
         width: 100vw;
@@ -114,12 +115,15 @@
             .goodSection-gallery {
                 height: 160px;
               }
+
+              .goodSection-more {
+                top: 10px;
+                right: -10px;
+              }
     
             
             .goodSection-actions {
-                width: 100%;
-                background-color: #fff;
-                padding: 5px;
+                display: none;
             }
     
         }

@@ -1,8 +1,9 @@
-import React from 'react'
-import GoodSectionGallery from './GoodSectionGallery'
-import Rating from '../Rating'
-import { useLocation } from 'react-router-dom'
-import { CustomContextMain } from '../../context/MainContext'
+import React from 'react';
+import GoodSectionGallery from './GoodSectionGallery';
+import Rating from '../Rating';
+import { useLocation } from 'react-router-dom';
+import { CustomContextMain } from '../../context/MainContext';
+import image404 from '../../assets/images-site/404.png';
 
 // export interface GoodSectionType {
 //     article: string,
@@ -58,7 +59,18 @@ const GoodSection: React.FC<any> = ({article, titleGood, price, reviews, categor
     
   return (
     <div className='goodSection'>
-        <div><GoodSectionGallery gallery={photoGood} width={51} /></div>
+        {
+            location && location.pathname === '/comparison' ? (
+                <div className='goodSection-gallery' style={{
+                    backgroundImage: `url(${photoGood.length ? photoGood[0] : image404})`
+                  }}
+                  >
+                      <img src={photoGood.length ? photoGood[0] : image404} alt="" />
+                  </div>
+            ) : (
+                <div><GoodSectionGallery gallery={photoGood} width={51} /></div>
+            )
+        }
         {
             location && location.pathname === '/' && (
                 <div className='goodSection-category'>
@@ -81,7 +93,6 @@ const GoodSection: React.FC<any> = ({article, titleGood, price, reviews, categor
                 <div className='goodSection-rating'>
                     <Rating rating={averageRating ? averageRating / reviews.length : 5} />
                     <p>{averageRating ? averageRating / reviews.length : 5}</p>
-                    <h1>{price} ₽</h1>
                 </div>
             )
         }
@@ -104,7 +115,7 @@ const GoodSection: React.FC<any> = ({article, titleGood, price, reviews, categor
                     </svg>
                 </div>
             </div>
-            {/* <h1>{price} ₽</h1> */}
+            <h1>{price} ₽</h1>
         </div>
 
         {

@@ -8,6 +8,7 @@ import Loading from "./components/Loading/Loading";
 import ErrorPage from "./pages/ErrorPage";
 import CartMobile from "./pages/CartMobile";
 import UserIn from "./layout/UserInLayout";
+import ActionsLayout from "./layout/ActionsLayout";
 
 function App() {
 
@@ -63,11 +64,19 @@ function App() {
             <ErrorPage />
           </React.Suspense>
         } />
-        <Route path="/favorite" element={
-          <React.Suspense fallback={<Loading />}>
-            <MyFavorite />
-          </React.Suspense>
-        } />
+        <Route element={<ActionsLayout />}>
+              <Route path="/favorite" element={
+                <React.Suspense fallback={<Loading />}>
+                  <MyFavorite />
+                </React.Suspense>
+              } />
+              <Route path="/comparison" element={
+                <React.Suspense fallback={<Loading />}>
+                  <Comparison />
+                </React.Suspense>
+              } />
+        </Route>
+        
         <Route path="/cart" element={
           <React.Suspense fallback={<Loading />}>
             {
@@ -81,11 +90,6 @@ function App() {
             <Checkout />
           }
         </React.Suspense>
-        } />
-        <Route path="/comparison" element={
-          <React.Suspense fallback={<Loading />}>
-            <Comparison />
-          </React.Suspense>
         } />
         <Route path="/user" element={
           <React.Suspense fallback={<Loading />}>

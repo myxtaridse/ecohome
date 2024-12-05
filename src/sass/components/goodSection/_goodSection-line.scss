@@ -199,7 +199,7 @@
         
         .goodSection-gallery {
             margin: 10px;
-            height: 150px;
+            height: max-content;
             width: 140px;
         }
 
@@ -241,7 +241,15 @@
             width: 20px;
             // display: none;
         }
-       
+        .goodSection-actions-price {
+            h1 {
+                position: static;
+                top: 35%;
+                right: 10px;
+                font-size: 15px;
+                margin: 2px 0;
+            }
+        }
     }
     
 
@@ -273,15 +281,7 @@
     //     display: none;
     // }
 
-    .goodSection-actions-price {
-        h1 {
-            position: static;
-            top: 35%;
-            right: 10px;
-            font-size: 15px;
-            margin: 2px 0;
-        }
-    }
+    
     .goodSection-line-actions {
         
         padding: 10px 5px;
