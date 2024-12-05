@@ -38,11 +38,15 @@ function App() {
   );
   const Auth = React.lazy(
     () =>
-      import(/* webpackChunkName: "LogIn" */ "./pages/Auth")
+      import(/* webpackChunkName: "Auth" */ "./pages/Auth")
   );
   const User = React.lazy(
     () =>
-      import(/* webpackChunkName: "LogIn" */ "./pages/User")
+      import(/* webpackChunkName: "User" */ "./pages/User")
+  );
+  const SettingsProfile = React.lazy(
+    () =>
+      import(/* webpackChunkName: "SettingsProfile" */ "./pages/SettingsProfile")
   );
 
   return (
@@ -94,6 +98,11 @@ function App() {
         <Route path="/user" element={
           <React.Suspense fallback={<Loading />}>
             <User />
+          </React.Suspense>
+        } />
+        <Route path="/settings" element={
+          <React.Suspense fallback={<Loading />}>
+            <SettingsProfile />
           </React.Suspense>
         } />
         </Route>

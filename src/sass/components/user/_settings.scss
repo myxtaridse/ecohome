@@ -1,0 +1,95 @@
+.settings {
+    width: 95vw;
+    margin: 0 auto;
+}
+
+.settings-head {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    div {
+        width: 20px;
+        height: 20px;
+        margin-right: auto;
+    }
+    h4 {
+        margin-right: auto;
+        margin-left: -5px;
+        color: #565656;
+    }
+}
+
+.settings-avatar {
+    position: relative;
+    width: max-content;
+    margin: 15px auto 25px;
+
+    .user-profile-avatar {
+        width: 90px;
+        height: 90px;
+
+        img {
+            filter: brightness(70%) blur(1px);
+        }
+    }
+}
+
+.settings-avatar-add {
+    background-color: #CF4E32;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+
+    svg {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.settings-form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    button {
+        padding: 15px 7px;
+        border: none;
+        border-bottom: 1px solid lightgray;
+        background-color: #fff;
+        border-radius: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 95%;
+        margin: 0 auto;
+        color: rgb(123, 123, 123);
+
+        div {
+            margin-right: 10px;
+            width: 14px;
+            height: 14px;
+        }
+    }
+    .settings-delete {
+        color: #CF4E32;
+    }
+}
+
+.settings-input {
+    width: 95%;
+    margin: 0 auto;
+    input {
+        border: none;
+        border-bottom: 1px solid lightgray;
+        width: 100%;
+        padding: 15px 7px;
+    }
+}

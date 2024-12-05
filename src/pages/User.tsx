@@ -1,4 +1,5 @@
 // import React from 'react'
+import { Link } from 'react-router-dom';
 import avatar from '../assets/icons-user/women.svg';
 
 const actions = [
@@ -82,22 +83,24 @@ const actions = [
 const User = () => {
   return (
     <div className='user'>
-        <div className='user-profile'>
-            <div className='user-profile-avatar'>
-                <img src={avatar} alt="avatar" />
-            </div>
-            <div className='user-profile-name'>
-                <h4>Ксения Бурханходжаева</h4>
-                <div className='user-profile-name-flex'>
-                    <h6>Настройки</h6>
-                    <div>
-                        <svg viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14.1364 7.6364C14.4879 7.28492 14.4879 6.71508 14.1364 6.3636L8.40883 0.636039C8.05736 0.284567 7.48751 0.284567 7.13604 0.636039C6.78457 0.987511 6.78457 1.55736 7.13604 1.90883L12.2272 7L7.13604 12.0912C6.78457 12.4426 6.78457 13.0125 7.13604 13.364C7.48751 13.7154 8.05736 13.7154 8.40883 13.364L14.1364 7.6364ZM0.5 7.9L13.5 7.9V6.1L0.5 6.1L0.5 7.9Z" fill="#565656"/>
-                        </svg>
+        <Link to='/settings'>
+            <div className='user-profile'>
+                <div className='user-profile-avatar'>
+                    <img src={avatar} alt="avatar" />
+                </div>
+                <div className='user-profile-name'>
+                    <h4>Ксения Бурханходжаева</h4>
+                    <div className='user-profile-name-flex'>
+                        <h6>Настройки</h6>
+                        <div>
+                            <svg viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.1364 7.6364C14.4879 7.28492 14.4879 6.71508 14.1364 6.3636L8.40883 0.636039C8.05736 0.284567 7.48751 0.284567 7.13604 0.636039C6.78457 0.987511 6.78457 1.55736 7.13604 1.90883L12.2272 7L7.13604 12.0912C6.78457 12.4426 6.78457 13.0125 7.13604 13.364C7.48751 13.7154 8.05736 13.7154 8.40883 13.364L14.1364 7.6364ZM0.5 7.9L13.5 7.9V6.1L0.5 6.1L0.5 7.9Z" fill="#565656"/>
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </Link>
         <div className='user-actions'>
             {
                 actions.map((action) => (
