@@ -15,6 +15,9 @@ const Comparison = () => {
   const [categories, setCategories] = React.useState<string[]>()
   const dispatch = useAppDispatch();
 
+  console.log(categories);
+  
+
   React.useEffect(() => {
     if (dispatch) {
       dispatch(fetchGoods())

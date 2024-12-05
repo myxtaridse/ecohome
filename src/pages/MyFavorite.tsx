@@ -19,6 +19,9 @@ const MyFavorite = () => {
   const {goods} = useSelector(selectGoods)
   const dispatch = useAppDispatch();
 
+  console.log(setIsListLine);
+  
+
   React.useEffect(() => {
     if (dispatch) {
       dispatch(fetchGoods())
