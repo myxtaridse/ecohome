@@ -387,6 +387,7 @@
         justify-content: center;
         grid-template-columns: repeat(1, 100vw);
         gap: 30px 15px;
+        
 
         .goodSection-line {
             padding: 15px 10px;
@@ -507,5 +508,11 @@
             
           }
         
+          .cart-loader {
+            div {
+                width: max-content;
+                margin: 0 auto;
+            }
+          }
     }
 }

@@ -15,7 +15,7 @@
 
 
 .comparison-goods {
-    border-top: 1px solid #0000001e;
+    // border-top: 1px solid #0000001e;
     padding-top: 10px;
     padding-left: 0px;
     display: block;
@@ -70,6 +70,12 @@
                 display: none
             }
         };
+
+        .cart-loader {
+            h4 {
+                margin-top: 40px;
+            }
+        }
 
     }
     .comparison-goods {

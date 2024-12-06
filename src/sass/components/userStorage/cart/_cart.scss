@@ -252,6 +252,18 @@
     .cart-block {
         width: 95vw;
         margin: auto;
+
+        .cart-loader {
+           margin: 80px auto 20px;
+        
+           .loader {
+            width: 60vw;
+           }
+
+           h4 {
+            margin: 60px auto 0;
+           }
+        }
     }
     
     .cart {
