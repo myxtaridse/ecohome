@@ -1,82 +1,10 @@
-// import React from 'react'
+import React from 'react'
 import GoodSectionLine from '../../GoodSection/GoodSectionLine';
-import goods from '../../../../db.json'
 import Select from '../../Select';
 
-// const goods = [
-//     {
-//         id: '1',
-//         article: '161616',
-//         url: '',
-//         titleGood: '',
-//         photoGood: [
-//             "http://localhost:5173/ecohome/src/assets/image.png",
-//             "http://localhost:5173/ecohome/src/assets/image-2.png",
-//             "http://localhost:5173/ecohome/src/assets/image-3.png",
-//         ],
-//         categoryChildren: 'Аксессуары для бани',
-//         price: 1413,
-//         reviews: 4.7
-//     },
-//     {
-//         id: '2',
-//         article: '161616',
-//         url: '',
-//         titleGood: '',
-//         photoGood: [
-//             "http://localhost:5173/ecohome/src/assets/image.png",
-//             "http://localhost:5173/ecohome/src/assets/image-2.png",
-//             "http://localhost:5173/ecohome/src/assets/image-3.png",
-//         ],
-//         categoryChildren: 'Аксессуары для бани',
-//         price: 1413,
-//         reviews: 4.7
-//     },
-//     {
-//         id: '3',
-//         article: '161616',
-//         url: '',
-//         titleGood: '',
-//         photoGood: [
-//             "http://localhost:5173/ecohome/src/assets/image.png",
-//             "http://localhost:5173/ecohome/src/assets/image-2.png",
-//             "http://localhost:5173/ecohome/src/assets/image-3.png",
-//         ],
-//         categoryChildren: 'Аксессуары для бани',
-//         price: 1413,
-//         reviews: 4.7
-//     },
-//     {
-//         id: '4',
-//         article: '161616',
-//         url: '',
-//         titleGood: '',
-//         photoGood: [
-//             "http://localhost:5173/ecohome/src/assets/image.png",
-//             "http://localhost:5173/ecohome/src/assets/image-2.png",
-//             "http://localhost:5173/ecohome/src/assets/image-3.png",
-//         ],
-//         categoryChildren: 'Аксессуары для бани',
-//         price: 1413,
-//         reviews: 4.7
-//     },
-//     {
-//         id: '5',
-//         article: '161616',
-//         url: '',
-//         titleGood: '',
-//         photoGood: [
-//             "http://localhost:5173/ecohome/src/assets/image.png",
-//             "http://localhost:5173/ecohome/src/assets/image-2.png",
-//             "http://localhost:5173/ecohome/src/assets/image-3.png",
-//         ],
-//         categoryChildren: 'Аксессуары для бани',
-//         price: 1413,
-//         reviews: 4.7
-//     }
-// ]
 
-const CartGoods = () => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const CartGoods: React.FC<any> = ({goods}) => {
   return (
     <div className="cartGoods-block">
         <div className='cart-main-input'>
@@ -96,7 +24,8 @@ const CartGoods = () => {
         </div>
         <div className='cart-main-goods-list'>
         {
-            goods && goods.goods.map((item) => <GoodSectionLine key={item.id} {...item} />)
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            goods && goods.map((item: any) => <GoodSectionLine key={item.id} {...item} />)
         }
         </div>
     </div>

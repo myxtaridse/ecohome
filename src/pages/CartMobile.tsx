@@ -6,6 +6,7 @@ import { selectGoods } from '../redux/goodsSlice/selectorGoods'
 import { useSelector } from 'react-redux'
 import { useAppDispatch } from '../redux/store'
 import { fetchGoods } from '../redux/goodsSlice/asyncActions'
+import Loader from '../components/Loader/Loader'
 
 const CartMobile = () => {
 
@@ -33,27 +34,35 @@ const CartMobile = () => {
         </div>
         <h1>Корзина</h1>
       </div>
-      <div className='cart'>
-            <div className='cart-main'>
-                    <div className='cart-main-goods'>
-                        <h2 className='cart-title'> Проверьте товары в заказе</h2>
-                        <CartGoods />
-                    </div>
+      {
+        goods && goods.length ? (
+          <>
+            <div className='cart'>
+                <div className='cart-main'>
+                        <div className='cart-main-goods'>
+                            <h2 className='cart-title'> Проверьте товары в заказе</h2>
+                            <CartGoods goods={goods} />
+                        </div>
+                </div>
             </div>
-      </div>
-      <div className='cartMobile-total-block'>
-            <div className='cartMobile-total-count'>
-                <h5>3 товара</h5>
-                <h4>3 500 Р</h4>
+            <div className='cartMobile-total-block'>
+                  <div className='cartMobile-total-count'>
+                      <h5>3 товара</h5>
+                      <h4>3 500 Р</h4>
+                  </div>
+                  <div className='cartMobile-total-discount'>
+                      <h5>Общая скидка</h5>
+                      <h4>-500 Р</h4>
+                  </div>
+                  <Link to='/checkout'>
+                      <button>Перейти к оформлению</button>
+                  </Link>
             </div>
-            <div className='cartMobile-total-discount'>
-                <h5>Общая скидка</h5>
-                <h4>-500 Р</h4>
-            </div>
-            <Link to='/checkout'>
-                <button>Перейти к оформлению</button>
-            </Link>
-      </div>
+          </>
+        ) : (
+          <Loader />
+        )
+      }
 
       <div className='cartMobile-recommend'>
         <h2 className='cart-title'>Рекомендуем вам</h2>

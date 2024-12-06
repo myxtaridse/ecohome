@@ -4,11 +4,12 @@ import { Route, Routes } from "react-router-dom";
 import MainPage from "./pages/MainPage";
 import MainLayout from "./layout/MainLayout";
 import CatalogPage from "./pages/CatalogPage";
-import Loading from "./components/Loading/Loading";
+// import Loading from "./components/Loading/Loading";
 import ErrorPage from "./pages/ErrorPage";
 import CartMobile from "./pages/CartMobile";
 import UserIn from "./layout/UserInLayout";
 import ActionsLayout from "./layout/ActionsLayout";
+import Loader from './components/Loader/Loader'
 
 function App() {
 
@@ -48,10 +49,6 @@ function App() {
     () =>
       import(/* webpackChunkName: "SettingsProfile" */ "./pages/SettingsProfile")
   );
-  const Loader = React.lazy(
-    () =>
-      import(/* webpackChunkName: "Loader" */ "./components/Loader/Loader")
-  );
 
   return (
     <Routes>
@@ -59,70 +56,71 @@ function App() {
         <Route path="/" element={
           <MainPage />} />
         <Route path="/catalog" element={
-          <React.Suspense fallback={<Loading />}>
+          <React.Suspense fallback={<Loader />}>
           <CatalogPage />
         </React.Suspense>} />
         <Route path="/item/:id" element={
-          <React.Suspense fallback={<Loading />}>
+          <React.Suspense fallback={<Loader />}>
             <GoodItemPage />
           </React.Suspense>
         } />
         <Route path="/*" element={
-          <React.Suspense fallback={<Loading />}>
+          <React.Suspense fallback={<Loader />}>
             <ErrorPage />
           </React.Suspense>
         } />
         <Route element={<ActionsLayout />}>
               <Route path="/favorite" element={
-                <React.Suspense fallback={<Loading />}>
+                <React.Suspense fallback={<Loader />}>
                   <MyFavorite />
                 </React.Suspense>
               } />
               <Route path="/comparison" element={
-                <React.Suspense fallback={<Loading />}>
+                <React.Suspense fallback={<Loader />}>
                   <Comparison />
                 </React.Suspense>
               } />
         </Route>
         
         <Route path="/cart" element={
-          <React.Suspense fallback={<Loading />}>
+          <React.Suspense fallback={<Loader />}>
             {
               window.innerWidth > 500 ? <Cart /> : <CartMobile />
             }
           </React.Suspense>
         } />
         <Route path="/checkout" element={
-          <React.Suspense fallback={<Loading />}>
+          <React.Suspense fallback={<Loader />}>
           {
             <Checkout />
           }
         </React.Suspense>
         } />
         <Route path="/user" element={
-          <React.Suspense fallback={<Loading />}>
+          <React.Suspense fallback={<Loader />}>
             <User />
           </React.Suspense>
         } />
         <Route path="/settings" element={
-          <React.Suspense fallback={<Loading />}>
+          <React.Suspense fallback={<Loader />}>
             <SettingsProfile />
           </React.Suspense>
         } />
+        
+        </Route>
         <Route path="/loader" element={
-          <React.Suspense fallback={<Loading />}>
+          <React.Suspense fallback={<Loader />}>
             <Loader />
           </React.Suspense>
         } />
-        </Route>
       <Route element={<UserIn />}>
           <Route path="/login" element={
-              <React.Suspense fallback={<Loading />}>
+              <React.Suspense fallback={<Loader />}>
                 <LogIn />
               </React.Suspense>
             } />
           <Route path="/auth" element={
-              <React.Suspense fallback={<Loading />}>
+              <React.Suspense fallback={<Loader />}>
                 <Auth />
               </React.Suspense>
             } />
