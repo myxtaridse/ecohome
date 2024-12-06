@@ -71,6 +71,18 @@ const SettingsProfile = () => {
             </button>
             <button className='settings-delete'>Удалить профиль</button>
         </div>
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="50"
+            height="50"
+            viewBox="0 0 24 24"
+            className="truck-icon"
+        >
+            <circle cx="7" cy="17" r="2" className="wheel front-wheel" />
+            <circle cx="17" cy="17" r="2" className="wheel back-wheel" />
+            <rect x="1" y="10" width="15" height="7" className="body" />
+            <rect x="16" y="10" width="7" height="5" className="cabin" />
+        </svg>
     </div>
   )
 }

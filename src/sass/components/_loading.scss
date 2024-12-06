@@ -13,29 +13,57 @@
   height: 400px;
   margin: calc((100vh - 550px) / 2) auto;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   border-radius: 5px;
 }
 
-.loading-logoText {
-  width: 340px;
-}
 .loading-car {
   position: relative;
-  width: 380px;
-  height: 90px;
+  width: max-content;
+  height: max-content;
+
+  svg {
+    width: 70px;
+    height: 70px;
+  }
 }
-.loading-car img {
+
+.lds-dual-ring,
+.lds-dual-ring:after {
+  box-sizing: border-box;
+}
+.lds-dual-ring {
   position: absolute;
-  top: 10px;
-  left: 0;
-  width: 85px;
-  animation: car 6s ease-in-out infinite;
-  z-index: 100;
-  
+  top: -7px;
+  left: -7px;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
 }
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 84px;
+  height: 84px;
+  margin: 0;
+  border-radius: 50%;
+  border: 6.4px solid #442005;
+  border-color: #442005 transparent #442005 transparent;
+  animation: lds-dual-ring 1.8s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
 .loading-line {
   width: 380px;
   background-color: #bdbdbd;
@@ -52,7 +80,6 @@
   position: absolute;
   top: 0;
   left: 0;
-  animation: loading-line 6s ease-in-out infinite;
   
 }
 .loading p {
@@ -84,15 +111,11 @@
     width: 80vw;
     height: 400px;
     margin: calc((100vh - 400px) / 2) auto;
+    gap: 30px;
   }
   
-  .loading-logoText {
-    width: 75vw;
-  }
   .loading-car {
     position: relative;
-    width: 75vw;
-    height: 70px;
   }
   .loading-car img {
     width: 65px;

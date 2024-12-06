@@ -100,3 +100,41 @@
         color: rgb(123, 123, 123);
     }
 }
+
+.truck-icon {
+    .wheel {
+      animation: spin 1s linear infinite; // Анимация вращения колес
+    }
+  
+    .front-wheel {
+      transform-origin: center; // Центр вращения
+    }
+  
+    .back-wheel {
+      transform-origin: center;
+    }
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+
+  .truck-icon {
+    animation: moveBackForth 2s ease-in-out infinite;
+  
+    @keyframes moveBackForth {
+      0%, 100% {
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateX(10px);
+      }
+    }
+  }
+  

@@ -48,6 +48,10 @@ function App() {
     () =>
       import(/* webpackChunkName: "SettingsProfile" */ "./pages/SettingsProfile")
   );
+  const Loader = React.lazy(
+    () =>
+      import(/* webpackChunkName: "Loader" */ "./components/Loader/Loader")
+  );
 
   return (
     <Routes>
@@ -103,6 +107,11 @@ function App() {
         <Route path="/settings" element={
           <React.Suspense fallback={<Loading />}>
             <SettingsProfile />
+          </React.Suspense>
+        } />
+        <Route path="/loader" element={
+          <React.Suspense fallback={<Loading />}>
+            <Loader />
           </React.Suspense>
         } />
         </Route>

@@ -5,9 +5,9 @@ import GoodDescription from './GoodDescription'
 import GoodQuestions from './GoodQuestions/GoodQuestions'
 import GoodReviews from './GoodReviews/GoodReviews'
 import { CustomContextProductItem } from '../../context/ProductContext';
-import Loading from '../Loading/Loading'
 import { CustomContextMain } from '../../context/MainContext'
 import GoodSectionGallery from '../GoodSection/GoodSectionGallery'
+import Loader from '../Loader/Loader'
 
 const GoodItem = () => {
     const [isActive, setIsActive] = React.useState<number | null>(0);
@@ -51,8 +51,7 @@ const GoodItem = () => {
   
  
 
-  if (!good || good.length === 0) return <Loading />;
-
+  if (!good || good.length === 0) return <Loader />;
 
     return (
       
@@ -155,3 +154,5 @@ const GoodItem = () => {
   }
 
 export default GoodItem;
+
+
