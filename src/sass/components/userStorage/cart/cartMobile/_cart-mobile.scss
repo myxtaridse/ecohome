@@ -32,11 +32,16 @@
 }
 
 .cartMobile-recommend {
-    background-color: #F2F5F9;
-    width: 100vw;
-    margin-left: -10px;
-    
+    width: 97vw;
+    margin-left: -2.5vw;
     padding: 20px 10px;
+
+    .mainGoods-list {
+        margin: 15px auto 0;
+        grid-template-columns: repeat(2, 45vw);
+        gap: 15px 15px;
+      }
+    
 }
 
 .cartMobile-recommend-goods {

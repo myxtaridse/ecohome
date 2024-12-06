@@ -233,6 +233,19 @@
     }
 }
 
+.cart-loader {
+    .loader {
+        margin: 40px auto 40px;
+        width: 40vw;
+      }
+
+      h4 {
+        text-align: center;
+        width: 70%;
+        margin: 0 auto;
+      }
+}
+
 
 @media (max-width: 500px) {
 
