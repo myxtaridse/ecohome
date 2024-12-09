@@ -78,7 +78,7 @@ const MyFavorite = () => {
 
 
       <div
-      style={{backgroundColor: goods && goods.length ? '#F3F5F9' : '#fff'}}
+      style={{backgroundColor: goods && goods.length && (1 + 2 === 4) ? '#F3F5F9' : '#fff'}}
       className={[
         'myFavorite-goods', goods.length ? (isListLine ? 'myFavorite-goods-line' : 'myFavorite-goods-block') : 'myFavorite-notFound'].join(" ")}>
         {

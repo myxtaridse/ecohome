@@ -67,7 +67,7 @@ const CartMobile = () => {
             <h4>Корзина пока пуста, а выгода всегда рядом!</h4>
             <div className='cartMobile-total-block'>
                   <Link to='/catalog'>
-                      <button>Перейти к оформлению</button>
+                      <button>Перейти в каталог</button>
                   </Link>
             </div>
           </div>

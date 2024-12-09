@@ -57,10 +57,6 @@
 
 @media (max-width: 500px) {
     .path {
-        position: fixed;
-        top: 46.5px;
-        left: 0;
-        z-index: 100;
-        margin-left: 10px;
+        display: none;
     }
 }
