@@ -178,8 +178,34 @@ const GoodSection: React.FC<any> = ({article, titleGood, price, reviews, categor
             )
         }
         <div className='goodSection-more'>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12.001 4.52853C14.35 2.42 17.98 2.49 20.2426 4.75736C22.5053 7.02472 22.583 10.637 20.4786 12.993L11.9999 21.485L3.52138 12.993C1.41705 10.637 1.49571 7.01901 3.75736 4.75736C6.02157 2.49315 9.64519 2.41687 12.001 4.52853Z"></path></svg>
+        <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_1782_172)">
+            <g filter="url(#filter0_f_1782_172)">
+            <path d="M17.4996 6.74174C20.9056 3.61319 26.1706 2.81595 29.4513 6.18017C32.7321 9.54439 32.8448 14.9042 29.7935 18.3999L17.4996 31L5.20596 18.3999C2.15474 14.9042 2.26879 9.53592 5.54812 6.18017C8.83117 2.82062 14.0837 3.60854 17.4996 6.74174Z" fill="#565656" fill-opacity="0.25"/>
+            </g>
+            <g filter="url(#filter1_b_1782_172)">
+            <path d="M17.4996 8.44776C20.4358 5.88305 24.9746 4.89538 27.8028 7.65329C30.6311 10.4112 30.7283 14.805 28.0978 17.6707L17.4996 28L6.90169 17.6707C4.27132 14.805 4.36965 10.4043 7.19666 7.65329C10.0269 4.89921 14.5549 5.87924 17.4996 8.44776Z" fill="white"/>
+            <path d="M17.4996 8.44776C20.4358 5.88305 24.9746 4.89538 27.8028 7.65329C30.6311 10.4112 30.7283 14.805 28.0978 17.6707L17.4996 28L6.90169 17.6707C4.27132 14.805 4.36965 10.4043 7.19666 7.65329C10.0269 4.89921 14.5549 5.87924 17.4996 8.44776Z" stroke="#CF4E32" stroke-width="2"/>
+            </g>
+            </g>
+            <defs>
+            <filter id="filter0_f_1782_172" x="-2" y="-1" width="39" height="37" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+            <feGaussianBlur stdDeviation="2.5" result="effect1_foregroundBlur_1782_172"/>
+            </filter>
+            <filter id="filter1_b_1782_172" x="0" y="1" width="35" height="32.3945" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feGaussianBlur in="BackgroundImageFix" stdDeviation="2"/>
+            <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1782_172"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_1782_172" result="shape"/>
+            </filter>
+            <clipPath id="clip0_1782_172">
+            <rect width="35" height="35" fill="white"/>
+            </clipPath>
+            </defs>
+        </svg>
+
         </div>
         {/* <div className='goodSection-more' onClick={morePopupFn}>
             <svg width="23" height="12" viewBox="0 0 23 12" fill="none" xmlns="http://www.w3.org/2000/svg">
