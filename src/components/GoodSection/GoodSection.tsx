@@ -181,7 +181,7 @@ const GoodSection: React.FC<any> = ({article, titleGood, price, reviews, categor
         <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1782_172)">
 <g filter="url(#filter0_f_1782_172)">
-<path d="M17.4996 6.74174C20.9056 3.61319 26.1706 2.81595 29.4513 6.18017C32.7321 9.54439 32.8448 14.9042 29.7935 18.3999L17.4996 31L5.20596 18.3999C2.15474 14.9042 2.26879 9.53592 5.54812 6.18017C8.83117 2.82062 14.0837 3.60854 17.4996 6.74174Z" fill="#565656" fill-opacity="0.2"/>
+<path d="M17.4996 6.74174C20.9056 3.61319 26.1706 2.81595 29.4513 6.18017C32.7321 9.54439 32.8448 14.9042 29.7935 18.3999L17.4996 31L5.20596 18.3999C2.15474 14.9042 2.26879 9.53592 5.54812 6.18017C8.83117 2.82062 14.0837 3.60854 17.4996 6.74174Z" fill="#565656" fill-opacity="0"/>
 </g>
 <g filter="url(#filter1_b_1782_172)">
 <path d="M17.4996 8.44776C20.4358 5.88305 24.9746 4.89538 27.8028 7.65329C30.6311 10.4112 30.7283 14.805 28.0978 17.6707L17.4996 28L6.90169 17.6707C4.27132 14.805 4.36965 10.4043 7.19666 7.65329C10.0269 4.89921 14.5549 5.87924 17.4996 8.44776Z" fill="white"/>
@@ -189,7 +189,7 @@ const GoodSection: React.FC<any> = ({article, titleGood, price, reviews, categor
 </g>
 </g>
 <defs>
-<filter id="filter0_f_1782_172" x="-2" y="-1" width="39" height="37" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_f_1782_172" x="0" y="0" width="35" height="35" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feGaussianBlur stdDeviation="2.5" result="effect1_foregroundBlur_1782_172"/>
@@ -205,6 +205,7 @@ const GoodSection: React.FC<any> = ({article, titleGood, price, reviews, categor
 </clipPath>
 </defs>
 </svg>
+
 
         </div>
         {/* <div className='goodSection-more' onClick={morePopupFn}>
