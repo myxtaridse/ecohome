@@ -3,8 +3,9 @@
     align-items: center;
     justify-content: start;
     gap: 20px;
-    overflow: scroll;
+    overflow-x: scroll;
     scrollbar-width: none;
+    -ms-overflow-style: none;
     margin-bottom: 20px;
 }
 
@@ -16,13 +17,13 @@
     justify-content: center;
     background-color: #F3F5F9;
     border-radius: 10px;
-    padding: 8px;
+    padding: 9px;
 
     svg {
         
         fill: #565656;
-        width: 26px;
-        height: 26px;
+        width: 25px;
+        height: 25px;
     }
 }
 
@@ -34,9 +35,14 @@
     justify-content: center;
     background-color: #F3F5F9;
     border-radius: 10px;
-    padding: 0 10px;
+    padding: 0 15px;
     gap: 5px;
     color: #565656;
+    
+    h6 {
+        font-size: 16px;
+        font-weight: 600;
+    }
 
     svg {
         transform: rotate(90deg);
