@@ -51,10 +51,6 @@ function App() {
     () =>
       import(/* webpackChunkName: "SettingsProfile" */ "./pages/SettingsProfile")
   );
-  const Sale = React.lazy(
-    () =>
-      import(/* webpackChunkName: "Sale" */ "./pages/Sale")
-  );
 
   return (
     <Routes>
