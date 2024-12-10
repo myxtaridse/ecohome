@@ -52,8 +52,7 @@ const ActionsLayout = () => {
         }
       </div>
         {
-          // eslint-disable-next-line no-constant-binary-expression
-          (1 + 2 === 4) && (
+           (
             <>
               <div className='myFavorite-head-flex'>
         <h2>Найдено 2 товара</h2>

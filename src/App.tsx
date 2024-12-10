@@ -10,6 +10,8 @@ import CartMobile from "./pages/CartMobile";
 import UserIn from "./layout/UserInLayout";
 import ActionsLayout from "./layout/ActionsLayout";
 import Loader from './components/Loader/Loader'
+import ListGoodsLayout from "./layout/ListGoodsLayout";
+import ListGoods from "./pages/ListGoods";
 
 function App() {
 
@@ -48,6 +50,10 @@ function App() {
   const SettingsProfile = React.lazy(
     () =>
       import(/* webpackChunkName: "SettingsProfile" */ "./pages/SettingsProfile")
+  );
+  const Sale = React.lazy(
+    () =>
+      import(/* webpackChunkName: "Sale" */ "./pages/Sale")
   );
 
   return (
@@ -106,7 +112,13 @@ function App() {
             <SettingsProfile />
           </React.Suspense>
         } />
-        
+        <Route element={<ListGoodsLayout />}>
+        <Route path="/:catalogId" element={
+          <React.Suspense fallback={<Loader />}>
+            <ListGoods />
+          </React.Suspense>
+        }/>
+      </Route>
         </Route>
         <Route path="/loader" element={
           <React.Suspense fallback={<Loader />}>
@@ -125,6 +137,7 @@ function App() {
               </React.Suspense>
             } />
       </Route>
+      
     </Routes>
   );
 }

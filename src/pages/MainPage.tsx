@@ -8,6 +8,7 @@ import { useSelector } from "react-redux";
 import { selectGoods } from "../redux/goodsSlice/selectorGoods";
 import { useAppDispatch } from "../redux/store";
 import { fetchGoods } from "../redux/goodsSlice/asyncActions";
+import { Link } from "react-router-dom";
 
 const MainPage = () => {
 
@@ -32,8 +33,13 @@ const MainPage = () => {
       <BannerMain />
       <MainBenefitLine />
 
-      <MainGoods goods={goods} title="Акции" />
-      <MainGoods goods={goods} title="Новинки" />
+      
+      <Link to={`/sale`}>
+        <MainGoods goods={goods} title="Акции" />
+      </Link>
+      <Link to={`/new`}>
+        <MainGoods goods={goods} title="Новинки" />
+      </Link>
       <Partners />
     </div>
   );

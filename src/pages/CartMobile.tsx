@@ -37,7 +37,7 @@ const CartMobile = () => {
         <h1>Корзина</h1>
       </div>
       {
-        goods && goods.length && (1 + 2 === 4) ? (
+        goods && goods.length ? (
           <>
             <div className='cart'>
                 <div className='cart-main'>
