@@ -178,19 +178,14 @@ const GoodSection: React.FC<any> = ({article, titleGood, price, reviews, categor
             )
         }
         <div className='goodSection-more'>
-        <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_f_1782_172)">
-<path d="M17.4996 6.74174C20.9056 3.61319 26.1706 2.81595 29.4513 6.18017C32.7321 9.54439 32.8448 14.9042 29.7935 18.3999L17.4996 31L5.20596 18.3999C2.15474 14.9042 2.26879 9.53592 5.54812 6.18017C8.83117 2.82062 14.0837 3.60854 17.4996 6.74174Z" fill="#565656" fill-opacity="0.02"/>
-</g>
-<path d="M17.4996 8.44776C20.4358 5.88305 24.9746 4.89538 27.8028 7.65329C30.6311 10.4112 30.7283 14.805 28.0978 17.6707L17.4996 28L6.90169 17.6707C4.27132 14.805 4.36965 10.4043 7.19666 7.65329C10.0269 4.89921 14.5549 5.87924 17.4996 8.44776Z" fill="white" stroke="#CF4E32" stroke-width="2"/>
-<defs>
-<filter id="filter0_f_1782_172" x="1" y="2" width="33" height="31" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="1" result="effect1_foregroundBlur_1782_172"/>
-</filter>
-</defs>
+        <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M46.7067 13.9065C41.6795 7.42675 31.8437 8.13163 27.6788 14.8926C27.598 15.0238 27.4026 15.0238 27.3217 14.8926C23.1568 8.13161 13.3211 7.42675 8.29376 13.9065L7.58481 14.8202C3.27102 20.3802 3.89387 28.3092 9.02294 33.1272L24.9964 48.1325C25.235 48.3569 25.496 48.6021 25.7419 48.7916C26.0249 49.0095 26.4204 49.2619 26.9487 49.3654C27.3128 49.4369 27.6877 49.4369 28.0519 49.3654C28.5801 49.2619 28.9756 49.0095 29.2587 48.7916C29.5048 48.6021 29.7656 48.3569 30.0044 48.1325L45.9775 33.1272C51.1067 28.3092 51.7296 20.3802 47.4158 14.8202L46.7067 13.9065Z" fill="white" stroke="#CF4E32" stroke-width="5"/>
 </svg>
+
+
+
+
+
 
 
 
