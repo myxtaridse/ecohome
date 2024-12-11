@@ -5,7 +5,7 @@ import Select from "../Select"
 
 const Category = () => {
   return (
-    <div style={{height: '50vh'}} className="categoryPopup">
+    <div className="categoryPopup">
       <h3>Категории</h3>
       <div className="categoryPopup-input">
         <input type="text" placeholder="Найти категорию" />
