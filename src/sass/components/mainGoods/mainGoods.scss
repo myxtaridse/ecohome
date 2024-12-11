@@ -206,11 +206,11 @@
       flex-direction: column;
       align-items: center;
       gap: 0;
-      height: max-content;
+      height: 100%;
       overflow: hidden;
 
       h2 {
-        font-size: 11px;
+        font-size: 12px;
         margin-top: 0;
         font-weight: 550;
       }
@@ -240,7 +240,6 @@
       }
 
       .goodSection-actions-price {
-        margin-top: auto;
         margin-right: auto;
           
             h1 {
@@ -251,6 +250,7 @@
       }
 
       .goodSection-category {
+        margin-top: auto;
         margin-right: auto;
       }
 
