@@ -1,3 +1,5 @@
+@use './categoryList';
+
 .listGoods-sort-flex {
     display: flex;
     align-items: center;
@@ -42,8 +44,8 @@
     color: #565656;
     
     h6 {
-        font-size: 15px;
-        font-weight: 600;
+        font-size: 14px;
+        font-weight: 650;
     }
 
     svg {

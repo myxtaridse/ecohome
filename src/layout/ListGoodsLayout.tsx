@@ -11,6 +11,7 @@ import { useSelector } from 'react-redux'
 import { selectGoods } from '../redux/goodsSlice/selectorGoods'
 import GoodSection from '../components/GoodSection/GoodSection'
 import { Link } from 'react-router-dom'
+import { CustomContextMain } from '../context/MainContext'
 
 const character = [
     {
@@ -42,6 +43,8 @@ const character = [
 
 const ListGoodsLayout = () => {
     const dispatch = useAppDispatch()
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const {setIsMore, setChildrenPopup}: any = React.useContext(CustomContextMain);
   
     React.useEffect(() => {
         if (dispatch) {
@@ -51,6 +54,15 @@ const ListGoodsLayout = () => {
     }, [])
 
   const {goods} = useSelector(selectGoods);
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const morePopupFn = (component: any) => {
+      setIsMore(true)
+      setChildrenPopup(
+          component
+      )
+  }
+
   return (
     <>
       <div className='myFavorite-head'>
@@ -75,7 +87,7 @@ const ListGoodsLayout = () => {
                 </div>
                 {
                     character.map((item) => (
-                        <div className='listGoods-sort-character'>
+                        <div className='listGoods-sort-character' onClick={() => morePopupFn(item.component)}>
                             <h6>{item.title}</h6>
                             <Arrow />
                         </div>

@@ -1,4 +1,5 @@
 import image from "../assets/image.png";
+
 export const goodsSale = [
   {
     id: "1",
@@ -149,3 +150,4 @@ export const sortList = [
     title: 'популярности',
   },
 ]
+
