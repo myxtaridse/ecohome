@@ -1,26 +1,14 @@
 import React from 'react'
-import Select from '../Select'
-import { ListGoodsPopupLayoutType } from '../../layout/ListGoodsPopupLayout'
+import Select from '../components/Select'
 
-const Brand: React.FC<ListGoodsPopupLayoutType> = ({list, title}) => {
-  const [isSelectAll, setIsSelectAll] = React.useState(false)
+export interface ListGoodsPopupLayoutType {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    list: any, 
+    title: string
+}
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const listSort = list.flat().sort((a: any, b: any) => {
-    const cityA = a.title
-    const cityB = b.title
-
-    if (cityA && cityB && (cityA.toLocaleLowerCase() > cityB.toLocaleLowerCase())) {
-      return 1;
-    } else if (cityA && cityB && (cityA.toLocaleLowerCase() < cityB.toLocaleLowerCase())) {
-      return -1;
-    }
-
-    return 0
-  }
-  )
-  
-  
+const ListGoodsPopupLayout: React.FC<ListGoodsPopupLayoutType> = ({list, title}) => {
+    const [isSelectAll, setIsSelectAll] = React.useState(false)
     return (
       <div className="categoryPopup">
         <h3>{title}</h3>
@@ -30,7 +18,7 @@ const Brand: React.FC<ListGoodsPopupLayoutType> = ({list, title}) => {
         <div className="categoryPopup-list">
           {
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            listSort && listSort.map((item: any) => (
+            list.map((item: any) => (
               <div key={item.id} className="categoryPopup-item" onClick={() => setIsSelectAll(!isSelectAll)}>
                   <h4>{item.title}</h4>
                   <Select isSelectAll={isSelectAll} />
@@ -46,4 +34,4 @@ const Brand: React.FC<ListGoodsPopupLayoutType> = ({list, title}) => {
     )
 }
 
-export default Brand
+export default ListGoodsPopupLayout

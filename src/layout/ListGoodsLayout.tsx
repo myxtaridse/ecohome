@@ -1,9 +1,7 @@
 import React from 'react'
 import Arrow from '../components/Arrow'
-import Category from '../components/Sorted/Category'
 import Price from '../components/Sorted/Price'
 import Brand from '../components/Sorted/Brand'
-import Material from '../components/Sorted/Material'
 import Color from '../components/Sorted/Color'
 import { useAppDispatch } from '../redux/store'
 import { fetchGoods } from '../redux/goodsSlice/asyncActions'
@@ -12,12 +10,17 @@ import { selectGoods } from '../redux/goodsSlice/selectorGoods'
 import GoodSection from '../components/GoodSection/GoodSection'
 import { Link } from 'react-router-dom'
 import { CustomContextMain } from '../context/MainContext'
+import ListGoodsPopupLayout from './ListGoodsPopupLayout'
+import { category } from '../const/category'
+import { material } from '../const/material'
+import { brand } from '../const/brand'
+
 
 const character = [
     {
         id: 1,
-        title: 'Категория',
-        component: <Category />
+        title: 'Катeгория',
+        component: <ListGoodsPopupLayout list={category} title='Катeгория' />
     },
     {
         id: 2,
@@ -27,12 +30,12 @@ const character = [
     {
         id: 3,
         title: 'Бренд',
-        component: <Brand />
+        component: <Brand list={brand} title={'Бренд'} />
     },
     {
         id: 4,
         title: 'Материал',
-        component: <Material />
+        component: <ListGoodsPopupLayout list={material} title='Материал' />
     },
     {
         id: 5,
