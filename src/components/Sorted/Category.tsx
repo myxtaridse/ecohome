@@ -1,9 +1,11 @@
-// import React from 'react'
+import React from 'react'
 
 import { category } from "../../const/category"
 import Select from "../Select"
 
 const Category = () => {
+  
+  const [isSelectAll, setIsSelectAll] = React.useState(false)
   return (
     <div className="categoryPopup">
       <h3>Категории</h3>
@@ -13,9 +15,9 @@ const Category = () => {
       <div className="categoryPopup-list">
         {
           category.map((item) => (
-            <div className="categoryPopup-item">
+            <div className="categoryPopup-item" onClick={() => setIsSelectAll(!isSelectAll)}>
                 <h4>{item.title}</h4>
-                <Select />
+                <Select isSelectAll={isSelectAll} />
             </div>
           ))
         }
