@@ -16,7 +16,7 @@
 
     input {
         width: 100%;
-        height: 50px;
+        height: 40px;
         background-color: #EBEBEB;
         border: none;
         border-radius: 10px;
@@ -26,9 +26,8 @@
     margin-top: 15px;
     width: 100%;
     height: 70%;
-    scrollbar-width: thin; /* or auto */
-    scrollbar-color: #888 #000; /* thumb and track color */
-    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #888;
     overflow-y: scroll;
     scroll-behavior: smooth;
 }
@@ -61,6 +60,7 @@
     h4 {
         font-weight: 550;
         color: #565656;
+        font-size: 15px;
     }
 
     .cart-main-select-all {
@@ -76,9 +76,26 @@
                 fill: #EBEBEB;
                 width: 30px;
                 height: 30px;
-                transform: translateX(5px);
+                transform: translateX(5px) translateY(2px);
                 border-radius: 5px;
             }
         }
+    }
+}
+.categoryPopup-btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    button {
+        width: 47%;
+        height: 40px;
+        border: 1px solid #CF4E32;
+        background-color: #fff;
+    }
+    button:last-of-type {
+        background-color: #CF4E32;
+        color: white;
     }
 }

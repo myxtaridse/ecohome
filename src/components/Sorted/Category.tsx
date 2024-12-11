@@ -20,6 +20,10 @@ const Category = () => {
           ))
         }
       </div>
+      <div className="categoryPopup-btns">
+        <button>Отменить</button>
+        <button>Применить</button>
+      </div>
     </div>
   )
 }
