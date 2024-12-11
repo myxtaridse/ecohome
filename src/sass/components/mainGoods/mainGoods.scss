@@ -210,7 +210,7 @@
       overflow: hidden;
 
       h2 {
-        font-size: 12px;
+        font-size: 11px;
         margin-top: 0;
         font-weight: 550;
       }
@@ -245,6 +245,7 @@
             h1 {
               font-size: 20px;
               height: max-content;
+              transform: translateY(2px) translateX(2px);
               
             }
       }
