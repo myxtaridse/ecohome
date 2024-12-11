@@ -7,6 +7,7 @@ const UserIn = () => {
   const location = useLocation()
   const navigate = useNavigate()
   const [isShowPassword, setIsShowPassword] = React.useState(false)
+  const [isSelectAll, setIsSelectAll] = React.useState(false)
   return (
     <div className={['userIn', location && location.pathname === '/auth' ? 'userIn-auth' : ''].join(" ")}>
         <div className='userIn-logo'>
@@ -53,8 +54,8 @@ const UserIn = () => {
             
             {
               location && location.pathname === '/auth' && (
-                <div className='userIn-sale'>
-                    <Select />
+                <div className='userIn-sale' onClick={() => setIsSelectAll(!isSelectAll)}>
+                    <Select isSelectAll={isSelectAll} />
                     <p>Получать <span>предложения о скидках и акциях</span></p>
                 </div>
               )
