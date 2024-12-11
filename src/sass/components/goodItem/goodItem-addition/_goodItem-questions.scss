@@ -45,52 +45,9 @@
     }
 }
 
-
-
 .goodItem-questions-item h2 {
     color: #565656;
     margin: 20px 0 20px 40px;
-}
-
-@media (max-width: 1650px) {
-    .goodItem-questions {
-        margin: 0px auto 0;
-    }
-    .goodItem-questions-title {
-        gap: 10px;
-        h1 {
-            font-size: 26px;
-        }
-    
-        div {
-            margin-top: 5px;
-            width: 26px;
-        }
-    }
-    .goodItem-questions form {
-        margin: 0px 70px;
-        gap: 30px;
-    
-        input, textarea {
-            height: 40px;
-            padding-left: 15px;
-            font-size: 16px;
-        }
-        button {
-            gap: 8px;
-            width: 16%;
-            height: 40px;
-            font-size: 16px;
-    
-            div {
-                width: 18px;
-                height: 18px;
-            }
-        }
-    }
-    .goodItem-questions-subtitle {
-        margin: 25px auto;
-    }
 }
 
 @media (max-width: 500px) {

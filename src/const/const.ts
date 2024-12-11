@@ -151,3 +151,11 @@ export const sortList = [
   },
 ]
 
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const averageRating = (reviews: any) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return reviews.reduce((sum: number, review: any) => {
+    return sum + parseFloat(review.statusRev)
+  }, 0);
+}

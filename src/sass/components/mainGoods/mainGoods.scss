@@ -35,25 +35,6 @@
 .mainGoods-title:hover .mainGoods-title-again {
   gap: 10px;
 }
-.main-good {
-  border-radius: 5px;
-  border: 1px solid #cf4e32;
-  padding: 30px 15px 15px;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-.main-good button {
-  border-radius: 5px;
-  padding: 10px 15px;
-  background-color: #cf4e32;
-  color: white;
-  font-size: 17px;
-}
-.main-good button:hover {
-  font-size: 18px;
-  background-color: #a63218;
-}
 
 @media (max-width: 1600px) {
   
@@ -202,28 +183,6 @@
     gap: 0;
     transition: 1s;
   }
-
-  .main-good {
-    border-radius: 0;
-    border: none;
-    padding: 30px 20px 15px;
-  }
-  .main-good button {
-    border-radius: 5px;
-    padding: 9px;
-    font-size: 15px;
-  }
-  .main-good button:hover {
-    font-size: 16px;
-  }
-  .main-good button {
-    border-radius: 5px;
-    padding: 10px 15px;
-    margin: 0 25px;
-    background-color: #cf4e32;
-    color: white;
-    font-size: 17px;
-  }
 }
 @media (max-width: 500px) {
   .mainGoods {
@@ -246,12 +205,12 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 6px;
+      gap: 0;
       height: 100%;
       overflow-x: hidden;
 
       h2 {
-        font-size: 14px;
+        font-size: 12px;
         margin-top: 0;
       }
       .goodSection-gallery {
@@ -279,32 +238,28 @@
       }
 
       .goodSection-actions-price {
-        h1 {
-          position: absolute;
-          bottom: 3.5%;
-          right: 0;
-          font-size: 16px;
-        }
+        margin-right: auto;
+          
+            h1 {
+              font-size: 18px;
+              height: max-content;
+              
+            }
       }
 
       .goodSection-category {
         margin-right: auto;
       }
 
+      .goodSection-incr-decr {
+    
+        h2 {
+          font-size: 16px;
+        }
+      }
+
       .goodSection-actions {
         display: none;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: #fff;
-        width: max-content;
-        // display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 5px;
-        padding: 5px;
-        border-radius: 50px;
-        box-shadow: 0px 0px 35px 10px #0000002d;
 
         div:last-of-type {
           display: none;
@@ -341,10 +296,4 @@
   }
 
   
-}
-
-@media (max-width: 500px) {
-  .main-good button {
-    margin: 0 10px;
-  }
 }

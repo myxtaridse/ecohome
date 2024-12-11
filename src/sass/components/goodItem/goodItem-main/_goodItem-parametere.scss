@@ -12,22 +12,6 @@
     }
 
 }
-.goodItem-parameter-exchange {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    gap: 10px;
-
-    div {
-        margin-top: -3px;
-        width: 16px;
-        height: 16px;
-
-        svg {
-            fill: #CF4E32;
-        }
-    }
-}
 .goodItem-parameter-block {
     display: flex;
     flex-direction: column;
@@ -102,10 +86,6 @@
             display: flex;
         }
     }
-    
-    .goodItem-parameter-exchange {
-        font-size: 15px;
-    }
 }
 
 @media (max-width: 1200px) {
@@ -122,14 +102,6 @@
             font-size: 20px;
         }
     
-    }
-    .goodItem-parameter-exchange {
-        font-size: 13px;
-    
-        div {
-            width: 15px;
-            height: 15px;
-        }
     }
 }
 

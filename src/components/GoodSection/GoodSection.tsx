@@ -4,6 +4,7 @@ import Rating from '../Rating';
 import { useLocation } from 'react-router-dom';
 // import { CustomContextMain } from '../../context/MainContext';
 import image404 from '../../assets/images-site/404.png';
+import { averageRating } from '../../const/const';
 
 // export interface GoodSectionType {
 //     article: string,
@@ -19,13 +20,9 @@ import image404 from '../../assets/images-site/404.png';
 // }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const GoodSection: React.FC<any> = ({article, titleGood, price, reviews, categoryChildren, photoGood, parameter}) => {
+const GoodSection: React.FC<any> = ({titleGood, price, reviews, categoryChildren, photoGood}) => {
     // const [isMore, setIsMore] = React.useState(false)
     const location = useLocation();
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const averageRating = reviews.reduce((sum: number, review: any) => {
-        return sum + parseFloat(review.statusRev)
-    }, 0);
 
     const [isBasket, setIsBasket] = React.useState(false)
 
@@ -54,7 +51,7 @@ const GoodSection: React.FC<any> = ({article, titleGood, price, reviews, categor
     //         </div>
     //     )
     // }
-
+//
     
   return (
     <div className='goodSection'>
@@ -70,32 +67,7 @@ const GoodSection: React.FC<any> = ({article, titleGood, price, reviews, categor
                 <div><GoodSectionGallery gallery={photoGood} width={51} /></div>
             )
         }
-        {
-            location && location.pathname === '/' && (
-                <div className='goodSection-category'>
-                    <p>{categoryChildren}</p>
-                    <div className='goodSection-category-arrow'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path></svg></div>
-                </div>
-            )
-        }
-        {
-            location && location.pathname === '/favorite' && (
-                <div className='goodSection-character goodSection-article'>
-                    <p>Артикул:</p>
-                    <p>{article}</p>
-                </div>
-            )
-        }
-        <h2>{titleGood}</h2>
-        {
-            location && location.pathname !== '/comparison' && (
-                <div className='goodSection-rating'>
-                    <Rating rating={averageRating ? averageRating / reviews.length : 5} />
-                    <p>{averageRating ? averageRating / reviews.length : 5}</p>
-                </div>
-            )
-        }
-        
+
         <div className='goodSection-actions-price'>
             <div className='goodSection-actions'>
                 <div>
@@ -116,39 +88,30 @@ const GoodSection: React.FC<any> = ({article, titleGood, price, reviews, categor
             </div>
             <h1>{price} ₽</h1>
         </div>
-
+        
+        <h2>{titleGood}</h2>
         {
-            location && location.pathname === '/favorite' && (
+            location && location.pathname !== '/comparison' && (
                 <>
-                    <div className='goodSection-character goodSection-material'>
-                        <p>Материал изделия:</p>
-                        <p>{parameter[2].valueParameter}</p>
+                    <div className='goodSection-rating'>
+                        <p>{averageRating(reviews) ? averageRating(reviews) / reviews.length : 5}</p>
+                        <Rating rating={averageRating(reviews) ? averageRating(reviews) / reviews.length : 5} />
+                        <h6>{reviews.length} оценки</h6>
                     </div>
-                    <div className='goodSection-character goodSection-material'>
-                        <p>Цвет изделия:</p>
-                        <p>серый</p>
-                    </div>
-                    <div className='goodSection-character goodSection-material'>
-                        <p>Размер изделия:</p>
-                        <p>{parameter[parameter.length - 4].valueParameter} x {parameter[parameter.length - 3].valueParameter} x {parameter[parameter.length - 2].valueParameter}</p>
-                    </div>
-                    <div className='goodSection-character goodSection-material'>
-                        <p>Производитель:</p>
-                        <p>Печи России</p>
-                    </div>
-
-                    <div className='cartGood-category'>
-                            <p>{categoryChildren}</p>
-                            <div >
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path></svg>
-                            </div>
+           
+                    <div className='goodSection-category'>
+                        <p>{categoryChildren}</p>
+                        <div className='goodSection-category-arrow'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path></svg></div>
                     </div>
                 </>
             )
         }
+        
+        
 
+        
         {
-            location.pathname === '/' && (
+            location.pathname !== '/comparison' && (
                 <div onClick={(e) => e.preventDefault()}>
                     {
                         !isBasket && (
@@ -177,22 +140,13 @@ const GoodSection: React.FC<any> = ({article, titleGood, price, reviews, categor
                 </div>
             )
         }
+
         <div className='goodSection-more'>
-        <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M46.7067 13.9065C41.6795 7.42675 31.8437 8.13163 27.6788 14.8926C27.598 15.0238 27.4026 15.0238 27.3217 14.8926C23.1568 8.13161 13.3211 7.42675 8.29376 13.9065L7.58481 14.8202C3.27102 20.3802 3.89387 28.3092 9.02294 33.1272L24.9964 48.1325C25.235 48.3569 25.496 48.6021 25.7419 48.7916C26.0249 49.0095 26.4204 49.2619 26.9487 49.3654C27.3128 49.4369 27.6877 49.4369 28.0519 49.3654C28.5801 49.2619 28.9756 49.0095 29.2587 48.7916C29.5048 48.6021 29.7656 48.3569 30.0044 48.1325L45.9775 33.1272C51.1067 28.3092 51.7296 20.3802 47.4158 14.8202L46.7067 13.9065Z" fill="white" stroke="#CF4E32" stroke-width="5"/>
-</svg>
-
-
-
-
-
-
-
-
-
-
-
+            <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M46.7067 13.9065C41.6795 7.42675 31.8437 8.13163 27.6788 14.8926C27.598 15.0238 27.4026 15.0238 27.3217 14.8926C23.1568 8.13161 13.3211 7.42675 8.29376 13.9065L7.58481 14.8202C3.27102 20.3802 3.89387 28.3092 9.02294 33.1272L24.9964 48.1325C25.235 48.3569 25.496 48.6021 25.7419 48.7916C26.0249 49.0095 26.4204 49.2619 26.9487 49.3654C27.3128 49.4369 27.6877 49.4369 28.0519 49.3654C28.5801 49.2619 28.9756 49.0095 29.2587 48.7916C29.5048 48.6021 29.7656 48.3569 30.0044 48.1325L45.9775 33.1272C51.1067 28.3092 51.7296 20.3802 47.4158 14.8202L46.7067 13.9065Z" fill="white" stroke="#CF4E32" stroke-width="5"/>
+            </svg>
         </div>
+
         {/* <div className='goodSection-more' onClick={morePopupFn}>
             <svg width="23" height="12" viewBox="0 0 23 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5.91525 8C6.97302 8 7.83051 7.10457 7.83051 6C7.83051 4.89543 6.97302 4 5.91525 4C4.85749 4 4 4.89543 4 6C4 7.10457 4.85749 8 5.91525 8Z" stroke="black" strokeLinejoin="round"/>

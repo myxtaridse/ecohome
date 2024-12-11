@@ -14,14 +14,28 @@
     }
 
     .goodSection-rating {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 7px;
+        width: 100%;
     
         p {
             margin-top: -2px;
             font-size: 16px;
+            color: #565656;
+            font-weight: 600;
+        }
+        h6 {
+            margin-left: 10px;
+            transform: translateY(-2px);
+            font-size: 10px;
+            font-weight: 350;
+            color: #565656;
         }
     
         .star-ratings {
-            gap: 0;
+            gap: 2px;
         }
         .star-container {
             width: 20px !important;
@@ -48,28 +62,16 @@
         
         
         svg {
-            fill: #fff;
             width: 24px;
             height: 24px;
-            stroke: #00000043;
-            stroke-width: 2px;
 
             path {
-                // filter: drop-shadow(0px 0px 1px rgba(207, 78, 50, 0.2));
-                backdrop-filter: blur(16px);
+                stroke: #cf4f3290;
             }
         }
     }
 }
 
-
-.goodSection-rating {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    gap: 7px;
-
-}
 
 
 
@@ -77,10 +79,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    // h1 {
-    //     font-size: 26px;
-    // }
 }
 
 .goodSection-actions {
@@ -115,13 +113,13 @@
 
 .goodSection-basket {
        position: absolute;
-       top: 175px;
-       right: 5px;
+       border: 1px solid white;
+       top: 195px;
+       right: 8px;
        background-color: #CF4E32;
-       box-shadow: 0px 0px 15px 10px rgba(211, 211, 211, 0.319);
        border-radius: 50%;
-       width: 36px;
-       height: 36px;
+       width: 40px;
+       height: 40px;
        display: flex;
        align-items: center;
        justify-content: center;
@@ -136,7 +134,7 @@
 .goodSection-category {
     margin-top: 0;
     display: flex;
-    font-size: 10px;
+    font-size: 9px;
     align-items: center;
     justify-content: start;
     gap: 2px;
@@ -145,11 +143,11 @@
         font-weight: 300;
     }
     .goodSection-category-arrow {
-        transform: translateY(1px);
-        width: 10px;
+        transform: translateY(2px);
+        width: 9px;
     
         svg {
-            fill: rgb(177, 177, 177);
+            fill: #565656;
         }
     }
 }
@@ -163,23 +161,26 @@
 
 
 .goodSection-incr-decr {
+    border: 1px solid #cf4f32a3;
     background-color: #fff;
-    box-shadow: 0px 0px 15px 10px rgba(211, 211, 211, 0.319);
     border-radius: 20px;
     height: 36px;
     width: 90px;
     position: absolute;
-    top: 175px;
-    right: 5px;
+    top: 195px;
+    right: 8px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 0;
     padding: 0px 10px;
 
+    h2 {
+        margin-right: 0;
+    }
+
     .goodItem-reviews-item-status-arrow {
-        font-size: 22px;
-        transform: rotate(0deg);
+        font-size: 24px;
         width: max-content;
         height: max-content;
         padding: 0;

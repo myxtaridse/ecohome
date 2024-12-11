@@ -87,10 +87,6 @@ React.useEffect(() => {
               </div>
 
                <GoodReviewItem />
-              {/*<GoodReviewItem />
-              <GoodReviewItem />
-              <GoodReviewItem />
-              <GoodReviewItem /> */}
           </div>
         </div>
         

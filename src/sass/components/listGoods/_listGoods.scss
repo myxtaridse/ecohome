@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: start;
-    gap: 20px;
+    gap: 10px;
     overflow-x: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -14,14 +14,14 @@
 }
 
 .listGoods-sort-icon {
-    width: 50px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #F3F5F9;
     border-radius: 10px;
-    padding: 9px;
+    padding: 6px;
 
     svg {
         
@@ -33,7 +33,7 @@
 
 .listGoods-sort-character {
     width: max-content;
-    height: 40px;
+    height: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
