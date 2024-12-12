@@ -23,8 +23,8 @@ export const color = [
     },
     {
         id: 5,
-        title: 'голубой',
-        color: '#A4CFFF'
+        title: 'бардовый',
+        color: '#9B2D30'
     },
     {
         id: 6,

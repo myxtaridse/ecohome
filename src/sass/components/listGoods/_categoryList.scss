@@ -40,22 +40,33 @@
     }
 }
 
+.categoryPopup-item-color {
+    width: 20px;
+    height: 20px;
+    border: 1px solid lightgray;
+    background-position: center;
+    background-size: 120px;
+    border-radius: 50px;
+    margin-right: 15px;
+}
+
 .categoryPopup-item {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     width: 100%;
     height: max-content;
     padding: 5px;
     border-bottom: 1px solid #EBEBEB;
 
     h4 {
+        
         font-weight: 550;
         color: #565656;
         font-size: 14px;
     }
 
     .cart-main-select-all {
+        margin-left: auto;
         p {
             display: none;
         }

@@ -22,7 +22,9 @@ const ListGoodsPopupLayout: React.FC<ListGoodsPopupLayoutType> = ({list, title})
             list.map((item: any) => (
               <div key={item.id} className="categoryPopup-item" onClick={() => setIsSelectAll(!isSelectAll)}>
                   {
-                    title === 'Цвет' && <div style={{backgroundColor: `${item.color ? item.color : '#fff'}`, width: '20px', height: '20px', border: '1px solid black'}}></div>
+                    title === 'Цвет' && <div className='categoryPopup-item-color' style={{
+                    background: item.title === 'бесцветный' ? `url(${item.image})` : item.color ? item.color : '',
+                  }}></div>
                   }
                   <h4>{item.title}</h4>
                   <Select isSelectAll={isSelectAll} />

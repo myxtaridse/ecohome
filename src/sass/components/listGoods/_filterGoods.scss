@@ -1,0 +1,123 @@
+.filterGoods {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: #fff;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow-y: scroll;
+}
+.filterGoods-header {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 5px;
+    transform: translateX(-10px);
+
+    div {
+        width: 22px;
+        height: 22px;
+    }
+
+    h3 {
+        font-size: 22px;
+        font-weight: 800;
+    }
+}
+.filterGoods-reset {
+    margin-left: auto;
+    p {
+        color: #4C6ACC;
+        text-decoration: underline dotted #4C6ACC;
+    }
+}
+.filterGoods-filter {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    h4 {
+        font-size: 20px;
+    }
+}
+.filterGoods-filter-price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+    
+    div {
+        width: 45%;
+        position: relative;
+        
+        input {
+            border-radius: 10px;
+            border: 1px solid #EBEBEB;
+            width: 100%;
+            height: 35px;
+            padding-left: 45%;
+            font-size: 16px;
+        }
+        
+        h6 {
+            position: absolute;
+            top: 20%;
+            font-size: 15px;
+        }
+        h6:first-of-type {
+            left: 8px;
+        }
+        h6:last-of-type {
+            right: 8px;
+        }
+    }
+}
+.filterGoods-filter-list {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+}
+.filterGoods-filter-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+    width: max-content;
+    padding: 0 10px;
+    height: 25px;
+    background-color: #EBEBEB;
+    border-radius: 5px;
+    
+    p {
+        font-size: 14px;
+        color: #565656;
+        font-weight: 550;
+    }
+
+    .categoryPopup-item-color {
+        margin-right: 10px;
+    }
+}
+.filterGoods-filter-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 5px;
+    color: #CF4E32;
+
+    svg {
+        width: 25px;
+        transform: rotate(90deg) translateX(3px);
+    }
+    p {
+        font-weight: 600;
+    }
+}
