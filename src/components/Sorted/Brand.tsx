@@ -34,7 +34,7 @@ const Brand: React.FC<ListGoodsPopupLayoutType> = ({list, title}) => {
         <div className="categoryPopup-list">
           {
             sortedList && Object.keys(sortedList).map((letter) => (
-              <div>
+              <>
                   <h3>{letter}</h3>
                   {
                     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -45,25 +45,9 @@ const Brand: React.FC<ListGoodsPopupLayoutType> = ({list, title}) => {
                       </div>
                     ))
                   }
-              </div>
+              </>
             ))
           }
-          {/*
-          {alphabet && Object.keys(alphabet).map((itemAlphabet: any) => (
-            <div>
-                <h3 onClick={() => console.log(alphabet[itemAlphabet])
-                }>{itemAlphabet}</h3>
-                {alphabet.length &&
-                  alphabet[itemAlphabet].map((item) => (
-                    <div key={item.id} className="categoryPopup-item" onClick={() => setIsSelectAll(!isSelectAll)}>
-                      <h4>{item.title}</h4>
-                      <Select isSelectAll={isSelectAll} />
-                  </div>
-                  ))
-                }
-            </div>
-          ))
-          } */}
         </div>
         <div className="categoryPopup-btns">
           <button>Отменить</button>

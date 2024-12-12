@@ -9,6 +9,7 @@ export interface ListGoodsPopupLayoutType {
 
 const ListGoodsPopupLayout: React.FC<ListGoodsPopupLayoutType> = ({list, title}) => {
     const [isSelectAll, setIsSelectAll] = React.useState(false)
+    
     return (
       <div className="categoryPopup">
         <h3>{title}</h3>
@@ -20,6 +21,9 @@ const ListGoodsPopupLayout: React.FC<ListGoodsPopupLayoutType> = ({list, title})
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             list.map((item: any) => (
               <div key={item.id} className="categoryPopup-item" onClick={() => setIsSelectAll(!isSelectAll)}>
+                  {
+                    title === 'Цвет' && <div style={{backgroundColor: `${item.color ? item.color : '#fff'}`, width: '20px', height: '20px', border: '1px solid black'}}></div>
+                  }
                   <h4>{item.title}</h4>
                   <Select isSelectAll={isSelectAll} />
               </div>

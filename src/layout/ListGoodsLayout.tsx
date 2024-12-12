@@ -2,7 +2,6 @@ import React from 'react'
 import Arrow from '../components/Arrow'
 import Price from '../components/Sorted/Price'
 import Brand from '../components/Sorted/Brand'
-import Color from '../components/Sorted/Color'
 import { useAppDispatch } from '../redux/store'
 import { fetchGoods } from '../redux/goodsSlice/asyncActions'
 import { useSelector } from 'react-redux'
@@ -14,6 +13,7 @@ import ListGoodsPopupLayout from './ListGoodsPopupLayout'
 import { category } from '../const/category'
 import { material } from '../const/material'
 import { brand } from '../const/brand'
+import { color } from '../const/color'
 
 
 const character = [
@@ -40,7 +40,7 @@ const character = [
     {
         id: 5,
         title: 'Цвет',
-        component: <Color />
+        component: <ListGoodsPopupLayout list={color} title='Цвет' />
     }
 ]
 
