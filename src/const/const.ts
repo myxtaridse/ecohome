@@ -159,3 +159,4 @@ export const averageRating = (reviews: any) => {
     return sum + parseFloat(review.statusRev)
   }, 0);
 }
+

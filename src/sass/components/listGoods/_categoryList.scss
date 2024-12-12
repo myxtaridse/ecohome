@@ -30,25 +30,16 @@
     scrollbar-color: #888;
     overflow-y: scroll;
     scroll-behavior: smooth;
+
+    h3 {
+        width: 100%;
+        background-color: #EBEBEB;
+        padding-left: 5px;
+        font-size: 14px;
+        border-radius: 5px;
+    }
 }
-  
-  /* Advanced styling for WebKit-based browsers */
-  .categoryPopup-list::-webkit-scrollbar {
-    width: 12px;
-  }
-  
-  .categoryPopup-list::-webkit-scrollbar-track {
-    background: #000;
-  }
-  
-  .categoryPopup-list::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 6px;
-  }
-  
-  .categoryPopup-list::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
+
 .categoryPopup-item {
     display: flex;
     align-items: center;
@@ -82,6 +73,9 @@
             }
         }
     }
+}
+.categoryPopup-item:last-of-type {
+    border: none;
 }
 .categoryPopup-btns {
     display: flex;
