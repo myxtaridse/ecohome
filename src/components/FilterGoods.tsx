@@ -5,11 +5,12 @@ import { category } from '../const/category'
 import { material } from '../const/material'
 import { color } from '../const/color'
 import { country } from '../const/country'
+import SliderPrice from './UserStorage/SliderPrice'
 
 interface FilterGoodsType {
   setFilter: (filter: boolean) => void;
 }
-
+//
 const FilterGoods: React.FC<FilterGoodsType> = ({setFilter}) => {
   return (
     <div className='filterGoods'>
@@ -42,7 +43,7 @@ const FilterGoods: React.FC<FilterGoodsType> = ({setFilter}) => {
             </div>
           </div>
         </div>
-        <div className='filterGoods-filter'>
+        {/* <div className='filterGoods-filter'>
           <h4>Цена</h4>
           <div className='filterGoods-filter-price'>
               <div>
@@ -56,7 +57,8 @@ const FilterGoods: React.FC<FilterGoodsType> = ({setFilter}) => {
                 <h6>₽</h6>
               </div>
           </div>
-        </div>
+        </div> */}
+        <SliderPrice />
         <div className='filterGoods-filter'>
           <h4>Бренд</h4>
           <div className='filterGoods-filter-list'>
@@ -102,6 +104,7 @@ const FilterGoods: React.FC<FilterGoodsType> = ({setFilter}) => {
                   <div className='categoryPopup-item-color' 
                     style={{
                       background: item.title === 'бесцветный' ? `url(${item.image})` : item.color ? item.color : '',
+                      border: item.title === 'бесцветный' || item.title === 'белый' ? '1px solid lightgrey' : 'none',
                     }}
                   ></div>
                   <p>{item.title}</p>

@@ -1,0 +1,41 @@
+.sortGoods {
+    height: max-content;
+    padding: 60px 20px 20px;
+
+    h3 {
+        font-size: 24px;
+        font-weight: 800;
+    }
+}
+.sortGoods-list {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sortGoods-item {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    padding: 10px 0 10px 10px;
+
+    div {
+        width: 27px;
+        height: 27px;
+
+        svg {
+            fill: #565656;
+        }
+    }
+    p {
+        font-weight: 550;
+        font-size: 18px;
+        color: #565656;
+    }
+}
+.sortGoods-item-active {
+    background-color: #F7F7F7;
+    border: 1px solid #565656;
+    border-radius: 5px;
+}

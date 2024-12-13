@@ -24,6 +24,7 @@ const ListGoodsPopupLayout: React.FC<ListGoodsPopupLayoutType> = ({list, title})
                   {
                     title === 'Цвет' && <div className='categoryPopup-item-color' style={{
                     background: item.title === 'бесцветный' ? `url(${item.image})` : item.color ? item.color : '',
+                    border: item.title === 'бесцветный' || item.title === 'белый' ? '1px solid lightgrey' : 'none',
                   }}></div>
                   }
                   <h4>{item.title}</h4>
