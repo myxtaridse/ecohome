@@ -22,14 +22,13 @@ const MainPage = () => {
 
   const {goods} = useSelector(selectGoods);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const { isCatalog, setPathValue }: any = React.useContext(CustomContextMain);
+  const { setPathValue }: any = React.useContext(CustomContextMain);
   React.useEffect(() => {
     setPathValue([])
 }, [setPathValue])
 
   return (
     <div className="mainPage">
-      {isCatalog && <div className="catalog-bg"></div>}
       <BannerMain />
       <MainBenefitLine />
 
@@ -37,9 +36,9 @@ const MainPage = () => {
       <Link to={`/sale`}>
         <MainGoods goods={goods} title="Акции" />
       </Link>
-      <Link to={`/new`}>
+      {/* <Link to={`/new`}>
         <MainGoods goods={goods} title="Новинки" />
-      </Link>
+      </Link> */}
       <Partners />
     </div>
   );

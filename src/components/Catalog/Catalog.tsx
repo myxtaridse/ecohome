@@ -2,6 +2,7 @@ import React from "react";
 import { CustomContextMain } from "../../context/MainContext";
 import Arrow from "../Arrow";
 import { category } from "../../const/category";
+import { Link } from "react-router-dom";
 
 
 
@@ -35,22 +36,25 @@ const Catalog = () => {
             }}
           >
             <div className="catalog-item-main">
-            <img style={{ width: "40px" }} src={item.svg} />
-            <p>{item.title}</p>
-            <div className={["catalog-arrow", "catalog-arrow-main", arrowDown && activeCategory === item.id ? 'catalog-arrow-down' : ''].join(" ")}>
-              <Arrow />
-            </div>
+              <img style={{ width: "40px" }} src={item.svg} />
+              <p>{item.title}</p>
+              <div className={["catalog-arrow", "catalog-arrow-main", arrowDown && activeCategory === item.id ? 'catalog-arrow-down' : ''].join(" ")}>
+                <Arrow />
+              </div>
             </div>
 
             {/* {activeCategory === item.id && ( */}
               <div className={["subCategory", windowRef.current <= 500 && activeCategory === item.id && arrowDown ? "catalog-item-sub-show" : ''].join(" ")}>
                 {item.list.map((li) => (
+                  <Link to={`/catalog/${li.link}`}>
                   <div key={li.id} className="catalog-item-main">
                     <p>{li.subTitle}</p>
                     <div className="catalog-arrow">
                       <Arrow />
                     </div>
                   </div>
+                </Link>
+                  
                 ))}
               </div>
             {/* )} */}

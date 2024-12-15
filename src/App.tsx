@@ -11,7 +11,6 @@ import UserIn from "./layout/UserInLayout";
 import ActionsLayout from "./layout/ActionsLayout";
 import Loader from './components/Loader/Loader'
 import ListGoodsLayout from "./layout/ListGoodsLayout";
-import ListGoods from "./pages/ListGoods";
 
 function App() {
 
@@ -109,18 +108,14 @@ function App() {
           </React.Suspense>
         } />
         <Route element={<ListGoodsLayout />}>
-        <Route path="/:catalogId" element={
+        <Route path="/catalog/:catalogId" element={
           <React.Suspense fallback={<Loader />}>
-            <ListGoods />
+            {/* <ListGoods /> */}
           </React.Suspense>
         }/>
       </Route>
         </Route>
-        <Route path="/loader" element={
-          <React.Suspense fallback={<Loader />}>
-            <Loader />
-          </React.Suspense>
-        } />
+        
       <Route element={<UserIn />}>
           <Route path="/login" element={
               <React.Suspense fallback={<Loader />}>

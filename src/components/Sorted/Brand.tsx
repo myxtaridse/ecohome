@@ -3,7 +3,10 @@ import Select from '../Select'
 import { ListGoodsPopupLayoutType } from '../../layout/ListGoodsPopupLayout'
 
 const Brand: React.FC<ListGoodsPopupLayoutType> = ({list, title}) => {
-  const [isSelectAll, setIsSelectAll] = React.useState(false)
+  const [selectId, setSelectId] = React.useState<number[]>([]);
+    const selectIdFn = (id: number) => {
+      setSelectId(prev => [...prev, id])
+    }
 
   const sortedList = React.useMemo(() => {
     if (!list) return {};
@@ -39,9 +42,16 @@ const Brand: React.FC<ListGoodsPopupLayoutType> = ({list, title}) => {
                   {
                     // eslint-disable-next-line @typescript-eslint/no-explicit-any
                     sortedList[letter].map((item: any) => (
-                      <div key={item.id} className="categoryPopup-item" onClick={() => setIsSelectAll(!isSelectAll)}>
+                      <div key={item.id} className="categoryPopup-item" onClick={() => {
+                        if (selectId.includes(item.id)) {
+                          const filter = selectId.filter((selectItem) => selectItem !== item.id)
+                          setSelectId(filter)
+                        } else {
+                          selectIdFn(item.id)
+                        }
+                      }}>
                           <h4>{item.title}</h4>
-                          <Select isSelectAll={isSelectAll} />
+                          <Select isSelectAll={selectId.includes(item.id)} />
                       </div>
                     ))
                   }

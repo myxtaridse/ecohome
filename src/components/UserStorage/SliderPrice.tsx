@@ -31,8 +31,9 @@ const SliderPrice = () => {
             thumbClassName="slider-thumb"
             trackClassName="slider-track"
             onChange={handleSliderChange} // Сохраняем изменения
-            min={MIN}
-            max={MAX}
+            defaultValue={[0, 100]}
+            min={0}
+            max={100}
             minDistance={10} // Минимальное расстояние между ползунками
           />
               
