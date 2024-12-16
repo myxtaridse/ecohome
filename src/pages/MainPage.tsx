@@ -10,6 +10,7 @@ import { useAppDispatch } from "../redux/store";
 import { fetchGoods } from "../redux/goodsSlice/asyncActions";
 import { Link } from "react-router-dom";
 import image from '../assets/images-site/sale-bg.png';
+import NewsMain from "../components/News-Block/NewsMain";
 
 const MainPage = () => {
 
@@ -50,6 +51,9 @@ const MainPage = () => {
         </div>
           <MainGoods goods={goods} title="" />
         </div>
+      </Link>
+      <Link to='/news'>
+          <NewsMain />
       </Link>
       <Link to={`/new`}>
         <MainGoods goods={goods} title="Новинки в ЭКОХОЗБЫТ" />
