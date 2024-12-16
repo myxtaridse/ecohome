@@ -186,21 +186,24 @@
   }
 }
 @media (max-width: 500px) {
+  .mainPage-sale {
+    position: relative;
+  }
   .mainGoods {
     margin-top: 80px;
-    position: relative;
   }
   .mainGoods-bg {
     position: absolute;
     top: -50px;
     left: 0;
-    width: 100vw;
+    width: 103vw;
     height: 100px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
     z-index: -100;
     margin-left: -1.5vw;
+    
   }
   .mainGoods-bottom {
     width: 100vw;
@@ -226,27 +229,25 @@
       font-weight: 800;
     }
   }
-  .mainGoods-title {
-    display: none;
-  }
   .mainGoods-list {
-    padding-top: 20px;
+    // padding-top: 20px;
     z-index: 100;
     width: max-content;
     margin: 0 auto;
-    display: grid;
-    justify-content: center;
+    display: flex;
+    justify-content: start;
     border-radius: 20px 0 0 0;
     background-color: #fff;
     width: 100vw;
     margin-left: -1.5vw;
-
-    grid-template-columns: repeat(2, 46vw);
+    // grid-template-columns: repeat(2, 46vw);
     gap: 30px 15px;
+    overflow-x: scroll;
+    scrollbar-width:none;
 
     .goodSection {
       padding: 0px;
-      width: 100%;
+      width: 50vw;
       position: relative;
       display: flex;
       flex-direction: column;
@@ -316,17 +317,19 @@
       }
     }
   }
-  // .mainGoods-title {
-  //   display: flex;
-  //   align-items: center;
-  //   margin-left: 0;
-  //   margin-bottom: 20px;
-  //   gap: 10px;
+  .mainGoods-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 0;
+    margin-bottom: 20px;
+    gap: 10px;
 
-  // }
+  }
   .mainGoods-title h1 {
     font-size: 22px;
     margin-left: 10px;
+    font-weight: 750;
   }
   .mainGoods-title-again div {
     margin-top: 0;
