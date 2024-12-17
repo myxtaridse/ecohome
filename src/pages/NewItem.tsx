@@ -22,7 +22,11 @@ const NewItem = () => {
                 ))
             }
             <div className='newsItem-content-html'>
-                <div className='newsItem-content-html'></div>
+                {
+                    newsItem?.content.contentHTML ? newsItem?.content.contentHTML : (
+                        <div></div>
+                    )
+                }
             </div>
         </div>
     </div>
