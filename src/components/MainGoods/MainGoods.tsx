@@ -11,7 +11,7 @@ interface MainGoodsType {
 const MainGoods: React.FC<MainGoodsType> = ({ goods, title }) => {
   
   return (
-    <div className="mainGoods" style={{marginTop: title ? '60px' : '70px'}}>
+    <div className="mainGoods" style={{marginTop: title ? '50px' : '70px'}}>
       
       {
         title && (
