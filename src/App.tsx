@@ -12,7 +12,7 @@ import ActionsLayout from "./layout/ActionsLayout";
 import Loader from './components/Loader/Loader'
 import ListGoodsLayout from "./layout/ListGoodsLayout";
 import Loading from "./components/Loading/Loading";
-import News from "./pages/News";
+import NewItem from "./pages/NewItem";
 
 function App() {
 
@@ -116,9 +116,9 @@ function App() {
           </React.Suspense>
         }/>
       </Route>
-      <Route path="" element={
+      <Route path="/news/:newsId" element={
         <React.Suspense fallback={<Loading />}>
-          <News />
+          <NewItem />
         </React.Suspense>
       }
       />

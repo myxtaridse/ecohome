@@ -1,3 +1,5 @@
+@use './newsItem-page';
+
 .news {
     margin: 45px 2.5vw 0;
     display: flex;
@@ -23,7 +25,7 @@
     scrollbar-width: none;
 }
 
-.newsItem-border {
+.newsMain-item-border {
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -33,7 +35,7 @@
     border: 2px solid #FFCE54;
     padding: 2px;
 }
-.newsItem {
+.newsMain-item {
     position: relative;
     border-radius: 16px;
     width: 120px;
