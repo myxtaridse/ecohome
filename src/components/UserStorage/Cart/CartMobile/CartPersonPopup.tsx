@@ -16,7 +16,7 @@ const CartPersonPopup = () => {
         setChildrenPopup(
             <div className='checkout-person-block'>
                 <div className='cartMobile-map-text'>
-                    <h4>Адрес магазина:</h4>
+                    <h4>Данные покупателя:</h4>
                 </div>
                 <div className='checkout-person-itsMe' onClick={() => setItsMe(!itsMe)}>
                         <h4>Получатель {itsMe ? 'не' : ''} я</h4>

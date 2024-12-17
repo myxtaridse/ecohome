@@ -7,7 +7,7 @@ const CartMapPopup = () => {
   const [isGraphic, setIsGraphic] = React.useState(false)
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const {setIsMore, setChildrenPopup, isMore}: any = React.useContext(CustomContextMain);
+  const {setIsMore, setChildrenPopup}: any = React.useContext(CustomContextMain);
 
   const morePopupFn = () => {
       setIsMore(true)
@@ -73,14 +73,14 @@ const CartMapPopup = () => {
       )
   }
   
-  React.useEffect(() => {
-    if (isMore) {
-      document.documentElement.style.overflowY = 'hidden';
-    } 
-    if (!isMore) {
-      document.documentElement.style.overflowY = 'scroll';
-    }
-  }, [isMore])
+  // React.useEffect(() => {
+  //   if (isMore) {
+  //     document.documentElement.style.overflowY = 'hidden';
+  //   } 
+  //   if (!isMore) {
+  //     document.documentElement.style.overflowY = 'scroll';
+  //   }
+  // }, [isMore])
   
   
   return (

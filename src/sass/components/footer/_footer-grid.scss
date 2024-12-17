@@ -653,8 +653,23 @@
     .footer-contacts-reviews-block {
       display: none;
     }
+    .footer-mail {
+      font-size: 17px;
+    }
+    .footer-webSites {
+      margin: 10px 0 15px 0px;
+
+      .footer-webSites-logo {
+        padding: 7px;
+      }
+      .footer-webSites-logo img {
+        width: 16px;
+        height: 16px;
+      }
+    }
   }
   .footer-contacts-address {
+    margin-top: 10px;
     h1 {
       margin-top: 0;
     }
@@ -715,32 +730,5 @@
       margin-left: -15px;
       margin-bottom: 10px;
     }
-
-    .footer-webSites {
-      width: max-content;
-      margin-top: -25px;
-      gap: 10px;
-      margin: 10px auto 5px auto;
-
-      .footer-webSites-logo {
-        padding: 7px;
-        
-      }
-      .footer-webSites-logo img {
-        width: 25px;
-        height: 25px;
-      }
-    }
   }
 }
-
-// @media (max-width: 370px) {
-//   .footer-client,
-//   .footer-company {
-//     width: 91%;
-//   }
-//   .footer-contacts {
-//     padding: 0 14px;
-    
-//   }
-// }

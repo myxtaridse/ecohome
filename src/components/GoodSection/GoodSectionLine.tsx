@@ -15,7 +15,7 @@ const GoodSectionLine: React.FC<any> = ({article, titleGood, categoryChildren, p
     }, 0);
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const {setIsMore, setChildrenPopup, isMore}: any = React.useContext(CustomContextMain);
+    const {setIsMore, setChildrenPopup}: any = React.useContext(CustomContextMain);
 
     const morePopupFn = () => {
         setIsMore(true)
@@ -49,16 +49,16 @@ const GoodSectionLine: React.FC<any> = ({article, titleGood, categoryChildren, p
         )
     }
 
-    React.useEffect(() => {
-        if (isMore) {
-          document.documentElement.style.overflowY = 'hidden';
-        } 
+    // React.useEffect(() => {
+    //     if (isMore) {
+    //       document.documentElement.style.overflowY = 'hidden';
+    //     } 
         
         
-        if (!isMore) {
-          document.documentElement.style.overflowY = 'scroll';
-        }
-      }, [isMore])
+    //     if (!isMore) {
+    //       document.documentElement.style.overflowY = 'scroll';
+    //     }
+    //   }, [isMore])
 
   return (
     <div className='goodSection-line'>
