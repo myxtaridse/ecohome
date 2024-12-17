@@ -4,6 +4,7 @@ import ozon from "../../assets/icons/footer-icons/ozon.svg";
 import wildberries from "../../assets/icons/footer-icons/wildberries.svg";
 import sber from "../../assets/icons/footer-icons/sber.svg";
 import { CustomContextMain } from "../../context/MainContext";
+import { Map, Placemark, YMaps } from "@pbe/react-yandex-maps";
 
 const webSites = [
   {
@@ -31,6 +32,70 @@ const webSites = [
 const FooterContacts = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const { isPopup, setIsPopup }: any = React.useContext(CustomContextMain);
+  const [isGraphic, setIsGraphic] = React.useState(false)
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const {setIsMore, setChildrenPopup}: any = React.useContext(CustomContextMain);
+
+  const morePopupFn = () => {
+      setIsMore(true)
+      setChildrenPopup(
+        <div className='cartMobile-map-block'>
+        <div className='cartMobile-map-text'>
+          <h4>Адрес магазина:</h4>
+          <h5>Кировская обл., г. Киров, ул. Складская. д. 9</h5>
+        </div>
+        <div className='cartMobile-map-text'>
+          <h4>Время работы:</h4>
+          <div className='cartMobile-map-text-flex' onClick={() => setIsGraphic(!isGraphic)}>
+            <h5>Открыто до 21:00</h5>
+            <div className='cartMobile-map-text-graphic'>
+                <h5>График</h5>
+                <div className={[isGraphic ? 'cartMobile-map-rotate' : ''].join(" ")}>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.5 16L8 10H17L12.5 16Z" fill="#565656"/>
+                    </svg>
+                </div>
+            </div>
+          </div>
+          <div className={['cartMobile-map-graphic', isGraphic ? 'cartMobile-map-graphic-show' : ''].join(" ")}>
+          {
+            ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'].map((day) => (
+              <div className={['cartMobile-map-text-flex'].join(" ")}>
+                <h5>{day}</h5>
+                <h5>Открыто до 21:00</h5>
+              </div>
+            ))
+          }
+          </div>
+        </div>
+        <YMaps
+            
+            >
+              <Map
+                // className="cartDelveryDetail-map"
+                state={{ center: [58.559339, 49.591738], zoom: 12 }}
+                width="100vw"
+                height="100%"
+                options={{
+                  suppressMapOpenBlock: true,
+                  
+                }}
+              >
+              <Placemark options={{
+                      iconLayout: 'default#image',
+                      iconImageHref: 'https://cdn-icons-png.flaticon.com/128/16972/16972756.png',
+                      iconImageSize: [36, 36]
+                      
+                  }} geometry={[58.559339, 49.591738]} />
+  
+              </Map>
+            </YMaps>
+
+            <div></div>
+    </div>
+      )
+  }
   return (
     <div className="footer-contacts">
       <div className="footer-info-title">
@@ -45,7 +110,7 @@ const FooterContacts = () => {
         </div>
         <h2>Обратная связь</h2>
       </div>
-      <div className="footer-contacts-address">
+      <div className="footer-contacts-address" onClick={morePopupFn}>
           <h1>Адрес:</h1>
           <div className="footer-contacts-address-subtext">
               <p>
