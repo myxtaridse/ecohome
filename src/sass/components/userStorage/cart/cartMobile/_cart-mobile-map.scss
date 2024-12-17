@@ -1,6 +1,13 @@
 .cartMobile-map-block {
     height: 80vh;
     padding: 70px 0 30px;
+
+    .footer-contacts-reviews-block {
+        display: inline-block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
 }
 
 .cartMobile-map-text {
@@ -47,3 +54,4 @@
     transform: scaleY(1);
     height: max-content;
 }
+

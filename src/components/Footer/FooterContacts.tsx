@@ -92,7 +92,16 @@ const FooterContacts = () => {
               </Map>
             </YMaps>
 
-            <div></div>
+          
+              <div className="footer-contacts-reviews-block">
+                <iframe
+                width="156px"
+                height="60px"
+                  src="https://yandex.ru/sprav/widget/rating-badge/1408067184?type=rating"
+                  style={{border: "none"}}
+                  className="footer-contacts-reviews"
+                ></iframe>
+              </div>
     </div>
       )
   }
