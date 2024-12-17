@@ -313,12 +313,6 @@
       grid-column-start: 4;
       grid-column-end: 4;
     }
-    .footer-phone {
-      position: absolute;
-      top: 45px;
-      right: 25px;
-      font-size: 15px;
-    }
     .footer-mail {
       margin-top: -15px;
       font-size: 19px;
@@ -431,12 +425,6 @@
       grid-column-end: 3;
       font-size: 18px;
     }
-    .footer-phone {
-      position: absolute;
-      top: 32px;
-      right: 61px;
-      font-size: 15px;
-    }
     .footer-mail {
       margin-top: -90px;
       font-size: 15px;
@@ -501,12 +489,6 @@
       grid-column-end: 2;
       font-size: 20px;
     }
-    .footer-phone {
-      position: absolute;
-      top: 32px;
-      right: 40px;
-      font-size: 15px;
-    }
     .footer-mail {
       margin-top: -10px;
       font-size: 20px;
@@ -566,27 +548,17 @@
     }
 
     .footer-contacts-reviews-block {
-      display: inline-block;
-      grid-row-start: 3;
-      grid-column-start: 2;
-      grid-column-end: 2;
-      margin: 10px 0 10px 20px;
+      margin: 0;
       position: absolute;
-      top: 95px;
+      bottom: 0;
       right: 25px;
     }
     h1 {
-      margin: 10px 0 0px 0px;
+      margin: 20px 0 0px 0px;
       grid-row-start: 2;
       grid-column-start: 2;
       grid-column-end: 2;
       font-size: 20px;
-    }
-    .footer-phone {
-      position: absolute;
-      top: 58px;
-      left: 210px;
-      font-size: 11px;
     }
     .footer-mail {
       margin: 21px 0 10px 0px;
@@ -602,11 +574,15 @@
       grid-column-start: 1;
       grid-column-end: 1;
       margin-left: 0;
-      gap: 7px;
+      gap: 10px;
       margin: 10px 0 10px 0px;
 
       .footer-webSites-logo {
         padding: 7px;
+      }
+      .footer-webSites-logo img {
+        width: 25px;
+        height: 25px;
       }
     }
   }
@@ -642,22 +618,17 @@
       margin-bottom: 10px;
     }
     .footer-contacts-reviews-block {
-      margin: 10px 0 10px 20px;
-      top: 80px;
-      right: 30px;
+      position: static;
+      margin: 20px 0 0;
     }
-    h1 {
-      font-size: 16px;
-    }
+    // h1 {
+    //   font-size: 18px;
+    // }
     .footer-mail {
       margin: 15px 0 10px 0px;
-      font-size: 16px;
+      font-size: 18px;
     }
-    .footer-phone {
-      top: 55px;
-      left: 176px;
-      font-size: 10px;
-    }
+    
     .footer-webSites {
       width: max-content;
       margin-top: -25px;
@@ -680,9 +651,25 @@
     padding: 0 14px;
 
     .footer-contacts-reviews-block {
-      margin: 10px 0 10px 20px;
-      top: 100px;
-      right: 15px;
+      display: none;
+    }
+  }
+  .footer-contacts-address {
+    h1 {
+      margin-top: 0;
+    }
+    .footer-contacts-address-subtext {
+      margin-top: 5px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      div {
+        width: 20px;
+        height: 20px;
+      }
+      p {
+        margin-top: 0;
+      }
     }
   }
 }
@@ -729,44 +716,31 @@
       margin-bottom: 10px;
     }
 
-    .footer-phone {
-      top: 50px;
-      left: 173px;
-      font-size: 13px;
-    }
-
-    .footer-contacts-reviews-block {
-      position: static;
-      margin: 0;
-      margin-top: 20px;
-      top: 0;
-      right: 0;
-    }
     .footer-webSites {
       width: max-content;
       margin-top: -25px;
       gap: 10px;
-      margin: 10px 0 5px 0px;
+      margin: 10px auto 5px auto;
 
       .footer-webSites-logo {
-        padding: 5px;
+        padding: 7px;
         
       }
       .footer-webSites-logo img {
-        width: 15px;
-        height: 15px;
+        width: 25px;
+        height: 25px;
       }
     }
   }
 }
 
-@media (max-width: 370px) {
-  .footer-client,
-  .footer-company {
-    width: 91%;
-  }
-  .footer-contacts {
-    padding: 0 14px;
+// @media (max-width: 370px) {
+//   .footer-client,
+//   .footer-company {
+//     width: 91%;
+//   }
+//   .footer-contacts {
+//     padding: 0 14px;
     
-  }
-}
+//   }
+// }

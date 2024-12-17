@@ -151,13 +151,39 @@
     left: 5%;
   }
 }
+@media (max-width: 500px) {
+  .footer-map-block {
+    margin: 20px auto 0;
+    width: 95%;
+  }
+  .footer-news {
+    position: static;
+    margin: 0 auto;
+    width: 95%;
+  }
+  .footer-news-input {
+    margin-top: 10px;
+    input {
+      width: 100%;
+      font-size: 14px;
+      height: 35px;
+    }
+  }
+  .footer-news-input button {
+    top: 5px;
+    right: 6px;
+    font-size: 11px;
+    width: 90px;
+    height: 25px;
+  }
+}
 @media (max-width: 450px) {
   .footer-news {
     position: static;
     width: 90%;
     margin: 0 auto;
-    
   }
+
   .footer-news-input input {
     width: 100%;
     height: 35px;

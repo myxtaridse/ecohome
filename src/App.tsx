@@ -11,6 +11,8 @@ import UserIn from "./layout/UserInLayout";
 import ActionsLayout from "./layout/ActionsLayout";
 import Loader from './components/Loader/Loader'
 import ListGoodsLayout from "./layout/ListGoodsLayout";
+import Loading from "./components/Loading/Loading";
+import News from "./pages/News";
 
 function App() {
 
@@ -114,6 +116,12 @@ function App() {
           </React.Suspense>
         }/>
       </Route>
+      <Route path="" element={
+        <React.Suspense fallback={<Loading />}>
+          <News />
+        </React.Suspense>
+      }
+      />
         </Route>
         
       <Route element={<UserIn />}>

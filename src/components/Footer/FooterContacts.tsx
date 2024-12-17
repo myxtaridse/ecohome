@@ -45,10 +45,23 @@ const FooterContacts = () => {
         </div>
         <h2>Обратная связь</h2>
       </div>
-      <h1>+7-(833)-220-71-90</h1>
-      <p className="footer-phone" onClick={() => setIsPopup(!isPopup)}>
-        Заказать звонок
-      </p>
+      <div className="footer-contacts-address">
+          <h1>Адрес:</h1>
+          <div className="footer-contacts-address-subtext">
+              <p>
+                  г. Киров, ул. Складская д.33
+              </p>
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path></svg>
+              </div>
+          </div>
+      </div>
+      <div className="footer-phone-block">
+        <h1>+7-(833)-220-71-90</h1>
+        <p className="footer-phone" onClick={() => setIsPopup(!isPopup)}>
+          Заказать звонок
+        </p>
+      </div>
       <h2 className="footer-mail">example@gmail.com</h2>
       <div className="footer-webSites">
         {webSites.map((item, id) => (
