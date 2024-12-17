@@ -1,5 +1,5 @@
 .news {
-    margin: 60px 2.5vw 0;
+    margin: 40px 2.5vw 0;
     display: flex;
     align-items: center;
 
@@ -18,7 +18,7 @@
     display: flex;
     align-items: center;
     justify-content: start;
-    gap: 15px;
+    gap: 10px;
     overflow-x: scroll;
     scrollbar-width: none;
 }
@@ -36,12 +36,12 @@
 .newsItem {
     position: relative;
     border-radius: 16px;
-    width: 120px;
-    height: 130px;
+    width: 100px;
+    height: 110px;
     background-color: #FFCE54;
 
     div {
-        width: 120px;
+        width: 100px;
         display: flex;
         height: 100%;
 
@@ -69,12 +69,12 @@
         left: 0;
         z-index: 99;
         transform: translateY(-15px);
-        font-size: 10px;
+        font-size: 11px;
         width: 90%;
         margin: 0 5px;
         text-align: left;
         color: white;
-        font-weight: 650;
+        font-weight: 750;
         
     }
 }
