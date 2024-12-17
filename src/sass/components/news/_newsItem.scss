@@ -2,20 +2,10 @@
 
 .news {
     margin: 30px 2.5vw 0;
-    display: flex;
-    align-items: center;
 
 }
-.news-arrow {
-    width: 40px;
-    height: 40px;
-    margin-left: 20px;
-    
-    svg {
-        fill: #FFCE54;
-    }
-}
 .news-list {
+    margin-top: -5px;
     padding-top: 5px;
     display: flex;
     align-items: center;
@@ -32,7 +22,7 @@
     justify-content: center;
     width: max-content;
     background-color: #fff;
-    border: 2px solid #FFCE54;
+    border: 2px solid #CF4E32;
     padding: 2px;
 }
 .newsMain-item {
@@ -40,7 +30,7 @@
     border-radius: 16px;
     width: 120px;
     height: 110px;
-    background-color: #FFCE54;
+    background-color: #CF4E32;
 
     div {
         width: 120px;

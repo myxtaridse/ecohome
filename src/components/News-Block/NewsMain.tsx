@@ -1,14 +1,15 @@
 // import React from 'react'
 import { Link } from 'react-router-dom'
-import Arrow from '../../components/Arrow'
 import { news } from '../../const/news'
 
 
 const NewsMain = () => {
   return (
    <>
-     <div className="mainGoods-title" style={{transform: 'translateY(25px) translateX(7px)'}}>
-            <h1>Советы</h1>
+     
+    <div className='news'>
+    <div className="mainGoods-title">
+            <h1>Блоги</h1>
             <div className="mainGoods-title-again">
               <p>Смотреть все</p>
               <div>
@@ -22,8 +23,6 @@ const NewsMain = () => {
               </div>
             </div>
           </div>
-    <div className='news'>
-        
         <div className='news-list'>
             {news &&
                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -41,9 +40,9 @@ const NewsMain = () => {
                 ))
             }
         </div>
-        <div className='news-arrow'>
+        {/* <div className='news-arrow'>
             <Arrow />
-        </div>
+        </div> */}
     </div>
    </>
   )
