@@ -34,7 +34,9 @@ const MainPage = () => {
     <div className="mainPage">
       <BannerMain />
       <MainBenefitLine />
-
+      <Link to='/news'>
+          <News />
+      </Link>
       <Link to={`/sale`}>
         <div className="mainPage-sale">
         <div className="mainGoods-bg"
@@ -53,9 +55,7 @@ const MainPage = () => {
           <MainGoods goods={goods} title="" />
         </div>
       </Link>
-      <Link to='/news'>
-          <News />
-      </Link>
+      
       <Link to={`/new`}>
         <MainGoods goods={goods} title="Новинки в ЭКОХОЗБЫТ" />
       </Link>
