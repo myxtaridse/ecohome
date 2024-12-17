@@ -8,12 +8,22 @@ const news = [
         id: 1,
         image: image1,
         title: 'Летнее изобилие зимой',
+        content: {
+            subtitle: '',
+            text: '',
+            contentHTML: ''
+        },
         link: ''
     },
     {
         id: 2,
         image: image2,
         title: 'Идеальная форма для запекания',
+        content: {
+            subtitle: '',
+            text: '',
+            contentHTML: ''
+        },
         link: ''
     },
 ]
