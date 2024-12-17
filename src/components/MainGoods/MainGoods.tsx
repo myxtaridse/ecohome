@@ -33,7 +33,7 @@ const MainGoods: React.FC<MainGoodsType> = ({ goods, title }) => {
         )
       }
       <div className="mainGoods-list"
-      style={{padding: title ? '0px 0 0 2vw' : '20px 0 20px 2vw'}}
+      style={{padding: title ? '0px 0 0 2vw' : '20px 5vw 20px 2vw'}}
       >
         {goods.map((item) => (
           
